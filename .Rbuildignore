@@ -1,2 +1,3 @@
-^gdata\.Rproj$
+^clindata\.Rproj$
 ^\.Rproj\.user$
+^data-raw$
