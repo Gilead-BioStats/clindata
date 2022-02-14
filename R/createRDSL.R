@@ -100,19 +100,19 @@ CreateRDSL <- function(
   ## Combine
   dfRDSL <- dfSubid %>% left_join( dfRand , by = c("SubjectID"="SubjectID", "SiteID"="SiteID")) %>%
     ## Create Randomization Flag
-    mutate( RandFlag = if_else(is.na(RGMNDTC), "N", "Y" ) ) %>%
+    mutate( RandFlag = if_else(is.na(RandDate), "N", "Y" ) ) %>%
     left_join( dfToS , by = c("SubjectID"="SubjectID", "SiteID"="SiteID")) %>%
     left_join( dfTrtEx , by = c("SubjectID"="SubjectID", "SiteID"="SiteID")) %>%
-    arrange( SubjectID )
+    arrange( desc(SubjectID) )
 
   ### Note: can we create a catch_all for subjects that fall out from left_join?
   missToS <- anti_join( dfToS, dfRDSL, by="SubjectID")
   missTrtEx <- anti_join( dfTrtEx, dfRDSL, by="SubjectID")
   missRand <- anti_join( dfRand, dfRDSL, by="SubjectID")
 
-  if( any(missToS) ) warning("Not all subjects matched for Time on Study from dfVisit dataset")
-  if( any(missTrtEx) ) warning("Not all subjects matched for Treatment Exposure from dfEx dataset")
-  if( any(missRand) ) warning("Not all subjects matched from dfIXRSrand dataset")
+  if( nrow(missToS) > 0 ) warning("Not all subjects matched for Time on Study from dfVisit dataset")
+  if( nrow(missTrtEx) > 0 ) warning("Not all subjects matched for Treatment Exposure from dfEx dataset")
+  if( nrow(missRand) > 0 ) warning("Not all subjects matched from dfIXRSrand dataset")
 
   return( dfRDSL )
 }
