@@ -1,11 +1,11 @@
 test_that("output created as expected and has correct structure",{
     dfTos <- TreatmentExposure(
-       dfEx = clindata::raw_ex,
-       dfSdrg = clindata::raw_sdrgcom2
+        dfEx = clindata::raw_ex,
+        dfSdrg = clindata::raw_sdrgcom2
     ) 
 
     expect_true(is.data.frame(dfTos))
-    expect_equal(names(dfTos), c("SubjectID","SiteID", "firstDoseDate", "lastDoseDate" ,"Exposure"))
+    expect_equal(names(dfTos), c("SubjectID","SiteID", "FirstDoseDate", "LastDoseDate" ,"TimeOnTreatment"))
 })
 
 test_that("incorrect inputs throw errors",{
@@ -83,9 +83,9 @@ test_that("direct specified input gives correct output",{
   
   
   
-  dfTos2 <- structure(list(SubjectID = c(1, 2, 2, 3, 4, 5), SiteID = c(1, 1, 2, 2, 2, 2), firstDoseDate = structure(c(16340, 16340, 16340, 
-                                                                                                                      16340, 16340, 16340), class = "Date"), lastDoseDate = structure(c(17071,     17071, 17071, 17071, 17071, 17071), class = "Date"), 
-                           Exposure = c(732,   732, 732, 732, 732, 732)), class = c("tbl_df", "tbl", "data.frame"), row.names = c(NA, -6L))
+  dfTos2 <- structure(list(SubjectID = c(1, 2, 2, 3, 4, 5), SiteID = c(1, 1, 2, 2, 2, 2), FirstDoseDate = structure(c(16340, 16340, 16340, 
+                                                                                                                      16340, 16340, 16340), class = "Date"), LastDoseDate = structure(c(17071,     17071, 17071, 17071, 17071, 17071), class = "Date"), 
+                           TimeOnTreatment = c(732,   732, 732, 732, 732, 732)), class = c("tbl_df", "tbl", "data.frame"), row.names = c(NA, -6L))
   
   
   

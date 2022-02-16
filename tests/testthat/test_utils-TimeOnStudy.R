@@ -1,20 +1,12 @@
 test_that("output created as expected and has correct structure",{
     dfTos <- TimeOnStudy(
-       dfVisit = clindata::raw_visdt,
-       dfStud = clindata::raw_studcomp
+      dfVisit = clindata::raw_visdt,
+      dfStud = clindata::raw_studcomp
     ) 
 
     expect_true(is.data.frame(dfTos))
-    expect_equal(names(dfTos), c("SubjectID","SiteID", "firstDoseDate", "lastDoseDate" ,"Exposure"))
+    expect_equal(names(dfTos), c("SubjectID","SiteID", "FirstStudyDate", "LastStudyDate" ,"TimeOnStudy"))
 })
-
-test_that("incorrect inputs throw errors",{
-    expect_error(TreatmentExposure(list(), list()))
-    expect_error(TreatmentExosure(  dfEx = clindata::raw_ex, list()))
-    expect_error(TreatmentExosure(list(),  clindata::raw_sdrgcom2))
-    expect_error(TreatmentExosure("Hi","Mom"))
-})
-
 
 test_that("error given if required column not found",{
     expect_error(
@@ -91,11 +83,11 @@ test_that("direct specified input gives correct output",{
   
   
   dfTos2 <- tribble(
-    ~SubjectID, ~SiteID, ~firstDoseDate, ~lastDoseDate, ~Exposure,
+    ~SubjectID, ~SiteID, ~FirstStudyDate, ~LastStudyDate, ~TimeOnStudy,
        1    ,  1, '2016-09-27'  ,  '2018-09-28'     ,   732,
        3    ,  2 ,'2016-09-27'   , '2017-09-28'     ,   367
-  )  %>% mutate(firstDoseDate = as.Date.character(.data$firstDoseDate),
-               lastDoseDate = as.Date.character(.data$lastDoseDate) )
+  )  %>% mutate(FirstStudyDate = as.Date.character(.data$FirstStudyDate),
+               LastStudyDate = as.Date.character(.data$LastStudyDate) )
   
  
   

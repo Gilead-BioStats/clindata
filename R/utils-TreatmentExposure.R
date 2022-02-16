@@ -1,27 +1,27 @@
 #' Utility Function to Calculate Treatment Exposure
 #'
 #' Calculates treatment exposure duration for subjects in a study using raw ex dataset
-#' 
+#'
 #' @details
-#' 
-#' This output of this function is used by assessments as a standardized measurement of time on treatment. 
-#' 
+#'
+#' This output of this function is used by assessments as a standardized measurement of time on treatment.
+#'
 #' @section Data Specification:
-#' 
-#' 
+#'
+#'
 #' The following columns are required:
 #' - `dfEX`
 #'     - `SUBJID` - Unique subject ID
 #'     - `INVID` - Unique Investigator ID
 #'     - `EXSTDAT` - Start date, dose date
 #'     - `EXENDAT` - Stop date
-#' 
+#'
 #' The following columns are optional
 #' - `dfSdrg`
 #'     - `SUBJID` - Unique subject ID
 #'     - `SDRGYN_STD` - Y/N Did subject complete study drug closing
-#' 
-#' 
+#'
+#'
 #'
 #' @param  dfEx data frame of treatment information with required columns SUBJID INVID EXSTDAT EXENDAT. If
 #' multiple treatments and only want to focus on one treatment then input data frame will need to be subset
@@ -32,13 +32,14 @@
 #' by user prior to input
 #' @param  dtSnapshot date of data snapshot, if NULL, will impute to be current date
 #'
-#' @return dataframe of time on study with a column for site ID, subject ID, and a column for time on study in days
+#' @return dataframe of time on treatment with a column for site ID, subject ID, first dose date, last dose date
+#' and a column for time on treatment in days
 #'
 #' @import dplyr
 #' @importFrom lubridate is.Date
-#' 
+#'
 #' @examples
-#' 
+#'
 #' dfTos <- TreatmentExposure(dfEx = clindata::raw_ex, dfSdrg = clindata::raw_sdrgcom2)
 #'
 #' @export
@@ -89,14 +90,14 @@ TreatmentExposure <- function(
         select( .data$SUBJID, .data$INVID, .data$EXSTDAT, .data$EXENDAT ) %>%
         group_by( .data$SUBJID, .data$INVID ) %>%
         summarise(
-            firstDoseDate = min( .data$EXSTDAT, .data$EXENDAT , na.rm=T),
-            lastDoseDate = if_else(
+            FirstDoseDate = min( .data$EXSTDAT, .data$EXENDAT , na.rm=T),
+            LastDoseDate = if_else(
                 first(.data$SUBJID) %in% completedIDs,
                 as.Date(max( .data$EXSTDAT, .data$EXENDAT , na.rm=T)),
                 as.Date(dtSnapshot)
             )
         ) %>%
-        mutate( Exposure = as.numeric(difftime(.data$lastDoseDate, .data$firstDoseDate, units="days" ) + 1)) %>%
+        mutate( TimeOnTreatment = as.numeric(difftime(.data$LastDoseDate, .data$FirstDoseDate, units="days" ) + 1)) %>%
         rename( SubjectID=.data$SUBJID, SiteID=.data$INVID) %>%
         ungroup()
 

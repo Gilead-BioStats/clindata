@@ -19,7 +19,8 @@ by user prior to input}
 \item{dtSnapshot}{date of data snapshot, if NULL, will impute to be current date}
 }
 \value{
-dataframe of time on study with a column for site ID, subject ID, and a column for time on study in days
+dataframe of time on treatment with a column for site ID, subject ID, first dose date, last dose date
+and a column for time on treatment in days
 }
 \description{
 Calculates treatment exposure duration for subjects in a study using raw ex dataset
