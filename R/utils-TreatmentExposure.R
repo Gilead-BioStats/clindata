@@ -97,7 +97,7 @@ TreatmentExposure <- function(
                 as.Date(dtSnapshot)
             )
         ) %>%
-        mutate( TimeOnTrt = as.numeric(difftime(.data$LastDoseDate, .data$FirstDoseDate, units="days" ) + 1)) %>%
+        mutate( TimeOnTreatment = as.numeric(difftime(.data$LastDoseDate, .data$FirstDoseDate, units="days" ) + 1)) %>%
         rename( SubjectID=.data$SUBJID, SiteID=.data$INVID) %>%
         ungroup()
 
