@@ -3,7 +3,7 @@
 # Not standardized for use generally and takes simplifications
 # to create the dataset
 ################################################################################ .
-
+library(usethis)
 library(devtools)
 load_all()
 
@@ -53,4 +53,6 @@ for(i in 1:nrow(raw_ic_elig)){
 
 }
 
-save( track, file = "~/clindata/raw_ie_all.rda" )
+raw_ie_all <- track
+usethis::use_data(raw_ie_all, overwrite=TRUE)
+#save( track, file = "~/clindata/raw_ie_all.rda" )
