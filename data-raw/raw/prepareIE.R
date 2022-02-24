@@ -5,7 +5,6 @@
 ################################################################################ .
 library(usethis)
 library(devtools)
-load_all()
 
 track_a1 <- rbind( raw_ie_a1[,c("SUBJID","SCRNID","INVID","PROJECT","SUBJECT","SITEID","IECAT_STD","IETESTCD_STD","IETEST_STD","IEORRES","IESTRESC_STD")])
 track_a1$PROTVER_STD <- "A1"
@@ -55,4 +54,4 @@ for(i in 1:nrow(raw_ic_elig)){
 
 raw_ie_all <- track
 usethis::use_data(raw_ie_all, overwrite=TRUE)
-#save( track, file = "~/clindata/raw_ie_all.rda" )
+

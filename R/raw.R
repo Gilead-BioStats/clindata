@@ -64,6 +64,12 @@
 "raw_ie_a2"
 
 
+#' @title raw_ie_all
+#' @description Raw ie_all data frame
+#' @format a data frame with 31692 rows and 11 columns.
+"raw_ie_all"
+
+
 #' @title raw_inv
 #' @description Raw inv data frame
 #' @format a data frame with 212 rows and 5 columns.
