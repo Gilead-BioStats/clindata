@@ -1,0 +1,31 @@
+rawplus_rdsl:
+  - id_col: SubjectID
+  - site_col: SiteID
+  - exposureTime_col: ExposureTime
+  - enrollmentTime_col: EnrollmentTime
+  - randFlag_col: Rand_Flag 
+  - randDate_col: Rand_Date
+  - StudyCompletionFlag_col: StudyCompletion_Flag
+  - StudyDiscontinuationReason_col: StudyDiscontinuationReason
+  - TreatmentCompletionFlag_col: TreatmentCompletion_Flag
+  - TreatmentDiscontinuationReason_col: TreatmentDiscontinuationReason
+rawplus_ae:
+  - id_col: SubjectID
+  - treatementEmergent_col: AE_TE_Flag
+  - grade_col: AE_Grade
+  - serious_col: AE_Serious 
+rawplus_pd: 
+  - id_col: SubjectID
+  - category_col: PD_Category
+  - important_col: PD_Important_Flag
+rawplus_ie:
+  - id_col: SubjectID
+  - type_col: IE_Type
+  - value_col: IE_Value
+  - version_col: IE_ProtocolVersion
+rawplus_consent:
+  - id_col: SubjectID
+  - type_col: Consent_Type
+  - date_col: Consent_Date
+
+
