@@ -1,4 +1,4 @@
-rawplus_rdsl:
+subj:
   - strIDCol: SubjectID
   - strSiteCol: SiteID
   - strTimeOnTreatmentCol: TimeOnTreatment
@@ -9,21 +9,21 @@ rawplus_rdsl:
   - strStudyDiscontinuationReasonCol: StudyDiscontinuationReason
   - strTreatmentCompletionFlagCol: TreatmentCompletionFlag
   - strTreatmentDiscontinuationReasonCol: TreatmentDiscontinuationReason
-rawplus_ae:
+ae:
   - strIDCol: SubjectID
   - strTreatementEmergentCol: AE_TEFlag
   - strGradeCol: AE_Grade
   - strSeriousCol: AE_Serious 
-rawplus_pd: 
+pd: 
   - strIDCol: SubjectID
   - strCategoryCol: PD_Category
   - strImportantCol: PD_ImportantFlag
-rawplus_ie:
+ie:
   - strIDCol: SubjectID
   - strCategoryCol: IE_Category
   - strValueCol: IE_Value
   - strVersionCol: IE_ProtocolVersion
-rawplus_consent:
+consent:
   - strIDCol: SubjectID
   - strTypeCol: Consent_Type
   - strValueCol: Consent_Value
