@@ -2,6 +2,7 @@
 
 export("%>%")
 export(CreateRDSL)
+export(FlagTELab)
 export(TimeOnStudy)
 export(TreatmentExposure)
 import(dplyr)

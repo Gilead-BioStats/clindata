@@ -1,8 +1,8 @@
 rawplus_rdsl:
   - id_col: SubjectID
   - site_col: SiteID
-  - exposureTime_col: ExposureTime
-  - enrollmentTime_col: EnrollmentTime
+  - timeOnTreatment_col: TimeOnTreatment
+  - timeOnStudy_col: TimeOnStudy
   - randFlag_col: Rand_Flag 
   - randDate_col: Rand_Date
   - StudyCompletionFlag_col: StudyCompletion_Flag
@@ -20,12 +20,11 @@ rawplus_pd:
   - important_col: PD_Important_Flag
 rawplus_ie:
   - id_col: SubjectID
-  - type_col: IE_Type
+  - category_col: IE_Category
   - value_col: IE_Value
   - version_col: IE_ProtocolVersion
 rawplus_consent:
   - id_col: SubjectID
   - type_col: Consent_Type
+  - value_col: Consent_Value
   - date_col: Consent_Date
-
-
