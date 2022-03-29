@@ -1,30 +1,30 @@
 rawplus_rdsl:
-  - id_col: SubjectID
-  - site_col: SiteID
-  - timeOnTreatment_col: TimeOnTreatment
-  - timeOnStudy_col: TimeOnStudy
-  - randFlag_col: RandFlag 
-  - randDate_col: RandDate
-  - StudyCompletionFlag_col: StudyCompletionFlag
-  - StudyDiscontinuationReason_col: StudyDiscontinuationReason
-  - TreatmentCompletionFlag_col: TreatmentCompletionFlag
-  - TreatmentDiscontinuationReason_col: TreatmentDiscontinuationReason
+  - strIDCol: SubjectID
+  - strSiteCol: SiteID
+  - strTimeOnTreatmentCol: TimeOnTreatment
+  - strTimeOnStudyCol: TimeOnStudy
+  - strRandFlagCol: RandFlag 
+  - strRandDateCol: RandDate
+  - strStudyCompletionFlagCol: StudyCompletionFlag
+  - strStudyDiscontinuationReasonCol: StudyDiscontinuationReason
+  - strTreatmentCompletionFlagCol: TreatmentCompletionFlag
+  - strTreatmentDiscontinuationReasonCol: TreatmentDiscontinuationReason
 rawplus_ae:
-  - id_col: SubjectID
-  - treatementEmergent_col: AE_TEFlag
-  - grade_col: AE_Grade
-  - serious_col: AE_Serious 
+  - strIDCol: SubjectID
+  - strTreatementEmergentCol: AE_TEFlag
+  - strGradeCol: AE_Grade
+  - strSeriousCol: AE_Serious 
 rawplus_pd: 
-  - id_col: SubjectID
-  - category_col: PD_Category
-  - important_col: PD_ImportantFlag
+  - strIDCol: SubjectID
+  - strCategoryCol: PD_Category
+  - strImportantCol: PD_ImportantFlag
 rawplus_ie:
-  - id_col: SubjectID
-  - category_col: IE_Category
-  - value_col: IE_Value
-  - version_col: IE_ProtocolVersion
+  - strIDCol: SubjectID
+  - strCategoryCol: IE_Category
+  - strValueCol: IE_Value
+  - strVersionCol: IE_ProtocolVersion
 rawplus_consent:
-  - id_col: SubjectID
-  - type_col: Consent_Type
-  - value_col: Consent_Value
-  - date_col: Consent_Date
+  - strIDCol: SubjectID
+  - strTypeCol: Consent_Type
+  - strValueCol: Consent_Value
+  - strDateCol: Consent_Date
