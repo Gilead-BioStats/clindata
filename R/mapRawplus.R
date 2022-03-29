@@ -14,7 +14,7 @@ map_rawplus_ae <- function(dfRawAE){
         SubjectID = SUBJID,
         AE_Serious = AESER
     ) %>%
-    mutate(AE_TE_FLAG=sample(c(TRUE,FALSE),n(),replace=TRUE)) %>% # Random TE for now - TODO update
+    mutate(AE_TEFLAG=sample(c(TRUE,FALSE),n(),replace=TRUE)) %>% # Random TE for now - TODO update
     mutate(AE_GRADE = sample(1:4,n(),replace=TRUE)) # Random Grade for now - TODO update
 
     return(rawplus_ae)
@@ -32,7 +32,7 @@ map_rawplus_ae <- function(dfRawAE){
 
 map_rawplus_pd <- function(dfRawAE){
     rawplus_pd <- dfRawAE %>%
-    mutate(PD_Important_Flag = case_when(
+    mutate(PD_ImportantFlag = case_when(
         DEVIMP == 'y' ~ "Y", 
         DEVIMP == 'n' ~ "N",
         TRUE ~ DEVIMP 
@@ -40,7 +40,7 @@ map_rawplus_pd <- function(dfRawAE){
     select(
         SubjectID = SUBJID,
         PD_Category = DEVTYPE,
-        PD_Important_Flag,
+        PD_ImportantFlag,
     ) 
 
     return(rawplus_pd)

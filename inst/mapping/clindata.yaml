@@ -3,21 +3,21 @@ rawplus_rdsl:
   - site_col: SiteID
   - timeOnTreatment_col: TimeOnTreatment
   - timeOnStudy_col: TimeOnStudy
-  - randFlag_col: Rand_Flag 
-  - randDate_col: Rand_Date
-  - StudyCompletionFlag_col: StudyCompletion_Flag
+  - randFlag_col: RandFlag 
+  - randDate_col: RandDate
+  - StudyCompletionFlag_col: StudyCompletionFlag
   - StudyDiscontinuationReason_col: StudyDiscontinuationReason
-  - TreatmentCompletionFlag_col: TreatmentCompletion_Flag
+  - TreatmentCompletionFlag_col: TreatmentCompletionFlag
   - TreatmentDiscontinuationReason_col: TreatmentDiscontinuationReason
 rawplus_ae:
   - id_col: SubjectID
-  - treatementEmergent_col: AE_TE_Flag
+  - treatementEmergent_col: AE_TEFlag
   - grade_col: AE_Grade
   - serious_col: AE_Serious 
 rawplus_pd: 
   - id_col: SubjectID
   - category_col: PD_Category
-  - important_col: PD_Important_Flag
+  - important_col: PD_ImportantFlag
 rawplus_ie:
   - id_col: SubjectID
   - category_col: IE_Category
