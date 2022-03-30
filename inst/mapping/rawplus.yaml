@@ -1,30 +1,30 @@
 subj:
-  - strIDCol: SubjectID
-  - strSiteCol: SiteID
-  - strTimeOnTreatmentCol: TimeOnTreatment
-  - strTimeOnStudyCol: TimeOnStudy
-  - strRandFlagCol: RandFlag 
-  - strRandDateCol: RandDate
-  - strStudyCompletionFlagCol: StudyCompletionFlag
-  - strStudyDiscontinuationReasonCol: StudyDiscontinuationReason
-  - strTreatmentCompletionFlagCol: TreatmentCompletionFlag
-  - strTreatmentDiscontinuationReasonCol: TreatmentDiscontinuationReason
+  strIDCol: SubjectID
+  strSiteCol: SiteID
+  strTimeOnTreatmentCol: TimeOnTreatment
+  strTimeOnStudyCol: TimeOnStudy
+  strRandFlagCol: RandFlag 
+  strRandDateCol: RandDate
+  strStudyCompletionFlagCol: StudyCompletionFlag
+  strStudyDiscontinuationReasonCol: StudyDiscontinuationReason
+  strTreatmentCompletionFlagCol: TreatmentCompletionFlag
+  strTreatmentDiscontinuationReasonCol: TreatmentDiscontinuationReason
 ae:
-  - strIDCol: SubjectID
-  - strTreatementEmergentCol: AE_TEFlag
-  - strGradeCol: AE_Grade
-  - strSeriousCol: AE_Serious 
+  strIDCol: SubjectID
+  strTreatementEmergentCol: AE_TEFlag
+  strGradeCol: AE_Grade
+  strSeriousCol: AE_Serious 
 pd: 
-  - strIDCol: SubjectID
-  - strCategoryCol: PD_Category
-  - strImportantCol: PD_ImportantFlag
+  strIDCol: SubjectID
+  strCategoryCol: PD_Category
+  strImportantCol: PD_ImportantFlag
 ie:
-  - strIDCol: SubjectID
-  - strCategoryCol: IE_Category
-  - strValueCol: IE_Value
-  - strVersionCol: IE_ProtocolVersion
+  strIDCol: SubjectID
+  strCategoryCol: IE_Category
+  strValueCol: IE_Value
+  strVersionCol: IE_ProtocolVersion
 consent:
-  - strIDCol: SubjectID
-  - strTypeCol: Consent_Type
-  - strValueCol: Consent_Value
-  - strDateCol: Consent_Date
+  strIDCol: SubjectID
+  strTypeCol: Consent_Type
+  strValueCol: Consent_Value
+  strDateCol: Consent_Date
