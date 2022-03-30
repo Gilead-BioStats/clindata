@@ -5,14 +5,14 @@ subj:
   strTimeOnStudyCol: TimeOnStudy
   strRandFlagCol: RandFlag 
   strRandDateCol: RandDate
-  strStudyCompletionFlagCol: StudyCompletionFlag
-  strStudyDiscontinuationReasonCol: StudyDiscontinuationReason
-  strTreatmentCompletionFlagCol: TreatmentCompletionFlag
-  strTreatmentDiscontinuationReasonCol: TreatmentDiscontinuationReason
+  strStudyCompletionFlagCol: StudCompletion
+  strStudyDiscontinuationReasonCol: StudDCReason
+  strTreatmentCompletionFlagCol: TrtCompletion
+  strTreatmentDiscontinuationReasonCol: TrtDCReason
 ae:
   strIDCol: SubjectID
-  strTreatementEmergentCol: AE_TEFlag
-  strGradeCol: AE_Grade
+  strTreatementEmergentCol: AE_TEFLAG
+  strGradeCol: AE_GRADE
   strSeriousCol: AE_Serious 
 pd: 
   strIDCol: SubjectID
