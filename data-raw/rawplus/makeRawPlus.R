@@ -13,17 +13,17 @@ rawplus_subj_s <- CreateSUBJ(
 
 rawplus_subj <- rawplus_subj_s %>%
     filter( RandFlag=="Y") %>%
-    filter( !is.na(TimeOnTreatment)) %>%
-    filter( SubjectID != "")
-
+    filter( !is.na(TimeOnTreatment))
+    
 usethis::use_data(rawplus_subj_s, overwrite=TRUE)
 usethis::use_data(rawplus_subj, overwrite=TRUE)
 
 # Domain Mappings
-rawplus_ae <- map_rawplus_ae(clindata::raw_ae)
-rawplus_pd <- map_rawplus_pd(clindata::raw_protdev)
-rawplus_ie <- map_rawplus_ie(clindata::raw_ie_all)
-rawplus_consent <- map_rawplus_consent(clindata::raw_ic_elig)
+ids<- rawplus_subj %>% pull(SubjectID)
+rawplus_ae <- map_rawplus_ae(clindata::raw_ae, ids)
+rawplus_pd <- map_rawplus_pd(clindata::raw_protdev, ids)
+rawplus_ie <- map_rawplus_ie(clindata::raw_ie_all, ids)
+rawplus_consent <- map_rawplus_consent(clindata::raw_ic_elig, ids)
 
 usethis::use_data(rawplus_ae, overwrite=TRUE)
 usethis::use_data(rawplus_pd, overwrite=TRUE)

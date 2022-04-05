@@ -4,7 +4,7 @@
 \alias{map_rawplus_ie}
 \title{map_rawplus_ie}
 \usage{
-map_rawplus_ie(dfRawIE)
+map_rawplus_ie(dfRawIE, ids)
 }
 \arguments{
 \item{dfRawIE}{data frame of raw AE data}
