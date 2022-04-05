@@ -1,8 +1,8 @@
 here::i_am("data-raw/rawplus/makeRawPlus.R")
 library(here)
 
-# Make RDSL
-rawplus_rdsl_s <- CreateRDSL(
+# Make subj
+rawplus_subj_s <- CreateSUBJ(
     dfDm = clindata::raw_dm,
     dfIXRSrand = clindata::raw_iwrsrand,
     dfEx = clindata::raw_ex,
@@ -11,12 +11,12 @@ rawplus_rdsl_s <- CreateRDSL(
     dfSdrg = clindata::raw_sdrgcomp
 )
 
-rawplus_rdsl <- rawplus_rdsl %>% 
+rawplus_subj <- rawplus_subj_s %>% 
     filter( RandFlag=="Y") %>% 
     filter( !is.na(TimeOnTreatment))
 
-usethis::use_data(rawplus_rdsl_s, overwrite=TRUE)
-usethis::use_data(rawplus_rdsl, overwrite=TRUE)
+usethis::use_data(rawplus_subj_s, overwrite=TRUE)
+usethis::use_data(rawplus_subj, overwrite=TRUE)
 
 # Domain Mappings
 rawplus_ae <- map_rawplus_ae(clindata::raw_ae)

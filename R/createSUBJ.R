@@ -66,7 +66,7 @@
 #'
 #' @examples
 #'
-#' rawplus_RDSL <- CreateRDSL(dfDm = clindata::raw_dm,
+#' rawplus_SUBJ <- CreateSUBJ(dfDm = clindata::raw_dm,
 #'                            dfIXRSrand = clindata::raw_iwrsrand,
 #'                            dfEx = clindata::raw_ex,
 #'                            dfVisit = clindata::raw_visdt,
@@ -76,7 +76,7 @@
 #' @export
 #'
 
-CreateRDSL <- function(
+CreateSUBJ <- function(
   dfDm = NULL,
   dfIXRSrand = NULL,
   dfVisit = NULL,

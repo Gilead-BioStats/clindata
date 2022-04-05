@@ -1,4 +1,4 @@
-subj:
+dfSUBJ:
   strIDCol: SubjectID
   strSiteCol: SiteID
   strTimeOnTreatmentCol: TimeOnTreatment
@@ -9,21 +9,21 @@ subj:
   strStudyDiscontinuationReasonCol: StudDCReason
   strTreatmentCompletionFlagCol: TrtCompletion
   strTreatmentDiscontinuationReasonCol: TrtDCReason
-ae:
+dfAE:
   strIDCol: SubjectID
   strTreatementEmergentCol: AE_TE_FLAG
   strGradeCol: AE_GRADE
   strSeriousCol: AE_SERIOUS
-pd: 
+dfPD: 
   strIDCol: SubjectID
   strCategoryCol: PD_CATEGORY
   strImportantCol: PD_IMPORTANT_FLAG
-ie:
+dfIE:
   strIDCol: SubjectID
   strCategoryCol: IE_CATEGORY
   strValueCol: IE_VALUE
   strVersionCol: IE_PROTOCOLVERSION
-consent:
+dfCONSENT:
   strIDCol: SubjectID
   strTypeCol: CONSENT_TYPE
   strValueCol: CONSENT_VALUE
