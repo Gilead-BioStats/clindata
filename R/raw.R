@@ -16,12 +16,6 @@
 "raw_consent"
 
 
-#' @title raw_covlab_hema
-#' @description Raw covlab_hema data frame
-#' @format a data frame with 531142 rows and 72 columns.
-"raw_covlab_hema"
-
-
 #' @title raw_da
 #' @description Raw da data frame
 #' @format a data frame with 69005 rows and 42 columns.
