@@ -52,7 +52,7 @@
 #' requires data frame of treatment completion information with columns SUBJID SDRGYN_STD. If multiple treatments
 #' and only want to focus on one treatment then input data frame will need to be subset
 #' by user prior to input
-#' @param  dfIXRSrand randomization dataset with required columns SUBJID RGMNDTC 
+#' @param  dfIXRSrand randomization dataset with required columns SUBJID RGMNDTC
 #' @param  dfVisit data frame of visit information with required columns SUBJID INVID FOLDERNAME RECORDDATE
 #' @param  dfStud optional, if no data frame is supplied will assume no subject completed study, otherwise
 #' requires data frame of study completion information with columns SUBJID COMPYN_STD COMPREAS
