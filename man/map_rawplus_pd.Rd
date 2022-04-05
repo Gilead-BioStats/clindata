@@ -4,7 +4,7 @@
 \alias{map_rawplus_pd}
 \title{map_rawplus_pd}
 \usage{
-map_rawplus_pd(dfRawAE)
+map_rawplus_pd(dfRawPD, ids)
 }
 \arguments{
 \item{dfRawPD}{data frame of raw AE data}

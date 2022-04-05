@@ -52,8 +52,7 @@ for(i in 1:nrow(raw_ic_elig)){
 
 }
 
-raw_ie_all <- track %>%
-  filter(SUBJID != "")
+raw_ie_all <- track
 
 usethis::use_data(raw_ie_all, overwrite=TRUE)
 

@@ -4,7 +4,7 @@
 \alias{map_rawplus_consent}
 \title{map_rawplus_consent}
 \usage{
-map_rawplus_consent(dfRawElig)
+map_rawplus_consent(dfRawElig, ids)
 }
 \arguments{
 \item{dfRawElig}{data frame of raw AE data}

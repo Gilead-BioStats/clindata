@@ -8,7 +8,7 @@
 #'
 #' rawplus_ae <- map_rawplus_ae(clindata::raw_ae)
 
-map_rawplus_ae <- function(dfRawAE){
+map_rawplus_ae <- function(dfRawAE, ids){
     rawplus_ae <- dfRawAE %>%
     select(
         SubjectID = SUBJID,
@@ -19,6 +19,10 @@ map_rawplus_ae <- function(dfRawAE){
     filter(
         SubjectID != ""
         )
+
+    if(!is.null(ids)){
+        rawplus_ae <- rawplus_ae%>%filter(SubjectID %in% ids)
+    }
 
     return(rawplus_ae)
 }
@@ -33,8 +37,8 @@ map_rawplus_ae <- function(dfRawAE){
 #'
 #' rawplus_pd <- map_rawplus_pd(clindata::raw_protdev)
 
-map_rawplus_pd <- function(dfRawAE){
-    rawplus_pd <- dfRawAE %>%
+map_rawplus_pd <- function(dfRawPD, ids){
+    rawplus_pd <- dfRawPD %>%
     mutate(PD_IMPORTANT_FLAG = case_when(
         DEVIMP == 'y' ~ "Y",
         DEVIMP == 'n' ~ "N",
@@ -49,6 +53,10 @@ map_rawplus_pd <- function(dfRawAE){
         SubjectID != ""
         )
 
+    if(!is.null(ids)){
+        rawplus_pd <- rawplus_pd%>%filter(SubjectID %in% ids)
+    }    
+
     return(rawplus_pd)
 }
 
@@ -62,7 +70,7 @@ map_rawplus_pd <- function(dfRawAE){
 #'
 #' rawplus_ie <- map_rawplus_ie(clindata::raw_ie_all)
 
-map_rawplus_ie <- function(dfRawIE){
+map_rawplus_ie <- function(dfRawIE, ids){
     rawplus_ie <- dfRawIE %>%
     select(
         SubjectID = SUBJID,
@@ -73,6 +81,10 @@ map_rawplus_ie <- function(dfRawIE){
     filter(
         SubjectID != ""
         )
+    
+    if(!is.null(ids)){
+        rawplus_ie <- rawplus_ie%>%filter(SubjectID %in% ids)
+    }    
 
     return(rawplus_ie)
 }
@@ -87,7 +99,7 @@ map_rawplus_ie <- function(dfRawIE){
 #'
 #' rawplus_consent <- map_rawplus_consent(clindata::raw_ic_elig)
 
-map_rawplus_consent <- function(dfRawElig){
+map_rawplus_consent <- function(dfRawElig, ids){
     rawplus_consent <- dfRawElig %>%
     select(
         SubjectID=SUBJID,
@@ -100,6 +112,10 @@ map_rawplus_consent <- function(dfRawElig){
     filter(
         SubjectID != ""
         )
+
+    if(!is.null(ids)){
+        rawplus_consent <- rawplus_consent%>%filter(SubjectID %in% ids)
+    }    
 
     return(rawplus_consent)
 }
