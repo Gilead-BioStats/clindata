@@ -11,20 +11,20 @@ subj:
   strTreatmentDiscontinuationReasonCol: TrtDCReason
 ae:
   strIDCol: SubjectID
-  strTreatementEmergentCol: AE_TEFLAG
+  strTreatementEmergentCol: AE_TE_FLAG
   strGradeCol: AE_GRADE
-  strSeriousCol: AE_Serious 
+  strSeriousCol: AE_SERIOUS
 pd: 
   strIDCol: SubjectID
-  strCategoryCol: PD_Category
-  strImportantCol: PD_ImportantFlag
+  strCategoryCol: PD_CATEGORY
+  strImportantCol: PD_IMPORTANT_FLAG
 ie:
   strIDCol: SubjectID
-  strCategoryCol: IE_Category
-  strValueCol: IE_Value
-  strVersionCol: IE_ProtocolVersion
+  strCategoryCol: IE_CATEGORY
+  strValueCol: IE_VALUE
+  strVersionCol: IE_PROTOCOLVERSION
 consent:
   strIDCol: SubjectID
-  strTypeCol: Consent_Type
-  strValueCol: Consent_Value
-  strDateCol: Consent_Date
+  strTypeCol: CONSENT_TYPE
+  strValueCol: CONSENT_VALUE
+  strDateCol: CONSENT_DATE

@@ -12,9 +12,9 @@ map_rawplus_ae <- function(dfRawAE){
     rawplus_ae <- dfRawAE %>%
     select(
         SubjectID = SUBJID,
-        AE_Serious = AESER
+        AE_SERIOUS = AESER
     ) %>%
-    mutate(AE_TEFLAG=sample(c(TRUE,FALSE),n(),replace=TRUE)) %>% # Random TE for now - TODO update
+    mutate(AE_TE_FLAG=sample(c(TRUE,FALSE),n(),replace=TRUE)) %>% # Random TE for now - TODO update
     mutate(AE_GRADE = sample(1:4,n(),replace=TRUE)) # Random Grade for now - TODO update
 
     return(rawplus_ae)
@@ -32,15 +32,15 @@ map_rawplus_ae <- function(dfRawAE){
 
 map_rawplus_pd <- function(dfRawAE){
     rawplus_pd <- dfRawAE %>%
-    mutate(PD_ImportantFlag = case_when(
+    mutate(PD_IMPORTANT_FLAG = case_when(
         DEVIMP == 'y' ~ "Y", 
         DEVIMP == 'n' ~ "N",
         TRUE ~ DEVIMP 
     )) %>%
     select(
         SubjectID = SUBJID,
-        PD_Category = DEVTYPE,
-        PD_ImportantFlag,
+        PD_CATEGORY = DEVTYPE,
+        PD_IMPORTANT_FLAG,
     ) 
 
     return(rawplus_pd)
@@ -60,9 +60,9 @@ map_rawplus_ie <- function(dfRawIE){
     rawplus_ie <- dfRawIE %>%
     select(
         SubjectID = SUBJID,
-        IE_Category = IECAT_STD,
-        IE_Value = IEORRES,
-        IE_ProtocolVersion = PROTVER_STD
+        IE_CATEGORY = IECAT_STD,
+        IE_VALUE = IEORRES,
+        IE_PROTOCOLVERSION = PROTVER_STD
     ) 
 
     return(rawplus_ie)
@@ -82,11 +82,11 @@ map_rawplus_consent <- function(dfRawElig){
     rawplus_consent <- dfRawElig %>%
     select(
         SubjectID=SUBJID, 
-        Consent_Date = DSSTDAT_RAW) %>%
+        CONSENT_DATE = DSSTDAT_RAW) %>%
     mutate(
-        Consent_Type = "MAINCONSENT",
-        Consent_Value = "Y",
-        Consent_Date = as.Date(Consent_Date, format = "%d %B %Y")
+        CONSENT_TYPE = "MAINCONSENT",
+        CONSENT_VALUE = "Y",
+        CONSENT_DATE = as.Date(CONSENT_DATE, format = "%d %B %Y")
     ) %>%
     filter(SubjectID != "")
     return(rawplus_consent)

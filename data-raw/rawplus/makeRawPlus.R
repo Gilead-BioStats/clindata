@@ -11,14 +11,14 @@ rawplus_rdsl_s <- CreateRDSL(
     dfSdrg = clindata::raw_sdrgcomp
 )
 
-rawplus_rdsl <- rawplus_rdsl %>% filter( RandFlag=="Y")
+rawplus_rdsl <- rawplus_rdsl %>% 
+    filter( RandFlag=="Y") %>% 
+    filter( !is.na(TimeOnTreatment))
 
 usethis::use_data(rawplus_rdsl_s, overwrite=TRUE)
 usethis::use_data(rawplus_rdsl, overwrite=TRUE)
 
-
 # Domain Mappings
-
 rawplus_ae <- map_rawplus_ae(clindata::raw_ae)
 rawplus_pd <- map_rawplus_pd(clindata::raw_protdev)
 rawplus_ie <- map_rawplus_ie(clindata::raw_ie_all)
