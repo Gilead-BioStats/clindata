@@ -11,9 +11,10 @@ rawplus_subj_s <- CreateSUBJ(
     dfSdrg = clindata::raw_sdrgcomp
 )
 
-rawplus_subj <- rawplus_subj_s %>% 
-    filter( RandFlag=="Y") %>% 
-    filter( !is.na(TimeOnTreatment))
+rawplus_subj <- rawplus_subj_s %>%
+    filter( RandFlag=="Y") %>%
+    filter( !is.na(TimeOnTreatment)) %>%
+    filter( SubjectID != "")
 
 usethis::use_data(rawplus_subj_s, overwrite=TRUE)
 usethis::use_data(rawplus_subj, overwrite=TRUE)
