@@ -12,12 +12,15 @@ dfSUBJ:
 dfAE:
   strIDCol: SubjectID
   strTreatmentEmergentCol: AE_TE_FLAG
+  strTreatmentEmergentVal: TRUE
   strGradeCol: AE_GRADE
   strSeriousCol: AE_SERIOUS
+  strSeriousVal: Yes
 dfPD:
   strIDCol: SubjectID
   strCategoryCol: PD_CATEGORY
   strImportantCol: PD_IMPORTANT_FLAG
+  strImportantVal: Y
 dfIE:
   strIDCol: SubjectID
   strCategoryCol: IE_CATEGORY
