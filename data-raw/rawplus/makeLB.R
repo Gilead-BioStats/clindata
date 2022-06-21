@@ -10,7 +10,7 @@
 #
 # Remove dataset from branch.
 # ```{git}
-# git rm data/rawplus_lb.rda
+# git rm data/rawplus_covlab.rda
 # ```
 
 rawplus_lb <- rawplus_covlab %>%

@@ -132,7 +132,7 @@ map_rawplus_consent <- function(dfRawElig, ids){
 #
 # Remove dataset from branch.
 # ```{git}
-# git rm data/rawplus_lb.rda
+# git rm data/rawplus_covlab.rda
 # ```
 
 map_rawplus_lb <- function(lb, dm = clindata::rawplus_subj) {
