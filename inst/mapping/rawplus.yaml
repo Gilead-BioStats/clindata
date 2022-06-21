@@ -39,3 +39,12 @@ dfCONSENT:
   strDateCol: "CONSENT_DATE"
   strConsentTypeValue: "MAINCONSENT"
   strConsentStatusValue: "Y"
+dfLB:
+  strIDCol: "SubjectID"
+  strVisitCol: "VISIT"
+  strDateCol: "LBDTN"
+  strMeasureCol: "LBTEST"
+  strResultCol: "LBSTRESN"
+  strTreatmentEmergentCol: "LB_TE_FLAG"
+  strTreatmentEmergentValue: TRUE
+  strGradeCol: "LB_GRADE"

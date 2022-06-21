@@ -82,6 +82,12 @@
 "raw_iwrsrand"
 
 
+#' @title raw_lb
+#' @description Raw LB data frame
+#' @format a data frame with 5170 rows and 38 columns.
+"raw_lb"
+
+
 #' @title raw_mh
 #' @description Raw mh data frame
 #' @format a data frame with 5170 rows and 38 columns.
