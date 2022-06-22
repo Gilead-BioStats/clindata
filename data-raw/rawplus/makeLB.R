@@ -10,10 +10,12 @@
 #
 # Remove dataset from branch.
 # ```{git}
-# git rm data/rawplus_covlab.rda
+# git rm -f data/rawplus_covlab.rda
 # ```
 
-rawplus_lb <- rawplus_covlab %>%
+library(dplyr)
+
+lb <- rawplus_covlab %>%
   filter(
     SUBJID != '',
     !is.na(SIRESN)
@@ -48,4 +50,5 @@ analysis_flag <- rawplus_lb %>%
     SubjectID = SUBJID
   )
 
-save(analysis_flag, file = 'data/rawplus_lb.rda')
+rawplus_lb <- analysis_flag
+usethis::use_data(rawplus_lb, overwrite = TRUE)
