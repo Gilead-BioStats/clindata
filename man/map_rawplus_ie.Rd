@@ -15,4 +15,5 @@ mapping to create rawplus_ie from raw
 \examples{
 
 rawplus_ie <- map_rawplus_ie(clindata::raw_ie_all)
+
 }

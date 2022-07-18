@@ -37,12 +37,12 @@
 #'
 #' @export
 
-FlagTELab <- function( dfLab , dfRDSL , strToxVar = "TOXGRG" ){
+FlagTELab <- function(dfLab, dfRDSL, strToxVar = "TOXGRG") {
 
   # Remove missing tox grade and send warning
-  if( any(dfLab$TOXGRG != "") ){
-    warning( paste(sum(dfLab$TOXGRG != ""), "lab records do not have toxicity grades and will be excluded" ) )
-    dfLab2 <- dfLab %>% filter( TOXGRG != "" )
+  if (any(dfLab$TOXGRG != "")) {
+    warning(paste(sum(dfLab$TOXGRG != ""), "lab records do not have toxicity grades and will be excluded"))
+    dfLab2 <- dfLab %>% filter(TOXGRG != "")
   }
 
   # Convert tox grading variable into numeric
@@ -55,73 +55,71 @@ FlagTELab <- function( dfLab , dfRDSL , strToxVar = "TOXGRG" ){
   dfLabAbnorm <- NULL
 
   # By-subject
-  for( p in vSubjectIndex ){
+  for (p in vSubjectIndex) {
     # Create tmeporary dataset
-    dfTmp <- data.frame( dfLab2[ dfLab2$SUBJID == p , ] )
-    strFDD <- dfRDSL$FirstDoseDate[ dfRDSL$SubjectID == p ]
+    dfTmp <- data.frame(dfLab2[dfLab2$SUBJID == p, ])
+    strFDD <- dfRDSL$FirstDoseDate[dfRDSL$SubjectID == p]
 
     # By observed labs
-    vLabIndex <- unique( dfTmp$LBTEST )
+    vLabIndex <- unique(dfTmp$LBTEST)
 
     # Check if any labs reported with tox grade - otherwise skip
-    if( length(vLabIndex) == 0 |
-        all( is.na( select(dfTmp , strToxVar) ) ) ) {
+    if (length(vLabIndex) == 0 |
+      all(is.na(select(dfTmp, strToxVar)))) {
       next
     }
 
     # Need to figure out the period of each lab abnormality reported
-    for( m in vLabIndex){
+    for (m in vLabIndex) {
+      dfTest <- dfTmp[dfTmp$LBTEST == m, ]
+      dfTest <- dfTest[order(dfTest$LBDTM, decreasing = FALSE), ]
+      dfTest <- dfTest[!is.na(dfTest[, strToxVar]), ]
 
-      dfTest <- dfTmp[ dfTmp$LBTEST == m , ]
-      dfTest <- dfTest[ order(dfTest$LBDTM, decreasing=FALSE) , ]
-      dfTest <- dfTest[ !is.na( dfTest[,strToxVar]) , ]
+      if (nrow(dfTest) == 0) next
 
-      if( nrow(dfTest) == 0 ) next
+      if (is.na(strFDD)) next ### do not include missing FDD
 
-      if( is.na(strFDD) ) next ### do not include missing FDD
-
-      if( sum(dfTest$LBDTM <= strFDD) == 0){ # If no baseline measurements then put NA for baseline
+      if (sum(dfTest$LBDTM <= strFDD) == 0) { # If no baseline measurements then put NA for baseline
         nToxBL <- NA
       } else {
-        nToxBL <- max( dfTest[ dfTest$LBDTM <= strFDD , strToxVar ] )
+        nToxBL <- max(dfTest[dfTest$LBDTM <= strFDD, strToxVar])
       }
 
-      if( sum(dfTest$LBDTM > strFDD) == 0){ # If no post-baseline measurements then put NA for postBL
+      if (sum(dfTest$LBDTM > strFDD) == 0) { # If no post-baseline measurements then put NA for postBL
         nToxPostBL <- NA
-        vMaxToxDate <- dfTest[ tail(which(dfTest[,strToxVar] ==
-                                            nToxBL ),1) , ]
+        vMaxToxDate <- dfTest[tail(which(dfTest[, strToxVar] ==
+          nToxBL), 1), ]
       } else {
-        nToxPostBL <- max( dfTest[ dfTest$LBDTM > strFDD , strToxVar ] )
-        vMaxToxDate <- dfTest[ which(dfTest[,strToxVar] ==
-                                       nToxPostBL )[1] , ] ## First date with max value
+        nToxPostBL <- max(dfTest[dfTest$LBDTM > strFDD, strToxVar])
+        vMaxToxDate <- dfTest[which(dfTest[, strToxVar] ==
+          nToxPostBL)[1], ] ## First date with max value
       }
 
-      vMaxToxDate <- data.frame( vMaxToxDate ,
-                                 BLTOX = as.numeric(nToxBL) )
+      vMaxToxDate <- data.frame(vMaxToxDate,
+        BLTOX = as.numeric(nToxBL)
+      )
 
-      if( is.null(dfLabAbnorm) ) {
-
+      if (is.null(dfLabAbnorm)) {
         dfLabAbnorm <- vMaxToxDate
-
       } else {
-
-        dfLabAbnorm <- dfLabAbnorm %>% dplyr::bind_rows( vMaxToxDate )
-
+        dfLabAbnorm <- dfLabAbnorm %>% dplyr::bind_rows(vMaxToxDate)
       }
     }
   }
 
   dfLabAbnorm$TOXFLG <- 0
-  dfLabAbnorm$TOXFLG[ which(
-    (dfLabAbnorm[,strToxVar] > 0 & is.na(dfLabAbnorm$BLTOX)) |
-      (dfLabAbnorm[,strToxVar] > dfLabAbnorm$BLTOX) )] <- 1
-  dfLabAbnorm <- dfLabAbnorm[,c("SUBJID","ACCSNNUM","LBTEST","LBDTM","BLTOX","TOXFLG")]
+  dfLabAbnorm$TOXFLG[which(
+    (dfLabAbnorm[, strToxVar] > 0 & is.na(dfLabAbnorm$BLTOX)) |
+      (dfLabAbnorm[, strToxVar] > dfLabAbnorm$BLTOX)
+  )] <- 1
+  dfLabAbnorm <- dfLabAbnorm[, c("SUBJID", "ACCSNNUM", "LBTEST", "LBDTM", "BLTOX", "TOXFLG")]
 
-  dfLab <- dfLab %>% left_join( dfLabAbnorm, by = c("SUBJID" = "SUBJID",
-                                                    "ACCSNNUM" = "ACCSNNUM",
-                                                    "LBDTM" = "LBDTM",
-                                                    "LBTEST" = "LBTEST"))
+  dfLab <- dfLab %>% left_join(dfLabAbnorm, by = c(
+    "SUBJID" = "SUBJID",
+    "ACCSNNUM" = "ACCSNNUM",
+    "LBDTM" = "LBDTM",
+    "LBTEST" = "LBTEST"
+  ))
 
-  return( dfLab )
-
+  return(dfLab)
 }

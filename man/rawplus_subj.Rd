@@ -5,7 +5,7 @@
 \alias{rawplus_subj}
 \title{rawplus_subj}
 \format{
-a data frame with 2387 rows and 16 columns.
+a data frame with 1297 rows and 18 columns.
 }
 \usage{
 rawplus_subj

@@ -7,24 +7,24 @@
 #' @examples
 #'
 #' rawplus_ae <- map_rawplus_ae(clindata::raw_ae)
-
-map_rawplus_ae <- function(dfRawAE, ids){
-    rawplus_ae <- dfRawAE %>%
+#'
+map_rawplus_ae <- function(dfRawAE, ids) {
+  rawplus_ae <- dfRawAE %>%
     select(
-        SubjectID = SUBJID,
-        AE_SERIOUS = AESER
+      SubjectID = SUBJID,
+      AE_SERIOUS = AESER
     ) %>%
-    mutate(AE_TE_FLAG=sample(c(TRUE,FALSE),n(),replace=TRUE)) %>% # Random TE for now - TODO update
-    mutate(AE_GRADE = sample(1:4,n(),replace=TRUE)) %>% # Random Grade for now - TODO update
+    mutate(AE_TE_FLAG = sample(c(TRUE, FALSE), n(), replace = TRUE)) %>% # Random TE for now - TODO update
+    mutate(AE_GRADE = sample(1:4, n(), replace = TRUE)) %>% # Random Grade for now - TODO update
     filter(
-        SubjectID != ""
-        )
+      SubjectID != ""
+    )
 
-    if(!is.null(ids)){
-        rawplus_ae <- rawplus_ae%>%filter(SubjectID %in% ids)
-    }
+  if (!is.null(ids)) {
+    rawplus_ae <- rawplus_ae %>% filter(SubjectID %in% ids)
+  }
 
-    return(rawplus_ae)
+  return(rawplus_ae)
 }
 
 #' map_rawplus_pd
@@ -36,28 +36,28 @@ map_rawplus_ae <- function(dfRawAE, ids){
 #' @examples
 #'
 #' rawplus_pd <- map_rawplus_pd(clindata::raw_protdev)
-
-map_rawplus_pd <- function(dfRawPD, ids){
-    rawplus_pd <- dfRawPD %>%
+#'
+map_rawplus_pd <- function(dfRawPD, ids) {
+  rawplus_pd <- dfRawPD %>%
     mutate(PD_IMPORTANT_FLAG = case_when(
-        DEVIMP == 'y' ~ "Y",
-        DEVIMP == 'n' ~ "N",
-        TRUE ~ DEVIMP
+      DEVIMP == "y" ~ "Y",
+      DEVIMP == "n" ~ "N",
+      TRUE ~ DEVIMP
     )) %>%
     select(
-        SubjectID = SUBJID,
-        PD_CATEGORY = DEVTYPE,
-        PD_IMPORTANT_FLAG,
+      SubjectID = SUBJID,
+      PD_CATEGORY = DEVTYPE,
+      PD_IMPORTANT_FLAG,
     ) %>%
     filter(
-        SubjectID != ""
-        )
+      SubjectID != ""
+    )
 
-    if(!is.null(ids)){
-        rawplus_pd <- rawplus_pd%>%filter(SubjectID %in% ids)
-    }    
+  if (!is.null(ids)) {
+    rawplus_pd <- rawplus_pd %>% filter(SubjectID %in% ids)
+  }
 
-    return(rawplus_pd)
+  return(rawplus_pd)
 }
 
 #' map_rawplus_ie
@@ -69,24 +69,24 @@ map_rawplus_pd <- function(dfRawPD, ids){
 #' @examples
 #'
 #' rawplus_ie <- map_rawplus_ie(clindata::raw_ie_all)
-
-map_rawplus_ie <- function(dfRawIE, ids){
-    rawplus_ie <- dfRawIE %>%
+#'
+map_rawplus_ie <- function(dfRawIE, ids) {
+  rawplus_ie <- dfRawIE %>%
     select(
-        SubjectID = SUBJID,
-        IE_CATEGORY = IECAT_STD,
-        IE_VALUE = IEORRES,
-        IE_PROTOCOLVERSION = PROTVER_STD
+      SubjectID = SUBJID,
+      IE_CATEGORY = IECAT_STD,
+      IE_VALUE = IEORRES,
+      IE_PROTOCOLVERSION = PROTVER_STD
     ) %>%
     filter(
-        SubjectID != ""
-        )
-    
-    if(!is.null(ids)){
-        rawplus_ie <- rawplus_ie%>%filter(SubjectID %in% ids)
-    }    
+      SubjectID != ""
+    )
 
-    return(rawplus_ie)
+  if (!is.null(ids)) {
+    rawplus_ie <- rawplus_ie %>% filter(SubjectID %in% ids)
+  }
+
+  return(rawplus_ie)
 }
 
 #' map_rawplus_consent
@@ -98,26 +98,27 @@ map_rawplus_ie <- function(dfRawIE, ids){
 #' @examples
 #'
 #' rawplus_consent <- map_rawplus_consent(clindata::raw_ic_elig)
-
-map_rawplus_consent <- function(dfRawElig, ids){
-    rawplus_consent <- dfRawElig %>%
+#'
+map_rawplus_consent <- function(dfRawElig, ids) {
+  rawplus_consent <- dfRawElig %>%
     select(
-        SubjectID=SUBJID,
-        CONSENT_DATE = DSSTDAT_RAW) %>%
+      SubjectID = SUBJID,
+      CONSENT_DATE = DSSTDAT_RAW
+    ) %>%
     mutate(
-        CONSENT_TYPE = "MAINCONSENT",
-        CONSENT_VALUE = "Y",
-        CONSENT_DATE = as.Date(CONSENT_DATE, format = "%d %B %Y")
+      CONSENT_TYPE = "MAINCONSENT",
+      CONSENT_VALUE = "Y",
+      CONSENT_DATE = as.Date(CONSENT_DATE, format = "%d %B %Y")
     ) %>%
     filter(
-        SubjectID != ""
-        )
+      SubjectID != ""
+    )
 
-    if(!is.null(ids)){
-        rawplus_consent <- rawplus_consent%>%filter(SubjectID %in% ids)
-    }    
+  if (!is.null(ids)) {
+    rawplus_consent <- rawplus_consent %>% filter(SubjectID %in% ids)
+  }
 
-    return(rawplus_consent)
+  return(rawplus_consent)
 }
 
 # Ingest full lab dataset from branch origin/fix-15-labflagging:
@@ -136,44 +137,44 @@ map_rawplus_consent <- function(dfRawElig, ids){
 # ```
 
 map_rawplus_lb <- function(lb, dm = clindata::rawplus_subj) {
-    rawplus_lb <- lb %>%
-        filter(
-            SUBJID != '',
-            !is.na(SIRESN)
-        ) %>%
-        select(
-            INVID, SUBJID, # participant
-            VISIT, VISITNUM, LBDTN, # timing
-            LBTEST, LBTESTCD, # measure
-            LBSTRESN = SIRESN, LBSTNRLO = SINRLO, LBSTNRHI = SINRHI, LBTOXGR = TOXGR
-        ) %>%
-        arrange(INVID, SUBJID, VISITNUM, LBTEST)
+  rawplus_lb <- lb %>%
+    filter(
+      SUBJID != "",
+      !is.na(SIRESN)
+    ) %>%
+    select(
+      INVID, SUBJID, # participant
+      VISIT, VISITNUM, LBDTN, # timing
+      LBTEST, LBTESTCD, # measure
+      LBSTRESN = SIRESN, LBSTNRLO = SINRLO, LBSTNRHI = SINRHI, LBTOXGR = TOXGR
+    ) %>%
+    arrange(INVID, SUBJID, VISITNUM, LBTEST)
 
-    analysis_flag <- rawplus_lb %>%
-        left_join(
-            dm %>%
-                select(SiteID, SubjectID, FirstDoseDate, LastDoseDate),
-            c(
-              'INVID' = 'SiteID',
-              'SUBJID' = 'SubjectID'
-            )
-        ) %>%
-        mutate(
-            LBSTNRLO = as.numeric(LBSTNRLO),
-            LBSTNRHI = as.numeric(LBSTNRHI),
-            LB_TE_FLAG = FirstDoseDate <= LBDTN & LBDTN <= LastDoseDate,
-            LB_GRADE = case_when(
-            LBTOXGR != '' ~ as.numeric(LBTOXGR),
-            LBSTRESN < LBSTNRLO | LBSTNRHI < LBSTRESN ~ 1,
-            LBSTNRLO <= LBSTRESN & LBSTRESN <= LBSTNRHI ~ 0
-            )
-        ) %>%
-        select(-LBTOXGR, -FirstDoseDate, -LastDoseDate) %>%
-        rename(
-            SiteID = INVID,
-            SubjectID = SUBJID
-        )
+  analysis_flag <- rawplus_lb %>%
+    left_join(
+      dm %>%
+        select(SiteID, SubjectID, FirstDoseDate, LastDoseDate),
+      c(
+        "INVID" = "SiteID",
+        "SUBJID" = "SubjectID"
+      )
+    ) %>%
+    mutate(
+      LBSTNRLO = as.numeric(LBSTNRLO),
+      LBSTNRHI = as.numeric(LBSTNRHI),
+      LB_TE_FLAG = FirstDoseDate <= LBDTN & LBDTN <= LastDoseDate,
+      LB_GRADE = case_when(
+        LBTOXGR != "" ~ as.numeric(LBTOXGR),
+        LBSTRESN < LBSTNRLO | LBSTNRHI < LBSTRESN ~ 1,
+        LBSTNRLO <= LBSTRESN & LBSTRESN <= LBSTNRHI ~ 0
+      )
+    ) %>%
+    select(-LBTOXGR, -FirstDoseDate, -LastDoseDate) %>%
+    rename(
+      SiteID = INVID,
+      SubjectID = SUBJID
+    )
 
-    analysis_flag
-    #save(analysis_flag, file = 'data/rawplus_lb.rda')
+  analysis_flag
+  # save(analysis_flag, file = 'data/rawplus_lb.rda')
 }

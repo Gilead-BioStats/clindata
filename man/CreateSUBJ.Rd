@@ -97,11 +97,13 @@ The following columns are optional
 
 \examples{
 
-rawplus_SUBJ <- CreateSUBJ(dfDm = clindata::raw_dm,
-                           dfIXRSrand = clindata::raw_iwrsrand,
-                           dfEx = clindata::raw_ex,
-                           dfVisit = clindata::raw_visdt,
-                           dfStud = clindata::raw_studcomp,
-                           dfSdrg = clindata::raw_sdrgcomp)
+rawplus_SUBJ <- CreateSUBJ(
+  dfDm = clindata::raw_dm,
+  dfIXRSrand = clindata::raw_iwrsrand,
+  dfEx = clindata::raw_ex,
+  dfVisit = clindata::raw_visdt,
+  dfStud = clindata::raw_studcomp,
+  dfSdrg = clindata::raw_sdrgcomp
+)
 
 }
