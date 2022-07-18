@@ -48,59 +48,60 @@ TreatmentExposure <- function(
     dfEx = NULL,
     dfSdrg = NULL,
     dtSnapshot = NULL
-){
+) {
 
-    # Stop if missing required variables
-    if( any(!is.null(dfSdrg)) & ! all(c("SUBJID","SDRGYN_STD") %in% names(dfSdrg)) ){
-        stop( "SUBJID, SDRG_STD columns are required in studcomp dataset" )
-    }
+  # Stop if missing required variables
+  if (any(!is.null(dfSdrg)) & !all(c("SUBJID", "SDRGYN_STD") %in% names(dfSdrg))) {
+    stop("SUBJID, SDRG_STD columns are required in studcomp dataset")
+  }
 
-    if( ! all(c("SUBJID","INVID","EXSTDAT","EXENDAT") %in% names(dfEx)) ){
-        stop( "SUBJID, INVID, EXSTDAT, EXENDAT columns are required in ex dataset" )
-    }
+  if (!all(c("SUBJID", "INVID", "EXSTDAT", "EXENDAT") %in% names(dfEx))) {
+    stop("SUBJID, INVID, EXSTDAT, EXENDAT columns are required in ex dataset")
+  }
 
-    # remove missing visits
-    dfEx <- dfEx %>%
-        filter( .data$SUBJID != "" ) %>%
-        filter( .data$INVID != "")
+  # remove missing visits
+  dfEx <- dfEx %>%
+    filter(.data$SUBJID != "") %>%
+    filter(.data$INVID != "")
 
-    # need to double check if any subjid has multiple INVIDs
-    if( anyDuplicated(dfEx %>% select(.data$SUBJID,.data$INVID) %>% distinct() ))
-        stop( "SUBJID has multiple INVID assignments in visdt")
+  # need to double check if any subjid has multiple INVIDs
+  if (anyDuplicated(dfEx %>% select(.data$SUBJID, .data$INVID) %>% distinct())) {
+    stop("SUBJID has multiple INVID assignments in visdt")
+  }
 
-    # Stop if snapshot date is not a date or NULL
-    if( !is.null(dtSnapshot) & !lubridate::is.Date(dtSnapshot) )
-        stop("dtSnapshot must be a date or NULL")
+  # Stop if snapshot date is not a date or NULL
+  if (!is.null(dtSnapshot) & !lubridate::is.Date(dtSnapshot)) {
+    stop("dtSnapshot must be a date or NULL")
+  }
 
-    # Set snapshot date to be today if NULL
-    if( is.null(dtSnapshot) ) dtSnapshot <- Sys.Date()
+  # Set snapshot date to be today if NULL
+  if (is.null(dtSnapshot)) dtSnapshot <- Sys.Date()
 
-    # Create a vector of IDs for those who are still on-going in study
-    if(!is.null(dfSdrg)){
-        completedIDs <- dfSdrg %>%
-            filter(.data$SDRGYN_STD %in% c("Y","N") ) %>%
-            pull(.data$SUBJID) %>%
-            unique()
-    } else {
-        completedIDs<-c()
-    }
+  # Create a vector of IDs for those who are still on-going in study
+  if (!is.null(dfSdrg)) {
+    completedIDs <- dfSdrg %>%
+      filter(.data$SDRGYN_STD %in% c("Y", "N")) %>%
+      pull(.data$SUBJID) %>%
+      unique()
+  } else {
+    completedIDs <- c()
+  }
 
-    # calculate maximum treatment date
-    dfExRange <- dfEx %>%
-        select( .data$SUBJID, .data$INVID, .data$EXSTDAT, .data$EXENDAT ) %>%
-        group_by( .data$SUBJID, .data$INVID ) %>%
-        summarise(
-            FirstDoseDate = min( .data$EXSTDAT, .data$EXENDAT , na.rm=T),
-            LastDoseDate = if_else(
-                first(.data$SUBJID) %in% completedIDs,
-                as.Date(max( .data$EXSTDAT, .data$EXENDAT , na.rm=T)),
-                as.Date(dtSnapshot)
-            )
-        ) %>%
-        mutate( TimeOnTreatment = as.numeric(difftime(.data$LastDoseDate, .data$FirstDoseDate, units="days" ) + 1)) %>%
-        rename( SubjectID=.data$SUBJID, SiteID=.data$INVID) %>%
-        ungroup()
+  # calculate maximum treatment date
+  dfExRange <- dfEx %>%
+    select(.data$SUBJID, .data$INVID, .data$EXSTDAT, .data$EXENDAT) %>%
+    group_by(.data$SUBJID, .data$INVID) %>%
+    summarise(
+      FirstDoseDate = min(.data$EXSTDAT, .data$EXENDAT, na.rm = T),
+      LastDoseDate = if_else(
+        first(.data$SUBJID) %in% completedIDs,
+        as.Date(max(.data$EXSTDAT, .data$EXENDAT, na.rm = T)),
+        as.Date(dtSnapshot)
+      )
+    ) %>%
+    mutate(TimeOnTreatment = as.numeric(difftime(.data$LastDoseDate, .data$FirstDoseDate, units = "days") + 1)) %>%
+    rename(SubjectID = .data$SUBJID, SiteID = .data$INVID) %>%
+    ungroup()
 
-    return ( dfExRange )
-
+  return(dfExRange)
 }
