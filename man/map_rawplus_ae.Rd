@@ -15,4 +15,5 @@ mapping to create rawplus_ae from raw
 \examples{
 
 rawplus_ae <- map_rawplus_ae(clindata::raw_ae)
+
 }

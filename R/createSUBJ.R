@@ -66,12 +66,14 @@
 #'
 #' @examples
 #'
-#' rawplus_SUBJ <- CreateSUBJ(dfDm = clindata::raw_dm,
-#'                            dfIXRSrand = clindata::raw_iwrsrand,
-#'                            dfEx = clindata::raw_ex,
-#'                            dfVisit = clindata::raw_visdt,
-#'                            dfStud = clindata::raw_studcomp,
-#'                            dfSdrg = clindata::raw_sdrgcomp)
+#' rawplus_SUBJ <- CreateSUBJ(
+#'   dfDm = clindata::raw_dm,
+#'   dfIXRSrand = clindata::raw_iwrsrand,
+#'   dfEx = clindata::raw_ex,
+#'   dfVisit = clindata::raw_visdt,
+#'   dfStud = clindata::raw_studcomp,
+#'   dfSdrg = clindata::raw_sdrgcomp
+#' )
 #'
 #' @export
 #'
@@ -84,7 +86,7 @@ CreateSUBJ <- function(
   dfEx = NULL,
   dfSdrg = NULL,
   dtSnapshot = NULL
-){
+) {
 
   ## Create Study Time Info
   dfToS <- TimeOnStudy(dfVisit = dfVisit, dfStud = dfStud, dtSnapshot = dtSnapshot)
@@ -93,60 +95,60 @@ CreateSUBJ <- function(
   dfTrtEx <- TreatmentExposure(dfEx = dfEx, dfSdrg = dfSdrg, dtSnapshot = dtSnapshot)
 
   ## Create Randomization Info
-  dfRand <- dfIXRSrand %>% select( .data$SUBJID, .data$INVID, .data$RGMNDTC ) %>%
-    mutate( RGMNDTC = lubridate::dmy(.data$RGMNDTC) ) %>%
-    rename( SubjectID = .data$SUBJID, SiteID = .data$INVID , RandDate = .data$RGMNDTC)
+  dfRand <- dfIXRSrand %>%
+    select(.data$SUBJID, .data$INVID, .data$RGMNDTC) %>%
+    mutate(RGMNDTC = lubridate::dmy(.data$RGMNDTC)) %>%
+    rename(SubjectID = .data$SUBJID, SiteID = .data$INVID, RandDate = .data$RGMNDTC)
 
   ## Source SUBJID SCRNID INVID
-  dfSubid <- dfDm %>% select( .data$SUBJID, .data$SCRNID, .data$INVID ) %>%
-    mutate( ScreenFlag = if_else(.data$SCRNID != "", "Y", "N") ) %>%
-    rename( SubjectID = .data$SUBJID, SiteID = .data$INVID , ScreenID = .data$SCRNID)
+  dfSubid <- dfDm %>%
+    select(.data$SUBJID, .data$SCRNID, .data$INVID, .data$PROJECT) %>%
+    mutate(ScreenFlag = if_else(.data$SCRNID != "", "Y", "N")) %>%
+    rename(SubjectID = .data$SUBJID, SiteID = .data$INVID, ScreenID = .data$SCRNID, StudyID = .data$PROJECT)
 
   ## Create study d/c reason column
-  dfStudStatus <- dfStud %>% select( .data$SUBJID, .data$INVID, .data$COMPYN_STD, .data$COMPREAS )%>%
-    rename( SubjectID = .data$SUBJID, SiteID = .data$INVID)
+  dfStudStatus <- dfStud %>%
+    select(.data$SUBJID, .data$INVID, .data$COMPYN_STD, .data$COMPREAS) %>%
+    rename(SubjectID = .data$SUBJID, SiteID = .data$INVID)
 
   ## Create treatment d/c reason column
-  dfTrtStatus <- dfSdrg %>% select( .data$SUBJID, .data$INVID, .data$SDRGYN_STD, .data$SDRGREAS )  %>%
-    rename( SubjectID = .data$SUBJID, SiteID = .data$INVID)
+  dfTrtStatus <- dfSdrg %>%
+    select(.data$SUBJID, .data$INVID, .data$SDRGYN_STD, .data$SDRGREAS) %>%
+    rename(SubjectID = .data$SUBJID, SiteID = .data$INVID)
 
   ## Combine
-  rawplus_RDSL <- dfSubid %>% left_join( dfRand , by = c("SubjectID"="SubjectID", "SiteID"="SiteID")) %>%
+  rawplus_RDSL <- dfSubid %>%
+    left_join(dfRand, by = c("SubjectID" = "SubjectID", "SiteID" = "SiteID")) %>%
     ## Create Randomization Flag
-    mutate( RandFlag = if_else(is.na(.data$RandDate), "N", "Y" ) ) %>%
-
-    left_join( dfToS , by = c("SubjectID"="SubjectID", "SiteID"="SiteID")) %>%
-    left_join( dfTrtEx , by = c("SubjectID"="SubjectID", "SiteID"="SiteID")) %>%
-    left_join( dfStudStatus,by = c("SubjectID"="SubjectID", "SiteID"="SiteID")) %>%
-    left_join( dfTrtStatus,by = c("SubjectID"="SubjectID", "SiteID"="SiteID")) %>%
-
+    mutate(RandFlag = if_else(is.na(.data$RandDate), "N", "Y")) %>%
+    left_join(dfToS, by = c("SubjectID" = "SubjectID", "SiteID" = "SiteID")) %>%
+    left_join(dfTrtEx, by = c("SubjectID" = "SubjectID", "SiteID" = "SiteID")) %>%
+    left_join(dfStudStatus, by = c("SubjectID" = "SubjectID", "SiteID" = "SiteID")) %>%
+    left_join(dfTrtStatus, by = c("SubjectID" = "SubjectID", "SiteID" = "SiteID")) %>%
     ## Create treatment status
-    mutate(SDRGYN_STD = replace( .data$SDRGYN_STD, is.na(.data$SDRGYN_STD) & !is.na(.data$FirstDoseDate), "O")) %>%
-
+    mutate(SDRGYN_STD = replace(.data$SDRGYN_STD, is.na(.data$SDRGYN_STD) & !is.na(.data$FirstDoseDate), "O")) %>%
     ## Create study status
-    mutate(COMPYN_STD = replace( .data$COMPYN_STD, is.na(.data$COMPYN_STD) & .data$RandFlag == "Y", "O")) %>%
-
-    rename( TrtCompletion = .data$SDRGYN_STD ,
-            StudCompletion = .data$COMPYN_STD ,
-            TrtDCReason = .data$SDRGREAS ,
-            StudDCReason = .data$COMPREAS ) %>%
-
-    arrange( desc(.data$SubjectID) )
+    mutate(COMPYN_STD = replace(.data$COMPYN_STD, is.na(.data$COMPYN_STD) & .data$RandFlag == "Y", "O")) %>%
+    rename(
+      TrtCompletion = .data$SDRGYN_STD,
+      StudCompletion = .data$COMPYN_STD,
+      TrtDCReason = .data$SDRGREAS,
+      StudDCReason = .data$COMPREAS
+    ) %>%
+    arrange(desc(.data$SubjectID))
 
   ### Note: can we create a catch_all for subjects that fall out from left_join?
-  missToS <- anti_join( dfToS, rawplus_RDSL, by="SubjectID")
-  missTrtEx <- anti_join( dfTrtEx, rawplus_RDSL, by="SubjectID")
-  missRand <- anti_join( dfRand, rawplus_RDSL, by="SubjectID")
-  #missStud <- anti_join( dfStudStatus, dfRDSL, by="SubjectID")
-  #missSdrg <- anti_join( dfTrtStatus, dfRDSL, by="SubjectID")
+  missToS <- anti_join(dfToS, rawplus_RDSL, by = "SubjectID")
+  missTrtEx <- anti_join(dfTrtEx, rawplus_RDSL, by = "SubjectID")
+  missRand <- anti_join(dfRand, rawplus_RDSL, by = "SubjectID")
+  # missStud <- anti_join( dfStudStatus, dfRDSL, by="SubjectID")
+  # missSdrg <- anti_join( dfTrtStatus, dfRDSL, by="SubjectID")
 
-  if( nrow(missToS) > 0 ) warning("Not all subjects matched for Time on Study from dfVisit dataset")
-  if( nrow(missTrtEx) > 0 ) warning("Not all subjects matched for Treatment Exposure from dfEx dataset")
-  if( nrow(missRand) > 0 ) warning("Not all subjects matched from dfIXRSrand dataset")
-  #if( nrow(missStud) > 0 ) warning("Not all subjects matched for Study Completion from dfStud dataset")
-  #if( nrow(missSdrg) > 0 ) warning("Not all subjects matched for Treatment Completion from dfSdrg dataset")
+  if (nrow(missToS) > 0) warning("Not all subjects matched for Time on Study from dfVisit dataset")
+  if (nrow(missTrtEx) > 0) warning("Not all subjects matched for Treatment Exposure from dfEx dataset")
+  if (nrow(missRand) > 0) warning("Not all subjects matched from dfIXRSrand dataset")
+  # if( nrow(missStud) > 0 ) warning("Not all subjects matched for Study Completion from dfStud dataset")
+  # if( nrow(missSdrg) > 0 ) warning("Not all subjects matched for Treatment Completion from dfSdrg dataset")
 
-  return( rawplus_RDSL )
+  return(rawplus_RDSL)
 }
-
-

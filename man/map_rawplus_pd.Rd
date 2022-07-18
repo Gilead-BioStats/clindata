@@ -15,4 +15,5 @@ mapping to create rawplus_pd from raw
 \examples{
 
 rawplus_pd <- map_rawplus_pd(clindata::raw_protdev)
+
 }

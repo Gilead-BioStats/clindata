@@ -17,7 +17,7 @@ library(dplyr)
 
 lb <- rawplus_covlab %>%
   filter(
-    SUBJID != '',
+    SUBJID != "",
     !is.na(SIRESN)
   ) %>%
   select(
@@ -32,14 +32,14 @@ analysis_flag <- rawplus_lb %>%
   left_join(
     clindata::rawplus_subj %>%
       select(SiteID, SubjectID, FirstDoseDate, LastDoseDate),
-    c('INVID' = 'SiteID', 'SUBJID' = 'SubjectID')
+    c("INVID" = "SiteID", "SUBJID" = "SubjectID")
   ) %>%
   mutate(
     LBSTNRLO = as.numeric(LBSTNRLO),
     LBSTNRHI = as.numeric(LBSTNRHI),
     LB_TE_FLAG = FirstDoseDate <= LBDTN & LBDTN <= LastDoseDate,
     LB_GRADE = case_when(
-      LBTOXGR != '' ~ as.numeric(LBTOXGR),
+      LBTOXGR != "" ~ as.numeric(LBTOXGR),
       LBSTRESN < LBSTNRLO | LBSTNRHI < LBSTRESN ~ 1,
       LBSTNRLO <= LBSTRESN & LBSTRESN <= LBSTNRHI ~ 0
     )

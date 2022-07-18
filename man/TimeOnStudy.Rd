@@ -53,6 +53,6 @@ The following columns are optional
 
 \examples{
 
-TimeOnStudy(dfVisit = clindata::raw_visdt,dfStud = clindata::raw_studcomp)
+TimeOnStudy(dfVisit = clindata::raw_visdt, dfStud = clindata::raw_studcomp)
 
 }
