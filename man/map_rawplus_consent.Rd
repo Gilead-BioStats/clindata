@@ -15,4 +15,5 @@ mapping to create map_rawplus_consent from raw
 \examples{
 
 rawplus_consent <- map_rawplus_consent(clindata::raw_ic_elig)
+
 }
