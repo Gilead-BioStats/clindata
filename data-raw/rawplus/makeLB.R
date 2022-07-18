@@ -28,7 +28,7 @@ lb <- rawplus_covlab %>%
   ) %>%
   arrange(INVID, SUBJID, VISITNUM, LBTEST)
 
-analysis_flag <- rawplus_lb %>%
+analysis_flag <- lb %>%
   left_join(
     clindata::rawplus_subj %>%
       select(SiteID, SubjectID, FirstDoseDate, LastDoseDate),
