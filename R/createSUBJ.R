@@ -79,13 +79,13 @@
 #'
 
 CreateSUBJ <- function(
-    dfDm = NULL,
-    dfIXRSrand = NULL,
-    dfVisit = NULL,
-    dfStud = NULL,
-    dfEx = NULL,
-    dfSdrg = NULL,
-    dtSnapshot = NULL
+  dfDm = NULL,
+  dfIXRSrand = NULL,
+  dfVisit = NULL,
+  dfStud = NULL,
+  dfEx = NULL,
+  dfSdrg = NULL,
+  dtSnapshot = NULL
 ) {
 
   ## Create Study Time Info

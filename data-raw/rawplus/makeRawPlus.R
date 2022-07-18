@@ -1,21 +1,44 @@
 here::i_am("data-raw/rawplus/makeRawPlus.R")
 library(here)
 library(yaml)
+library(dplyr)
 
-# Make subj
-rawplus_subj_s <- CreateSUBJ(
-  dfDm = clindata::raw_dm,
-  dfIXRSrand = clindata::raw_iwrsrand,
-  dfEx = clindata::raw_ex,
-  dfVisit = clindata::raw_visdt,
-  dfStud = clindata::raw_studcomp,
-  dfSdrg = clindata::raw_sdrgcomp,
-  dtSnapshot = as.Date("2017-12-27")
+set.seed(1)
+regions <- c(
+  "China",
+  "India",
+  "United States",
+  "Indonesia",
+  "Pakistan",
+  "Brazil",
+  "Nigeria",
+  "Bangladesh",
+  "Mexico",
+  "Japan"
 )
 
+# Make subj
+rawplus_subj_s <- clindata::raw_dm %>%
+  CreateSUBJ(
+    dfIXRSrand = clindata::raw_iwrsrand,
+    dfEx = clindata::raw_ex,
+    dfVisit = clindata::raw_visdt,
+    dfStud = clindata::raw_studcomp,
+    dfSdrg = clindata::raw_sdrgcomp,
+    dtSnapshot = as.Date("2017-12-27")
+  ) %>%
+  group_by(SiteID) %>%
+  mutate(
+    RegionID = sample(regions, 1, replace = TRUE)
+  ) %>%
+  ungroup() %>%
+  arrange(SiteID)
+
 rawplus_subj <- rawplus_subj_s %>%
-  filter(RandFlag == "Y") %>%
-  filter(!is.na(TimeOnTreatment))
+  filter(
+    RandFlag == "Y",
+    !is.na(TimeOnTreatment)
+  )
 
 usethis::use_data(rawplus_subj_s, overwrite = TRUE)
 usethis::use_data(rawplus_subj, overwrite = TRUE)

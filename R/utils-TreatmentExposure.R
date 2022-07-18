@@ -45,9 +45,9 @@
 #' @export
 
 TreatmentExposure <- function(
-    dfEx = NULL,
-    dfSdrg = NULL,
-    dtSnapshot = NULL
+  dfEx = NULL,
+  dfSdrg = NULL,
+  dtSnapshot = NULL
 ) {
 
   # Stop if missing required variables
