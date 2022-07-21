@@ -31,21 +31,42 @@ map_rawplus_ae <- function(dfRawAE, ids) {
 #'
 #' mapping to create rawplus_pd from raw
 #'
-#' @param  dfRawPD data frame of raw AE data
+#' @param dfRawPD `data.frame` data frame of raw AE data
+#' @param strIds `character` vector of IDs on which to subset
+#' @param lCodeList `list` Named list of PD categories where `name` corresponds to the higher-level
+#'   term and the value is a vector of lower-level terms
 #'
 #' @examples
 #'
 #' rawplus_pd <- map_rawplus_pd(clindata::raw_protdev)
 #'
-map_rawplus_pd <- function(dfRawPD, ids) {
+map_rawplus_pd <- function(
+  dfRawPD,
+  strIds,
+  lCodeList = yaml::read_yaml(system.file('codelists', 'dvdecod.yaml', package = 'clindata'))
+) {
+  dfCodeList <- lCodeList %>%
+    utils::stack() %>%
+    rlang::set_names('DEVTYPE', 'DVDECOD')
+
   rawplus_pd <- dfRawPD %>%
-    mutate(PD_IMPORTANT_FLAG = case_when(
-      DEVIMP == "y" ~ "Y",
-      DEVIMP == "n" ~ "N",
-      TRUE ~ DEVIMP
-    )) %>%
+    dplyr::left_join(
+      dfCodeList,
+      'DEVTYPE'
+    ) %>%
+    mutate(
+      DVDECOD = dplyr::coalesce(
+        DVDECOD, 'OTHER'
+      ),
+      PD_IMPORTANT_FLAG = case_when(
+        DEVIMP == "y" ~ "Y",
+        DEVIMP == "n" ~ "N",
+        TRUE ~ DEVIMP
+      )
+    ) %>%
     select(
       SubjectID = SUBJID,
+      DVDECOD,
       PD_CATEGORY = DEVTYPE,
       PD_IMPORTANT_FLAG,
     ) %>%
@@ -53,8 +74,8 @@ map_rawplus_pd <- function(dfRawPD, ids) {
       SubjectID != ""
     )
 
-  if (!is.null(ids)) {
-    rawplus_pd <- rawplus_pd %>% filter(SubjectID %in% ids)
+  if (!is.null(strIds)) {
+    rawplus_pd <- rawplus_pd %>% filter(SubjectID %in% strIds)
   }
 
   return(rawplus_pd)
