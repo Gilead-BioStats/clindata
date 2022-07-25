@@ -11,6 +11,6 @@ a data frame with 1297 rows and 18 columns.
 rawplus_subj
 }
 \description{
-raw data subject level (rdsl) data using Raw Plus format
+raw data subject level (rdsl) data using Raw+ format
 }
 \keyword{datasets}

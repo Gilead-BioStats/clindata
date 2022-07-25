@@ -12,10 +12,13 @@ map_rawplus_ae <- function(dfRawAE, ids) {
   rawplus_ae <- dfRawAE %>%
     select(
       SubjectID = SUBJID,
-      AE_SERIOUS = AESER
+      AE_SERIOUS = AESER,
+      AEBODSYS = MDRSOC
     ) %>%
-    mutate(AE_TE_FLAG = sample(c(TRUE, FALSE), n(), replace = TRUE)) %>% # Random TE for now - TODO update
-    mutate(AE_GRADE = sample(1:4, n(), replace = TRUE)) %>% # Random Grade for now - TODO update
+    mutate(
+      AE_TE_FLAG = sample(c(TRUE, FALSE), n(), replace = TRUE, c(.75,.25)), # Random TE for now - TODO update
+      AE_GRADE = sample(1:4, n(), replace = TRUE, c(.6,.25,.125,.025)) # Random Grade for now - TODO update
+    ) %>%
     filter(
       SubjectID != ""
     )
