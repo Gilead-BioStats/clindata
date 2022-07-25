@@ -15,7 +15,7 @@
 
 #' @title rawplus_lb
 #' @description Labs data in Raw+ format
-#' @format a data frame with 1264063 rows and 13 columns.
+#' @format a data frame with 1132070 rows and 14 columns.
 "rawplus_lb"
 
 #' @title rawplus_pd
