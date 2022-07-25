@@ -18,12 +18,13 @@ library(dplyr)
 lb <- rawplus_covlab %>%
   filter(
     SUBJID != "",
+    BATTRNAM %in% c('URINE CHEMISTRY', 'HEMATOLOGY&DIFFERENTIAL PANEL', 'CHEMISTRY PANEL'),
     !is.na(SIRESN)
   ) %>%
   select(
     INVID, SUBJID, # participant
     VISIT, VISITNUM, LBDTN, # timing
-    LBTEST, LBTESTCD, # measure
+    LBCAT = BATTRNAM, LBTEST, LBTESTCD, # measure
     LBSTRESN = SIRESN, LBSTNRLO = SINRLO, LBSTNRHI = SINRHI, LBTOXGR = TOXGR
   ) %>%
   arrange(INVID, SUBJID, VISITNUM, LBTEST)

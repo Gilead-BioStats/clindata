@@ -4,10 +4,20 @@
 \alias{map_rawplus_pd}
 \title{map_rawplus_pd}
 \usage{
-map_rawplus_pd(dfRawPD, ids)
+map_rawplus_pd(
+  dfRawPD,
+  strIds,
+  lCodeList = yaml::read_yaml(system.file("codelists", "dvdecod.yaml", package =
+    "clindata"))
+)
 }
 \arguments{
-\item{dfRawPD}{data frame of raw AE data}
+\item{dfRawPD}{\code{data.frame} data frame of raw AE data}
+
+\item{strIds}{\code{character} vector of IDs on which to subset}
+
+\item{lCodeList}{\code{list} Named list of PD categories where \code{name} corresponds to the higher-level
+term and the value is a vector of lower-level terms}
 }
 \description{
 mapping to create rawplus_pd from raw
