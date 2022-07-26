@@ -5,7 +5,7 @@
 \alias{rawplus_lb}
 \title{rawplus_lb}
 \format{
-a data frame with 1663122 rows and 12 columns.
+a data frame with 1132070 rows and 14 columns.
 }
 \usage{
 rawplus_lb
