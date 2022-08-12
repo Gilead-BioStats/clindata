@@ -1,0 +1,23 @@
+library(magrittr)
+library(purrr)
+library(stringr)
+library(usethis)
+library(yaml)
+
+system.file('data-raw', package = 'clindata') %>% # path to ./data-raw
+  list.files(
+    '\\.parquet$', # retrieve .parquet files in ./data-raw
+    full.names = TRUE
+  ) %>%
+  purrr::walk(function(file) {
+    domain <- stringr::word(file, -2, sep = '/|\\.') # name of data domain
+    data <- arrow::read_parquet(file) # ingest .parquet file
+    assign(domain, data) # define local variable
+    do.call(
+      'use_data',
+      list(
+        as.name(domain),
+        overwrite = TRUE
+      )
+    )
+  })
