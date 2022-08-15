@@ -4,7 +4,7 @@ library(stringr)
 library(usethis)
 library(yaml)
 
-system.file('data-raw', package = 'clindata') %>% # path to ./data-raw
+system.file('data-raw', 'rawplus', package = 'clindata') %>% # path to ./data-raw
   list.files(
     '\\.parquet$', # retrieve .parquet files in ./data-raw
     full.names = TRUE
