@@ -6,8 +6,8 @@ library(jsonlite)
 library(glue)
 
 system.file('data-standards', 'ctms.yaml', package = 'clindata') %>%
-  yaml::read_yaml() %>% 
-  purrr::imap(function(description,domain){ 
+  yaml::read_yaml() %>%
+  purrr::imap(function(description,domain){
     ctms_domain <- glue::glue('ctms_{domain}')
 
     dimensions <- dim(
@@ -30,8 +30,8 @@ system.file('data-standards', 'ctms.yaml', package = 'clindata') %>%
         '\n"',
         ctms_domain,
         '"'
-      )   
+      )
     )
   })%>%
   paste(collapse = '\n\n') %>%
-  writeLines('./r/ctms.R')
+  writeLines('./R/ctms.R')
