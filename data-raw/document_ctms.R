@@ -9,6 +9,7 @@ system.file('data-standards', 'ctms.yaml', package = 'clindata') %>%
   yaml::read_yaml() %>%
   purrr::imap(function(description,domain){
     ctms_domain <- glue::glue('ctms_{domain}')
+    print(ctms_domain)
 
     dimensions <- dim(
       do.call(`::`, list('clindata', ctms_domain))

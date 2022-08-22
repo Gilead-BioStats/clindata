@@ -3,9 +3,8 @@ library(purrr)
 library(stringr)
 library(usethis)
 
-
-list.files(
-    './data-raw/ctms', 
+system.file('data-raw', 'ctms', package = 'clindata') %>% # path to ./data-raw
+  list.files(
     '\\.csv$', # retrieve .csv files in ./data-raw
     full.names = TRUE
   ) %>%
@@ -14,8 +13,8 @@ list.files(
       'ctms_',
       stringr::word(file, -2, sep = '/|\\.') # name of data domain
     )
+    print(domain)
 
-    
     data <-read.csv(file)
 
     assign(domain, data) # define local variable
