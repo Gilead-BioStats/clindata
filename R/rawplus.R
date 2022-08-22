@@ -431,7 +431,7 @@
 #'   \item{visitdat_yy_nsv}{[ double ] Visit Date_Year}
 #'   \item{visitdat_mm_nsv}{[ double ] Visit Date_Month}
 #'   \item{visitdat_dd_nsv}{[ double ] Visit Date_Day}
-#'   \item{peperf_std_nsv}{[ string ] Complete physical examination performed?_Coded Value}
+#'   \item{peperf_std_nsv}{[ string ] Complete physical examination performed? _Coded Value_}
 #'   \item{svvs_nsv}{[ double ] Vital Signs}
 #'   \item{svaecm_nsv}{[ double ] Concomitant Medications}
 #'   \item{svecg_nsv}{[ double ] ECG}
