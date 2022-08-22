@@ -1,11 +1,10 @@
 library(magrittr)
 library(purrr)
 library(stringr)
-
 library(usethis)
 
-system.file( package = 'clindata') %>% # path to ./data-raw
-  list.files(include.dirs=TRUE)
+list.files(
+    './data-raw/ctms', 
     '\\.csv$', # retrieve .csv files in ./data-raw
     full.names = TRUE
   ) %>% 
@@ -15,7 +14,7 @@ system.file( package = 'clindata') %>% # path to ./data-raw
       stringr::word(file, -2, sep = '/|\\.') # name of data domain
     )
     
-    data <-readcsv(file)
+    data <-read.csv(file)
     
     assign(domain, data) # define local variable
 
