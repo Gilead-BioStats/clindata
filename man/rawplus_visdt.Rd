@@ -45,7 +45,7 @@ a data frame with 29248 rows and 48 columns.
 \item{visitdat_yy_nsv}{\link{ double } Visit Date_Year}
 \item{visitdat_mm_nsv}{\link{ double } Visit Date_Month}
 \item{visitdat_dd_nsv}{\link{ double } Visit Date_Day}
-\item{peperf_std_nsv}{\link{ string } Complete physical examination performed?\emph{Coded Value}
+\item{peperf_std_nsv}{\link{ string } Complete physical examination performed? \emph{Coded Value}}
 \item{svvs_nsv}{\link{ double } Vital Signs}
 \item{svaecm_nsv}{\link{ double } Concomitant Medications}
 \item{svecg_nsv}{\link{ double } ECG}
@@ -54,7 +54,7 @@ a data frame with 29248 rows and 48 columns.
 \item{svpregtest_nsv}{\link{ double } Urine Pregnancy Test}
 \item{svsd_nsv}{\link{ double } Study Drug Adjustment or Dispensation}
 \item{svhcc_nsv}{\link{ double } HCC Surveillance}
-\item{svhcc_raw_nsv}{\link{ string } HCC Surveillance}(Character)}
+\item{svhcc_raw_nsv}{\link{ string } HCC Surveillance_(Character)}
 }
 }
 \source{

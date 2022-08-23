@@ -13,6 +13,7 @@ system.file('data-raw', 'ctms', package = 'clindata') %>% # path to ./data-raw
       'ctms_',
       stringr::word(file, -2, sep = '/|\\.') # name of data domain
     )
+    print(domain)
 
     data <-read.csv(file)
 

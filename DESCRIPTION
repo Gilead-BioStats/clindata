@@ -1,6 +1,6 @@
 Package: clindata
 Title: Synthetic Clinical Data for testing and development
-Version: 0.6.2
+Version: 0.7.1
 Authors@R: 
     person("Jeremy", "Wildfire", , "jwildfire@gildead.com", role = c("aut", "cre"))
 Description: Synthetic Clinical Data for testing and development. Raw form data to start, more data formats in future releases. 
