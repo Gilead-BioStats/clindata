@@ -130,7 +130,7 @@
 #'   \item{uveitis_nsv}{[ string ] Uveitis}
 #'   \item{ae_te}{[ string ] Treatment Emergent Event}
 #' }
-#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/ae.parquet
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/ae.parquet
 "rawplus_ae"
 
 #' @title rawplus_dm
@@ -184,7 +184,7 @@
 #'   \item{timeontreatment}{[ int ] Time on Treatment}
 #'   \item{timeonstudy}{[ int ] Time on Study}
 #' }
-#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/dm.parquet
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/dm.parquet
 "rawplus_dm"
 
 #' @title rawplus_ex
@@ -245,7 +245,7 @@
 #'   \item{exongo_std_nsv}{[ string ] Check if Ongoing_Coded Value}
 #'   \item{experm_nsv}{[ string ] if study drug was permanently withdrawn}
 #' }
-#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/ex.parquet
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/ex.parquet
 "rawplus_ex"
 
 #' @title rawplus_ixrsrand
@@ -271,8 +271,88 @@
 #'   \item{status}{[ string ]}
 #'   \item{rand_dt}{[ string ]}
 #' }
-#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/ixrsrand.parquet
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/ixrsrand.parquet
 "rawplus_ixrsrand"
+
+#' @title rawplus_lb
+#' @description Labs (lb) data in Raw+ format.
+#' @format a data frame with 2332541 rows and 72 columns.
+#' \describe{
+#'   \item{studyid}{[ string ] Study ID or Number}
+#'   \item{invid}{[ string ] Investigator ID or Number}
+#'   \item{scrnid}{[ string ] Screen ID or Number}
+#'   \item{subjid}{[ string ] Subject ID or Number}
+#'   \item{filcrdtm}{[ string ] File Creation Date and Time}
+#'   \item{trmtyp}{[ string ] Transmission Type}
+#'   \item{invnam}{[ string ] Investigator Name}
+#'   \item{sex}{[ string ] Subject Sex}
+#'   \item{brth_dt}{[ string ] Subject Date Of Birth}
+#'   \item{visnum}{[ float ] Visit ID or Number}
+#'   \item{visnam}{[ string ] Visit Name}
+#'   \item{visittyp}{[ string ] Visit Type}
+#'   \item{visitmod}{[ string ] Visit Type Modifier}
+#'   \item{lbnam}{[ string ] Central Laboratory Name}
+#'   \item{accsnnum}{[ string ] Accession ID or Number}
+#'   \item{lactdtm}{[ string ] Last Active Date and Time}
+#'   \item{recextyp}{[ string ] Record Extension Type}
+#'   \item{lb_dt}{[ string ] Actual Collection Date and Time}
+#'   \item{ptmel}{[ string ] Planned Collection Time Elapsed}
+#'   \item{ptmeltx}{[ string ] Planned Collection Time Elapsed Desc}
+#'   \item{colendtm}{[ string ] Collection End Date and Time}
+#'   \item{rcvdtm}{[ string ] Received Date and Time}
+#'   \item{speccnd}{[ string ] Specimen Condition}
+#'   \item{speccom}{[ string ] Lab - Specimen Comments}
+#'   \item{specicom}{[ string ] Investigator - Specimen Comments}
+#'   \item{specmnum}{[ string ] Specimen Material ID}
+#'   \item{specnam}{[ string ] Specimen Material Name}
+#'   \item{ageatcol}{[ float ] Subject Age at Collection}
+#'   \item{ageu}{[ string ] Subject Age Units}
+#'   \item{faststat}{[ string ] Fasting Status}
+#'   \item{battrid}{[ string ] Battery ID}
+#'   \item{battrnam}{[ string ] Battery Name}
+#'   \item{lbtstcd}{[ string ] Test ID}
+#'   \item{lbtstnam}{[ string ] Test Name ID}
+#'   \item{lbloinc}{[ string ] LOINC Code}
+#'   \item{loinccd}{[ string ] LOINC Code List ID}
+#'   \item{tststat}{[ string ] Test Status}
+#'   \item{tstcom}{[ string ] Test Level Comments}
+#'   \item{tsttyp}{[ string ] Test Type}
+#'   \item{rptresc}{[ string ] Reported Text Result}
+#'   \item{rptresn}{[ float ] Reported Numeric Result}
+#'   \item{rptnrlo}{[ string ] Reported Reference Range Low}
+#'   \item{rptnrhi}{[ string ] Reported Reference Range High}
+#'   \item{rptu}{[ string ] Reported Units}
+#'   \item{cnvresc}{[ string ] Conventional Text Result}
+#'   \item{cnvresn}{[ float ] Conventional Numeric Result}
+#'   \item{cnvnrhi}{[ string ] Conventional Reference Range High}
+#'   \item{cnvu}{[ string ] Conventional Units}
+#'   \item{siresc}{[ string ] SI Text Result}
+#'   \item{siresn}{[ float ] SI Numeric Result}
+#'   \item{sinrlo}{[ string ] SI Reference Range Low}
+#'   \item{sinrhi}{[ string ] SI Reference Range High}
+#'   \item{siu}{[ string ] SI Units}
+#'   \item{rptrtyp}{[ string ] Reported Result Type}
+#'   \item{rptrstat}{[ string ] Reported Result Status}
+#'   \item{alrtfl}{[ string ] Alert Flag}
+#'   \item{deltfl}{[ string ] Delta Flag}
+#'   \item{toxgr}{[ string ] Toxicity Grade}
+#'   \item{exclfl}{[ string ] Exclusion Flag}
+#'   \item{blndfl}{[ string ] Blinding Flag}
+#'   \item{rptdtm}{[ string ] Reported Date and Time}
+#'   \item{trnstyp}{[ string ] Transaction Type}
+#'   \item{subjinit_nsv}{[ string ] SUBJECT INITIALS}
+#'   \item{brthdtn_nsv}{[ string ] SUBJECT DATE OF BIRTH NUMERIC}
+#'   \item{lbdtn_nsv}{[ string ] ACTUAL COLLECTION DATE NUMERIC}
+#'   \item{cnvnrlo_nsv}{[ string ] CONVENTIONAL REFERENCE RANGE LOW}
+#'   \item{specmcd_nsv}{[ string ] SPECIMEN MATERIAL CODE LIST ID}
+#'   \item{toxgrdsc_nsv}{[ string ] Toxicity Grade Description}
+#'   \item{toxgrver_nsv}{[ string ] Toxicity Grade Scale Version}
+#'   \item{toxgrg_nsv}{[ string ] Toxicity Grade}
+#'   \item{toxgrnam_nsv}{[ string ] Toxicity Grade Scale Name}
+#'   \item{toxgrhyp_nsv}{[ string ] Toxicity Grade Direction}
+#' }
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/lb.parquet
+"rawplus_lb"
 
 #' @title rawplus_protdev
 #' @description Protocol Deviations (protdev) data in Raw+ format.
@@ -305,7 +385,7 @@
 #'   \item{devdatec_nsv}{[ string ] Date of Deviation}
 #'   \item{idendatec_nsv}{[ string ] Date Deviation Identified}
 #' }
-#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/protdev.parquet
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/protdev.parquet
 "rawplus_protdev"
 
 #' @title rawplus_sdrgcomp
@@ -347,7 +427,7 @@
 #'   \item{sdrgtrt_nsv}{[ string ] Did subject start another HBV therapy}
 #'   \item{sdrgtrt_std_nsv}{[ string ] Did subject start another HBV therapy_Coded Value}
 #' }
-#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/sdrgcomp.parquet
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/sdrgcomp.parquet
 "rawplus_sdrgcomp"
 
 #' @title rawplus_studcomp
@@ -386,7 +466,7 @@
 #'   \item{comptrt_nsv}{[ string ] Did subject start another HBV therapy}
 #'   \item{comptrt_std_nsv}{[ string ] Did subject start another HBV therapy_Coded Value}
 #' }
-#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/studcomp.parquet
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/studcomp.parquet
 "rawplus_studcomp"
 
 #' @title rawplus_visdt
@@ -442,5 +522,5 @@
 #'   \item{svhcc_nsv}{[ double ] HCC Surveillance}
 #'   \item{svhcc_raw_nsv}{[ string ] HCC Surveillance_(Character)}
 #' }
-#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/visdt.parquet
+#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/visdt.parquet
 "rawplus_visdt"
