@@ -28,7 +28,7 @@ a data frame with 1301 rows and 18 columns.
 }
 }
 \source{
-C:/Users/schildress/dev/clindata/data-raw/rawplus/ixrsrand.parquet
+C:/Users/zwang6/Development/clindata/data-raw/rawplus/ixrsrand.parquet
 }
 \usage{
 rawplus_ixrsrand
