@@ -24,11 +24,13 @@ system.file('data-raw', 'rawplus', package = 'clindata') %>% # path to ./data-ra
                                                 full.names = TRUE))
       data_te <- rawplus_dm  %>%
         select(subjid, siteid, rfxst_dt, rfxen_dt)  %>%
-        filter(subjid!="")
+        filter(subjid != "")
       data_lb <- rawplus_lb %>%
         left_join(data_te, by = "subjid") %>%
         mutate(
-          lb_te = ifelse(lb_dt>=as.Date(rfxst_dt)&lb_dt<=as.Date(rfxen_dt)+30, "YES", "")
+          lb_te = ifelse(lb_dt == "" | rfxst_dt == "" | rfxen_dt == "", "",
+                          ifelse(as.Date(lb_dt) >= as.Date(rfxst_dt) & lb_dt<=as.Date(rfxen_dt) + 30,
+                            "YES", ""))
         )
       print(dim(data_lb))
       assign(domain, data_lb)
