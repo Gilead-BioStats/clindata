@@ -3,6 +3,15 @@ library(purrr)
 library(stringr)
 library(arrow)
 library(usethis)
+library(dplyr)
+
+devtools::load_all()
+
+source('data-raw/rawplus/modify_lb.R')
+
+dm <- arrow::read_parquet(
+  system.file('data-raw', 'rawplus', 'dm.parquet', package = 'clindata')
+)
 
 system.file('data-raw', 'rawplus', package = 'clindata') %>% # path to ./data-raw
   list.files(
@@ -17,8 +26,12 @@ system.file('data-raw', 'rawplus', package = 'clindata') %>% # path to ./data-ra
     print(domain)
 
     data <- arrow::read_parquet(file) # ingest .parquet file
-    print(dim(data))
 
+    if (domain == "rawplus_lb") { # hard code lb differently using lb, dm rawplus data
+      data <- modify_lb(data, dm)
+    }
+
+    print(dim(data))
     assign(domain, data) # define local variable
 
     do.call(

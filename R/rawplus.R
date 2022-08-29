@@ -274,6 +274,25 @@
 #' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/ixrsrand.parquet
 "rawplus_ixrsrand"
 
+#' @title rawplus_lb
+#' @description Labs (lb) data in Raw+ format.
+#' @format a data frame with 1132070 rows and 12 columns.
+#' \describe{
+#'   \item{subjid}{[ string ] Subject ID or Number}
+#'   \item{visnum}{[ float ] Visit ID or Number}
+#'   \item{visnam}{[ string ] Visit Name}
+#'   \item{lb_dt}{[ string ] Actual Collection Date and Time}
+#'   \item{battrnam}{[ string ] Battery Name}
+#'   \item{lbtstcd}{[ string ] Test ID}
+#'   \item{lbtstnam}{[ string ] Test Name ID}
+#'   \item{siresn}{[ float ] SI Numeric Result}
+#'   \item{sinrlo}{[ string ] SI Reference Range Low}
+#'   \item{sinrhi}{[ string ] SI Reference Range High}
+#'   \item{toxgr}{[ string ] Toxicity Grade}
+#' }
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/lb.parquet
+"rawplus_lb"
+
 #' @title rawplus_protdev
 #' @description Protocol Deviations (protdev) data in Raw+ format.
 #' @format a data frame with 4837 rows and 26 columns.
