@@ -130,7 +130,7 @@
 #'   \item{uveitis_nsv}{[ string ] Uveitis}
 #'   \item{ae_te}{[ string ] Treatment Emergent Event}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/ae.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/ae.parquet
 "rawplus_ae"
 
 #' @title rawplus_dm
@@ -184,7 +184,7 @@
 #'   \item{timeontreatment}{[ int ] Time on Treatment}
 #'   \item{timeonstudy}{[ int ] Time on Study}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/dm.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/dm.parquet
 "rawplus_dm"
 
 #' @title rawplus_ex
@@ -245,7 +245,7 @@
 #'   \item{exongo_std_nsv}{[ string ] Check if Ongoing_Coded Value}
 #'   \item{experm_nsv}{[ string ] if study drug was permanently withdrawn}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/ex.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/ex.parquet
 "rawplus_ex"
 
 #' @title rawplus_ixrsrand
@@ -271,12 +271,12 @@
 #'   \item{status}{[ string ]}
 #'   \item{rand_dt}{[ string ]}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/ixrsrand.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/ixrsrand.parquet
 "rawplus_ixrsrand"
 
 #' @title rawplus_lb
 #' @description Labs (lb) data in Raw+ format.
-#' @format a data frame with 2332541 rows and 72 columns.
+#' @format a data frame with 2332541 rows and 76 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study ID or Number}
 #'   \item{invid}{[ string ] Investigator ID or Number}
@@ -351,7 +351,7 @@
 #'   \item{toxgrnam_nsv}{[ string ] Toxicity Grade Scale Name}
 #'   \item{toxgrhyp_nsv}{[ string ] Toxicity Grade Direction}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/lb.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/lb.parquet
 "rawplus_lb"
 
 #' @title rawplus_protdev
@@ -385,7 +385,7 @@
 #'   \item{devdatec_nsv}{[ string ] Date of Deviation}
 #'   \item{idendatec_nsv}{[ string ] Date Deviation Identified}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/protdev.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/protdev.parquet
 "rawplus_protdev"
 
 #' @title rawplus_sdrgcomp
@@ -427,7 +427,7 @@
 #'   \item{sdrgtrt_nsv}{[ string ] Did subject start another HBV therapy}
 #'   \item{sdrgtrt_std_nsv}{[ string ] Did subject start another HBV therapy_Coded Value}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/sdrgcomp.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/sdrgcomp.parquet
 "rawplus_sdrgcomp"
 
 #' @title rawplus_studcomp
@@ -466,7 +466,7 @@
 #'   \item{comptrt_nsv}{[ string ] Did subject start another HBV therapy}
 #'   \item{comptrt_std_nsv}{[ string ] Did subject start another HBV therapy_Coded Value}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/studcomp.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/studcomp.parquet
 "rawplus_studcomp"
 
 #' @title rawplus_visdt
@@ -522,5 +522,5 @@
 #'   \item{svhcc_nsv}{[ double ] HCC Surveillance}
 #'   \item{svhcc_raw_nsv}{[ string ] HCC Surveillance_(Character)}
 #' }
-#' @source C:/Users/zwang6/Development/clindata/data-raw/rawplus/visdt.parquet
+#' @source C:/Users/schildress/dev/clindata/data-raw/rawplus/visdt.parquet
 "rawplus_visdt"

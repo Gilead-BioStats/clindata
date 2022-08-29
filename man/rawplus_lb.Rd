@@ -5,7 +5,7 @@
 \alias{rawplus_lb}
 \title{rawplus_lb}
 \format{
-a data frame with 2332541 rows and 72 columns.
+a data frame with 2332541 rows and 76 columns.
 \describe{
 \item{studyid}{\link{ string } Study ID or Number}
 \item{invid}{\link{ string } Investigator ID or Number}
@@ -82,7 +82,7 @@ a data frame with 2332541 rows and 72 columns.
 }
 }
 \source{
-C:/Users/zwang6/Development/clindata/data-raw/rawplus/lb.parquet
+C:/Users/schildress/dev/clindata/data-raw/rawplus/lb.parquet
 }
 \usage{
 rawplus_lb
