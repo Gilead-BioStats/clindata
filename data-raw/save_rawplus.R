@@ -5,6 +5,8 @@ library(arrow)
 library(usethis)
 library(dplyr)
 
+devtools::load_all()
+
 source('data-raw/rawplus/modify_lb.R')
 
 dm <- arrow::read_parquet(

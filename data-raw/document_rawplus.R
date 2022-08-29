@@ -5,6 +5,8 @@ library(stringr)
 library(jsonlite)
 library(glue)
 
+devtools::load_all()
+
 domains <- system.file('data-standards', 'rawplus.yaml', package = 'clindata') %>%
   yaml::read_yaml()
 
@@ -25,7 +27,8 @@ system.file('data-raw', 'rawplus', package = 'clindata') %>% # path to ./data-ra
       do.call(`::`, list('clindata', rawplus_domain))
     )
 
-    column_metadata <- jsonlite::read_json(file) # ingest .json file
+    column_metadata <- jsonlite::read_json(file) %>% # ingest .json file
+      .[intersect(names(.), names(get(paste0('rawplus_', domain))))]
 
     column_documentation <- paste0(
       '  \\item{',
