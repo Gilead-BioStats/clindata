@@ -8,7 +8,7 @@
 a data frame with 1 rows and 10 columns
 }
 \source{
-./data-raw/ctms/study.csv)}
+./data-raw/ctms/study.csv
 }
 \usage{
 ctms_study

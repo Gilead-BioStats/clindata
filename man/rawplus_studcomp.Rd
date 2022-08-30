@@ -41,12 +41,12 @@ a data frame with 133 rows and 31 columns.
 }
 }
 \source{
-./data-raw/rawplus/studcomp.parquet)}
+./data-raw/rawplus/studcomp.parquet
 }
 \usage{
 rawplus_studcomp
 }
 \description{
-Study Disposition (studcomp) data in Raw+ format.
+Study Disposition (studcomp) data in \link{ rawplus } format.
 }
 \keyword{datasets}

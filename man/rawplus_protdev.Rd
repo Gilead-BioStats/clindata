@@ -36,12 +36,12 @@ a data frame with 4473 rows and 26 columns.
 }
 }
 \source{
-./data-raw/rawplus/protdev.parquet)}
+./data-raw/rawplus/protdev.parquet
 }
 \usage{
 rawplus_protdev
 }
 \description{
-Protocol Deviations (protdev) data in Raw+ format.
+Protocol Deviations (protdev) data in \link{ rawplus } format.
 }
 \keyword{datasets}

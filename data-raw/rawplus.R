@@ -1,5 +1,4 @@
 devtools::load_all()
-library(magrittr)
 datasets <- rawplus_1_import()
 datasets_processed <- rawplus_2_process(datasets)
 rawplus_3_export(datasets_processed)

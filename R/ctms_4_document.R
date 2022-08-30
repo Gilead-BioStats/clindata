@@ -43,7 +43,7 @@ ctms_4_document <- function(
             glue::glue('@title {description}'),
             glue::glue('@description {description} ({domain}) data CTMS data'),
             glue::glue('@format a data frame with {dimensions[1]} rows and {dimensions[2]} columns'),
-            glue::glue('@source ./data-raw/ctms/{domain}.csv)}')
+            glue::glue('@source ./data-raw/ctms/{domain}.csv')
         )
 
         paste0(

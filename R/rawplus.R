@@ -1,5 +1,5 @@
 #' @title rawplus_ae
-#' @description Adverse Events (ae) data in Raw+ format.
+#' @description Adverse Events (ae) data in [ rawplus ] format.
 #' @format a data frame with 4854 rows and 127 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study Identifier}
@@ -130,11 +130,11 @@
 #'   \item{uveitis_nsv}{[ string ] Uveitis}
 #'   \item{ae_te}{[ string ] Treatment Emergent Event}
 #' }
-#' @source ./data-raw/rawplus/ae.parquet)}
+#' @source ./data-raw/rawplus/ae.parquet
 "rawplus_ae"
 
 #' @title rawplus_dm
-#' @description Demographics (dm) data in Raw+ format.
+#' @description Demographics (dm) data in [ rawplus ] format.
 #' @format a data frame with 1301 rows and 46 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study Identifier}
@@ -184,11 +184,11 @@
 #'   \item{timeontreatment}{[ int ] Time on Treatment}
 #'   \item{timeonstudy}{[ int ] Time on Study}
 #' }
-#' @source ./data-raw/rawplus/dm.parquet)}
+#' @source ./data-raw/rawplus/dm.parquet
 "rawplus_dm"
 
 #' @title rawplus_ex
-#' @description Exposure (ex) data in Raw+ format.
+#' @description Exposure (ex) data in [ rawplus ] format.
 #' @format a data frame with 4876 rows and 53 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study Identifier}
@@ -245,11 +245,11 @@
 #'   \item{exongo_std_nsv}{[ string ] Check if Ongoing_Coded Value}
 #'   \item{experm_nsv}{[ string ] if study drug was permanently withdrawn}
 #' }
-#' @source ./data-raw/rawplus/ex.parquet)}
+#' @source ./data-raw/rawplus/ex.parquet
 "rawplus_ex"
 
 #' @title rawplus_ixrsrand
-#' @description Randomization (ixrsrand) data in Raw+ format.
+#' @description Randomization (ixrsrand) data in [ rawplus ] format.
 #' @format a data frame with 1301 rows and 18 columns.
 #' \describe{
 #'   \item{studyid}{[ string ]}
@@ -271,11 +271,11 @@
 #'   \item{status}{[ string ]}
 #'   \item{rand_dt}{[ string ]}
 #' }
-#' @source ./data-raw/rawplus/ixrsrand.parquet)}
+#' @source ./data-raw/rawplus/ixrsrand.parquet
 "rawplus_ixrsrand"
 
 #' @title rawplus_lb
-#' @description Labs (lb) data in Raw+ format.
+#' @description Labs (lb) data in [ rawplus ] format.
 #' @format a data frame with 1132070 rows and 15 columns.
 #' \describe{
 #'   \item{subjid}{[ string ] Subject ID or Number}
@@ -294,11 +294,11 @@
 #'   \item{alrtfl_s}{[ character ]}
 #'   \item{lb_abn}{[ logical ]}
 #' }
-#' @source ./data-raw/rawplus/lb.parquet)}
+#' @source ./data-raw/rawplus/lb.parquet
 "rawplus_lb"
 
 #' @title rawplus_protdev
-#' @description Protocol Deviations (protdev) data in Raw+ format.
+#' @description Protocol Deviations (protdev) data in [ rawplus ] format.
 #' @format a data frame with 4473 rows and 26 columns.
 #' \describe{
 #'   \item{invid}{[ string ] Investigator ID}
@@ -328,11 +328,11 @@
 #'   \item{devdatec_nsv}{[ string ] Date of Deviation}
 #'   \item{idendatec_nsv}{[ string ] Date Deviation Identified}
 #' }
-#' @source ./data-raw/rawplus/protdev.parquet)}
+#' @source ./data-raw/rawplus/protdev.parquet
 "rawplus_protdev"
 
 #' @title rawplus_sdrgcomp
-#' @description Treatment Disposition (sdrgcomp) data in Raw+ format.
+#' @description Treatment Disposition (sdrgcomp) data in [ rawplus ] format.
 #' @format a data frame with 689 rows and 34 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study Identifier}
@@ -370,11 +370,11 @@
 #'   \item{sdrgtrt_nsv}{[ string ] Did subject start another HBV therapy}
 #'   \item{sdrgtrt_std_nsv}{[ string ] Did subject start another HBV therapy_Coded Value}
 #' }
-#' @source ./data-raw/rawplus/sdrgcomp.parquet)}
+#' @source ./data-raw/rawplus/sdrgcomp.parquet
 "rawplus_sdrgcomp"
 
 #' @title rawplus_studcomp
-#' @description Study Disposition (studcomp) data in Raw+ format.
+#' @description Study Disposition (studcomp) data in [ rawplus ] format.
 #' @format a data frame with 133 rows and 31 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study Identifier}
@@ -409,11 +409,11 @@
 #'   \item{comptrt_nsv}{[ string ] Did subject start another HBV therapy}
 #'   \item{comptrt_std_nsv}{[ string ] Did subject start another HBV therapy_Coded Value}
 #' }
-#' @source ./data-raw/rawplus/studcomp.parquet)}
+#' @source ./data-raw/rawplus/studcomp.parquet
 "rawplus_studcomp"
 
 #' @title rawplus_visdt
-#' @description Visits (visdt) data in Raw+ format.
+#' @description Visits (visdt) data in [ rawplus ] format.
 #' @format a data frame with 28093 rows and 48 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study Identifier}
@@ -465,5 +465,5 @@
 #'   \item{svhcc_nsv}{[ double ] HCC Surveillance}
 #'   \item{svhcc_raw_nsv}{[ string ] HCC Surveillance_(Character)}
 #' }
-#' @source ./data-raw/rawplus/visdt.parquet)}
+#' @source ./data-raw/rawplus/visdt.parquet
 "rawplus_visdt"

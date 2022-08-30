@@ -25,12 +25,12 @@ a data frame with 1132070 rows and 15 columns.
 }
 }
 \source{
-./data-raw/rawplus/lb.parquet)}
+./data-raw/rawplus/lb.parquet
 }
 \usage{
 rawplus_lb
 }
 \description{
-Labs (lb) data in Raw+ format.
+Labs (lb) data in \link{ rawplus } format.
 }
 \keyword{datasets}

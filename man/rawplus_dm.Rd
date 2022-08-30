@@ -56,12 +56,12 @@ a data frame with 1301 rows and 46 columns.
 }
 }
 \source{
-./data-raw/rawplus/dm.parquet)}
+./data-raw/rawplus/dm.parquet
 }
 \usage{
 rawplus_dm
 }
 \description{
-Demographics (dm) data in Raw+ format.
+Demographics (dm) data in \link{ rawplus } format.
 }
 \keyword{datasets}

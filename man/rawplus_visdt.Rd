@@ -58,12 +58,12 @@ a data frame with 28093 rows and 48 columns.
 }
 }
 \source{
-./data-raw/rawplus/visdt.parquet)}
+./data-raw/rawplus/visdt.parquet
 }
 \usage{
 rawplus_visdt
 }
 \description{
-Visits (visdt) data in Raw+ format.
+Visits (visdt) data in \link{ rawplus } format.
 }
 \keyword{datasets}

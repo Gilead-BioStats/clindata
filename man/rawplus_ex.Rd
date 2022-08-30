@@ -63,12 +63,12 @@ a data frame with 4876 rows and 53 columns.
 }
 }
 \source{
-./data-raw/rawplus/ex.parquet)}
+./data-raw/rawplus/ex.parquet
 }
 \usage{
 rawplus_ex
 }
 \description{
-Exposure (ex) data in Raw+ format.
+Exposure (ex) data in \link{ rawplus } format.
 }
 \keyword{datasets}

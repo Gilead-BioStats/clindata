@@ -8,7 +8,7 @@
 a data frame with 175 rows and 8 columns
 }
 \source{
-./data-raw/ctms/site.csv)}
+./data-raw/ctms/site.csv
 }
 \usage{
 ctms_site

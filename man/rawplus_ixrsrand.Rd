@@ -28,12 +28,12 @@ a data frame with 1301 rows and 18 columns.
 }
 }
 \source{
-./data-raw/rawplus/ixrsrand.parquet)}
+./data-raw/rawplus/ixrsrand.parquet
 }
 \usage{
 rawplus_ixrsrand
 }
 \description{
-Randomization (ixrsrand) data in Raw+ format.
+Randomization (ixrsrand) data in \link{ rawplus } format.
 }
 \keyword{datasets}

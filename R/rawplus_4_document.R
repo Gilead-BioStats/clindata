@@ -98,7 +98,7 @@ rawplus_4_document <- function(
             '\\describe{',
                 column_documentation,
             '}',
-            glue::glue('@source ./data-raw/rawplus/{domain}.parquet)}')
+            glue::glue('@source ./data-raw/rawplus/{domain}.parquet')
         )
 
         paste0(

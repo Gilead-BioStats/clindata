@@ -137,12 +137,12 @@ a data frame with 4854 rows and 127 columns.
 }
 }
 \source{
-./data-raw/rawplus/ae.parquet)}
+./data-raw/rawplus/ae.parquet
 }
 \usage{
 rawplus_ae
 }
 \description{
-Adverse Events (ae) data in Raw+ format.
+Adverse Events (ae) data in \link{ rawplus } format.
 }
 \keyword{datasets}

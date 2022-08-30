@@ -44,12 +44,12 @@ a data frame with 689 rows and 34 columns.
 }
 }
 \source{
-./data-raw/rawplus/sdrgcomp.parquet)}
+./data-raw/rawplus/sdrgcomp.parquet
 }
 \usage{
 rawplus_sdrgcomp
 }
 \description{
-Treatment Disposition (sdrgcomp) data in Raw+ format.
+Treatment Disposition (sdrgcomp) data in \link{ rawplus } format.
 }
 \keyword{datasets}
