@@ -44,7 +44,7 @@ a data frame with 689 rows and 34 columns.
 }
 }
 \source{
-C:/Users/schildress/dev/clindata/data-raw/rawplus/sdrgcomp.parquet
+./data-raw/rawplus/sdrgcomp.parquet)}
 }
 \usage{
 rawplus_sdrgcomp

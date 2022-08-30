@@ -5,7 +5,7 @@
 \alias{rawplus_dm}
 \title{rawplus_dm}
 \format{
-a data frame with 2387 rows and 46 columns.
+a data frame with 1301 rows and 46 columns.
 \describe{
 \item{studyid}{\link{ string } Study Identifier}
 \item{siteid}{\link{ string } Site Identifier}
@@ -56,7 +56,7 @@ a data frame with 2387 rows and 46 columns.
 }
 }
 \source{
-C:/Users/schildress/dev/clindata/data-raw/rawplus/dm.parquet
+./data-raw/rawplus/dm.parquet)}
 }
 \usage{
 rawplus_dm

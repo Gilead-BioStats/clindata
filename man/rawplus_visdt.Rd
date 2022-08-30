@@ -5,7 +5,7 @@
 \alias{rawplus_visdt}
 \title{rawplus_visdt}
 \format{
-a data frame with 29248 rows and 48 columns.
+a data frame with 28093 rows and 48 columns.
 \describe{
 \item{studyid}{\link{ string } Study Identifier}
 \item{siteid}{\link{ string } Site Identifier}
@@ -58,7 +58,7 @@ a data frame with 29248 rows and 48 columns.
 }
 }
 \source{
-C:/Users/schildress/dev/clindata/data-raw/rawplus/visdt.parquet
+./data-raw/rawplus/visdt.parquet)}
 }
 \usage{
 rawplus_visdt

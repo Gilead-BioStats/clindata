@@ -5,7 +5,7 @@
 \alias{rawplus_ae}
 \title{rawplus_ae}
 \format{
-a data frame with 4857 rows and 127 columns.
+a data frame with 4854 rows and 127 columns.
 \describe{
 \item{studyid}{\link{ string } Study Identifier}
 \item{siteid}{\link{ string } Site Identifier}
@@ -137,7 +137,7 @@ a data frame with 4857 rows and 127 columns.
 }
 }
 \source{
-C:/Users/schildress/dev/clindata/data-raw/rawplus/ae.parquet
+./data-raw/rawplus/ae.parquet)}
 }
 \usage{
 rawplus_ae

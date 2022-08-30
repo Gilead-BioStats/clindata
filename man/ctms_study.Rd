@@ -5,12 +5,15 @@
 \alias{ctms_study}
 \title{Study Metadata}
 \format{
-a data frame with 1 rows and 10 columns.
+a data frame with 1 rows and 10 columns
+}
+\source{
+./data-raw/ctms/study.csv)}
 }
 \usage{
 ctms_study
 }
 \description{
-Study Metadata (study) CTMS data.
+Study Metadata (study) data CTMS data
 }
 \keyword{datasets}
