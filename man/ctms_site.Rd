@@ -5,12 +5,15 @@
 \alias{ctms_site}
 \title{Site Metadata}
 \format{
-a data frame with 175 rows and 8 columns.
+a data frame with 175 rows and 8 columns
+}
+\source{
+./data-raw/ctms/site.csv
 }
 \usage{
 ctms_site
 }
 \description{
-Site Metadata (site) CTMS data.
+Site Metadata (site) data CTMS data
 }
 \keyword{datasets}

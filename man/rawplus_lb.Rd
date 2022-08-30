@@ -5,28 +5,32 @@
 \alias{rawplus_lb}
 \title{rawplus_lb}
 \format{
-a data frame with 1132070 rows and 12 columns.
+a data frame with 1132070 rows and 15 columns.
 \describe{
 \item{subjid}{\link{ string } Subject ID or Number}
-\item{visnum}{\link{ float } Visit ID or Number}
 \item{visnam}{\link{ string } Visit Name}
+\item{visnum}{\link{ float } Visit ID or Number}
 \item{lb_dt}{\link{ string } Actual Collection Date and Time}
 \item{battrnam}{\link{ string } Battery Name}
-\item{lbtstcd}{\link{ string } Test ID}
 \item{lbtstnam}{\link{ string } Test Name ID}
+\item{lbtstcd}{\link{ string } Test ID}
 \item{siresn}{\link{ float } SI Numeric Result}
 \item{sinrlo}{\link{ string } SI Reference Range Low}
 \item{sinrhi}{\link{ string } SI Reference Range High}
 \item{toxgr}{\link{ string } Toxicity Grade}
+\item{alrtfl}{\link{ string } Alert Flag}
+\item{lb_te}{\link{ character }}
+\item{alrtfl_s}{\link{ character }}
+\item{lb_abn}{\link{ logical }}
 }
 }
 \source{
-C:/Users/schildress/dev/clindata/data-raw/rawplus/lb.parquet
+./data-raw/rawplus/lb.parquet
 }
 \usage{
 rawplus_lb
 }
 \description{
-Labs (lb) data in Raw+ format.
+Labs (lb) data in \link{ rawplus } format.
 }
 \keyword{datasets}

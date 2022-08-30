@@ -5,7 +5,7 @@
 \alias{rawplus_protdev}
 \title{rawplus_protdev}
 \format{
-a data frame with 4837 rows and 26 columns.
+a data frame with 4473 rows and 26 columns.
 \describe{
 \item{invid}{\link{ string } Investigator ID}
 \item{scrnid}{\link{ string } Screen Identifier}
@@ -36,12 +36,12 @@ a data frame with 4837 rows and 26 columns.
 }
 }
 \source{
-C:/Users/schildress/dev/clindata/data-raw/rawplus/protdev.parquet
+./data-raw/rawplus/protdev.parquet
 }
 \usage{
 rawplus_protdev
 }
 \description{
-Protocol Deviations (protdev) data in Raw+ format.
+Protocol Deviations (protdev) data in \link{ rawplus } format.
 }
 \keyword{datasets}

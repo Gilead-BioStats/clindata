@@ -1,6 +1,6 @@
 Package: clindata
 Title: Synthetic Clinical Data for testing and development
-Version: 0.7.2
+Version: 0.8.0
 Authors@R: 
     person("Jeremy", "Wildfire", , "jwildfire@gildead.com", role = c("aut", "cre"))
 Description: Synthetic Clinical Data for testing and development. Raw form data to start, more data formats in future releases. 
@@ -10,9 +10,16 @@ LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.1
 Imports: 
+    arrow,
+    cli,
     dplyr,
-    lubridate,
-    magrittr
+    glue,
+    magrittr,
+    purrr,
+    rlang,
+    stringr,
+    usethis,
+    yaml
 Suggests:
     testthat (>= 3.0.0)
 Depends: 
