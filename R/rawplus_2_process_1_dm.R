@@ -16,7 +16,7 @@ rawplus_2_process_1_dm <- function(dm) {
 
     if (n_rows_filtered)
         cli::cli_alert_warning(
-            '[ {n_rows_filtered} ] rows with a missing subject ID removed from [ dm ].'
+            '{n_rows_filtered} rows with a missing subject ID removed from [ dm ].'
         )
 
     dm_processed

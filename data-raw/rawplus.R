@@ -1,5 +1,7 @@
 devtools::load_all()
 datasets <- rawplus_1_import()
+datasets$dm$timeonstudy <- dplyr::coalesce(datasets$dm$timeonstudy, 0)
+datasets$dm$timeontreatment <- dplyr::coalesce(datasets$dm$timeontreatment, 0)
 datasets_processed <- rawplus_2_process(datasets)
 rawplus_3_export(datasets_processed)
 rawplus_4_document(datasets_processed)

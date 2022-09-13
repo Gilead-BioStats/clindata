@@ -1,22 +1,22 @@
 snapshot_studcomp <- function(snapshot_date, dm, studcomp = clindata::rawplus_studcomp) {
   studcomp_snapshot <- studcomp %>%
-    inner_join(
-      dm %>% select(subjid, rfpen_dt, rfpen_dt0),
+    dplyr::inner_join(
+      dm %>% dplyr::select(subjid, rfpen_dt, rfpen_dt0),
       'subjid'
     ) %>%
-    mutate(
-      compyn = if_else(
+    dplyr::mutate(
+      compyn = dplyr::if_else(
         rfpen_dt < rfpen_dt0,
         '',
         compyn
       ),
-      compreas = if_else(
+      compreas = dplyr::if_else(
         rfpen_dt < rfpen_dt0,
         '',
         compreas
       )
     ) %>%
-    select(
+    dplyr::select(
       -rfpen_dt,
       -rfpen_dt0
     )

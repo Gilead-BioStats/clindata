@@ -1,22 +1,20 @@
 snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
   ae_snapshot <- ae %>%
-    left_join(
-      dm %>% select(subjid, rfpen_dt, rfxen_dt),
+    dplyr::left_join(
+      dm %>% dplyr::select(subjid, rfpen_dt, rfxen_dt),
       'subjid'
     ) %>%
-    mutate(
-      aest_dt = ymd(aest_dt),
-      aeen_dt = ymd(aeen_dt),
-      aeen_dt = if_else(
-        aeen_dt > snapshot_date,
-        snapshot_date,
+    dplyr::mutate(
+      aeen_dt = dplyr::if_else(
+        lubridate::ymd(aeen_dt) > snapshot_date,
+        as.character(snapshot_date),
         aeen_dt
       )
     ) %>%
-    filter(
-      aest_dt <= snapshot_date
+    dplyr::filter(
+      lubridate::ymd(aest_dt) <= snapshot_date
     ) %>%
-    select(
+    dplyr::select(
       -rfpen_dt,
       -rfxen_dt
     )

@@ -1,16 +1,12 @@
 snapshot_ex <- function(snapshot_date, ex = clindata::rawplus_ex) {
   ex_snapshot <- ex %>%
-    mutate(
-      exst_dt = ymd(exst_dt),
-      exen_dt = ymd(exen_dt)
+    dplyr::filter(
+      lubridate::ymd(exst_dt) <= snapshot_date
     ) %>%
-    filter(
-      exst_dt <= snapshot_date
-    ) %>%
-    mutate(
-      exen_dt = if_else(
-        exen_dt > snapshot_date,
-        snapshot_date,
+    dplyr::mutate(
+      exen_dt = dplyr::if_else(
+        lubridate::ymd(exen_dt) > snapshot_date,
+        as.character(snapshot_date),
         exen_dt
       )
     )

@@ -1,6 +1,6 @@
 snapshot_ie <- function(snapshot_date, dm, ie = clindata::rawplus_ie) {
   ie_snapshot <- ie %>%
-    filter(
+    dplyr::filter(
       subjid %in% dm$subjid
     )
 
