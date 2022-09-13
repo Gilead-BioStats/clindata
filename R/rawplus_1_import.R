@@ -34,7 +34,7 @@ rawplus_1_import <- function(
         purrr::imap(function(data_file, index) {
             domain <- domains[ index ]
 
-            data <- arrow::read_parquet(data_file,)
+            data <- arrow::read_parquet(data_file)
 
             cli::cli_alert_success(
                 '[ {stringr::str_pad(domain, 8, "both")} ] imported with {nrow(data)} rows and {ncol(data)} columns.'
