@@ -15,9 +15,9 @@ snapshot_dm <- function(snapshot_date, visdt, ex, dm = clindata::rawplus_dm) {
     filter(
       rfpst_dt <= snapshot_date
     ) %>%
-    select(
-      -rfpen_dt,
-      -rfxen_dt
+    rename(
+      rfpen_dt0 = rfpen_dt,
+      rfxen_dt0 = rfxen_dt
     ) %>%
     left_join(
       rfpen_dt,
