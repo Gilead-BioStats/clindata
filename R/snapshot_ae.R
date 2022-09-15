@@ -6,13 +6,13 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
     ) %>%
     dplyr::mutate(
       aeen_dt = dplyr::if_else(
-        lubridate::ymd(aeen_dt) > snapshot_date,
+        impute_date(aeen_dt) > snapshot_date,
         as.character(snapshot_date),
         aeen_dt
       )
     ) %>%
     dplyr::filter(
-      lubridate::ymd(aest_dt) <= snapshot_date
+      impute_date(aest_dt) <= snapshot_date
     ) %>%
     dplyr::select(
       -rfpen_dt,

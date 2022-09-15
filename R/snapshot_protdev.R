@@ -1,7 +1,7 @@
 snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::rawplus_protdev) {
   protdev_snapshot <- protdev %>%
     dplyr::filter(
-      lubridate::ymd(dv_dt) <= snapshot_date
+      impute_date(dv_dt) <= snapshot_date
     )
 
   check_rows(protdev, protdev_snapshot, 'protdev')

@@ -1,7 +1,7 @@
 get_snapshot_date <- function(snapshot_date = NULL, interval = lubridate::month, n_intervals = 1) {
   if (is.null(snapshot_date)) {
     snapshot_date <- clindata::rawplus_visdt$visit_dt %>%
-      lubridate::ymd() %>%
+      impute_date() %>%
       max(na.rm = TRUE)
   } else {
     lubridate::month(snapshot_date) <- lubridate::month(snapshot_date) - n_intervals

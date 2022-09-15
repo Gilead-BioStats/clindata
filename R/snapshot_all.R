@@ -21,6 +21,7 @@ snapshot_all <- function(
 
   return(
     list(
+      snapshot_date = snapshot_date,
       dfSUBJ = dm,
       dfCONSENT = consent,
       dfIE = ie,

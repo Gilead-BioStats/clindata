@@ -13,7 +13,7 @@ snapshot_dm <- function(snapshot_date, visdt, ex, dm = clindata::rawplus_dm) {
 
   dm_snapshot <- dm %>%
     dplyr::filter(
-      lubridate::ymd(rfpst_dt) <= snapshot_date
+      impute_date(rfpst_dt) <= snapshot_date
     ) %>%
     dplyr::rename(
       rfpen_dt0 = rfpen_dt,
