@@ -1,7 +1,18 @@
 devtools::load_all()
 datasets <- rawplus_1_import()
-datasets$dm$timeonstudy <- dplyr::coalesce(datasets$dm$timeonstudy, 0)
-datasets$dm$timeontreatment <- dplyr::coalesce(datasets$dm$timeontreatment, 0)
+
+# join country data from ctms
+# default to 'US' when country is missing
+ctms <- ctms_1_import()
+datasets$dm <- datasets$dm %>%
+  full_join(
+    ctms$site %>% select(siteid, country), by = "siteid"
+  ) %>%
+  mutate(
+    country = ifelse(is.na(country), 'US', country),
+    timeonstudy = dplyr::coalesce(timeonstudy, 0),
+    timeontreatment = dplyr::coalesce(timeontreatment, 0)
+  )
 datasets_processed <- rawplus_2_process(datasets)
 rawplus_3_export(datasets_processed)
 rawplus_4_document(datasets_processed)
