@@ -1,3 +1,7 @@
+#' @format a data frame with 75 rows and 2 columns
+#' @source ./data-raw/ctms/schedule.csv
+"ctms_schedule"
+
 #' @title Site Metadata
 #' @description Site Metadata (site) data CTMS data
 #' @format a data frame with 176 rows and 7 columns
