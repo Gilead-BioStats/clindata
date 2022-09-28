@@ -8,11 +8,12 @@
 #' @importFrom usethis use_data
 
 ctms_3_export <- function(
-    datasets_processed
+    datasets_processed,
+    data_domain = "ctms"
 ) {
     datasets_processed %>%
         purrr::iwalk(function(data, domain) {
-            ctms_domain <- paste0('ctms_', domain)
+            ctms_domain <- paste0(data_domain, "_", domain)
 
             assign(ctms_domain, data)
 

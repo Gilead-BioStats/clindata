@@ -16,7 +16,8 @@ ctms_4_document <- function(
     documentation_path = paste0(
         system.file('R', package = 'clindata'),
         '/ctms.R'
-    )
+    ),
+    data_domain = "ctms"
 ) {
     stopifnot(
         '[ domain_metadata_path ] does not exist.' = file.exists(domain_metadata_path)
@@ -28,7 +29,7 @@ ctms_4_document <- function(
     domains <- names(datasets_processed)
 
     purrr::map_chr(domains, function(domain) {
-        ctms_domain <- paste0('ctms_', domain)
+        ctms_domain <- paste0(data_domain, "_", domain)
 
         # Retrieve data.
         data <- datasets_processed[[ domain ]]
@@ -43,7 +44,7 @@ ctms_4_document <- function(
             glue::glue('@title {description}'),
             glue::glue('@description {description} ({domain}) data CTMS data'),
             glue::glue('@format a data frame with {dimensions[1]} rows and {dimensions[2]} columns'),
-            glue::glue('@source ./data-raw/ctms/{domain}.csv')
+            glue::glue('@source ./data-raw/{data_domain}/{domain}.csv')
         )
 
         paste0(
