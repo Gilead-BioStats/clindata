@@ -6,6 +6,6 @@
 
 #' @title Study Metadata
 #' @description Study Metadata (study) data CTMS data
-#' @format a data frame with 1 rows and 11 columns
+#' @format a data frame with 1 rows and 12 columns
 #' @source ./data-raw/ctms/study.csv
 "ctms_study"
