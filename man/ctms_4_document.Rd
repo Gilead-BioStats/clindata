@@ -6,8 +6,10 @@
 \usage{
 ctms_4_document(
   datasets_processed,
-  domain_metadata_path = system.file("data-standards", "ctms.yaml", package = "clindata"),
-  documentation_path = paste0(system.file("R", package = "clindata"), "/ctms.R")
+  domain_metadata_path = system.file("data-standards", "ctms.yaml", package =
+    "clindata"),
+  documentation_path = paste0(system.file("R", package = "clindata"), "/ctms.R"),
+  data_domain = "ctms"
 )
 }
 \arguments{

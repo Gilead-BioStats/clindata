@@ -4,7 +4,7 @@
 \alias{ctms_3_export}
 \title{Export CTMS data}
 \usage{
-ctms_3_export(datasets_processed)
+ctms_3_export(datasets_processed, data_domain = "ctms")
 }
 \arguments{
 \item{datasets_processed}{\code{list} named list of processed data frames}
