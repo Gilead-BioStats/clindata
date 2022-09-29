@@ -10,14 +10,16 @@ set.seed(1)
 status_site <- clindata::rawplus_dm %>%
   group_by(siteid) %>%
   summarize(
-    planned_participants = n(),
     start_date = min(rfpen_dt)
   ) %>%
   mutate(
     studyid = 'AA-AA-000-0000',
     country = sample(c("US", "China", "Japan"), n(), replace = TRUE),
-    region = if_else(country == "US", "NA", "AS"),
-    invname = randomNames(n())
+    invname = randomNames(n()),
+    institution = paste("institution",row_number()),
+    status="Active", 
+    city=paste("city",row_number()),
+    state=paste("state",row_number())
   ) %>%
   relocate(studyid, siteid)
 
