@@ -63,7 +63,12 @@ data_points1 <- data_points %>%
   group_by(subjid, foldername, visit_dt, form) %>%
   tally(name = 'n_data_points') %>%
   mutate(
-    data_entry_lag = rnbinom(n(), size = 1, mu = 2)
+    data_entry_lag = rnbinom(n(), size = 1, mu = 2),
+    data_entry_lag_fl = if_else(
+      data_entry_lag > 10,
+      'Y',
+      'N'
+    )
   )
 
 data.table::fwrite(
