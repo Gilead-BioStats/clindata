@@ -43,11 +43,5 @@ edc_1_import <- function(
         }) %>%
         rlang::set_names(domains)
 
-    # # Parse numeric siteid from siteid
-    # datasets$site <- datasets$site %>%
-    #   mutate(
-    #     siteid = as.character(readr::parse_number(siteid))
-    #   )
-
     datasets
 }

@@ -23,7 +23,7 @@ folder <- rawplus_visdt %>%
   )
 
 # Form/field metadata.
-form_field <- read.csv('data-raw/edc/form-field.csv')
+form_field <- data.table::fread('data-raw/edc/form-field.tsv')
 
 # Merge visit data and form/field metadata (Cartesian join) to generate queries.
 queries <- folder %>%
@@ -133,5 +133,7 @@ queries1 <- queries %>%
     'qryopendate', 'qryresponsedate', 'qryclosedate'
   )))
 
-edc_queries <- queries1
-usethis::use_data(edc_queries)
+data.table::fwrite(
+  queries1,
+  'data-raw/edc/queries.csv'
+)

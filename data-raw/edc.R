@@ -1,0 +1,5 @@
+devtools::load_all()
+datasets <- edc_1_import()
+datasets_processed <- edc_2_process(datasets)
+edc_3_export(datasets_processed)
+edc_4_document(datasets_processed)
