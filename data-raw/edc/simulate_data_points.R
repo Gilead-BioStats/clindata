@@ -58,7 +58,7 @@ data_points <- folder %>%
     )
   ) %>%
   arrange(
-    subjid, visit_dt, foldername, form
+    subjid, visit_dt, foldername, form, field
   )
 
 saveRDS(

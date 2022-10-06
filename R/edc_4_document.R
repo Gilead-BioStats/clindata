@@ -40,7 +40,7 @@ edc_4_document <- function(
         dimensions <- dim(data)
 
         documentation <- c(
-            glue::glue('@title {description$name}'),
+            glue::glue('@title {description$title}'),
             glue::glue('@description {description$description} ({domain})'),
             glue::glue('@format a data frame with {dimensions[1]} rows and {dimensions[2]} columns'),
             glue::glue('@source ./data-raw/edc/{domain}.csv')

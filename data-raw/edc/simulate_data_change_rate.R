@@ -34,7 +34,7 @@ data_change_rate <- data_points %>%
       n_queries > 0,
       rpois(n(), .3),
       0L
-    )
+    ),
   ) %>%
   ungroup
 
@@ -42,9 +42,11 @@ data_change_rate1 <- data_change_rate %>%
   group_by(subjid, foldername, form) %>%
   summarize(
     n_data_points = n(),
-    n_queries = sum(n_queries),
-    n_data_changes = sum(n_data_changes)
-  )
+    n_data_points_with_changes = sum(n_data_changes > 0),
+    n_data_point_changes = sum(n_data_changes),
+    #n_queries = sum(n_queries),
+  ) %>%
+  ungroup
 
 fwrite(
   data_change_rate1,
