@@ -1,0 +1,62 @@
+data_points:
+  title: Data Points
+  description: data point-level data (not exported)
+  order: 0
+  script: data-raw/edc/simulate_data_points.R
+  input:
+    - clindata::rawplus_visdt
+    - data-raw/edc/data_points.Rds
+  structure:
+    - subject
+    - visit
+    - form
+    - field
+data_entry_lag:
+  title: Data Entry Lag
+  description: data page-level data with simulated data entry lag
+  order: 1
+  script: data-raw/edc/simulate_data_entry_lag.R
+  input:
+    - data-raw/edc/data_points.Rds
+  structure:
+    - subject
+    - visit
+    - form
+  derivations:
+    - n_data_points
+    - data_entry_lag
+    - data_entry_lagfl
+queries:
+  title: Queries
+  description: query-level data with simulated query characteristics
+  order: 1
+  script: data-raw/edc/simulate_queries.R
+  input:
+    - clindata::rawplus_dm
+    - data-raw/edc/data_points.Rds
+  structure:
+    - subject
+    - visit
+    - form
+    - field
+    - query
+  derivations:
+    - qryage
+    - qry30fl
+    - qryagecat
+data_change_rate:
+  title: Data Change Rate
+  description: data page-level data with simulated data changes
+  order: 2
+  script: data-raw/edc/simulate_data_change_rate.R
+  input:
+    - data-raw/edc/data_points.Rds
+    - clindata::edc_queries
+  structure:
+    - subject
+    - visit
+    - form
+  derivations:
+    - n_data_points
+    - n_queries
+    - n_data_changes
