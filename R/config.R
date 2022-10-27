@@ -1,6 +1,6 @@
 #' @title Configuration Parameters
 #' @description Configuration Parameters (param) data CTMS data
-#' @format a data frame with 26 rows and 6 columns
+#' @format a data frame with 24 rows and 6 columns
 #' @source ./data-raw/config/param.csv
 "config_param"
 
@@ -12,6 +12,6 @@
 
 #' @title Configuration Workflow
 #' @description Configuration Workflow (workflow) data CTMS data
-#' @format a data frame with 8 rows and 4 columns
+#' @format a data frame with 7 rows and 4 columns
 #' @source ./data-raw/config/workflow.csv
 "config_workflow"

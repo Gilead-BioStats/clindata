@@ -4,8 +4,11 @@ library(gsm)
 datasets <- ctms_1_import(data_path = file.path('data-raw', 'config'))
 
 # update description ------------------------------------------------------
-datasets$param$gsm_version <- utils::packageVersion('gsm')
-datasets$workflow$gsm_version <- utils::packageVersion('gsm')
+# Note: packageVersion() creates a class "package_version" that causes issues when joining/merging data
+# easier for us to retain as a character value
+
+datasets$param$gsm_version <- "1.2.0"
+datasets$workflow$gsm_version <- "1.2.0"
 
 datasets_processed <- ctms_2_process(datasets)
 ctms_3_export(datasets_processed, data_domain = "config")
