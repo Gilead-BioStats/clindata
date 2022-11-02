@@ -5,7 +5,7 @@
 \alias{config_param}
 \title{Configuration Parameters}
 \format{
-a data frame with 26 rows and 6 columns
+a data frame with 32 rows and 6 columns
 }
 \source{
 ./data-raw/config/param.csv
