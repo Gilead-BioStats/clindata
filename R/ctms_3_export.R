@@ -15,7 +15,7 @@ ctms_3_export <- function(
         purrr::iwalk(function(data, domain) {
             ctms_domain <- paste0(data_domain, "_", domain)
 
-            assign(ctms_domain, data)
+            assign(ctms_domain, as_tibble(data))
 
             do.call(
                 'use_data',

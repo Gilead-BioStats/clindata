@@ -14,7 +14,7 @@ rawplus_3_export <- function(
         purrr::iwalk(function(data, domain) {
             rawplus_domain <- paste0('rawplus_', domain)
 
-            assign(rawplus_domain, data)
+            assign(rawplus_domain, as_tibble(data))
 
             do.call(
                 'use_data',

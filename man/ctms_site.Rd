@@ -5,7 +5,7 @@
 \alias{ctms_site}
 \title{Site Metadata}
 \format{
-a data frame with 176 rows and 9 columns
+a data frame with 176 rows and 14 columns
 }
 \source{
 ./data-raw/ctms/site.csv
