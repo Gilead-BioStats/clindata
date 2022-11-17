@@ -5,6 +5,7 @@
 #' @importFrom cli cli_alert_success
 #' @importFrom magrittr %>%
 #' @importFrom purrr iwalk
+#' @importFrom tibble as_tibble
 #' @importFrom usethis use_data
 
 edc_3_export <- function(
@@ -14,7 +15,7 @@ edc_3_export <- function(
         purrr::iwalk(function(data, domain) {
             edc_domain <- paste0('edc_', domain)
 
-            assign(edc_domain, as_tibble(data))
+            assign(edc_domain, tibble::as_tibble(data))
 
             do.call(
                 'use_data',

@@ -11,14 +11,14 @@
     "ACT_FPFV": "2003-01-01 00:00:00",
     "EST_LPLV": "2021-06-01 00:00:00",
     "ACT_LPLV": "2021-06-01 00:00:00",
-    "EST_LPLV": "2020-06-01 00:00:00",
-    "ACT_LPLV": "2020-06-01 00:00:00",
+    "EST_LPFV": "2020-06-01 00:00:00",
+    "ACT_LPFV": "2020-06-01 00:00:00",
     "STATUS": "Active",
     "NUM_PLAN_SUBJ": "1300",
-    "NUM_ENROLLED_SUBJ_M": 1301,
+    "NUM_ENROLLED_SUBJ_M": "1301",
     "PROTOCOL_INDICATION": "Protocol Indication",
     "PRODUCT": "Product",
     "THERAPEUTIC_AREA": "Therapeutic Area",
-    "PROTOCOL_PRODUCT_NUMBER": 123,
+    "PROTOCOL_PRODUCT_NUMBER": "123",
     "X_RBM_FLG": "Y"
 }
