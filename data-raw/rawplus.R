@@ -7,10 +7,11 @@ datasets <- rawplus_1_import()
 ctms <- ctms_1_import()
 datasets$dm <- datasets$dm %>%
   full_join(
-    ctms$site %>% select(siteid, country), by = "siteid"
+    ctms$site %>% select(SITE_NUM, COUNTRY),
+    by = c("siteid" = 'SITE_NUM')
   ) %>%
   mutate(
-    country = ifelse(is.na(country), 'US', country),
+    country = ifelse(is.na(COUNTRY), 'US', COUNTRY),
     timeonstudy = dplyr::coalesce(timeonstudy, 0),
     timeontreatment = dplyr::coalesce(timeontreatment, 0)
   )

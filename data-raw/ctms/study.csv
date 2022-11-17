@@ -1,2 +1,2 @@
-studyid,planned_sites,planned_participants,title,nickname,indication,ta,phase,fpfv,lplv,lpfv,rbm_flag, status
-AA-AA-000-0000,190,1300,Sample Protocol,Sample Nickname,Sample Indication,Oncology,3,1/1/03,6/1/21,6/1/20,1, Active
+"PROTOCOL_ROW_ID","PROTOCOL_NUMBER","PROTOCOL_TITLE","NICKNAME","PROTOCOL_TYPE","PHASE","NUM_PLAN_SITE","NUM_SITE_ACTL","EST_FPFV","ACT_FPFV","EST_LPLV","ACT_LPLV","EST_LPLV.1","ACT_LPLV.1","STATUS","NUM_PLAN_SUBJ","NUM_ENROLLED_SUBJ_M","PROTOCOL_INDICATION","PRODUCT","THERAPEUTIC_AREA","PROTOCOL_PRODUCT_NUMBER","X_RBM_FLG"
+"1-1G9113","AA-AA-000-0000","Protocol Title","Protocol Nickname","Investigator Sponsored","P3","190","176","2003-01-01 00:00:00","2003-01-01 00:00:00","2021-06-01 00:00:00","2021-06-01 00:00:00","2020-06-01 00:00:00","2020-06-01 00:00:00","Active","1300",1301,"Protocol Indication","Product","Therapeutic Area",123,"Y"

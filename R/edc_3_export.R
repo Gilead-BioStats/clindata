@@ -14,7 +14,7 @@ edc_3_export <- function(
         purrr::iwalk(function(data, domain) {
             edc_domain <- paste0('edc_', domain)
 
-            assign(edc_domain, data)
+            assign(edc_domain, as_tibble(data))
 
             do.call(
                 'use_data',

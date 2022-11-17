@@ -5,7 +5,7 @@
 \alias{ctms_study}
 \title{Study Metadata}
 \format{
-a data frame with 1 rows and 12 columns
+a data frame with 1 rows and 22 columns
 }
 \source{
 ./data-raw/ctms/study.csv
