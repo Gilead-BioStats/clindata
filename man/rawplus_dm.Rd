@@ -5,7 +5,7 @@
 \alias{rawplus_dm}
 \title{rawplus_dm}
 \format{
-a data frame with 1301 rows and 48 columns.
+a data frame with 1301 rows and 47 columns.
 \describe{
 \item{studyid}{\link{ string } Study Identifier}
 \item{siteid}{\link{ string } Site Identifier}
@@ -53,7 +53,6 @@ a data frame with 1301 rows and 48 columns.
 \item{rfpst_dt}{\link{ string } First Participant Date}
 \item{timeontreatment}{\link{ int } Time on Treatment}
 \item{timeonstudy}{\link{ int } Time on Study}
-\item{COUNTRY}{\link{ character }}
 \item{country}{\link{ character }}
 }
 }
