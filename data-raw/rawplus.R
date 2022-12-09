@@ -33,6 +33,14 @@ usethis::use_data(rawplus_consent, overwrite = TRUE)
 
 # temporary fix for [ enroll ]
 rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
+    full_join(
+        ctms$site %>% select(SITE_NUM, COUNTRY),
+        by = c("siteid" = 'SITE_NUM')
+    ) %>%
+    mutate(
+        country = ifelse(is.na(COUNTRY), 'US', COUNTRY)
+    ) %>%
+    select(-COUNTRY) %>%
     mutate(
         enrollyn = if_else(
             subjid != '',
@@ -48,12 +56,13 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
             '',
             sample(
                 c(
-                    'IE',
-                    'Consent',
-                    'Extenuating Circumstance'
+                    'Inclusion/Exclusion Criteria',
+                    'Withdrawal of Consent',
+                    'Medical Issue'
                 ),
                 n(),
-                TRUE
+                TRUE,
+                prob = c(.9, .05, .05)
             )
         ),
         subjid = if_else(
@@ -63,6 +72,6 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
         )
     ) %>%
     ungroup %>%
-    select(subjid, enrollyn, sfreas)
+    select(studyid, siteid, country, subjid, enrollyn, sfreas)
 
 usethis::use_data(rawplus_enroll, overwrite = TRUE)
