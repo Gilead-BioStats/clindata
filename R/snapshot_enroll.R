@@ -1,7 +1,7 @@
-snapshot_enroll <- function(snapshot_date, dm, enroll = clindata::rawplus_enroll) {
+snapshot_enroll <- function(snapshot_date, enroll = clindata::rawplus_enroll) {
   enroll_snapshot <- enroll %>%
     dplyr::filter(
-      subjid %in% dm$subjid
+      impute_date(enrolldt) <= snapshot_date
     )
 
   check_rows(enroll, enroll_snapshot, 'enroll')
