@@ -74,7 +74,7 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     ungroup %>%
     select(
         studyid, siteid, country, invid,
-        subjid, enrolldt = rfpst_dt, enrollyn, sfreas
+        subjid, enroll_dt = rfpst_dt, enrollyn, sfreas
     )
 
 usethis::use_data(rawplus_enroll, overwrite = TRUE)
