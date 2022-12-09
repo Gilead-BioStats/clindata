@@ -1,6 +1,9 @@
 ae: Adverse Events
+consent: Informed Consent
 dm: Demographics
+enroll: Screening
 ex: Exposure
+ie: Inclusion/Exclusion
 ixrsrand: Randomization
 lb: Labs
 protdev: Protocol Deviations

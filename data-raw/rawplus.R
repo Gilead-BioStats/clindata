@@ -30,3 +30,39 @@ usethis::use_data(rawplus_ie, overwrite = TRUE)
 load('data-raw/rawplus/rawplus_consent.rda')
 names(rawplus_consent) <- c('subjid', 'consdt', 'conscat', 'consyn')
 usethis::use_data(rawplus_consent, overwrite = TRUE)
+
+# temporary fix for [ enroll ]
+rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
+    mutate(
+        enrollyn = if_else(
+            subjid != '',
+            'Y',
+            'N'
+        )
+    ) %>%
+    group_by(enrollyn) %>%
+    arrange(rfpst_dt, as.numeric(siteid), scrnid) %>%
+    mutate(
+        sfreas = if_else(
+            enrollyn == 'Y',
+            '',
+            sample(
+                c(
+                    'IE',
+                    'Consent',
+                    'Extenuating Circumstance'
+                ),
+                n(),
+                TRUE
+            )
+        ),
+        subjid = if_else(
+            enrollyn == 'Y',
+            subjid,
+            paste0('sf', row_number())
+        )
+    ) %>%
+    ungroup %>%
+    select(subjid, enrollyn, sfreas)
+
+usethis::use_data(rawplus_enroll, overwrite = TRUE)
