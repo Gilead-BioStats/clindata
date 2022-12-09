@@ -30,3 +30,51 @@ usethis::use_data(rawplus_ie, overwrite = TRUE)
 load('data-raw/rawplus/rawplus_consent.rda')
 names(rawplus_consent) <- c('subjid', 'consdt', 'conscat', 'consyn')
 usethis::use_data(rawplus_consent, overwrite = TRUE)
+
+# temporary fix for [ enroll ]
+rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
+    full_join(
+        ctms$site %>% select(SITE_NUM, COUNTRY),
+        by = c("siteid" = 'SITE_NUM')
+    ) %>%
+    mutate(
+        country = ifelse(is.na(COUNTRY), 'US', COUNTRY)
+    ) %>%
+    select(-COUNTRY) %>%
+    mutate(
+        enrollyn = if_else(
+            subjid != '',
+            'Y',
+            'N'
+        )
+    ) %>%
+    group_by(enrollyn) %>%
+    arrange(rfpst_dt, as.numeric(siteid), scrnid) %>%
+    mutate(
+        sfreas = if_else(
+            enrollyn == 'Y',
+            '',
+            sample(
+                c(
+                    'Inclusion/Exclusion Criteria',
+                    'Withdrawal of Consent',
+                    'Medical Issue'
+                ),
+                n(),
+                TRUE,
+                prob = c(.9, .05, .05)
+            )
+        ),
+        subjid = if_else(
+            enrollyn == 'Y',
+            subjid,
+            paste0('sf', row_number())
+        )
+    ) %>%
+    ungroup %>%
+    select(
+        studyid, siteid, country, invid,
+        subjid, enroll_dt = rfpst_dt, enrollyn, sfreas
+    )
+
+usethis::use_data(rawplus_enroll, overwrite = TRUE)
