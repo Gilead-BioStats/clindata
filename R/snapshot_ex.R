@@ -11,7 +11,7 @@ snapshot_ex <- function(snapshot_date, ex = clindata::rawplus_ex) {
       )
     )
 
-  check_rows(ex, ex_snapshot, 'ex')
+  check_rows(ex, ex_snapshot, "ex")
 
   ex_snapshot
 }

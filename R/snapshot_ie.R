@@ -4,7 +4,7 @@ snapshot_ie <- function(snapshot_date, dm, ie = clindata::rawplus_ie) {
       subjid %in% dm$subjid
     )
 
-  check_rows(ie, ie_snapshot, 'ie')
+  check_rows(ie, ie_snapshot, "ie")
 
   ie_snapshot
 }
