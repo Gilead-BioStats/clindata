@@ -1,6 +1,7 @@
 snapshot_all <- function(
   snapshot_date = get_snapshot_date()
 ) {
+  # rawplus
   visdt <- snapshot_visdt(snapshot_date)
   ex <- snapshot_ex(snapshot_date)
   dm <- snapshot_dm(snapshot_date, visdt, ex)
@@ -12,9 +13,17 @@ snapshot_all <- function(
   ae <- snapshot_ae(snapshot_date, dm)
   protdev <- snapshot_protdev(snapshot_date, dm)
 
+  # edc
+  queries <- snapshot_queries(snapshot_date)
+  data_entry_lag <- snapshot_data_entry_lag(snapshot_date)
+  data_change_rate <- snapshot_data_change_rate(snapshot_date)
+
+
   return(
     list(
       snapshot_date = snapshot_date,
+
+      # rawplus
       dfSUBJ = dm,
       dfCONSENT = consent,
       dfIE = ie,
@@ -22,7 +31,12 @@ snapshot_all <- function(
       dfSDRGCOMP = sdrgcomp,
       dfLB = lb,
       dfAE = ae,
-      dfPD = protdev
+      dfPD = protdev,
+
+      # edc
+      dfQUERY = queries,
+      dfDATAENT = data_entry_lag,
+      dfDATACHG = data_change_rate
     )
   )
 }
