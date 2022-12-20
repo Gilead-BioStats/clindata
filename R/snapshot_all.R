@@ -12,6 +12,7 @@ snapshot_all <- function(
   lb <- snapshot_lb(snapshot_date, dm)
   ae <- snapshot_ae(snapshot_date, dm)
   protdev <- snapshot_protdev(snapshot_date, dm)
+  enroll <- snapshot_enroll(snapshot_date)
 
   # edc
   queries <- snapshot_queries(snapshot_date)
@@ -32,6 +33,7 @@ snapshot_all <- function(
       dfLB = lb,
       dfAE = ae,
       dfPD = protdev,
+      dfENROLL = enroll,
 
       # edc
       dfQUERY = queries,
