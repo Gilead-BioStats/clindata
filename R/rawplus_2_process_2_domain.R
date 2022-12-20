@@ -11,17 +11,18 @@
 #' @importFrom magrittr %>%
 
 rawplus_2_process_2_domain <- function(data, dm, domain) {
-    data_processed <- data %>%
-        dplyr::filter(
-            .data$subjid %in% dm$subjid
-        )
+  data_processed <- data %>%
+    dplyr::filter(
+      .data$subjid %in% dm$subjid
+    )
 
-    n_rows_removed <- nrow(data) - nrow(data_processed)
+  n_rows_removed <- nrow(data) - nrow(data_processed)
 
-    if (n_rows_removed)
-        cli::cli_alert_warning(
-            '{n_rows_removed} rows removed from [ {domain} ] for subject IDs not present in [ dm ].'
-        )
+  if (n_rows_removed) {
+    cli::cli_alert_warning(
+      "{n_rows_removed} rows removed from [ {domain} ] for subject IDs not present in [ dm ]."
+    )
+  }
 
-    data_processed
+  data_processed
 }

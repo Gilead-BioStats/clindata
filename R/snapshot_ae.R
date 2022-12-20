@@ -2,7 +2,7 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
   ae_snapshot <- ae %>%
     dplyr::left_join(
       dm %>% dplyr::select(subjid, rfpen_dt, rfxen_dt),
-      'subjid'
+      "subjid"
     ) %>%
     dplyr::mutate(
       aeen_dt = dplyr::if_else(
@@ -19,7 +19,7 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
       -rfxen_dt
     )
 
-  check_rows(ae, ae_snapshot, 'ae')
+  check_rows(ae, ae_snapshot, "ae")
 
   ae_snapshot
 }

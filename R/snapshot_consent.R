@@ -4,7 +4,7 @@ snapshot_consent <- function(snapshot_date, dm, consent = clindata::rawplus_cons
       subjid %in% dm$subjid
     )
 
-  check_rows(consent, consent_snapshot, 'consent')
+  check_rows(consent, consent_snapshot, "consent")
 
   consent_snapshot
 }
