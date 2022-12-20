@@ -10,7 +10,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-04-12",
+        "SITE_ACTIVE_DT": "2004-01-31",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -26,7 +26,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-09-18",
+        "SITE_ACTIVE_DT": "2011-09-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -42,7 +42,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-07-18",
+        "SITE_ACTIVE_DT": "2006-03-03",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -58,7 +58,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2014-08-19",
+        "SITE_ACTIVE_DT": "2012-09-18",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -74,7 +74,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2010-08-06",
+        "SITE_ACTIVE_DT": "2008-03-14",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -90,7 +90,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2005-10-23",
+        "SITE_ACTIVE_DT": "2005-02-28",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -106,7 +106,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-08-09",
+        "SITE_ACTIVE_DT": "2007-06-04",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -122,7 +122,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-14",
+        "SITE_ACTIVE_DT": "2003-11-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -138,7 +138,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-09-07",
+        "SITE_ACTIVE_DT": "2007-10-03",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -154,7 +154,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-05-09",
+        "SITE_ACTIVE_DT": "2010-12-11",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -170,7 +170,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-14",
+        "SITE_ACTIVE_DT": "2005-08-12",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -186,7 +186,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2019-07-13",
+        "SITE_ACTIVE_DT": "2017-05-01",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -202,7 +202,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-09-23",
+        "SITE_ACTIVE_DT": "2004-05-15",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -218,7 +218,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2010-11-10",
+        "SITE_ACTIVE_DT": "2008-11-03",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -234,7 +234,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-09-27",
+        "SITE_ACTIVE_DT": "2004-07-01",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -250,7 +250,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-09-01",
+        "SITE_ACTIVE_DT": "2005-04-02",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -266,7 +266,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2012-03-20",
+        "SITE_ACTIVE_DT": "2011-01-25",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -282,7 +282,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-04-26",
+        "SITE_ACTIVE_DT": "2006-03-05",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -298,7 +298,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2019-08-07",
+        "SITE_ACTIVE_DT": "2017-09-01",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -314,7 +314,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-08-02",
+        "SITE_ACTIVE_DT": "2006-03-06",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -330,7 +330,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-08-08",
+        "SITE_ACTIVE_DT": "2005-03-30",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -346,7 +346,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-23",
+        "SITE_ACTIVE_DT": "2004-08-31",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -362,7 +362,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2014-08-10",
+        "SITE_ACTIVE_DT": "2012-08-26",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -378,7 +378,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-05-06",
+        "SITE_ACTIVE_DT": "2006-02-28",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -394,7 +394,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-06-13",
+        "SITE_ACTIVE_DT": "2005-06-17",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -410,7 +410,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-09-19",
+        "SITE_ACTIVE_DT": "2007-10-16",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -426,7 +426,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-09-15",
+        "SITE_ACTIVE_DT": "2006-10-13",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -442,7 +442,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-05",
+        "SITE_ACTIVE_DT": "2004-06-05",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -458,7 +458,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-07-07",
+        "SITE_ACTIVE_DT": "2005-12-10",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -474,7 +474,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-06-19",
+        "SITE_ACTIVE_DT": "2006-07-20",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -490,7 +490,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2014-08-04",
+        "SITE_ACTIVE_DT": "2012-08-20",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -506,7 +506,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2005-09-02",
+        "SITE_ACTIVE_DT": "2003-11-16",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -522,7 +522,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-10-22",
+        "SITE_ACTIVE_DT": "2005-11-09",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -538,7 +538,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-04-16",
+        "SITE_ACTIVE_DT": "2004-10-14",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -554,7 +554,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-08-20",
+        "SITE_ACTIVE_DT": "2011-09-08",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -570,7 +570,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2010-07-31",
+        "SITE_ACTIVE_DT": "2008-05-25",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -586,7 +586,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-09-04",
+        "SITE_ACTIVE_DT": "2006-09-28",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -602,7 +602,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-24",
+        "SITE_ACTIVE_DT": "2004-09-10",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -618,7 +618,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-09-21",
+        "SITE_ACTIVE_DT": "2004-07-14",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -634,7 +634,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-06-16",
+        "SITE_ACTIVE_DT": "2004-04-27",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -650,7 +650,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-04-29",
+        "SITE_ACTIVE_DT": "2004-03-04",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -666,7 +666,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-06-03",
+        "SITE_ACTIVE_DT": "2004-04-12",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -682,7 +682,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-07-31",
+        "SITE_ACTIVE_DT": "2011-06-23",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -698,7 +698,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2004-09-28",
+        "SITE_ACTIVE_DT": "2004-08-14",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -714,7 +714,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-04",
+        "SITE_ACTIVE_DT": "2005-04-16",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -730,7 +730,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-10-14",
+        "SITE_ACTIVE_DT": "2005-11-06",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -746,7 +746,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-01",
+        "SITE_ACTIVE_DT": "2004-05-23",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -762,7 +762,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-06-09",
+        "SITE_ACTIVE_DT": "2009-06-26",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -778,7 +778,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2012-03-21",
+        "SITE_ACTIVE_DT": "2012-01-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -794,7 +794,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-15",
+        "SITE_ACTIVE_DT": "2004-02-20",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -810,7 +810,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-08-10",
+        "SITE_ACTIVE_DT": "2006-08-27",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -826,7 +826,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-08-06",
+        "SITE_ACTIVE_DT": "2006-09-05",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -842,7 +842,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-07-16",
+        "SITE_ACTIVE_DT": "2005-12-09",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -858,7 +858,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2005-09-09",
+        "SITE_ACTIVE_DT": "2005-06-19",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -874,7 +874,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-10-06",
+        "SITE_ACTIVE_DT": "2005-03-05",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -890,7 +890,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-09-21",
+        "SITE_ACTIVE_DT": "2006-04-14",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -906,7 +906,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-26",
+        "SITE_ACTIVE_DT": "2005-09-06",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -922,7 +922,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-06-02",
+        "SITE_ACTIVE_DT": "2005-01-16",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -938,7 +938,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2015-06-04",
+        "SITE_ACTIVE_DT": "2014-02-15",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -954,7 +954,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-02",
+        "SITE_ACTIVE_DT": "2004-08-03",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -970,7 +970,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-10-28",
+        "SITE_ACTIVE_DT": "2004-11-19",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -986,7 +986,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-02",
+        "SITE_ACTIVE_DT": "2004-06-16",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1002,7 +1002,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-07-27",
+        "SITE_ACTIVE_DT": "2009-07-14",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1018,7 +1018,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-03-14",
+        "SITE_ACTIVE_DT": "2011-06-25",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1034,7 +1034,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-10",
+        "SITE_ACTIVE_DT": "2004-08-27",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1050,7 +1050,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-07-30",
+        "SITE_ACTIVE_DT": "2007-08-17",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1066,7 +1066,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-12-19",
+        "SITE_ACTIVE_DT": "2013-03-28",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1082,7 +1082,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-09-09",
+        "SITE_ACTIVE_DT": "2007-09-26",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1098,7 +1098,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-08",
+        "SITE_ACTIVE_DT": "2005-08-02",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1114,7 +1114,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-22",
+        "SITE_ACTIVE_DT": "2004-08-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -1130,7 +1130,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-06-20",
+        "SITE_ACTIVE_DT": "2010-04-06",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1146,7 +1146,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2005-10-08",
+        "SITE_ACTIVE_DT": "2004-08-17",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1162,7 +1162,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-04",
+        "SITE_ACTIVE_DT": "2004-06-18",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1178,7 +1178,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-07-23",
+        "SITE_ACTIVE_DT": "2006-08-18",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -1194,7 +1194,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-06-17",
+        "SITE_ACTIVE_DT": "2004-01-23",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -1210,7 +1210,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-09-08",
+        "SITE_ACTIVE_DT": "2004-09-22",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1226,7 +1226,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-09-27",
+        "SITE_ACTIVE_DT": "2005-10-13",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1242,7 +1242,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-05-11",
+        "SITE_ACTIVE_DT": "2004-01-25",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1258,7 +1258,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-05-17",
+        "SITE_ACTIVE_DT": "2003-12-17",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1274,7 +1274,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-12",
+        "SITE_ACTIVE_DT": "2004-03-10",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1290,7 +1290,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2014-09-17",
+        "SITE_ACTIVE_DT": "2012-09-25",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1306,7 +1306,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-22",
+        "SITE_ACTIVE_DT": "2005-08-22",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1322,7 +1322,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-09-04",
+        "SITE_ACTIVE_DT": "2004-09-23",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1338,7 +1338,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-09-07",
+        "SITE_ACTIVE_DT": "2011-07-03",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1354,7 +1354,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-06-11",
+        "SITE_ACTIVE_DT": "2006-03-30",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1370,7 +1370,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-08-17",
+        "SITE_ACTIVE_DT": "2006-08-28",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1386,7 +1386,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-09-24",
+        "SITE_ACTIVE_DT": "2007-08-07",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1402,7 +1402,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-07-28",
+        "SITE_ACTIVE_DT": "2009-06-06",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1418,7 +1418,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-04-17",
+        "SITE_ACTIVE_DT": "2005-07-23",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1434,7 +1434,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-07-08",
+        "SITE_ACTIVE_DT": "2011-05-10",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -1450,7 +1450,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2012-04-08",
+        "SITE_ACTIVE_DT": "2011-06-19",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1466,7 +1466,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-09-14",
+        "SITE_ACTIVE_DT": "2007-02-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1482,7 +1482,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-06-12",
+        "SITE_ACTIVE_DT": "2005-10-25",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1498,7 +1498,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-09-30",
+        "SITE_ACTIVE_DT": "2004-07-16",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1514,7 +1514,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-07-05",
+        "SITE_ACTIVE_DT": "2009-07-22",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1530,7 +1530,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-06-21",
+        "SITE_ACTIVE_DT": "2003-10-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1546,7 +1546,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2012-05-23",
+        "SITE_ACTIVE_DT": "2010-04-07",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1562,7 +1562,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2005-06-13",
+        "SITE_ACTIVE_DT": "2004-02-20",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1578,7 +1578,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-08-01",
+        "SITE_ACTIVE_DT": "2007-08-13",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1594,7 +1594,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-09-10",
+        "SITE_ACTIVE_DT": "2006-09-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1610,7 +1610,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-05-19",
+        "SITE_ACTIVE_DT": "2005-03-11",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -1626,7 +1626,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2010-05-11",
+        "SITE_ACTIVE_DT": "2008-03-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1642,7 +1642,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-14",
+        "SITE_ACTIVE_DT": "2003-11-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1658,7 +1658,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-09-21",
+        "SITE_ACTIVE_DT": "2006-07-17",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -1674,7 +1674,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2005-06-08",
+        "SITE_ACTIVE_DT": "2004-10-17",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1690,7 +1690,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-10-09",
+        "SITE_ACTIVE_DT": "2006-08-04",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1706,7 +1706,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-07-25",
+        "SITE_ACTIVE_DT": "2006-12-18",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1722,7 +1722,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-29",
+        "SITE_ACTIVE_DT": "2004-07-15",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1738,7 +1738,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-18",
+        "SITE_ACTIVE_DT": "2004-03-13",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1754,7 +1754,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-10-30",
+        "SITE_ACTIVE_DT": "2006-11-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1770,7 +1770,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-10-23",
+        "SITE_ACTIVE_DT": "2006-11-11",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1786,7 +1786,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-06-19",
+        "SITE_ACTIVE_DT": "2007-01-19",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1802,7 +1802,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-16",
+        "SITE_ACTIVE_DT": "2004-07-22",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1818,7 +1818,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2010-10-10",
+        "SITE_ACTIVE_DT": "2008-05-11",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1834,7 +1834,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2017-07-26",
+        "SITE_ACTIVE_DT": "2015-05-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -1850,7 +1850,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2005-12-02",
+        "SITE_ACTIVE_DT": "2004-12-20",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -1866,7 +1866,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-09-10",
+        "SITE_ACTIVE_DT": "2004-10-24",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1882,7 +1882,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2010-05-12",
+        "SITE_ACTIVE_DT": "2008-03-05",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1898,7 +1898,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-07-07",
+        "SITE_ACTIVE_DT": "2006-07-30",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1914,7 +1914,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2012-08-02",
+        "SITE_ACTIVE_DT": "2010-09-01",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1930,7 +1930,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2004-07-26",
+        "SITE_ACTIVE_DT": "2004-02-13",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1946,7 +1946,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-08-06",
+        "SITE_ACTIVE_DT": "2007-03-28",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -1962,7 +1962,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2017-09-03",
+        "SITE_ACTIVE_DT": "2015-06-30",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1978,7 +1978,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2004-02-15",
+        "SITE_ACTIVE_DT": "2004-01-10",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -1994,7 +1994,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-05-24",
+        "SITE_ACTIVE_DT": "2005-12-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2010,7 +2010,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2010-05-02",
+        "SITE_ACTIVE_DT": "2008-09-15",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2026,7 +2026,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-10-22",
+        "SITE_ACTIVE_DT": "2004-10-13",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2042,7 +2042,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-10-17",
+        "SITE_ACTIVE_DT": "2005-11-07",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2058,7 +2058,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-24",
+        "SITE_ACTIVE_DT": "2005-05-25",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2074,7 +2074,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-10-10",
+        "SITE_ACTIVE_DT": "2005-08-27",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2090,7 +2090,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-10-14",
+        "SITE_ACTIVE_DT": "2009-05-22",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2106,7 +2106,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-01-17",
+        "SITE_ACTIVE_DT": "2004-05-20",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2122,7 +2122,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-08",
+        "SITE_ACTIVE_DT": "2004-07-31",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2138,7 +2138,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2015-10-26",
+        "SITE_ACTIVE_DT": "2013-11-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2154,7 +2154,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-25",
+        "SITE_ACTIVE_DT": "2004-03-01",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2170,7 +2170,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-27",
+        "SITE_ACTIVE_DT": "2004-09-16",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2186,7 +2186,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-06-22",
+        "SITE_ACTIVE_DT": "2005-07-22",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2202,7 +2202,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-21",
+        "SITE_ACTIVE_DT": "2004-02-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2218,7 +2218,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-06-28",
+        "SITE_ACTIVE_DT": "2005-07-20",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2234,7 +2234,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-16",
+        "SITE_ACTIVE_DT": "2005-03-01",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2250,7 +2250,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-06-20",
+        "SITE_ACTIVE_DT": "2003-09-05",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2266,7 +2266,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-06-07",
+        "SITE_ACTIVE_DT": "2004-04-20",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2282,7 +2282,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-05",
+        "SITE_ACTIVE_DT": "2004-06-23",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2298,7 +2298,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-08-11",
+        "SITE_ACTIVE_DT": "2009-08-30",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2314,7 +2314,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-10-02",
+        "SITE_ACTIVE_DT": "2009-05-01",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2330,7 +2330,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2018-08-25",
+        "SITE_ACTIVE_DT": "2016-06-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2346,7 +2346,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-06-08",
+        "SITE_ACTIVE_DT": "2005-06-19",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2362,7 +2362,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-05-17",
+        "SITE_ACTIVE_DT": "2006-06-04",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2378,7 +2378,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-26",
+        "SITE_ACTIVE_DT": "2004-05-27",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2394,7 +2394,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-08-16",
+        "SITE_ACTIVE_DT": "2005-04-19",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2410,7 +2410,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-22",
+        "SITE_ACTIVE_DT": "2005-08-07",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2426,7 +2426,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-20",
+        "SITE_ACTIVE_DT": "2004-02-26",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2442,7 +2442,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-11-21",
+        "SITE_ACTIVE_DT": "2007-11-09",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2458,7 +2458,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2013-08-28",
+        "SITE_ACTIVE_DT": "2011-09-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2474,7 +2474,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2009-08-08",
+        "SITE_ACTIVE_DT": "2007-04-21",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2490,7 +2490,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-06",
+        "SITE_ACTIVE_DT": "2003-12-15",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2506,7 +2506,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-19",
+        "SITE_ACTIVE_DT": "2003-10-18",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2522,7 +2522,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2019-09-16",
+        "SITE_ACTIVE_DT": "2017-10-02",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2538,7 +2538,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-23",
+        "SITE_ACTIVE_DT": "2005-02-02",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2554,7 +2554,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": true,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-10-23",
+        "SITE_ACTIVE_DT": "2005-12-11",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2570,7 +2570,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2012-11-26",
+        "SITE_ACTIVE_DT": "2012-10-24",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2586,7 +2586,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2016-08-25",
+        "SITE_ACTIVE_DT": "2014-09-19",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2602,7 +2602,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-11-21",
+        "SITE_ACTIVE_DT": "2005-11-28",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2618,7 +2618,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-08-23",
+        "SITE_ACTIVE_DT": "2006-09-23",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2634,7 +2634,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-07-28",
+        "SITE_ACTIVE_DT": "2005-06-02",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2650,7 +2650,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2007-08-29",
+        "SITE_ACTIVE_DT": "2005-06-22",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2666,7 +2666,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2008-10-04",
+        "SITE_ACTIVE_DT": "2006-08-09",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2682,7 +2682,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-10-22",
+        "SITE_ACTIVE_DT": "2011-02-04",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2698,7 +2698,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2011-06-29",
+        "SITE_ACTIVE_DT": "2009-01-19",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2714,7 +2714,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-16",
+        "SITE_ACTIVE_DT": "2004-06-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2730,7 +2730,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-04-06",
+        "SITE_ACTIVE_DT": "2004-05-05",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2746,7 +2746,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-04-29",
+        "SITE_ACTIVE_DT": "2004-06-13",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2762,7 +2762,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-05-08",
+        "SITE_ACTIVE_DT": "2004-05-07",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "China"
@@ -2778,7 +2778,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-07-27",
+        "SITE_ACTIVE_DT": "2004-08-26",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "US"
@@ -2794,7 +2794,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2006-08-02",
+        "SITE_ACTIVE_DT": "2004-08-30",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
@@ -2810,7 +2810,7 @@
         "SITE_STATUS": "Active",
         "IS_SATELLITE": false,
         "ACCOUNT": "city 1 Medical Center",
-        "SITE_ACTIVE_DT": "2019-09-01",
+        "SITE_ACTIVE_DT": "2017-09-29",
         "CITY": "city 1",
         "STATE": "state 1",
         "COUNTRY": "Japan"
