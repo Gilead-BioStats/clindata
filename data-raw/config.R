@@ -1,3 +1,4 @@
+library(magrittr)
 devtools::load_all()
 
 # import
@@ -7,7 +8,7 @@ gsm_releases <- gh::gh(
     '/repos/Gilead-BioStats/gsm/releases',
     token = remotes:::github_pat()
 )
-gsm_version <- releases[[1]]$name %>% substring(2)
+gsm_version <- gsm_releases[[1]]$name %>% substring(2) %T>% message
 
 datasets$param$gsm_version <- gsm_version
 datasets$workflow$gsm_version <- gsm_version
