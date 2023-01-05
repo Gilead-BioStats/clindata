@@ -11,7 +11,7 @@ set.seed(1)
 status_site <- clindata::rawplus_dm %>%
   group_by(studyid, siteid, invid, country) %>%
   summarize(
-    SITE_ACTIVE_DT = min(rfpen_dt)
+    SITE_ACTIVE_DT = min(rfpst_dt)
   ) %>%
   mutate(
     PROTOCOL_ROW_ID = '1-1G9113',

@@ -5,7 +5,7 @@
 \alias{edc_queries}
 \title{Queries}
 \format{
-a data frame with 41000 rows and 12 columns
+a data frame with 40976 rows and 12 columns
 }
 \source{
 ./data-raw/edc/queries.csv

@@ -21,14 +21,14 @@ snapshot_dm <- function(snapshot_date, visdt, ex, dm = clindata::rawplus_dm) {
     ) %>%
     dplyr::left_join(
       rfpen_dt,
-      'subjid'
+      "subjid"
     ) %>%
     dplyr::left_join(
       rfxen_dt,
-      'subjid'
+      "subjid"
     )
 
-  check_rows(dm, dm_snapshot, 'dm')
+  check_rows(dm, dm_snapshot, "dm")
 
   dm_snapshot
 }

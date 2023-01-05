@@ -5,7 +5,7 @@
 \alias{config_workflow}
 \title{Configuration Workflow}
 \format{
-a data frame with 16 rows and 4 columns
+a data frame with 26 rows and 4 columns
 }
 \source{
 ./data-raw/config/workflow.csv

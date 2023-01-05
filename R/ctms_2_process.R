@@ -6,9 +6,9 @@
 #' @importFrom purrr imap
 
 ctms_2_process <- function(
-    datasets
+  datasets
 ) {
-    datasets_processed <- datasets
+  datasets_processed <- datasets
 
-    datasets_processed
+  datasets_processed
 }

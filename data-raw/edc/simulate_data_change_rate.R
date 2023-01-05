@@ -39,7 +39,7 @@ data_change_rate <- data_points %>%
   ungroup
 
 data_change_rate1 <- data_change_rate %>%
-  group_by(subjid, foldername, form) %>%
+  group_by(subjid, foldername, visit_dt, form) %>%
   summarize(
     n_data_points = n(),
     n_data_points_with_changes = sum(n_data_changes > 0),

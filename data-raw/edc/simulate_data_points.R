@@ -14,6 +14,9 @@ folder <- clindata::rawplus_visdt %>%
   select(subjid, foldername, visit_dt) %>%
   mutate(
     visit_dt = ymd(visit_dt)
+  ) %>%
+  filter(
+    !is.na(visit_dt)
   )
 
 # Form/field metadata.
