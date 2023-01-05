@@ -10,8 +10,8 @@ gsm_releases <- gh::gh(
 )
 gsm_version <- gsm_releases[[1]]$name %>% substring(2) %T>% message
 
-datasets$param$gsm_version <- gsm_version
-datasets$workflow$gsm_version <- gsm_version
+datasets$param$gsm_version <- as.character(gsm_version)
+datasets$workflow$gsm_version <- as.character(gsm_version)
 
 # process
 datasets_processed <- ctms_2_process(datasets)
