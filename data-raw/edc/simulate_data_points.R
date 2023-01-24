@@ -4,20 +4,48 @@
 
 # load_all('.')
 library(dplyr)
+library(tidyr)
 library(lubridate)
 library(data.table)
 
 set.seed(8675309)
 
-# Visit data.
+# Visit data with unique visit values within each subject ID.
 folder <- clindata::rawplus_visdt %>%
-  select(subjid, foldername, visit_dt) %>%
-  mutate(
-    visit_dt = ymd(visit_dt)
-  ) %>%
   filter(
-    !is.na(visit_dt)
-  )
+    visit_dt != ''
+  ) %>%
+  select(subjid, foldername, visit_dt, folderseq_nsv) %>%
+  arrange(subjid, visit_dt) %>%
+  group_by(subjid) %>%
+  mutate(
+    visit_dt = ymd(visit_dt),
+    # Group unscheduled visits with most recent, prior scheduled visit.
+    visitnum_tmp = ifelse(
+        foldername != 'Unscheduled',
+        folderseq_nsv,
+        NA
+    )
+  ) %>%
+  fill(visitnum_tmp, .direction = 'down') %>%
+  group_by(subjid, visitnum_tmp) %>%
+  mutate(
+    # Increment visit number by .1 for each unscheduled visit following the most recent, prior
+    # scheduled visit.
+    visitnum = if_else(
+      row_number() == 1,
+      visitnum_tmp,
+      visitnum_tmp + (row_number()-1)*.1
+    ),
+    # Concatenate visit name with visit number to define unique visit name.
+    foldername = if_else(
+      row_number() == 1,
+      foldername,
+      paste(foldername, visitnum)
+    )
+  ) %>%
+  ungroup() %>%
+  select(-folderseq_nsv, -visitnum_tmp)
 
 # Form/field metadata.
 form_field <- fread('data-raw/edc/form-field.tsv') %>%
