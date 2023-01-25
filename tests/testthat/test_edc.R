@@ -1,4 +1,3 @@
-# TODO: add tests checking uniqueness of key variables in each dataset using data standard YAML
 standard <- 'edc'
 metadata <- read_yaml(system.file('data-standards', paste0(standard, '.yaml'), package = 'clindata'))
 

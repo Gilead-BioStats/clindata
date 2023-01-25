@@ -5,7 +5,7 @@
 \alias{edc_data_change_rate}
 \title{Data Change Rate}
 \format{
-a data frame with 240398 rows and 7 columns
+a data frame with 247462 rows and 7 columns
 }
 \source{
 ./data-raw/edc/data_change_rate.csv

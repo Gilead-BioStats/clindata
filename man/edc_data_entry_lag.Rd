@@ -5,7 +5,7 @@
 \alias{edc_data_entry_lag}
 \title{Data Entry Lag}
 \format{
-a data frame with 240398 rows and 6 columns
+a data frame with 247462 rows and 6 columns
 }
 \source{
 ./data-raw/edc/data_entry_lag.csv
