@@ -11,6 +11,11 @@ data_points:
     - visit
     - form
     - field
+  keys:
+    - subjid
+    - foldername
+    - form
+    - field
 data_entry_lag:
   title: Data Entry Lag
   description: data page-level data with simulated data entry lag
@@ -21,6 +26,10 @@ data_entry_lag:
   structure:
     - subject
     - visit
+    - form
+  keys:
+    - subjid
+    - foldername
     - form
   derivations:
     - n_data_points
@@ -40,6 +49,12 @@ queries:
     - form
     - field
     - query
+  keys:
+    - subjid
+    - foldername
+    - form
+    - field
+    - qryopendate
   derivations:
     - qryage
     - qry30fl
@@ -56,7 +71,11 @@ data_change_rate:
     - subject
     - visit
     - form
+  keys:
+    - subjid
+    - foldername
+    - form
   derivations:
     - n_data_points
-    - n_queries
-    - n_data_changes
+    - n_data_points_with_changes
+    - n_data_point_changes
