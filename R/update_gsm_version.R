@@ -16,8 +16,7 @@
 #' @noRd
 #'
 #' @keywords internal
-#'
-#' @export
+
 update_gsm_version <- function(gsm_version = 'latest') {
     # import
     datasets <- ctms_1_import(data_path = file.path('data-raw', 'config'))
