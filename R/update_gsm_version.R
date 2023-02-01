@@ -13,6 +13,10 @@
 #'
 #' @return Updated .rda and .csv files.
 #'
+#' @noRd
+#'
+#' @keywords internal
+#'
 #' @export
 update_gsm_version <- function(gsm_version = 'latest') {
     # import
