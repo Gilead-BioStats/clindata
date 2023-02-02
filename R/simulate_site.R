@@ -1,6 +1,7 @@
 simulate_site <- function(
-    site = clindata::ctms_site,
-    n_sites
+    n_sites,
+    studyid,
+    site = clindata::ctms_site
 ) {
     if (!is.null(n_sites)) {
         site1 <- site %>%
@@ -16,6 +17,8 @@ simulate_site <- function(
     } else {
         site1 <- site
     }
+
+    site1$studyid <- studyid
 
     return(site1)
 }

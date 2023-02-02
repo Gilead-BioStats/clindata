@@ -1,6 +1,6 @@
 simulate_enroll <- function(
-    enroll = clindata::rawplus_enroll,
     dm,
+    enroll = clindata::rawplus_enroll,
     sf_rate = runif(1, 0, 1)
 ) {
     enrolled <- dm %>%

@@ -1,3 +1,4 @@
+# TODO: use start and end date arguments
 simulate_study <- function(
     n_sites = NULL,
     n_subjects = NULL,
@@ -28,74 +29,38 @@ simulate_study <- function(
         duration <- as.numeric(
             as.Date(end_date) - as.Date(start_date)
         ) + 1
+        print(duration)
     }
 
-    # TODO: move each domain into its own function
     studyid <- glue::glue('s-${n_sites}-${n_subjects}-${duration}')
 
     # sites
     site <- simulate_site(
-        clindata::ctms_site,
-        n_sites
+        n_sites,
+        studyid
     )
 
     # subjects
     dm <- simulate_dm(
-        clindata::rawplus_dm,
         site,
         n_subjects,
         start_date,
         end_date
     )
 
-    # adverse events
-    ae <- simulate_ae(
-        clindata::rawplus_ae,
-        dm
-    )
+    # rawplus
+    ae <- simulate_ae(dm)
+    protdev <- simulate_protdev(dm)
+    lb <- simulate_lb(dm)
+    studcomp <- simulate_studcomp(dm)
+    sdrgcomp <- simulate_sdrgcomp(dm)
+    enroll <- simulate_enroll(dm)
 
-    # protocol deviations
-    protdev <- simulate_protdev(
-        clindata::rawplus_protdev,
-        dm
-    )
-
-    # labs
-    lb <- simulate_lb(
-        clindata::rawplus_lb,
-        dm
-    )
-
-    # disposition - study
-    studcomp <- simulate_studcomp(
-        clindata::rawplus_studcomp,
-        dm
-    )
-
-    # disposition - treatment
-    sdrgcomp <- simulate_sdrgcomp(
-        clindata::rawplus_sdrgcomp,
-        dm
-    )
-
-    # queries
-    queries <- simulate_queries(
-        clindata::edc_queries,
-        dm
-    )
-
-    # data entry lag & data change rate
-    data_pages <- simulate_data_pages(
-        clindata::edc_data_entry_lag,
-        dm
-    )
-
-    # disposition - enrollment
-    enroll <- simulate_enroll(
-        clindata::rawplus_enroll,
-        dm
-    )
+    # edc
+    queries <- simulate_queries(dm)
+    data_pages <- simulate_data_pages(dm)
     
+    # list of data domains
     data <- list(
         site = site,
         dm = dm,

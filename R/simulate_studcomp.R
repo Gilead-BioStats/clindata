@@ -1,6 +1,6 @@
 simulate_studcomp <- function(
-    studcomp = clindata::rawplus_studcomp,
     dm,
+    studcomp = clindata::rawplus_studcomp,
     disc_rate = runif(1, 0.001, .25)
 ) {
     compreas <- studcomp$compreas %>% .[. != '']

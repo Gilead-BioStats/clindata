@@ -1,6 +1,6 @@
 simulate_queries <- function(
-    queries = clindata::rawplus_queries,
     dm,
+    queries = clindata::rawplus_queries,
     query_rate = runif(1, 0, .1)
 ) {
     queries1 <- dm %>%

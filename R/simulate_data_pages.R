@@ -1,6 +1,6 @@
 simulate_data_pages <- function(
-    data_entry_lag = clindata::rawplus_data_entry_lag,
     dm,
+    data_entry_lag = clindata::rawplus_data_entry_lag,
     data_page_rate = runif(1, .1, .4)
 ) {
     data_pages <- dm %>%

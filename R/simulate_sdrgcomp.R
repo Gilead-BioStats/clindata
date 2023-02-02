@@ -1,6 +1,6 @@
 simulate_sdrgcomp <- function(
-    sdrgcomp = clindata::rawplus_sdrgcomp,
     dm,
+    sdrgcomp = clindata::rawplus_sdrgcomp,
     disc_rate = runif(1, 0.001, .25)
 ) {
     sdrgreas <- sdrgcomp$sdrgreas %>% .[. != '']

@@ -1,22 +1,13 @@
 simulate_dm <- function(
-    dm = clindata::rawplus_dm,
     site,
     n_subjects,
     start_date,
-    end_date
+    end_date,
+    dm = clindata::rawplus_dm
 ) {
     dm1 <- dm %>%
         select(
-            studyid,
-            siteid,
-            subjid,
-            country,
-            rfpst_dt,
-            rfpen_dt,
-            timeonstudy,
-            rfxst_dt,
-            rfxen_dt,
-            timeontreatment
+            subjid
         )
 
     if (!is.null(n_subjects)) {
@@ -35,11 +26,15 @@ simulate_dm <- function(
     }
 
     dm3 <- dm2 %>%
-        select(-ends_with('dt'), -starts_with('timeon')) %>%
         mutate(
             siteid = sample(site$SITE_NUM, nrow(dm2), TRUE, runif(nrow(site))),
             rfpst_dt = sample(start_date:end_date, n(), TRUE),
             rfxst_dt = rfpst_dt + sample(1:60, n(), TRUE)
+        ) %>%
+        left_join(
+            site %>%
+                select(studyid, siteid, country),
+            c('siteid' = 'SITE_NUM')
         ) %>%
         rowwise() %>%
         mutate(
@@ -51,6 +46,11 @@ simulate_dm <- function(
             across(ends_with('dt'), lubridate::as_date),
             timeonstudy = as.numeric(rfpen_dt - rfpst_dt) + 1,
             timeontreatment = as.numeric(rfxen_dt - rfxst_dt) + 1
+        ) %>%
+        select(
+            studyid, siteid, country, subjid,
+            rfpst_dt, rfpen_dt, timeonstudy,
+            rfxst_dt, rfxen_dt, timeontreatment
         )
 
     return(dm3)

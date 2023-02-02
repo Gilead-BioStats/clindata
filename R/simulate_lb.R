@@ -1,6 +1,6 @@
 simulate_lb <- function(
-    lb = clindata::rawplus_lb,
     dm,
+    lb = clindata::rawplus_lb,
     lb_rate = runif(1, .5, 1.1)
 ) {
     lb1 <- dm %>%

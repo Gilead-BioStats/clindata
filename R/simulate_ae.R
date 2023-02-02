@@ -1,6 +1,6 @@
 simulate_ae <- function(
-    ae = clindata::rawplus_ae,
     dm,
+    ae = clindata::rawplus_ae,
     ae_rate = runif(1, .25, 1)
 ) {
     ae1 <- dm %>%

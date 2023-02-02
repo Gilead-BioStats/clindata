@@ -1,6 +1,6 @@
 simulate_protdev <- function(
-    protdev = clindata::rawplus_protdev,
     dm,
+    protdev = clindata::rawplus_protdev,
     pd_rate = runif(1, .25, 1)
 ) {
     protdev1 <- dm %>%
