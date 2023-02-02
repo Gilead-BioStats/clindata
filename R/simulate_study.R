@@ -30,104 +30,95 @@ simulate_study <- function(
         ) + 1
     }
 
+    # TODO: move each domain into its own function
     studyid <- glue::glue('s-${n_sites}-${n_subjects}-${duration}')
 
     # sites
-    ctms_site <- clindata::ctms_site
-
-    if (!is.null(n_sites)) {
-        inv <- ctms_site %>%
-            slice_sample(
-                n = n_sites,
-                replace = TRUE
-            ) %>%
-            group_by(SITE_NUM) %>%
-            mutate(
-                SITE_NUM = glue('{SITE_NUM}-{row_number()}')
-            ) %>%
-            ungroup()
-    } else {
-        inv <- ctms_site
-    }
+    site <- simulate_site(
+        clindata::ctms_site,
+        n_sites
+    )
 
     # subjects
-    rawplus_dm <- clindata::rawplus_dm
-
-    if (!is.null(n_subjects)) {
-        dm <- rawplus_dm %>%
-            select(
-                studyid,
-                siteid,
-                subjid,
-                country,
-                rfpst_dt,
-                rfpen_dt,
-                timeonstudy,
-                rfxst_dt,
-                rfxen_dt,
-                timeontreatment
-            ) %>%
-            slice_sample(
-                n = n_subjects,
-                replace = TRUE
-            ) %>%
-            group_by(subjid) %>%
-            mutate(
-                subjid = glue('{subjid}-{row_number()}')
-            ) %>%
-            ungroup()
-    } else {
-        dm <- rawplus_dm
-    }
-
-    dm1 <- dm %>%
-        select(-ends_with('dt'), -starts_with('timeon')) %>%
-        mutate(
-            siteid = sample(inv$SITE_NUM, nrow(dm), TRUE, runif(nrow(inv))),
-            rfpst_dt = sample(start_date:end_date, n(), TRUE),
-            rfxst_dt = rfpst_dt + sample(1:60, n(), TRUE)
-        ) %>%
-        rowwise() %>%
-        mutate(
-            rfpen_dt = sample(rfxst_dt:end_date, 1),
-            rfxen_dt = sample(rfxst_dt:rfpen_dt, 1)
-        ) %>%
-        ungroup() %>%
-        mutate(
-            across(ends_with('dt'), lubridate::as_date),
-            timeonstudy = as.numeric(rfpen_dt - rfpst_dt) + 1,
-            timeontreatment = as.numeric(rfxen_dt - rfxst_dt) + 1
-        )
+    dm <- simulate_dm(
+        clindata::rawplus_dm,
+        site,
+        n_subjects,
+        start_date,
+        end_date
+    )
 
     # adverse events
-    # TODO:
-    ae_rate <- runif(1, .25, 1)
-    ae <- dm1 %>%
-        select(subjid, starts_with('rfx'), timeontreatment) %>%
-        filter(timeontreatment > 0) %>%
-        slice_sample(
-            n = floor(ae_rate*nrow(dm1))
-        ) %>%
-        rowwise() %>%
-        mutate(
-            event_rate = rnbinom(1, size = 1, mu = ceiling(timeontreatment/250)) # event every 250 days on average
-        ) %>%
-        ungroup() %>%
-        mutate(
-            n_events = floor(timeontreatment / max(event_rate, 1)),
-            n = n_events
-        ) %>%
-        tidyr::uncount(
-            n_events # generate n duplicate rows
-        )
+    ae <- simulate_ae(
+        clindata::rawplus_ae,
+        dm
+    )
 
     # protocol deviations
+    protdev <- simulate_protdev(
+        clindata::rawplus_protdev,
+        dm
+    )
 
     # labs
+    lb <- simulate_lb(
+        clindata::rawplus_lb,
+        dm
+    )
 
-    # disposition
+    # disposition - study
+    studcomp <- simulate_studcomp(
+        clindata::rawplus_studcomp,
+        dm
+    )
 
-    # edc
+    # disposition - treatment
+    sdrgcomp <- simulate_sdrgcomp(
+        clindata::rawplus_sdrgcomp,
+        dm
+    )
 
-    return(ae)
+    # queries
+    queries <- simulate_queries(
+        clindata::edc_queries,
+        dm
+    )
+
+    # data entry lag & data change rate
+    data_pages <- simulate_data_pages(
+        clindata::edc_data_entry_lag,
+        dm
+    )
+
+    # disposition - enrollment
+    enroll <- simulate_enroll(
+        clindata::rawplus_enroll,
+        dm
+    )
+    
+    data <- list(
+        site = site,
+        dm = dm,
+        ae = ae,
+        protdev = protdev,
+        lb = lb,
+        studcomp = studcomp,
+        sdrgcomp = sdrgcomp,
+        queries = queries,
+        data_entry_lag = data_pages,
+        data_change_rate = data_pages,
+        enroll = enroll
+    )
+
+    # Display number of rows.
+    data %>%
+        map_int(~nrow(.x)) %>%
+        stack %>%
+        select(
+            domain = ind,
+            n_rows = values
+        ) %>%
+        print(row.names = FALSE)
+
+    return(data)
 }

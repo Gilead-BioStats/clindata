@@ -19,7 +19,6 @@ snapshot_all <- function(
   data_entry_lag <- snapshot_data_entry_lag(snapshot_date)
   data_change_rate <- snapshot_data_change_rate(snapshot_date)
 
-
   return(
     list(
       snapshot_date = snapshot_date,
