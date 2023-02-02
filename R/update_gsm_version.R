@@ -1,6 +1,6 @@
 #' Update {gsm} version in config files.
 #'
-#' @param gsm_version
+#' @param version `character` {gsm} version number.
 #'
 #' @examples
 #' \dontrun{
@@ -17,7 +17,7 @@
 #'
 #' @keywords internal
 
-update_gsm_version <- function(gsm_version = 'latest') {
+update_gsm_version <- function(version = 'latest') {
     # import
     datasets <- ctms_1_import(data_path = file.path('data-raw', 'config'))
 
@@ -51,9 +51,7 @@ update_gsm_version <- function(gsm_version = 'latest') {
     config_files <- c("param.csv", "workflow.csv")
 
     update <- purrr::map(config_files, ~read.csv(here::here('data-raw', 'config', .))) %>%
-        purrr::map(function(x) {
-            x %>% mutate(gsm_version = gsm_version)
-        }) %>%
+        purrr::map(~.x %>% mutate(gsm_version = version)) %>%
         purrr::set_names(config_files)
 
     purrr::iwalk(update, function(x, y) {write.csv(x, file = paste0(here::here('data-raw', 'config', y)), row.names = FALSE)})
