@@ -1,6 +1,6 @@
 simulate_queries <- function(
     dm,
-    queries = clindata::rawplus_queries,
+    queries = clindata::edc_queries,
     query_rate = runif(1, 0, .1)
 ) {
     queries1 <- dm %>%
@@ -14,6 +14,9 @@ simulate_queries <- function(
             n_queries # generate n duplicate rows
         ) %>%
         mutate(
+            foldername = 'visit',
+            form = 'form',
+            field = 'field',
             qry30fl = sample(
                 unique(queries$qry30fl),
                 n(),
@@ -23,11 +26,12 @@ simulate_queries <- function(
         ) %>%
         rowwise() %>%
         mutate(
-           qryopendate = sample(rfpst_dt:rfpen_dt, 1) %>% lubridate::as_date()
+           qryopendate = sample(rfpst_dt:rfpen_dt, 1) %>%
+               lubridate::as_date()
         ) %>%
         ungroup() %>%
         select(
-            subjid, qryopendate, qry30fl
+            subjid, foldername, form, field, qryopendate, qry30fl
         )
 
     return(queries1)

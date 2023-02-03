@@ -38,8 +38,10 @@ simulate_ae <- function(
         ) %>%
         rowwise() %>%
         mutate(
-            aest_dt = sample(rfxst_dt:rfxen_dt, 1) %>% lubridate::as_date(),
-            aeen_dt = sample(aest_dt:(rfxen_dt + 30), 1) %>% lubridate::as_date()
+            aest_dt = sample(rfxst_dt:rfxen_dt, 1) %>%
+                lubridate::as_date(),
+            aeen_dt = sample(aest_dt:(rfxen_dt + 30), 1) %>%
+                lubridate::as_date()
         ) %>%
         ungroup() %>%
         select(

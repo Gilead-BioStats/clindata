@@ -1,6 +1,6 @@
 simulate_data_pages <- function(
     dm,
-    data_entry_lag = clindata::rawplus_data_entry_lag,
+    data_entry_lag = clindata::edc_data_entry_lag,
     data_page_rate = runif(1, .1, .4)
 ) {
     data_pages <- dm %>%
@@ -14,6 +14,8 @@ simulate_data_pages <- function(
             n_data_pages # generate n duplicate rows
         ) %>%
         mutate(
+            foldername = 'visit',
+            form = 'form',
             n_data_points = rpois(n(), 4) + 1,
             data_entry_lag_fl = sample(
                 unique(data_entry_lag$data_entry_lag_fl),
@@ -21,15 +23,16 @@ simulate_data_pages <- function(
                 replace = TRUE,
                 prob = table(data_entry_lag$data_entry_lag_fl) / nrow(data_entry_lag)
             ),
-            n_data_points_with_changes = rpois(n(), .3),
+            n_data_points_with_changes = rpois(n(), .3)
         ) %>%
         rowwise() %>%
         mutate(
-           visitdt = sample(rfpst_dt:rfpen_dt, 1) %>% lubridate::as_date()
+           visit_dt = sample(rfpst_dt:rfpen_dt, 1) %>%
+               lubridate::as_date()
         ) %>%
         ungroup() %>%
         select(
-            subjid, visitdt, n_data_points, data_entry_lag_fl, n_data_points_with_changes
+            subjid, visit_dt, foldername, form, n_data_points, data_entry_lag_fl, n_data_points_with_changes
         )
 
     return(data_pages)

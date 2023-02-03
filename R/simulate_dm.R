@@ -18,7 +18,8 @@ simulate_dm <- function(
             ) %>%
             group_by(subjid) %>%
             mutate(
-                subjid = glue('{subjid}-{row_number()}')
+                subjid = glue('{subjid}-{row_number()}') %>%
+                    as.character
             ) %>%
             ungroup()
     } else {
@@ -33,7 +34,7 @@ simulate_dm <- function(
         ) %>%
         left_join(
             site %>%
-                select(studyid, siteid, country),
+                select(studyid, SITE_NUM, country = COUNTRY),
             c('siteid' = 'SITE_NUM')
         ) %>%
         rowwise() %>%

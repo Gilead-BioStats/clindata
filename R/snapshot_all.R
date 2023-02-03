@@ -1,3 +1,4 @@
+# TODO: add consent and IE back in
 snapshot_all <- function(
   snapshot_date = get_snapshot_date(),
   data = list(
@@ -5,8 +6,8 @@ snapshot_all <- function(
     visdt = clindata::rawplus_visdt,
     ex = clindata::rawplus_ex,
     dm = clindata::rawplus_dm,
-    consent = clindata::rawplus_consent,
-    ie = clindata::rawplus_ie,
+    #consent = clindata::rawplus_consent,
+    #ie = clindata::rawplus_ie,
     studcomp = clindata::rawplus_studcomp,
     sdrgcomp = clindata::rawplus_sdrgcomp,
     lb = clindata::rawplus_lb,
@@ -18,14 +19,20 @@ snapshot_all <- function(
     queries = clindata::edc_queries,
     data_entry_lag = clindata::edc_data_entry_lag,
     data_change_rate = clindata::edc_data_change_rate
-  )
+  ),
+  impute_rf_dt = TRUE
 ) {
   # rawplus
-  visdt <- snapshot_visdt(snapshot_date, data$visdt)
-  ex <- snapshot_ex(snapshot_date, data$ex)
-  dm <- snapshot_dm(snapshot_date, visdt, ex, data$dm)
-  consent <- snapshot_consent(snapshot_date, dm, data$consent)
-  ie <- snapshot_ie(snapshot_date, dm, data$ie)
+  if (impute_rf_dt) {
+    visdt <- snapshot_visdt(snapshot_date, data$visdt)
+    ex <- snapshot_ex(snapshot_date, data$ex)
+    dm <- snapshot_dm(snapshot_date, visdt, ex, data$dm)
+  } else {
+    dm <- snapshot_dm(snapshot_date, dm = data$dm)
+  }
+
+  #consent <- snapshot_consent(snapshot_date, dm, data$consent)
+  #ie <- snapshot_ie(snapshot_date, dm, data$ie)
   studcomp <- snapshot_studcomp(snapshot_date, dm, data$studcomp)
   sdrgcomp <- snapshot_sdrgcomp(snapshot_date, dm, data$sdrgcomp)
   lb <- snapshot_lb(snapshot_date, dm, data$lb)
@@ -44,8 +51,8 @@ snapshot_all <- function(
 
       # rawplus
       dfSUBJ = dm,
-      dfCONSENT = consent,
-      dfIE = ie,
+      #dfCONSENT = consent,
+      #dfIE = ie,
       dfSTUDCOMP = studcomp,
       dfSDRGCOMP = sdrgcomp,
       dfLB = lb,

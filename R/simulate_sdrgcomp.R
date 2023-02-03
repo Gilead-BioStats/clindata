@@ -8,7 +8,7 @@ simulate_sdrgcomp <- function(
         filter(timeontreatment > 0) %>%
         select(subjid) %>%
         slice_sample(
-            n = floor(disc_rate*nrow(dm))
+            n = ceiling(disc_rate*nrow(dm))
         ) %>%
         mutate(
             sdrgyn = 'N',
@@ -17,7 +17,8 @@ simulate_sdrgcomp <- function(
                 n(),
                 replace = TRUE,
                 prob = table(sdrgreas) / length(sdrgreas)
-            )
+            ),
+            datapagename  = 'Blinded Study Drug Completion'
         )
 
     return(sdrgcomp1)

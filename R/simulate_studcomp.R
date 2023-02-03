@@ -8,7 +8,7 @@ simulate_studcomp <- function(
         filter(timeonstudy > 0) %>%
         select(subjid) %>%
         slice_sample(
-            n = floor(disc_rate*nrow(dm))
+            n = ceiling(disc_rate*nrow(dm))
         ) %>%
         mutate(
             compyn = 'N',

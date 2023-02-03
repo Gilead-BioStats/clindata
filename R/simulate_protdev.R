@@ -37,7 +37,8 @@ simulate_protdev <- function(
         ) %>%
         rowwise() %>%
         mutate(
-            dv_dt = sample(rfpst_dt:rfpen_dt, 1) %>% lubridate::as_date()
+            dv_dt = sample(rfpst_dt:rfpen_dt, 1) %>%
+                lubridate::as_date()
         ) %>%
         ungroup() %>%
         select(

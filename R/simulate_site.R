@@ -11,7 +11,8 @@ simulate_site <- function(
             ) %>%
             group_by(SITE_NUM) %>%
             mutate(
-                SITE_NUM = glue('{SITE_NUM}-{row_number()}')
+                SITE_NUM = glue('{SITE_NUM}-{row_number()}') %>%
+                    as.character
             ) %>%
             ungroup()
     } else {

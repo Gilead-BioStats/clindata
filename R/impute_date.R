@@ -1,4 +1,7 @@
 impute_date <- function(date) {
+  if (is.Date(date))
+      return(date)
+
   # no year-month-day
   no_ymd <- which(date == "-----")
   date[no_ymd] <- NA_character_

@@ -12,7 +12,8 @@ simulate_enroll <- function(
             enroll_dt = rfpst_dt
         ) %>%
         mutate(
-            enrollyn = 'Y'
+            enrollyn = 'Y',
+            sfreas = ''
         )
 
     sfreas <- enroll$sfreas %>% .[. != '']
@@ -26,6 +27,7 @@ simulate_enroll <- function(
         ) %>%
         ungroup() %>%
         mutate(
+            enrollyn = 'N',
             sfreas = sample(
                 unique(sfreas),
                 n(),
@@ -34,12 +36,8 @@ simulate_enroll <- function(
             )
         )
 
-    enroll <- enrolled %>%
-        bind_rows(screen_failures) %>%
-        mutate(
-            enrollyn = coalesce(enrollyn, 'N'),
-            sfreas = coalesce(sfreas, '')
-        )
+    enroll1 <- enrolled %>%
+        bind_rows(screen_failures)
 
-    return(enroll)
+    return(enroll1)
 }

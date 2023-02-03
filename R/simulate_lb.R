@@ -24,7 +24,8 @@ simulate_lb <- function(
         ) %>%
         rowwise() %>%
         mutate(
-           lb_dt = sample(rfxst_dt:rfxen_dt, 1) %>% lubridate::as_date()
+           lb_dt = sample(rfxst_dt:rfxen_dt, 1) %>%
+               lubridate::as_date()
         ) %>%
         ungroup() %>%
         select(

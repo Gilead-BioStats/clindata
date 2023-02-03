@@ -8,7 +8,7 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
       aeen_dt = dplyr::if_else(
         impute_date(aeen_dt) > snapshot_date,
         as.character(snapshot_date),
-        aeen_dt
+        as.character(aeen_dt)
       )
     ) %>%
     dplyr::filter(

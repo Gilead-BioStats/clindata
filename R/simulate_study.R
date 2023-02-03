@@ -4,7 +4,8 @@ simulate_study <- function(
     n_subjects = NULL,
     start_date = NULL,
     end_date = NULL,
-    duration = NULL
+    duration = NULL,
+    rename_gsm = FALSE
 ) {
     if (is.null(n_sites)) {
         n_sites <- nrow(clindata::ctms_site)
@@ -32,7 +33,8 @@ simulate_study <- function(
         print(duration)
     }
 
-    studyid <- glue::glue('s-${n_sites}-${n_subjects}-${duration}')
+    studyid <- glue::glue('s-{n_sites}-{n_subjects}-{duration}') %>%
+        as.character
 
     # sites
     site <- simulate_site(
@@ -84,6 +86,24 @@ simulate_study <- function(
             n_rows = values
         ) %>%
         print(row.names = FALSE)
+
+    if (rename_gsm) {
+        mapping <- c(
+            'site' = 'dfSITE',
+            'dm' = 'dfSUBJ',
+            'ae' = 'dfAE',
+            'protdev' = 'dfPD',
+            'lb' = 'dfLB',
+            'studcomp' = 'dfSTUDCOMP',
+            'sdrgcomp' = 'dfSDRGCOMP',
+            'queries' = 'dfQUERY',
+            'data_entry_lag' = 'dfDATAENT',
+            'data_change_rate' = 'dfDATACHG',
+            'enroll' = 'dfENROLL'
+        )
+
+        names(data) <- mapping[names(data)]
+    }
 
     return(data)
 }
