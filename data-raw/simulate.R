@@ -3,7 +3,7 @@ library(purrr)
 library(lubridate)
 
 #load_all('.')
-walk(list.files('R', full.names = TRUE), ~source(.x))
+#walk(list.files('R', full.names = TRUE), ~source(.x))
 #load_all('../gsm')
 
 params <- yaml::read_yaml('data-raw/simulate.yaml')
