@@ -1,0 +1,124 @@
+library(dplyr)
+library(purrr)
+library(lubridate)
+
+#load_all('.')
+walk(list.files('R', full.names = TRUE), ~source(.x))
+#load_all('../gsm')
+
+params <- yaml::read_yaml('data-raw/simulate.yaml')
+
+end_date <- lubridate::today()
+start_date <- end_date
+year(start_date) <- year(start_date) - 2
+
+metadata <- list(
+    config_param = clindata::config_param,
+    config_workflow = clindata::config_workflow,
+    meta_params = gsm::meta_param,
+    meta_site = clindata::ctms_site,
+    meta_study = clindata::ctms_study,
+    meta_workflow = gsm::meta_workflow
+)
+
+workflows <- gsm::MakeWorkflowList()
+
+for (n_sites in params$n_sites) {
+    for (n_subjects in params$n_subjects) {
+        print(glue::glue(
+            '[ {sprintf("%3d", n_sites)} ] sites - [ {sprintf("%4d", n_subjects)} ] subjects'
+        ))
+
+        data <- simulate_study(
+            n_sites,
+            n_subjects,
+            start_date = start_date,
+            end_date = end_date
+        )
+
+        studyid <- unique(data$site$PROTOCOL)
+        metadata$meta_study$PROTOCOL_NUMBER <- studyid
+        metadata$meta_study$NUM_PLAN_SITE <- n_sites
+        metadata$meta_study$NUM_PLAN_SUBJ <- n_subjects
+        metadata$config_param$studyid <- studyid
+        metadata$config_workflow$studyid <- studyid
+
+        for (n_snapshots in params$n_snapshots) {
+            study_path <- glue::glue('output/{studyid}-{n_snapshots}_snapshots')
+            print(study_path)
+            if (!file.exists(study_path))
+                dir.create(study_path)
+
+            for (i in 0:n_snapshots) {
+                snapshot_date <- end_date
+                month(snapshot_date) <- month(snapshot_date) - i
+                print(snapshot_date)
+
+                snapshot_path <- glue::glue('{study_path}/{snapshot_date}/')
+                if (!file.exists(snapshot_path))
+                    dir.create(snapshot_path)
+
+                data_snapshot <- snapshot_all(
+                    snapshot_date,
+                    data,
+                    impute_rf_dt = FALSE
+                )
+
+                # apply snapshot to study data
+                meta_study <- snapshot_study(snapshot_date, data_snapshot$dfSUBJ, metadata$meta_study)
+                metadata$meta_study <- meta_study
+
+                # apply snapshot to site data
+                meta_site <- snapshot_site(snapshot_date, data_snapshot$dfSUBJ, data$site)
+                metadata$meta_site <- meta_site
+
+                # randomly tweak thresholds
+                thresholds <- metadata$config_param %>%
+                    filter(
+                        param == 'vThreshold'
+                    ) %>%
+                    mutate(
+                        new_threshold = as.numeric(value) +
+                            as.numeric(value) * .1 * sample(c(-1,1), n(), TRUE),
+                        value = if_else(
+                            runif(n()) > .05,
+                            as.numeric(value),
+                            round(new_threshold, 1)
+                        ) %>% as.character
+                    )
+
+                metadata$config_param <- metadata$config_param %>%
+                    left_join(
+                        thresholds,
+                        c('studyid', 'workflowid', 'gsm_version', 'param', 'index')
+                    ) %>%
+                    mutate(
+                        value = coalesce(value.y, value.x)
+                    ) %>%
+                    select(-value.x, -value.y)
+
+                gsm_snapshot <- Make_Snapshot(
+                    lMeta = metadata,
+                    lData = data_snapshot,
+                    lAssessments = workflows,
+                    bUpdateParams = TRUE,
+                    bQuiet = TRUE
+                )
+
+                gsm_snapshot %>%
+                    iwalk(function(value, key) {
+                        #value$gsm_analysis_date <- format(
+                        #    as.Date(snapshot_date),
+                        #    '%Y-%m-%d %H:%M:%S'
+                        #)
+                        value$gsm_analysis_date <- snapshot_date
+
+                        data.table::fwrite(
+                            value,
+                            paste0(snapshot_path, key, '.csv')
+                        )
+                    })
+            }
+        }
+    }
+}

@@ -19,7 +19,7 @@ simulate_site <- function(
         site1 <- site
     }
 
-    site1$studyid <- studyid
+    site1$PROTOCOL <- studyid
 
     return(site1)
 }

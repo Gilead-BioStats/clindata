@@ -34,7 +34,7 @@ simulate_dm <- function(
         ) %>%
         left_join(
             site %>%
-                select(studyid, SITE_NUM, country = COUNTRY),
+                select(studyid = PROTOCOL, SITE_NUM, country = COUNTRY),
             c('siteid' = 'SITE_NUM')
         ) %>%
         rowwise() %>%

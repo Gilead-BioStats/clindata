@@ -33,7 +33,7 @@ simulate_study <- function(
         print(duration)
     }
 
-    studyid <- glue::glue('s-{n_sites}-{n_subjects}-{duration}') %>%
+    studyid <- glue::glue('study-{n_sites}_sites-{n_subjects}_subjects') %>%
         as.character
 
     # sites
