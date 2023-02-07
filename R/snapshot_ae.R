@@ -22,8 +22,9 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae, print_chec
       -rfxen_dt
     )
 
-  if (print_check_rows)
+  if (print_check_rows) {
     check_rows(ae, ae_snapshot, "ae")
+  }
 
   ae_snapshot
 }

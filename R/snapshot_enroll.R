@@ -7,8 +7,9 @@ snapshot_enroll <- function(snapshot_date, enroll = clindata::rawplus_enroll, pr
       impute_date(enroll_dt) <= snapshot_date
     )
 
-  if (print_check_rows)
-  check_rows(enroll, enroll_snapshot, "enroll")
+  if (print_check_rows) {
+    check_rows(enroll, enroll_snapshot, "enroll")
+  }
 
   enroll_snapshot
 }

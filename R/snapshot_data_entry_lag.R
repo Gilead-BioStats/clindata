@@ -7,8 +7,9 @@ snapshot_data_entry_lag <- function(snapshot_date, data_entry_lag = clindata::ed
       impute_date(visit_dt) <= snapshot_date
     )
 
-  if (print_check_rows)
-  check_rows(data_entry_lag, data_entry_lag_snapshot, "data_entry_lag")
+  if (print_check_rows) {
+    check_rows(data_entry_lag, data_entry_lag_snapshot, "data_entry_lag")
+  }
 
   data_entry_lag_snapshot
 }

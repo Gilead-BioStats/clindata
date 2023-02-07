@@ -24,8 +24,9 @@ snapshot_sdrgcomp <- function(snapshot_date, dm, sdrgcomp = clindata::rawplus_sd
       -rfxen_dt0
     )
 
-  if (print_check_rows)
-  check_rows(sdrgcomp, sdrgcomp_snapshot, "sdrgcomp")
+  if (print_check_rows) {
+    check_rows(sdrgcomp, sdrgcomp_snapshot, "sdrgcomp")
+  }
 
   sdrgcomp_snapshot
 }

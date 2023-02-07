@@ -24,8 +24,9 @@ snapshot_studcomp <- function(snapshot_date, dm, studcomp = clindata::rawplus_st
       -rfpen_dt0
     )
 
-  if (print_check_rows)
-  check_rows(studcomp, studcomp_snapshot, "studcomp")
+  if (print_check_rows) {
+    check_rows(studcomp, studcomp_snapshot, "studcomp")
+  }
 
   studcomp_snapshot
 }

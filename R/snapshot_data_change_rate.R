@@ -7,8 +7,9 @@ snapshot_data_change_rate <- function(snapshot_date, data_change_rate = clindata
       impute_date(visit_dt) <= snapshot_date
     )
 
-  if (print_check_rows)
-  check_rows(data_change_rate, data_change_rate_snapshot, "data_change_rate")
+  if (print_check_rows) {
+    check_rows(data_change_rate, data_change_rate_snapshot, "data_change_rate")
+  }
 
   data_change_rate_snapshot
 }

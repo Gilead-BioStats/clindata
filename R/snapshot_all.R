@@ -17,8 +17,8 @@ snapshot_all <- function(
     visdt = clindata::rawplus_visdt,
     ex = clindata::rawplus_ex,
     dm = clindata::rawplus_dm,
-    #consent = clindata::rawplus_consent,
-    #ie = clindata::rawplus_ie,
+    # consent = clindata::rawplus_consent,
+    # ie = clindata::rawplus_ie,
     studcomp = clindata::rawplus_studcomp,
     sdrgcomp = clindata::rawplus_sdrgcomp,
     lb = clindata::rawplus_lb,
@@ -44,8 +44,8 @@ snapshot_all <- function(
     dm <- snapshot_dm(snapshot_date, dm = data$dm, print_check_rows = print_check_rows)
   }
 
-  #consent <- snapshot_consent(snapshot_date, dm, data$consent, print_check_rows = print_check_rows)
-  #ie <- snapshot_ie(snapshot_date, dm, data$ie, print_check_rows = print_check_rows)
+  # consent <- snapshot_consent(snapshot_date, dm, data$consent, print_check_rows = print_check_rows)
+  # ie <- snapshot_ie(snapshot_date, dm, data$ie, print_check_rows = print_check_rows)
   studcomp <- snapshot_studcomp(snapshot_date, dm, data$studcomp, print_check_rows = print_check_rows)
   sdrgcomp <- snapshot_sdrgcomp(snapshot_date, dm, data$sdrgcomp, print_check_rows = print_check_rows)
   lb <- snapshot_lb(snapshot_date, dm, data$lb, print_check_rows = print_check_rows)
@@ -59,27 +59,28 @@ snapshot_all <- function(
   data_change_rate <- snapshot_data_change_rate(snapshot_date, data$data_change_rate, print_check_rows = print_check_rows)
 
   data <- list(
-      snapshot_date = snapshot_date,
+    snapshot_date = snapshot_date,
 
-      # rawplus
-      dm = dm,
-      #consent = consent,
-      #ie = ie,
-      studcomp = studcomp,
-      sdrgcomp = sdrgcomp,
-      lb = lb,
-      ae = ae,
-      protdev = protdev,
-      enroll = enroll,
+    # rawplus
+    dm = dm,
+    # consent = consent,
+    # ie = ie,
+    studcomp = studcomp,
+    sdrgcomp = sdrgcomp,
+    lb = lb,
+    ae = ae,
+    protdev = protdev,
+    enroll = enroll,
 
-      # edc
-      queries = queries,
-      data_entry_lag = data_entry_lag,
-      data_change_rate = data_change_rate
+    # edc
+    queries = queries,
+    data_entry_lag = data_entry_lag,
+    data_change_rate = data_change_rate
   )
 
-  if (rename_gsm)
-      names(data) <- map_gsm_domains(data)
+  if (rename_gsm) {
+    names(data) <- map_gsm_domains(data)
+  }
 
   return(data)
 }

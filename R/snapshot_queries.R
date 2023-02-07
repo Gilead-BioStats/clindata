@@ -7,8 +7,9 @@ snapshot_queries <- function(snapshot_date, queries = clindata::edc_queries, pri
       impute_date(qryopendate) <= snapshot_date
     )
 
-  if (print_check_rows)
-  check_rows(queries, queries_snapshot, "queries")
+  if (print_check_rows) {
+    check_rows(queries, queries_snapshot, "queries")
+  }
 
   queries_snapshot
 }

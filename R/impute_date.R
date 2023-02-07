@@ -2,8 +2,9 @@
 #'
 #' @export
 impute_date <- function(date) {
-  if (lubridate::is.Date(date))
-      return(date)
+  if (lubridate::is.Date(date)) {
+    return(date)
+  }
 
   # no year-month-day
   no_ymd <- which(date == "-----")

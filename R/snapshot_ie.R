@@ -7,8 +7,9 @@ snapshot_ie <- function(snapshot_date, dm, ie = clindata::rawplus_ie, print_chec
       subjid %in% dm$subjid
     )
 
-  if (print_check_rows)
-  check_rows(ie, ie_snapshot, "ie")
+  if (print_check_rows) {
+    check_rows(ie, ie_snapshot, "ie")
+  }
 
   ie_snapshot
 }
