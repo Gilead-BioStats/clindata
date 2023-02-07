@@ -1,3 +1,8 @@
+#' @import dplyr
+#' @importFrom lubridate as_date
+#' @importFrom tidyr uncount
+#'
+#' @export
 simulate_ae <- function(
     dm,
     ae = clindata::rawplus_ae,
@@ -7,7 +12,7 @@ simulate_ae <- function(
         select(subjid, starts_with('rfx'), timeontreatment) %>%
         filter(timeontreatment > 0) %>%
         slice_sample(
-            n = floor(ae_rate*nrow(dm))
+            n = floor(ae_rate*nrow(.))
         ) %>%
         rowwise() %>%
         mutate(

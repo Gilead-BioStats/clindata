@@ -1,3 +1,14 @@
+#' Snapshot all data domains
+#'
+#' Snapshot all data domains at a specific point in time.
+#'
+#' @param snapshot_date `Date` Date at which to snapshot data
+#' @param data `list` Name list of data domains to snapshot
+#' @param impute_rf_dt `logical` Imput reference dates with [ visdt ] and [ ex ]?
+#'
+#' @return `list` Named list of modified data domains
+#'
+#' @export
 # TODO: add consent and IE back in
 snapshot_all <- function(
   snapshot_date = get_snapshot_date(),
@@ -20,7 +31,8 @@ snapshot_all <- function(
     data_entry_lag = clindata::edc_data_entry_lag,
     data_change_rate = clindata::edc_data_change_rate
   ),
-  impute_rf_dt = TRUE
+  impute_rf_dt = TRUE,
+  rename_gsm = TRUE
 ) {
   # rawplus
   if (impute_rf_dt) {
@@ -45,25 +57,28 @@ snapshot_all <- function(
   data_entry_lag <- snapshot_data_entry_lag(snapshot_date, data$data_entry_lag)
   data_change_rate <- snapshot_data_change_rate(snapshot_date, data$data_change_rate)
 
-  return(
-    list(
+  data <- list(
       snapshot_date = snapshot_date,
 
       # rawplus
-      dfSUBJ = dm,
-      #dfCONSENT = consent,
-      #dfIE = ie,
-      dfSTUDCOMP = studcomp,
-      dfSDRGCOMP = sdrgcomp,
-      dfLB = lb,
-      dfAE = ae,
-      dfPD = protdev,
-      dfENROLL = enroll,
+      dm = dm,
+      #consent = consent,
+      #ie = ie,
+      studcomp = studcomp,
+      sdrgcomp = sdrgcomp,
+      lb = lb,
+      ae = ae,
+      protdev = protdev,
+      enroll = enroll,
 
       # edc
-      dfQUERY = queries,
-      dfDATAENT = data_entry_lag,
-      dfDATACHG = data_change_rate
-    )
+      queries = queries,
+      data_entry_lag = data_entry_lag,
+      data_change_rate = data_change_rate
   )
+
+  if (rename_gsm)
+      names(data) <- map_gsm_domains(data)
+
+  return(data)
 }

@@ -1,3 +1,6 @@
+#' @importFrom dplyr filter
+#'
+#' @export
 snapshot_enroll <- function(snapshot_date, enroll = clindata::rawplus_enroll) {
   enroll_snapshot <- enroll %>%
     dplyr::filter(

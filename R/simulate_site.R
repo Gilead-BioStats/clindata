@@ -1,3 +1,7 @@
+#' @import dplyr
+#' @importFrom glue glue
+#'
+#' @export
 simulate_site <- function(
     n_sites,
     studyid,
@@ -11,7 +15,7 @@ simulate_site <- function(
             ) %>%
             group_by(SITE_NUM) %>%
             mutate(
-                SITE_NUM = glue('{SITE_NUM}-{row_number()}') %>%
+                SITE_NUM = glue::glue('{SITE_NUM}-{row_number()}') %>%
                     as.character
             ) %>%
             ungroup()

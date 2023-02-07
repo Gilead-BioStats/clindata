@@ -1,3 +1,8 @@
+#' @import dplyr
+#' @importFrom lubridate as_date
+#' @importFrom tidyr uncount
+#'
+#' @export
 simulate_queries <- function(
     dm,
     queries = clindata::edc_queries,

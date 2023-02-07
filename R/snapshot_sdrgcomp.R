@@ -1,3 +1,6 @@
+#' @importFrom dplyr if_else inner_join mutate select
+#'
+#' @export
 snapshot_sdrgcomp <- function(snapshot_date, dm, sdrgcomp = clindata::rawplus_sdrgcomp) {
   sdrgcomp_snapshot <- sdrgcomp %>%
     dplyr::inner_join(

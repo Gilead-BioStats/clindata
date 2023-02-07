@@ -5,6 +5,11 @@
 #' @param n_intervals `numeric` Number of intervals
 #'
 #' @return `Date`
+#'
+#' @importFrom cli cli_alert_success
+#' @importFrom lubridate interval month
+#'
+#' @export
 get_snapshot_date <- function(
   snapshot_date = NULL,
   interval = lubridate::month,

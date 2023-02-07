@@ -1,3 +1,6 @@
+#' @importFrom dplyr filter
+#'
+#' @export
 snapshot_queries <- function(snapshot_date, queries = clindata::edc_queries) {
   queries_snapshot <- queries %>%
     dplyr::filter(

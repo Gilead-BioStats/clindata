@@ -1,3 +1,6 @@
+#' @importFrom dplyr filter if_else mutate
+#'
+#' @export
 snapshot_ex <- function(snapshot_date, ex = clindata::rawplus_ex) {
   ex_snapshot <- ex %>%
     dplyr::filter(

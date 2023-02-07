@@ -1,3 +1,6 @@
+#' @importFrom dplyr filter if_else left_join select
+#'
+#' @export
 snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
   ae_snapshot <- ae %>%
     dplyr::left_join(

@@ -1,3 +1,6 @@
+#' @importFrom cli cli_alert_success
+#'
+#' @export
 check_rows <- function(df1, df2, domain = NULL) {
   n_rows <- nrow(df1) - nrow(df2)
 

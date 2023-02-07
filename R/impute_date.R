@@ -1,5 +1,8 @@
+#' @importFrom lubridate is.Date ymd
+#'
+#' @export
 impute_date <- function(date) {
-  if (is.Date(date))
+  if (lubridate::is.Date(date))
       return(date)
 
   # no year-month-day

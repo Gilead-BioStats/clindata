@@ -1,3 +1,8 @@
+#' @import dplyr
+#' @importFrom lubridate as_date
+#' @importFrom tidyr uncount
+#'
+#' @export
 simulate_data_pages <- function(
     dm,
     data_entry_lag = clindata::edc_data_entry_lag,

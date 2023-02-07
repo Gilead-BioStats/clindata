@@ -1,3 +1,6 @@
+#' @importFrom dplyr filter
+#'
+#' @export
 snapshot_lb <- function(snapshot_date, dm, lb = clindata::rawplus_lb) {
   if (is.character(lb$lb_dt))
       lb$lb_dt <- substring(lb$lb_dt, 1, 10)

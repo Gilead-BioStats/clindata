@@ -1,3 +1,8 @@
+#' @import dplyr
+#' @importFrom lubridate as_date
+#' @importFrom tidyr uncount
+#'
+#' @export
 simulate_protdev <- function(
     dm,
     protdev = clindata::rawplus_protdev,
@@ -7,7 +12,7 @@ simulate_protdev <- function(
         select(subjid, starts_with('rfp'), timeonstudy) %>%
         filter(timeonstudy > 0) %>%
         slice_sample(
-            n = floor(pd_rate*nrow(dm))
+            n = floor(pd_rate*nrow(.))
         ) %>%
         rowwise() %>%
         mutate(

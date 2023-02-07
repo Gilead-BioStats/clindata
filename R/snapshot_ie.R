@@ -1,3 +1,6 @@
+#' @importFrom dplyr filter
+#'
+#' @export
 snapshot_ie <- function(snapshot_date, dm, ie = clindata::rawplus_ie) {
   ie_snapshot <- ie %>%
     dplyr::filter(

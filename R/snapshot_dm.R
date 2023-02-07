@@ -1,3 +1,6 @@
+#' @import dplyr
+#'
+#' @export
 snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::rawplus_dm) {
   if (!is.null(visdt) & !is.null(ex)) {
     rfpen_dt <- visdt %>%

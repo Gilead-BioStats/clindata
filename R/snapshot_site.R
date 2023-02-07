@@ -1,3 +1,6 @@
+#' @importFrom dplyr filter group_by inner_join summarize ungroup
+#'
+#' @export
 snapshot_site <- function(
   snapshot_date,
   dm = clindata::rawplus_dm,

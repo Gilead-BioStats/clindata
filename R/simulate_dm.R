@@ -1,3 +1,9 @@
+#' @import dplyr
+#' @importFrom glue glue
+#' @importFrom lubridate as_date
+#' @importFrom tidyr uncount
+#'
+#' @export
 simulate_dm <- function(
     site,
     n_subjects,
@@ -18,7 +24,7 @@ simulate_dm <- function(
             ) %>%
             group_by(subjid) %>%
             mutate(
-                subjid = glue('{subjid}-{row_number()}') %>%
+                subjid = glue::glue('{subjid}-{row_number()}') %>%
                     as.character
             ) %>%
             ungroup()
@@ -53,6 +59,7 @@ simulate_dm <- function(
             rfpst_dt, rfpen_dt, timeonstudy,
             rfxst_dt, rfxen_dt, timeontreatment
         )
+    print(table(dm3$siteid))
 
     return(dm3)
 }

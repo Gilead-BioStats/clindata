@@ -1,3 +1,6 @@
+#' @import dplyr
+#'
+#' @export
 simulate_enroll <- function(
     dm,
     enroll = clindata::rawplus_enroll,

@@ -1,3 +1,8 @@
+#' @import dplyr
+#' @importFrom lubridate as_date
+#' @importFrom tidyr uncount
+#'
+#' @export
 simulate_lb <- function(
     dm,
     lb = clindata::rawplus_lb,

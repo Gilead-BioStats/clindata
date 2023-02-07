@@ -1,3 +1,6 @@
+#' @import dplyr
+#'
+#' @export
 simulate_sdrgcomp <- function(
     dm,
     sdrgcomp = clindata::rawplus_sdrgcomp,
@@ -8,7 +11,7 @@ simulate_sdrgcomp <- function(
         filter(timeontreatment > 0) %>%
         select(subjid) %>%
         slice_sample(
-            n = ceiling(disc_rate*nrow(dm))
+            n = ceiling(disc_rate*nrow(.))
         ) %>%
         mutate(
             sdrgyn = 'N',
