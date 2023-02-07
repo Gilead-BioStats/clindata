@@ -1,7 +1,7 @@
 #' @importFrom dplyr filter if_else mutate
 #'
 #' @export
-snapshot_ex <- function(snapshot_date, ex = clindata::rawplus_ex) {
+snapshot_ex <- function(snapshot_date, ex = clindata::rawplus_ex, print_check_rows = TRUE) {
   ex_snapshot <- ex %>%
     dplyr::filter(
       impute_date(exst_dt) <= snapshot_date
@@ -14,6 +14,7 @@ snapshot_ex <- function(snapshot_date, ex = clindata::rawplus_ex) {
       )
     )
 
+  if (print_check_rows)
   check_rows(ex, ex_snapshot, "ex")
 
   ex_snapshot

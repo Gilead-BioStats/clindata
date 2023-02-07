@@ -1,7 +1,7 @@
 #' @import dplyr
 #'
 #' @export
-snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::rawplus_dm) {
+snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::rawplus_dm, print_check_rows = TRUE) {
   if (!is.null(visdt) & !is.null(ex)) {
     rfpen_dt <- visdt %>%
         dplyr::group_by(subjid) %>%
@@ -46,6 +46,7 @@ snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::r
         )
   }
 
+  if (print_check_rows)
   check_rows(dm, dm_snapshot, "dm")
 
   dm_snapshot

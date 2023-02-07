@@ -5,7 +5,7 @@ snapshot_site <- function(
   snapshot_date,
   dm = clindata::rawplus_dm,
   site = clindata::ctms_site
-) {
+, print_check_rows = TRUE) {
   n_enrolled <- dm %>%
     filter(
       .data$rfpst_dt <= snapshot_date
@@ -22,6 +22,7 @@ snapshot_site <- function(
       c("SITE_NUM" = "siteid")
     )
 
+  if (print_check_rows)
   check_rows(site, site_snapshot, "site")
 
   site_snapshot

@@ -10,7 +10,8 @@ run_simulation <- function(
     n_subjects,
     n_snapshots = 6,
     end_date = lubridate::today(),
-    start_date = NULL
+    start_date = NULL,
+    print_check_rows = FALSE
 ) {
     print(glue::glue(
         '[ {sprintf("%3d", n_sites)} ] sites - [ {sprintf("%4d", n_subjects)} ] subjects'
@@ -65,7 +66,8 @@ run_simulation <- function(
         data_snapshot <- snapshot_all(
             snapshot_date,
             data,
-            impute_rf_dt = FALSE
+            impute_rf_dt = FALSE,
+            print_check_rows = print_check_rows
         )
         tictoc::toc()
 

@@ -1,4 +1,4 @@
-#load_all('.')
+load_all('.')
 #walk(list.files('R', full.names = TRUE), ~source(.x))
 #load_all('../gsm')
 

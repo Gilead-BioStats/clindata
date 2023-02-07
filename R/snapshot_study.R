@@ -5,7 +5,7 @@ snapshot_study <- function(
   snapshot_date,
   dm = clindata::rawplus_dm,
   study = clindata::ctms_study
-) {
+, print_check_rows = TRUE) {
   n_enrolled <- dm %>%
     filter(
       .data$rfpst_dt <= snapshot_date
@@ -23,6 +23,7 @@ snapshot_study <- function(
       c("PROTOCOL_NUMBER" = "studyid")
     )
 
+  if (print_check_rows)
   check_rows(study, study_snapshot, "study")
 
   study_snapshot
