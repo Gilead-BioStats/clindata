@@ -33,7 +33,7 @@ run_simulation <- function(
 
   workflows <- gsm::MakeWorkflowList()
 
-  tictoc::tic("simulate date")
+  tictoc::tic("simulate data")
   data <- simulate_study(
     n_sites,
     n_subjects,
