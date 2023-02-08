@@ -2,6 +2,7 @@
 #' @importFrom glue glue
 #' @importFrom lubridate year
 #' @importFrom purrr iwalk
+#' @importFrom stringr str_pad
 #' @importFrom tictoc tic toc
 #'
 #' @export
@@ -14,7 +15,7 @@ run_simulation <- function(
   print_check_rows = FALSE
 ) {
   message(glue::glue(
-    '[ {sprintf("%3d", n_sites)} ] sites - [ {sprintf("%4d", n_subjects)} ] subjects'
+    '\n[ {sprintf("%3d", n_sites)} ] sites - [ {sprintf("%4d", n_subjects)} ] subjects'
   ))
 
   if (is.null(start_date)) {
@@ -33,7 +34,7 @@ run_simulation <- function(
 
   workflows <- gsm::MakeWorkflowList()
 
-  tictoc::tic("simulate data")
+  tictoc::tic(stringr::str_pad("simulate data", 16))
   data <- simulate_study(
     n_sites,
     n_subjects,
@@ -62,9 +63,9 @@ run_simulation <- function(
     if (!file.exists(snapshot_path)) {
       dir.create(snapshot_path)
     }
-    message(snapshot_path)
+    message(paste0('\noutput path: ', snapshot_path))
 
-    tictoc::tic("snapshot data")
+    tictoc::tic(stringr::str_pad("snapshot data", 16))
     data_snapshot <- snapshot_all(
       snapshot_date,
       data,
@@ -106,7 +107,7 @@ run_simulation <- function(
     #    ) %>%
     #    select(-value.x, -value.y)
 
-    tictoc::tic("run gsm")
+    tictoc::tic(stringr::str_pad("run gsm", 16))
     gsm_output <- gsm::Make_Snapshot(
       lMeta = metadata,
       lData = data_snapshot,
@@ -116,7 +117,7 @@ run_simulation <- function(
     )
     tictoc::toc()
 
-    tictoc::tic("output data files")
+    tictoc::tic(stringr::str_pad("output data files", 16))
     gsm_output %>%
       purrr::iwalk(function(value, key) {
         # value$gsm_analysis_date <- format(
