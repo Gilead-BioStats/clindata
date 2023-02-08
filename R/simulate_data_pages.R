@@ -1,5 +1,4 @@
 #' @import dplyr
-#' @importFrom lubridate as_date
 #' @importFrom tidyr uncount
 #'
 #' @export
@@ -10,13 +9,13 @@ simulate_data_pages <- function(
 ) {
   data_pages <- dm %>%
     select(subjid, starts_with("rfp"), timeonstudy) %>%
-    filter(timeonstudy > 0) %>%
+    filter(.data$timeonstudy > 0) %>%
     mutate(
-      n_data_pages = floor(timeonstudy * data_page_rate),
-      n = n_data_pages
+      n_data_pages = ceiling(.data$timeonstudy * data_page_rate),
+      n = .data$n_data_pages
     ) %>%
     tidyr::uncount(
-      n_data_pages # generate n duplicate rows
+      .data$n_data_pages # generate n duplicate rows
     ) %>%
     mutate(
       foldername = "visit",
@@ -32,8 +31,7 @@ simulate_data_pages <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      visit_dt = sample(rfpst_dt:rfpen_dt, 1) %>%
-        lubridate::as_date()
+      visit_dt = sample_date(.data$rfpst_dt, .data$rfpen_dt)
     ) %>%
     ungroup() %>%
     select(

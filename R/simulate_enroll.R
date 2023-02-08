@@ -22,11 +22,11 @@ simulate_enroll <- function(
   sfreas <- enroll$sfreas %>% .[. != ""]
   screen_failures <- enrolled %>%
     slice_sample(
-      n = floor(sf_rate * nrow(enrolled))
+      n = ceiling(sf_rate * nrow(enrolled))
     ) %>%
-    group_by(subjid) %>%
+    group_by(.data$subjid) %>%
     mutate(
-      subjid = paste0("sf", subjid, row_number())
+      subjid = paste0("sf", .data$subjid, row_number())
     ) %>%
     ungroup() %>%
     mutate(

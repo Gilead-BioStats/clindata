@@ -1,22 +1,21 @@
 #' @import dplyr
-#' @importFrom lubridate as_date
 #' @importFrom tidyr uncount
 #'
 #' @export
 simulate_queries <- function(
   dm,
   queries = clindata::edc_queries,
-  query_rate = runif(1, 0, .1)
+  query_rate = runif(1, 0.001, .1)
 ) {
   queries1 <- dm %>%
     select(subjid, starts_with("rfp"), timeonstudy) %>%
-    filter(timeonstudy > 0) %>%
+    filter(.data$timeonstudy > 0) %>%
     mutate(
-      n_queries = floor(timeonstudy * query_rate),
-      n = n_queries
+      n_queries = ceiling(.data$timeonstudy * query_rate),
+      n = .data$n_queries
     ) %>%
     tidyr::uncount(
-      n_queries # generate n duplicate rows
+      .data$n_queries # generate n duplicate rows
     ) %>%
     mutate(
       foldername = "visit",
@@ -31,8 +30,7 @@ simulate_queries <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      qryopendate = sample(rfpst_dt:rfpen_dt, 1) %>%
-        lubridate::as_date()
+      qryopendate = sample_date(.data$rfpst_dt, .data$rfpen_dt)
     ) %>%
     ungroup() %>%
     select(

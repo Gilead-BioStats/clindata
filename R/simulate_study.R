@@ -34,11 +34,13 @@ simulate_study <- function(
   # TODO: add logic around start date, end date, and duration
   if (is.null(start_date)) {
     start_date <- as.Date(min(clindata::rawplus_dm$rfpst_dt, na.rm = TRUE))
+    message('> Start date')
     print(start_date)
   }
 
   if (is.null(end_date)) {
     end_date <- as.Date(max(clindata::rawplus_dm$rfpen_dt, na.rm = TRUE))
+    message('> End date')
     print(end_date)
   }
 
@@ -46,6 +48,7 @@ simulate_study <- function(
   #    duration <- as.numeric(
   #        as.Date(end_date) - as.Date(start_date)
   #    ) + 1
+  #    message('> Duration')
   #    print(duration)
   # }
 
@@ -93,7 +96,7 @@ simulate_study <- function(
     enroll = enroll
   )
 
-  # Display number of rows.
+  message('> Rows per domain')
   data %>%
     purrr::map_int(~ nrow(.x)) %>%
     stack() %>%
@@ -102,6 +105,7 @@ simulate_study <- function(
       n_rows = values
     ) %>%
     print(row.names = FALSE)
+  cat('\n')
 
   if (rename_gsm) {
     names(data) <- map_gsm_domains(data)

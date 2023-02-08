@@ -24,7 +24,7 @@ simulate_dm <- function(
       ) %>%
       group_by(subjid) %>%
       mutate(
-        subjid = glue::glue("{subjid}-{row_number()}") %>%
+        subjid = glue::glue("{.data$subjid}-{row_number()}") %>%
           as.character()
       ) %>%
       ungroup()
@@ -36,7 +36,7 @@ simulate_dm <- function(
     mutate(
       siteid = sample(site$SITE_NUM, nrow(dm2), TRUE, runif(nrow(site))),
       rfpst_dt = sample(start_date:end_date, n(), TRUE),
-      rfxst_dt = rfpst_dt + sample(1:60, n(), TRUE)
+      rfxst_dt = .data$rfpst_dt + sample(1:60, n(), TRUE)
     ) %>%
     left_join(
       site %>%
@@ -45,21 +45,26 @@ simulate_dm <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      rfpen_dt = sample(rfxst_dt:end_date, 1),
-      rfxen_dt = sample(rfxst_dt:rfpen_dt, 1)
+      rfpen_dt = sample_date(.data$rfxst_dt, end_date),
+      rfxen_dt = sample_date(.data$rfxst_dt, .data$rfpen_dt)
     ) %>%
     ungroup() %>%
     mutate(
       across(ends_with("dt"), lubridate::as_date),
-      timeonstudy = as.numeric(rfpen_dt - rfpst_dt) + 1,
-      timeontreatment = as.numeric(rfxen_dt - rfxst_dt) + 1
+      timeonstudy = as.numeric(.data$rfpen_dt - .data$rfpst_dt) + 1,
+      timeontreatment = as.numeric(.data$rfxen_dt - .data$rfxst_dt) + 1
     ) %>%
     select(
       studyid, siteid, country, subjid,
       rfpst_dt, rfpen_dt, timeonstudy,
       rfxst_dt, rfxen_dt, timeontreatment
     )
-  print(table(dm3$siteid))
+
+  message('> Subjects per site')
+  table(dm3$siteid) %>%
+      sort() %>%
+      print()
+  cat('\n')
 
   return(dm3)
 }

@@ -38,7 +38,7 @@ snapshot_all <- function(
   # rawplus
   if (impute_rf_dt) {
     visdt <- snapshot_visdt(snapshot_date, data$visdt, print_check_rows = print_check_rows)
-    ex <- snapshot_ex(snapshot_date, data$ex, print_check_rows = print_check_rows, print_check_rows = print_check_rows)
+    ex <- snapshot_ex(snapshot_date, data$ex, print_check_rows = print_check_rows)
     dm <- snapshot_dm(snapshot_date, visdt, ex, data$dm, print_check_rows = print_check_rows)
   } else {
     dm <- snapshot_dm(snapshot_date, dm = data$dm, print_check_rows = print_check_rows)

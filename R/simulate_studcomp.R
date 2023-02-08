@@ -8,7 +8,7 @@ simulate_studcomp <- function(
 ) {
   compreas <- studcomp$compreas %>% .[. != ""]
   studcomp1 <- dm %>%
-    filter(timeonstudy > 0) %>%
+    filter(.data$timeonstudy > 0) %>%
     select(subjid) %>%
     slice_sample(
       n = ceiling(disc_rate * nrow(.))

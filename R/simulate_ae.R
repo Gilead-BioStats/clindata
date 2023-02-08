@@ -1,5 +1,4 @@
 #' @import dplyr
-#' @importFrom lubridate as_date
 #' @importFrom tidyr uncount
 #'
 #' @export
@@ -10,21 +9,21 @@ simulate_ae <- function(
 ) {
   ae1 <- dm %>%
     select(subjid, starts_with("rfx"), timeontreatment) %>%
-    filter(timeontreatment > 0) %>%
+    filter(.data$timeontreatment > 0) %>%
     slice_sample(
-      n = floor(ae_rate * nrow(.))
+      n = ceiling(ae_rate * nrow(.))
     ) %>%
     rowwise() %>%
     mutate(
-      event_rate = rnbinom(1, size = 1, mu = ceiling(timeontreatment / 217)) # event every 217 days (median)
+      event_rate = rnbinom(1, size = 1, mu = ceiling(.data$timeontreatment / 217)) # event every 217 days (median)
     ) %>%
     ungroup() %>%
     mutate(
-      n_events = floor(timeontreatment / max(event_rate, 1)),
-      n = n_events
+      n_events = ceiling(.data$timeontreatment / max(event_rate, 1)),
+      n = .data$n_events
     ) %>%
     tidyr::uncount(
-      n_events # generate n duplicate rows
+      .data$n_events # generate n duplicate rows
     ) %>%
     mutate(
       aeser = sample(
@@ -43,10 +42,8 @@ simulate_ae <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      aest_dt = sample(rfxst_dt:rfxen_dt, 1) %>%
-        lubridate::as_date(),
-      aeen_dt = sample(aest_dt:(rfxen_dt + 30), 1) %>%
-        lubridate::as_date()
+      aest_dt = sample_date(.data$rfxst_dt, rfxen_dt),
+      aeen_dt = sample_date(.data$aest_dt, .data$rfxen_dt + 30)
     ) %>%
     ungroup() %>%
     select(

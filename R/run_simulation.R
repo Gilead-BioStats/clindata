@@ -13,7 +13,7 @@ run_simulation <- function(
   start_date = NULL,
   print_check_rows = FALSE
 ) {
-  print(glue::glue(
+  message(glue::glue(
     '[ {sprintf("%3d", n_sites)} ] sites - [ {sprintf("%4d", n_subjects)} ] subjects'
   ))
 
@@ -62,9 +62,9 @@ run_simulation <- function(
     if (!file.exists(snapshot_path)) {
       dir.create(snapshot_path)
     }
-    print(snapshot_path)
+    message(snapshot_path)
 
-    tictoc::tic("data snapshot")
+    tictoc::tic("snapshot data")
     data_snapshot <- snapshot_all(
       snapshot_date,
       data,
@@ -74,11 +74,11 @@ run_simulation <- function(
     tictoc::toc()
 
     # apply snapshot to study data
-    meta_study <- snapshot_study(snapshot_date, data_snapshot$dfSUBJ, metadata$meta_study)
+    meta_study <- snapshot_study(snapshot_date, data_snapshot$dfSUBJ, metadata$meta_study, print_check_rows = print_check_rows)
     metadata$meta_study <- meta_study
 
     # apply snapshot to site data
-    meta_site <- snapshot_site(snapshot_date, data_snapshot$dfSUBJ, data$site)
+    meta_site <- snapshot_site(snapshot_date, data_snapshot$dfSUBJ, data$site, print_check_rows = print_check_rows)
     metadata$meta_site <- meta_site
 
     ## randomly tweak thresholds
@@ -106,8 +106,8 @@ run_simulation <- function(
     #    ) %>%
     #    select(-value.x, -value.y)
 
-    tictoc::tic("gsm snapshot")
-    gsm_snapshot <- gsm::Make_Snapshot(
+    tictoc::tic("run gsm")
+    gsm_output <- gsm::Make_Snapshot(
       lMeta = metadata,
       lData = data_snapshot,
       lAssessments = workflows,
@@ -116,8 +116,8 @@ run_simulation <- function(
     )
     tictoc::toc()
 
-    tictoc::tic("output")
-    gsm_snapshot %>%
+    tictoc::tic("output data files")
+    gsm_output %>%
       purrr::iwalk(function(value, key) {
         # value$gsm_analysis_date <- format(
         #    as.Date(snapshot_date),
@@ -132,4 +132,6 @@ run_simulation <- function(
       })
     tictoc::toc()
   }
+
+  return(data)
 }

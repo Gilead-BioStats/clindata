@@ -1,5 +1,4 @@
 #' @import dplyr
-#' @importFrom lubridate as_date
 #' @importFrom tidyr uncount
 #'
 #' @export
@@ -12,7 +11,7 @@ simulate_lb <- function(
     select(subjid, starts_with("rfx"), timeontreatment) %>%
     filter(timeontreatment > 0) %>%
     mutate(
-      n_results = floor(timeontreatment * lb_rate),
+      n_results = ceiling(timeontreatment * lb_rate),
       n = n_results
     ) %>%
     tidyr::uncount(
@@ -29,8 +28,7 @@ simulate_lb <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      lb_dt = sample(rfxst_dt:rfxen_dt, 1) %>%
-        lubridate::as_date()
+      lb_dt = sample_date(.data$rfxst_dt, .data$rfxen_dt)
     ) %>%
     ungroup() %>%
     select(

@@ -8,7 +8,7 @@ simulate_sdrgcomp <- function(
 ) {
   sdrgreas <- sdrgcomp$sdrgreas %>% .[. != ""]
   sdrgcomp1 <- dm %>%
-    filter(timeontreatment > 0) %>%
+    filter(.data$timeontreatment > 0) %>%
     select(subjid) %>%
     slice_sample(
       n = ceiling(disc_rate * nrow(.))
