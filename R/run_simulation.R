@@ -15,8 +15,9 @@ run_simulation <- function(
   print_check_rows = FALSE
 ) {
   message(glue::glue(
-    '\n[ {sprintf("%3d", n_sites)} ] sites - [ {sprintf("%4d", n_subjects)} ] subjects'
+    'Simulating [ {sprintf("%3d", n_sites)} ] sites - [ {sprintf("%4d", n_subjects)} ] subjects'
   ))
+  cat('\n')
 
   if (is.null(start_date)) {
     start_date <- end_date
@@ -34,7 +35,7 @@ run_simulation <- function(
 
   workflows <- gsm::MakeWorkflowList()
 
-  tictoc::tic(stringr::str_pad("simulate data", 16))
+  tictoc::tic(stringr::str_pad("simulate data", 17))
   data <- simulate_study(
     n_sites,
     n_subjects,
@@ -50,7 +51,7 @@ run_simulation <- function(
   metadata$config_param$studyid <- studyid
   metadata$config_workflow$studyid <- studyid
 
-  study_path <- glue::glue("output/{studyid}")
+  study_path <- glue::glue("{studyid}")
   if (!file.exists(study_path)) {
     dir.create(study_path)
   }
@@ -63,9 +64,10 @@ run_simulation <- function(
     if (!file.exists(snapshot_path)) {
       dir.create(snapshot_path)
     }
-    message(paste0('\noutput path: ', snapshot_path))
+    message(paste0('\n--> Output path: ', snapshot_path))
+    cat('\n')
 
-    tictoc::tic(stringr::str_pad("snapshot data", 16))
+    tictoc::tic(stringr::str_pad("snapshot data", 17))
     data_snapshot <- snapshot_all(
       snapshot_date,
       data,
@@ -107,7 +109,7 @@ run_simulation <- function(
     #    ) %>%
     #    select(-value.x, -value.y)
 
-    tictoc::tic(stringr::str_pad("run gsm", 16))
+    tictoc::tic(stringr::str_pad("run gsm", 17))
     gsm_output <- gsm::Make_Snapshot(
       lMeta = metadata,
       lData = data_snapshot,
@@ -117,7 +119,7 @@ run_simulation <- function(
     )
     tictoc::toc()
 
-    tictoc::tic(stringr::str_pad("output data files", 16))
+    tictoc::tic(stringr::str_pad("output data files", 17))
     gsm_output %>%
       purrr::iwalk(function(value, key) {
         # value$gsm_analysis_date <- format(

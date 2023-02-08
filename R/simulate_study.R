@@ -96,7 +96,8 @@ simulate_study <- function(
     enroll = enroll
   )
 
-  message('> Rows per domain')
+  message('--> Rows per domain')
+  cat('\n')
   data %>%
     purrr::map_int(~ nrow(.x)) %>%
     stack() %>%

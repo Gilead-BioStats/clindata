@@ -60,7 +60,7 @@ simulate_dm <- function(
       rfxst_dt, rfxen_dt, timeontreatment
     )
 
-  message('> Subjects per site')
+  message('--> Subjects per site')
   table(dm3$siteid) %>%
       sort() %>%
       print()
