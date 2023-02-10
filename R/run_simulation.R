@@ -12,6 +12,7 @@ run_simulation <- function(
   n_snapshots = 6,
   end_date = lubridate::today(),
   start_date = NULL,
+  out_path = 'simulation',
   print_check_rows = FALSE
 ) {
   message(glue::glue(
@@ -22,6 +23,10 @@ run_simulation <- function(
   if (is.null(start_date)) {
     start_date <- end_date
     lubridate::year(start_date) <- lubridate::year(start_date) - 2
+  }
+
+  if (!file.exists(out_path)) {
+    dir.create(out_path)
   }
 
   metadata <- list(
@@ -51,7 +56,7 @@ run_simulation <- function(
   metadata$config_param$studyid <- studyid
   metadata$config_workflow$studyid <- studyid
 
-  study_path <- glue::glue("{studyid}")
+  study_path <- glue::glue("{out_path}/{studyid}")
   if (!file.exists(study_path)) {
     dir.create(study_path)
   }

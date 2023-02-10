@@ -5,7 +5,8 @@ snapshot_study <- function(
   snapshot_date,
   dm = clindata::rawplus_dm,
   study = clindata::ctms_study,
-  print_check_rows = TRUE) {
+  print_check_rows = TRUE
+) {
   n_enrolled <- dm %>%
     filter(
       .data$rfpst_dt <= snapshot_date
@@ -18,6 +19,7 @@ snapshot_study <- function(
     ungroup()
 
   study_snapshot <- study %>%
+    select(-any_of(c('enrolled_sites', 'enrolled_participants'))) %>%
     inner_join(
       n_enrolled,
       c("PROTOCOL_NUMBER" = "studyid")
