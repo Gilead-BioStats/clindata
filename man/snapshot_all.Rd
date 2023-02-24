@@ -13,6 +13,7 @@ snapshot_all(
     clindata::edc_queries, data_entry_lag = clindata::edc_data_entry_lag,
     data_change_rate = clindata::edc_data_change_rate),
   impute_rf_dt = TRUE,
+  print_check_rows = TRUE,
   rename_gsm = TRUE
 )
 }
