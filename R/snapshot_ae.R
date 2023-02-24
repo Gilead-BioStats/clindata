@@ -1,4 +1,7 @@
-snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
+#' @importFrom dplyr filter if_else left_join select
+#'
+#' @export
+snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae, print_check_rows = TRUE) {
   ae_snapshot <- ae %>%
     dplyr::left_join(
       dm %>% dplyr::select(subjid, rfpen_dt, rfxen_dt),
@@ -8,7 +11,7 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
       aeen_dt = dplyr::if_else(
         impute_date(aeen_dt) > snapshot_date,
         as.character(snapshot_date),
-        aeen_dt
+        as.character(aeen_dt)
       )
     ) %>%
     dplyr::filter(
@@ -19,7 +22,9 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae) {
       -rfxen_dt
     )
 
-  check_rows(ae, ae_snapshot, "ae")
+  if (print_check_rows) {
+    check_rows(ae, ae_snapshot, "ae")
+  }
 
   ae_snapshot
 }

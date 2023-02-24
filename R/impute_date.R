@@ -1,4 +1,11 @@
+#' @importFrom lubridate is.Date ymd
+#'
+#' @export
 impute_date <- function(date) {
+  if (lubridate::is.Date(date)) {
+    return(date)
+  }
+
   # no year-month-day
   no_ymd <- which(date == "-----")
   date[no_ymd] <- NA_character_
