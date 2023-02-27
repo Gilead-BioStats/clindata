@@ -15,11 +15,13 @@ Imports:
     data.table,
     dplyr,
     glue,
+    lubridate,
     magrittr,
     purrr,
     rlang,
     stringr,
     tictoc,
+    tidyr,
     usethis,
     yaml
 Suggests:
