@@ -1,6 +1,6 @@
 Package: clindata
 Title: Synthetic Clinical Data for testing and development
-Version: 0.13.0
+Version: 0.13.2
 Authors@R: 
     person("Jeremy", "Wildfire", , "jwildfire@gilead.com", role = c("aut", "cre"))
 Description: Synthetic Clinical Data for testing and development. Raw form data to start, more data formats in future releases. 
@@ -15,11 +15,13 @@ Imports:
     data.table,
     dplyr,
     glue,
+    lubridate,
     magrittr,
     purrr,
     rlang,
     stringr,
     tictoc,
+    tidyr,
     usethis,
     yaml
 Suggests:
