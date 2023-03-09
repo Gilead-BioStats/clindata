@@ -5,9 +5,15 @@ datasets <- rawplus_1_import()
 # join country data from ctms
 # default to 'US' when country is missing
 ctms <- ctms_1_import()
+site <- ctms$site %>%
+    select(SITE_NUM, COUNTRY) %>%
+    mutate(
+        across(everything(), as.character)
+    )
+
 datasets$dm <- datasets$dm %>%
   full_join(
-    ctms$site %>% select(SITE_NUM, COUNTRY),
+    site,
     by = c("siteid" = 'SITE_NUM')
   ) %>%
   mutate(
@@ -34,7 +40,7 @@ usethis::use_data(rawplus_consent, overwrite = TRUE)
 # temporary fix for [ enroll ]
 rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     full_join(
-        ctms$site %>% select(SITE_NUM, COUNTRY),
+        site,
         by = c("siteid" = 'SITE_NUM')
     ) %>%
     mutate(

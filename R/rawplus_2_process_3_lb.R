@@ -11,7 +11,7 @@
 
 rawplus_2_process_3_lb <- function(lb, dm) {
   cli::cli_alert_warning(
-    "[ lb_te ], [ alrtfl_s ], and [ lb_abn ] temporarily derived for [ lb ]."
+    "[ treatment_emergent ], [ alrtfl_s ], and [ lb_abn ] temporarily derived for [ lb ]."
   )
 
   lb_processed <- lb %>%
@@ -33,7 +33,7 @@ rawplus_2_process_3_lb <- function(lb, dm) {
       "subjid"
     ) %>%
     dplyr::mutate(
-      lb_te = dplyr::case_when(
+      treatment_emergent = dplyr::case_when(
         lb_dt == "" | rfxst_dt == "" | rfxen_dt == "" ~ "",
         as.Date(rfxst_dt) <= as.Date(lb_dt) & as.Date(lb_dt) <= (as.Date(rfxen_dt) + 30) ~ "Y",
         TRUE ~ ""

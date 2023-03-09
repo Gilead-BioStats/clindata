@@ -15,11 +15,11 @@ folder <- clindata::rawplus_visdt %>%
   filter(
     visit_dt != ''
   ) %>%
-  select(subjid, foldername, visit_dt, folderseq_nsv) %>%
-  arrange(subjid, visit_dt) %>%
-  group_by(subjid) %>%
+  select(subjectname = subjid, foldername, visitdat_date = visit_dt, folderseq_nsv) %>%
+  arrange(subjectname, visitdat_date) %>%
+  group_by(subjectname) %>%
   mutate(
-    visit_dt = ymd(visit_dt),
+    visitdat_date = ymd(visitdat_date),
     # Group unscheduled visits with most recent, prior scheduled visit.
     visitnum_tmp = ifelse(
         foldername != 'Unscheduled',
@@ -28,7 +28,7 @@ folder <- clindata::rawplus_visdt %>%
     )
   ) %>%
   fill(visitnum_tmp, .direction = 'down') %>%
-  group_by(subjid, visitnum_tmp) %>%
+  group_by(subjectname, visitnum_tmp) %>%
   mutate(
     # Increment visit number by .1 for each unscheduled visit following the most recent, prior
     # scheduled visit.
@@ -47,10 +47,10 @@ folder <- clindata::rawplus_visdt %>%
   ungroup() %>%
   select(-folderseq_nsv, -visitnum_tmp)
 
-# Form/field metadata.
+# form/field metadata.
 form_field <- fread('data-raw/edc/form-field.tsv') %>%
   filter(
-    !form %in% c('Adverse Event')
+    !formoid %in% c('Adverse Event')
   )
 
 # Merge visit data and form/field metadata (Cartesian join) to generate data points.
@@ -62,7 +62,7 @@ data_points <- folder %>%
   filter(
     !(
       foldername == 'Screening' &
-        !form %in% c(
+        !formoid %in% c(
           'Consents',
           'Visit Date',
           'Vital Signs Performed',
@@ -71,15 +71,15 @@ data_points <- folder %>%
     ),
     !(
       foldername != 'Screening' &
-        form == 'Consents'
+        formoid == 'Consents'
     ),
     !(
       foldername != 'Day 1' &
-        form == 'Enrollment'
+        formoid == 'Enrollment'
     ),
     !(
       foldername == 'Unscheduled' &
-        !form %in% c(
+        !formoid %in% c(
           'PK',
           'Study Drug Administration (DRUG1)',
           'Study Drug Administration (DRUG2)',
@@ -88,8 +88,25 @@ data_points <- folder %>%
         )
     )
   ) %>%
+  group_by(subjectname, foldername, visitdat_date, formoid, fieldoid) %>%
+  mutate(
+    log_number = row_number()
+  ) %>%
+  ungroup() %>%
   arrange(
-    subjid, visit_dt, foldername, form, field
+    subjectname, visitdat_date, visitnum, foldername, visitdat_date, formoid, fieldoid, log_number
+  ) %>%
+  mutate(
+    datapointid = row_number(),
+    n_changes = rpois(n(), .3)
+  ) %>%
+  select(
+    subjectname,
+    foldername, visitdat_date,
+    formoid,
+    fieldoid,
+    log_number,
+    datapointid, n_changes
   )
 
 saveRDS(

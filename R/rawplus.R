@@ -128,7 +128,7 @@
 #'   \item{carddis_nsv}{[ string ] Cardiovascular Disease}
 #'   \item{hlipdem_nsv}{[ string ] Hyperlipidemia}
 #'   \item{uveitis_nsv}{[ string ] Uveitis}
-#'   \item{ae_te}{[ string ] Treatment Emergent Event}
+#'   \item{treatment_emergent}{[ string ] Treatment Emergent Event}
 #' }
 #' @source ./data-raw/rawplus/ae.parquet
 "rawplus_ae"
@@ -291,7 +291,7 @@
 #'   \item{sinrhi}{[ string ] SI Reference Range High}
 #'   \item{toxgr}{[ string ] Toxicity Grade}
 #'   \item{alrtfl}{[ string ] Alert Flag}
-#'   \item{lb_te}{[ character ]}
+#'   \item{treatment_emergent}{[ character ]}
 #'   \item{alrtfl_s}{[ character ]}
 #'   \item{lb_abn}{[ logical ]}
 #' }

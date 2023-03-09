@@ -12,17 +12,15 @@ data_points <- readRDS('data-raw/edc/data_points.Rds')
 
 # Simulate data entry lag and flag data points with data entry lag greater than 10 days.
 data_entry_lag <- data_points %>%
-  group_by(subjid, foldername, visit_dt, form) %>%
-  tally(name = 'n_data_points') %>%
+  group_by(subjectname, foldername, visitdat_date, formoid) %>%
+  tally() %>%
   mutate(
     data_entry_lag = rnbinom(n(), size = 1, mu = 3),
-    data_entry_lag_fl = if_else(
-      data_entry_lag > 10,
-      'Y',
-      'N'
-    )
+    min_entereddate = visitdat_date + data_entry_lag
   ) %>%
-  select(-n_data_points)
+  select(
+    subjectname, foldername, formoid, visitdat_date, min_entereddate, data_entry_lag
+  )
 
 fwrite(
   data_entry_lag,
