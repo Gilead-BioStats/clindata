@@ -22,7 +22,7 @@ data_entry_lag <- data_points %>%
     subjectname, foldername, formoid, visitdat_date, min_entereddate, data_entry_lag
   )
 
-fwrite(
+saveRDS(
   data_entry_lag,
-  'data-raw/edc/data_entry_lag.csv'
+  'data-raw/edc/data_entry_lag.Rds'
 )

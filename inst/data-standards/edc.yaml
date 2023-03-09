@@ -1,21 +1,25 @@
 data_points:
   title: Data Points
-  description: data point-level data (not exported)
+  description: data point-level data with simulated count of data changes
   order: 0
   script: data-raw/edc/simulate_data_points.R
   input:
     - clindata::rawplus_visdt
-    - data-raw/edc/data_points.Rds
+    - data-raw/edc/form-field.tsv
   structure:
     - subject
     - visit
     - form
     - field
+    - log number
   keys:
-    - subjid
+    - subjectname
     - foldername
-    - form
-    - field
+    - formoid
+    - fieldoid
+    - log number
+  derivations:
+    - n_changes
 data_entry_lag:
   title: Data Entry Lag
   description: data page-level data with simulated data entry lag
@@ -28,13 +32,11 @@ data_entry_lag:
     - visit
     - form
   keys:
-    - subjid
+    - subjectname
     - foldername
-    - form
+    - formoid
   derivations:
-    - n_data_points
     - data_entry_lag
-    - data_entry_lagfl
 queries:
   title: Queries
   description: query-level data with simulated query characteristics
@@ -48,34 +50,12 @@ queries:
     - visit
     - form
     - field
-    - query
+    - log number
   keys:
-    - subjid
+    - subjectname
     - foldername
-    - form
-    - field
-    - qryopendate
+    - formoid
+    - fieldoid
+    - log_number
   derivations:
-    - qryage
-    - qry30fl
-    - qryagecat
-data_change_rate:
-  title: Data Change Rate
-  description: data page-level data with simulated data changes
-  order: 2
-  script: data-raw/edc/simulate_data_change_rate.R
-  input:
-    - data-raw/edc/data_points.Rds
-    - clindata::edc_queries
-  structure:
-    - subject
-    - visit
-    - form
-  keys:
-    - subjid
-    - foldername
-    - form
-  derivations:
-    - n_data_points
-    - n_data_points_with_changes
-    - n_data_point_changes
+    - queryage

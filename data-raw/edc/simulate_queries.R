@@ -64,7 +64,7 @@ queries1 <- queries %>%
     ),
     timeonstudy_since_visit = if_else(
       !is.na(visitdat_date),
-      (rfpen_dt - visitdat_date) + 1,
+      as.numeric(rfpen_dt - visitdat_date) + 1,
       timeonstudy
     )
   ) %>%
@@ -111,7 +111,7 @@ queries1 <- queries %>%
     'queryage', 'markinggroup'
   )))
 
-fwrite(
+saveRDS(
   queries1,
-  'data-raw/edc/queries.csv'
+  'data-raw/edc/queries.Rds'
 )

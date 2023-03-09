@@ -18,7 +18,7 @@ edc_1_import <- function(
   # Retrieve list of data files.
   data_files <- data_path %>%
     list.files(
-      "\\.csv$",
+      "\\.Rds$",
       full.names = TRUE
     )
 
@@ -33,7 +33,7 @@ edc_1_import <- function(
     purrr::imap(function(data_file, index) {
       domain <- domains[index]
 
-      data <- read.csv(data_file, colClasses = "character")
+      data <- readRDS(data_file)
 
       cli::cli_alert_success(
         '[ {stringr::str_pad(domain, 8, "both")} ] imported with {nrow(data)} rows and {ncol(data)} columns.'
