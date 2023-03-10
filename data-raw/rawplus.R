@@ -86,7 +86,3 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     )
 
 usethis::use_data(rawplus_enroll, overwrite = TRUE)
-
-#
-domain_mapping <- yaml::read_yaml(system.file('mappings', 'mapping_domain.yaml', package = 'gsm'))
-mapping <- yaml::read_yaml()

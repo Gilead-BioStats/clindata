@@ -8,7 +8,7 @@ check_mapping <- function(domain, data) {
 
     if (length(missing_columns)) {
         cli::cli_alert_danger(
-            '{length(missing_columns)} columns not found in [ {domain} ]: {missing_columns}.'
+            '{length(missing_columns)} column{ifelse(length(missing_columns) == 1, "", "s")} not found in [ {domain} ]: {missing_columns}.'
         )
     }
 }

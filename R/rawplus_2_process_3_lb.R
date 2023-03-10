@@ -25,8 +25,8 @@ rawplus_2_process_3_lb <- function(lb, dm) {
     dplyr::select(
       subjid, # participant
       visnam, visnum, lb_dt, # timing
-      battrnam, lbtstnam, lbtstcd, # measure
-      siresn, sinrlo, sinrhi, toxgr, alrtfl # result
+      battrnam, lbtstnam, # measure
+      siresn, sinrlo, sinrhi, toxgrg_nsv, alrtfl # result
     ) %>%
     dplyr::inner_join(
       dm %>% dplyr::select(subjid, firstdosedate, lastdosedate),

@@ -105,7 +105,7 @@ data_points <- folder %>%
   mutate(
     datapointid = row_number(),
     n_changes = rpois(n(), .3),
-    is_required = 1
+    isrequired = 1
   ) %>%
   select(
     protocolname,
@@ -114,7 +114,7 @@ data_points <- folder %>%
     formoid,
     fieldoid,
     log_number,
-    datapointid, n_changes, is_required
+    datapointid, n_changes, isrequired
   )
 
 saveRDS(
