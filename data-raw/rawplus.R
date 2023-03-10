@@ -19,6 +19,7 @@ datasets$dm <- datasets$dm %>%
     by = c("siteid" = 'SITE_NUM')
   ) %>%
   mutate(
+    enrollyn = "Y",
     country = ifelse(is.na(COUNTRY), 'US', COUNTRY),
     timeonstudy = dplyr::coalesce(timeonstudy, 0),
     timeontreatment = dplyr::coalesce(timeontreatment, 0)
