@@ -2,7 +2,7 @@
 #' - clindata::rawplus_dm
 #' - data-raw/edc/data_points.Rds
 
-# load_all('.')
+#load_all('.')
 library(dplyr)
 library(lubridate)
 library(data.table)
@@ -14,7 +14,7 @@ snapshot_date <- get_snapshot_date()
 
 # participant-level data with study timeline from which to impute query start date.
 subjid <- rawplus_dm %>%
-  select(subjid, firstparticipantdate, lastparticipantdate, timeonstudy) %>%
+  select(subject_nsv, firstparticipantdate, lastparticipantdate, timeonstudy) %>%
   mutate(
     firstparticipantdate = ymd(firstparticipantdate),
     lastparticipantdate = ymd(lastparticipantdate),
@@ -51,7 +51,7 @@ querystatus <- c(
 queries1 <- queries %>%
   left_join(
     subjid,
-    c('subjectname' = 'subjid')
+    c('subjectname' = 'subject_nsv')
   ) %>%
   mutate(
     # Sample marking group set.
