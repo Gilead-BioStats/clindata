@@ -135,7 +135,7 @@
 
 #' @title rawplus_dm
 #' @description Demographics (dm) data in [ rawplus ] format.
-#' @format a data frame with 1301 rows and 47 columns.
+#' @format a data frame with 1301 rows and 48 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study Identifier}
 #'   \item{siteid}{[ string ] Site Identifier}
@@ -183,6 +183,7 @@
 #'   \item{rfpst_dt}{[ string ] First Participant Date}
 #'   \item{timeontreatment}{[ int ] Time on Treatment}
 #'   \item{timeonstudy}{[ int ] Time on Study}
+#'   \item{enrollyn}{[ character ]}
 #'   \item{country}{[ character ]}
 #' }
 #' @source ./data-raw/rawplus/dm.parquet
