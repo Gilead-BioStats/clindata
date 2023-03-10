@@ -277,7 +277,7 @@
 
 #' @title rawplus_lb
 #' @description Labs (lb) data in [ rawplus ] format.
-#' @format a data frame with 1132070 rows and 14 columns.
+#' @format a data frame with 1132070 rows and 13 columns.
 #' \describe{
 #'   \item{subjid}{[ string ] Subject ID or Number}
 #'   \item{visnam}{[ string ] Visit Name}
@@ -285,11 +285,10 @@
 #'   \item{lb_dt}{[ string ] Actual Collection Date and Time}
 #'   \item{battrnam}{[ string ] Battery Name}
 #'   \item{lbtstnam}{[ string ] Test Name ID}
-#'   \item{lbtstcd}{[ string ] Test ID}
 #'   \item{siresn}{[ float ] SI Numeric Result}
 #'   \item{sinrlo}{[ string ] SI Reference Range Low}
 #'   \item{sinrhi}{[ string ] SI Reference Range High}
-#'   \item{toxgr}{[ string ] Toxicity Grade}
+#'   \item{toxgrg_nsv}{[ string ] Toxicity Grade}
 #'   \item{alrtfl}{[ string ] Alert Flag}
 #'   \item{treatmentemergent}{[ character ]}
 #'   \item{alertsimplified}{[ character ]}

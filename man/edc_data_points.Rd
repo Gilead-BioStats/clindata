@@ -5,7 +5,7 @@
 \alias{edc_data_points}
 \title{Data Points}
 \format{
-a data frame with 2114862 rows and 8 columns
+a data frame with 2114862 rows and 10 columns
 }
 \source{
 ./data-raw/edc/data_points.csv
