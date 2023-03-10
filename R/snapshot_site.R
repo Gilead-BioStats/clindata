@@ -8,7 +8,7 @@ snapshot_site <- function(
   print_check_rows = TRUE) {
   n_enrolled <- dm %>%
     filter(
-      .data$rfpst_dt <= snapshot_date
+      .data$firstparticipantdate <= snapshot_date
     ) %>%
     group_by(siteid) %>%
     summarize(

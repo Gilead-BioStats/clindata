@@ -9,7 +9,7 @@ snapshot_study <- function(
 ) {
   n_enrolled <- dm %>%
     filter(
-      .data$rfpst_dt <= snapshot_date
+      .data$firstparticipantdate <= snapshot_date
     ) %>%
     group_by(studyid) %>%
     summarize(

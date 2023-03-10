@@ -31,7 +31,7 @@ simulate_data_pages <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      visit_dt = sample_date(.data$rfpst_dt, .data$rfpen_dt)
+      visit_dt = sample_date(.data$firstparticipantdate, .data$lastparticipantdate)
     ) %>%
     ungroup() %>%
     select(

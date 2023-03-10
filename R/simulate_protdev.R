@@ -41,7 +41,7 @@ simulate_protdev <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      dv_dt = sample_date(.data$rfpst_dt, .data$rfpen_dt)
+      dv_dt = sample_date(.data$firstparticipantdate, .data$lastparticipantdate)
     ) %>%
     ungroup() %>%
     select(

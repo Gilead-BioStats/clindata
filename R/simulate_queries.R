@@ -30,7 +30,7 @@ simulate_queries <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      qryopendate = sample_date(.data$rfpst_dt, .data$rfpen_dt)
+      qryopendate = sample_date(.data$firstparticipantdate, .data$lastparticipantdate)
     ) %>%
     ungroup() %>%
     select(

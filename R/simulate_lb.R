@@ -28,7 +28,7 @@ simulate_lb <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      lb_dt = sample_date(.data$rfxst_dt, .data$rfxen_dt)
+      lb_dt = sample_date(.data$firstdosedate, .data$lastdosedate)
     ) %>%
     ungroup() %>%
     select(

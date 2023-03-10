@@ -42,8 +42,8 @@ simulate_ae <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      aest_dt = sample_date(.data$rfxst_dt, rfxen_dt),
-      aeen_dt = sample_date(.data$aest_dt, .data$rfxen_dt + 30)
+      aest_dt = sample_date(.data$firstdosedate, lastdosedate),
+      aeen_dt = sample_date(.data$aest_dt, .data$lastdosedate + 30)
     ) %>%
     ungroup() %>%
     select(

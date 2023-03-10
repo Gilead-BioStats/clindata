@@ -11,7 +11,7 @@
 
 rawplus_2_process_3_lb <- function(lb, dm) {
   cli::cli_alert_warning(
-    "[ treatment_emergent ], [ alrtfl_s ], and [ lb_abn ] temporarily derived for [ lb ]."
+    "[ treatmentemergent ] and [ alertsimplified ] temporarily derived for [ lb ]."
   )
 
   lb_processed <- lb %>%
@@ -29,27 +29,22 @@ rawplus_2_process_3_lb <- function(lb, dm) {
       siresn, sinrlo, sinrhi, toxgr, alrtfl # result
     ) %>%
     dplyr::inner_join(
-      dm %>% dplyr::select(subjid, rfxst_dt, rfxen_dt),
+      dm %>% dplyr::select(subjid, firstdosedate, lastdosedate),
       "subjid"
     ) %>%
     dplyr::mutate(
-      treatment_emergent = dplyr::case_when(
-        lb_dt == "" | rfxst_dt == "" | rfxen_dt == "" ~ "",
-        as.Date(rfxst_dt) <= as.Date(lb_dt) & as.Date(lb_dt) <= (as.Date(rfxen_dt) + 30) ~ "Y",
+      treatmentemergent = dplyr::case_when(
+        lb_dt == "" | firstdosedate == "" | lastdosedate == "" ~ "",
+        as.Date(firstdosedate) <= as.Date(lb_dt) & as.Date(lb_dt) <= (as.Date(lastdosedate) + 30) ~ "Y",
         TRUE ~ ""
       ),
-      alrtfl_s = dplyr::case_when(
+      alertsimplified = dplyr::case_when(
         alrtfl %in% c("H", "HN", "HT", "HP") ~ "H",
         alrtfl %in% c("L", "LN", "LT", "LP") ~ "L",
         TRUE ~ alrtfl
-      ),
-      lb_abn = dplyr::if_else(
-        toxgr %in% c("1", "2", "3", "4") & alrtfl_s != "N",
-        TRUE,
-        FALSE
       )
     ) %>%
-    dplyr::select(-rfxst_dt, -rfxen_dt)
+    dplyr::select(-firstdosedate, -lastdosedate)
 
   n_rows_removed <- nrow(lb) - nrow(lb_processed)
 

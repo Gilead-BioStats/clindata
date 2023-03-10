@@ -177,10 +177,10 @@
 #'   \item{ethnic_std_nsv}{[ string ] Ethnicity_Coded Value}
 #'   \item{race_std_nsv}{[ string ] Race_Coded Value}
 #'   \item{racescat_std_nsv}{[ string ] Race Sub-category_Coded Value}
-#'   \item{rfxst_dt}{[ string ] First Dose Date}
-#'   \item{rfxen_dt}{[ string ] Last Dose Date}
-#'   \item{rfpen_dt}{[ string ] Last Participant Date}
-#'   \item{rfpst_dt}{[ string ] First Participant Date}
+#'   \item{firstdosedate}{[ string ] First Dose Date}
+#'   \item{lastdosedate}{[ string ] Last Dose Date}
+#'   \item{lastparticipantdate}{[ string ] Last Participant Date}
+#'   \item{firstparticipantdate}{[ string ] First Participant Date}
 #'   \item{timeontreatment}{[ int ] Time on Treatment}
 #'   \item{timeonstudy}{[ int ] Time on Study}
 #'   \item{country}{[ character ]}

@@ -4,24 +4,24 @@
 snapshot_sdrgcomp <- function(snapshot_date, dm, sdrgcomp = clindata::rawplus_sdrgcomp, print_check_rows = TRUE) {
   sdrgcomp_snapshot <- sdrgcomp %>%
     dplyr::inner_join(
-      dm %>% select(subjid, rfxen_dt, rfxen_dt0),
+      dm %>% select(subjid, lastdosedate, lastdosedate0),
       "subjid"
     ) %>%
     dplyr::mutate(
       sdrgyn = dplyr::if_else(
-        rfxen_dt < rfxen_dt0,
+        lastdosedate < lastdosedate0,
         "",
         sdrgyn
       ),
       sdrgreas = dplyr::if_else(
-        rfxen_dt < rfxen_dt0,
+        lastdosedate < lastdosedate0,
         "",
         sdrgreas
       )
     ) %>%
     dplyr::select(
-      -rfxen_dt,
-      -rfxen_dt0
+      -lastdosedate,
+      -lastdosedate0
     )
 
   if (print_check_rows) {

@@ -15,7 +15,7 @@ folder <- clindata::rawplus_visdt %>%
   filter(
     visit_dt != ''
   ) %>%
-  select(subjectname = subjid, foldername, visitdat_date = visit_dt, folderseq_nsv) %>%
+  select(subjectname = subject_nsv, foldername, visitdat_date = visit_dt, folderseq_nsv) %>%
   arrange(subjectname, visitdat_date) %>%
   group_by(subjectname) %>%
   mutate(

@@ -4,24 +4,24 @@
 snapshot_studcomp <- function(snapshot_date, dm, studcomp = clindata::rawplus_studcomp, print_check_rows = TRUE) {
   studcomp_snapshot <- studcomp %>%
     dplyr::inner_join(
-      dm %>% dplyr::select(subjid, rfpen_dt, rfpen_dt0),
+      dm %>% dplyr::select(subjid, lastparticipantdate, lastparticipantdate0),
       "subjid"
     ) %>%
     dplyr::mutate(
       compyn = dplyr::if_else(
-        rfpen_dt < rfpen_dt0,
+        lastparticipantdate < lastparticipantdate0,
         "",
         compyn
       ),
       compreas = dplyr::if_else(
-        rfpen_dt < rfpen_dt0,
+        lastparticipantdate < lastparticipantdate0,
         "",
         compreas
       )
     ) %>%
     dplyr::select(
-      -rfpen_dt,
-      -rfpen_dt0
+      -lastparticipantdate,
+      -lastparticipantdate0
     )
 
   if (print_check_rows) {

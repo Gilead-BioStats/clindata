@@ -35,8 +35,8 @@ simulate_dm <- function(
   dm3 <- dm2 %>%
     mutate(
       siteid = sample(site$SITE_NUM, nrow(dm2), TRUE, runif(nrow(site))),
-      rfpst_dt = sample(start_date:end_date, n(), TRUE),
-      rfxst_dt = .data$rfpst_dt + sample(1:60, n(), TRUE)
+      firstparticipantdate = sample(start_date:end_date, n(), TRUE),
+      firstdosedate = .data$firstparticipantdate + sample(1:60, n(), TRUE)
     ) %>%
     left_join(
       site %>%
@@ -45,19 +45,19 @@ simulate_dm <- function(
     ) %>%
     rowwise() %>%
     mutate(
-      rfpen_dt = sample_date(.data$rfxst_dt, end_date),
-      rfxen_dt = sample_date(.data$rfxst_dt, .data$rfpen_dt)
+      lastparticipantdate = sample_date(.data$firstdosedate, end_date),
+      lastdosedate = sample_date(.data$firstdosedate, .data$lastparticipantdate)
     ) %>%
     ungroup() %>%
     mutate(
       across(ends_with("dt"), lubridate::as_date),
-      timeonstudy = as.numeric(.data$rfpen_dt - .data$rfpst_dt) + 1,
-      timeontreatment = as.numeric(.data$rfxen_dt - .data$rfxst_dt) + 1
+      timeonstudy = as.numeric(.data$lastparticipantdate - .data$firstparticipantdate) + 1,
+      timeontreatment = as.numeric(.data$lastdosedate - .data$firstdosedate) + 1
     ) %>%
     select(
       studyid, siteid, country, subjid,
-      rfpst_dt, rfpen_dt, timeonstudy,
-      rfxst_dt, rfxen_dt, timeontreatment
+      firstparticipantdate, lastparticipantdate, timeonstudy,
+      firstdosedate, lastdosedate, timeontreatment
     )
 
   message('--> Subjects per site')
