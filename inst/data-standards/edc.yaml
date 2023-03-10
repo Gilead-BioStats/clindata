@@ -20,11 +20,11 @@ data_points:
     - log number
   derivations:
     - n_changes
-data_entry_lag:
+data_pages:
   title: Data Entry Lag
   description: data page-level data with simulated data entry lag
   order: 1
-  script: data-raw/edc/simulate_data_entry_lag.R
+  script: data-raw/edc/simulate_data_pages.R
   input:
     - data-raw/edc/data_points.Rds
   structure:

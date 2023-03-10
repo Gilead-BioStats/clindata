@@ -1,5 +1,6 @@
 library(dplyr)
 devtools::load_all()
+
 datasets <- rawplus_1_import()
 
 # join country data from ctms
@@ -55,7 +56,7 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
         )
     ) %>%
     group_by(enrollyn) %>%
-    arrange(rfpst_dt, as.numeric(siteid), scrnid) %>%
+    arrange(firstparticipantdate, as.numeric(siteid), scrnid) %>%
     mutate(
         sfreas = if_else(
             enrollyn == 'Y',
@@ -80,8 +81,12 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     ungroup %>%
     select(
         studyid, siteid, subjid,
-        enroll_dt = rfpst_dt, enrollyn, sfreas,
+        enroll_dt = firstparticipantdate, enrollyn, sfreas,
         country, invid
     )
 
 usethis::use_data(rawplus_enroll, overwrite = TRUE)
+
+#
+domain_mapping <- yaml::read_yaml(system.file('mappings', 'mapping_domain.yaml', package = 'gsm'))
+mapping <- yaml::read_yaml()

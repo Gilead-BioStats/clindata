@@ -90,9 +90,9 @@ simulate_study <- function(
     lb = lb,
     studcomp = studcomp,
     sdrgcomp = sdrgcomp,
+    data_points = data_points,
+    data_pages = data_pages,
     queries = queries,
-    data_entry_lag = data_pages,
-    data_change_rate = data_pages,
     enroll = enroll
   )
 

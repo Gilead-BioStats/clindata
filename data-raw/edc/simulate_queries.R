@@ -14,10 +14,10 @@ snapshot_date <- get_snapshot_date()
 
 # participant-level data with study timeline from which to impute query start date.
 subjid <- rawplus_dm %>%
-  select(subjid, rfpst_dt, rfpen_dt, timeonstudy) %>%
+  select(subjid, firstparticipantdate, lastparticipantdate, timeonstudy) %>%
   mutate(
-    rfpst_dt = ymd(rfpst_dt),
-    rfpen_dt = ymd(rfpen_dt),
+    firstparticipantdate = ymd(firstparticipantdate),
+    lastparticipantdate = ymd(lastparticipantdate),
   )
 
 # data point-level data
@@ -64,7 +64,7 @@ queries1 <- queries %>%
     ),
     timeonstudy_since_visit = if_else(
       !is.na(visitdat_date),
-      as.numeric(rfpen_dt - visitdat_date) + 1,
+      as.numeric(lastparticipantdate - visitdat_date) + 1,
       timeonstudy
     )
   ) %>%
@@ -73,7 +73,7 @@ queries1 <- queries %>%
   rowwise() %>%
   mutate(
     # Impute query open date as any date between visit date and study end date + 30.
-    created = rfpst_dt + sample(timeonstudy_since_visit + 31, 1) - 1
+    created = firstparticipantdate + sample(timeonstudy_since_visit + 31, 1) - 1
   ) %>%
   ungroup() %>%
   mutate(
