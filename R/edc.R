@@ -1,8 +1,8 @@
 #' @title Data Entry Lag
-#' @description data page-level data with simulated data entry lag (data_entry_lag)
+#' @description data page-level data with simulated data entry lag (data_pages)
 #' @format a data frame with 247462 rows and 6 columns
-#' @source ./data-raw/edc/data_entry_lag.csv
-"edc_data_entry_lag"
+#' @source ./data-raw/edc/data_pages.csv
+"edc_data_pages"
 
 #' @title Data Points
 #' @description data point-level data with simulated count of data changes (data_points)

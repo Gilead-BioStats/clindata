@@ -1,7 +1,7 @@
 #' @importFrom dplyr filter
 #'
 #' @export
-snapshot_data_pages function(snapshot_date, data_pages = clindata::edc_data_pages, print_check_rows = TRUE) {
+snapshot_data_pages <- function(snapshot_date, data_pages = clindata::edc_data_pages, print_check_rows = TRUE) {
   data_pages_snapshot <- data_pages %>%
     dplyr::filter(
       impute_date(visit_dt) <= snapshot_date

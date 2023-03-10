@@ -133,7 +133,7 @@ a data frame with 4854 rows and 127 columns.
 \item{carddis_nsv}{\link{ string } Cardiovascular Disease}
 \item{hlipdem_nsv}{\link{ string } Hyperlipidemia}
 \item{uveitis_nsv}{\link{ string } Uveitis}
-\item{ae_te}{\link{ string } Treatment Emergent Event}
+\item{treatmentemergent}{\link{ character }}
 }
 }
 \source{

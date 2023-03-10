@@ -15,9 +15,15 @@ folder <- clindata::rawplus_visdt %>%
   filter(
     visit_dt != ''
   ) %>%
-  select(subjectname = subject_nsv, foldername, visitdat_date = visit_dt, folderseq_nsv) %>%
-  arrange(subjectname, visitdat_date) %>%
-  group_by(subjectname) %>%
+  select(
+      protocolname = studyid,
+      subjectname = subject_nsv,
+      foldername,
+      visitdat_date = visit_dt,
+      folderseq_nsv
+  ) %>%
+  arrange(protocolname, subjectname, visitdat_date) %>%
+  group_by(protocolname, subjectname) %>%
   mutate(
     visitdat_date = ymd(visitdat_date),
     # Group unscheduled visits with most recent, prior scheduled visit.
@@ -28,7 +34,7 @@ folder <- clindata::rawplus_visdt %>%
     )
   ) %>%
   fill(visitnum_tmp, .direction = 'down') %>%
-  group_by(subjectname, visitnum_tmp) %>%
+  group_by(protocolname, subjectname, visitnum_tmp) %>%
   mutate(
     # Increment visit number by .1 for each unscheduled visit following the most recent, prior
     # scheduled visit.
@@ -88,25 +94,27 @@ data_points <- folder %>%
         )
     )
   ) %>%
-  group_by(subjectname, foldername, visitdat_date, formoid, fieldoid) %>%
+  group_by(protocolname, subjectname, foldername, visitdat_date, formoid, fieldoid) %>%
   mutate(
     log_number = row_number()
   ) %>%
   ungroup() %>%
   arrange(
-    subjectname, visitdat_date, visitnum, foldername, visitdat_date, formoid, fieldoid, log_number
+    protocolname, subjectname, visitdat_date, visitnum, foldername, visitdat_date, formoid, fieldoid, log_number
   ) %>%
   mutate(
     datapointid = row_number(),
-    n_changes = rpois(n(), .3)
+    n_changes = rpois(n(), .3),
+    is_required = 1
   ) %>%
   select(
+    protocolname,
     subjectname,
     foldername, visitdat_date,
     formoid,
     fieldoid,
     log_number,
-    datapointid, n_changes
+    datapointid, n_changes, is_required
   )
 
 saveRDS(

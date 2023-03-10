@@ -5,7 +5,7 @@
 \alias{rawplus_lb}
 \title{rawplus_lb}
 \format{
-a data frame with 1132070 rows and 15 columns.
+a data frame with 1132070 rows and 14 columns.
 \describe{
 \item{subjid}{\link{ string } Subject ID or Number}
 \item{visnam}{\link{ string } Visit Name}
@@ -19,9 +19,8 @@ a data frame with 1132070 rows and 15 columns.
 \item{sinrhi}{\link{ string } SI Reference Range High}
 \item{toxgr}{\link{ string } Toxicity Grade}
 \item{alrtfl}{\link{ string } Alert Flag}
-\item{lb_te}{\link{ character }}
-\item{alrtfl_s}{\link{ character }}
-\item{lb_abn}{\link{ logical }}
+\item{treatmentemergent}{\link{ character }}
+\item{alertsimplified}{\link{ character }}
 }
 }
 \source{

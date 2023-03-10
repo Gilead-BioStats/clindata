@@ -106,7 +106,7 @@ queries1 <- queries %>%
     queryage = as.numeric(qryenddate - created) + 1
   ) %>%
   select(all_of(c(
-    'subjectname', 'foldername', 'formoid', 'fieldoid', 'log_number', 'datapointid',
+    'protocolname', 'subjectname', 'foldername', 'formoid', 'fieldoid', 'log_number', 'datapointid',
     'querystatus', 'created', 'answered', 'resolved',
     'queryage', 'markinggroup'
   )))
