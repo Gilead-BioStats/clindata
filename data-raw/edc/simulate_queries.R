@@ -10,10 +10,10 @@ library(data.table)
 set.seed(8675309)
 
 # snapshot date for imputation of query end date.
-snapshot_date <- get_snapshot_date()
+snapshot_date <- clindata::get_snapshot_date()
 
 # participant-level data with study timeline from which to impute query start date.
-subjid <- rawplus_dm %>%
+subjid <- clindata::rawplus_dm %>%
   select(subject_nsv, firstparticipantdate, lastparticipantdate, timeonstudy) %>%
   mutate(
     firstparticipantdate = ymd(firstparticipantdate),
@@ -30,7 +30,7 @@ queries <- data_points %>%
     runif(n()) < .02,
   ) %>%
   arrange(
-    subjectname, foldername, formoid, fieldoid
+    subjectname, visit, formoid, fieldoid
   )
 
 # Marking group set from which to sample.
@@ -95,6 +95,7 @@ queries1 <- queries %>%
       created + rnbinom(n(), size = 1, mu = 7),
       as.Date(NA)
     ),
+    dataextractiondate = snapshot_date,
     # Define query "end date" dependent on query status.
     qryenddate = case_when(
       querystatus == 'Answered' ~ answered,
@@ -106,8 +107,8 @@ queries1 <- queries %>%
     queryage = as.numeric(qryenddate - created) + 1
   ) %>%
   select(all_of(c(
-    'protocolname', 'subjectname', 'foldername', 'formoid', 'fieldoid', 'log_number', 'datapointid',
-    'querystatus', 'created', 'answered', 'resolved',
+    'protocolname', 'subjectname', 'visit', 'formoid', 'fieldoid', 'log_number', 'datapointid',
+    'querystatus', 'created', 'answered', 'resolved', 'dataextractiondate',
     'queryage', 'markinggroup'
   )))
 

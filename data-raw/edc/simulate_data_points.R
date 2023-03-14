@@ -11,14 +11,14 @@ library(data.table)
 set.seed(8675309)
 
 # Visit data with unique visit values within each subject ID.
-folder <- clindata::rawplus_visdt %>%
+visit <- clindata::rawplus_visdt %>%
   filter(
     visit_dt != ''
   ) %>%
   select(
       protocolname = studyid,
       subjectname = subject_nsv,
-      foldername,
+      visit = foldername,
       visitdat_date = visit_dt,
       folderseq_nsv
   ) %>%
@@ -28,7 +28,7 @@ folder <- clindata::rawplus_visdt %>%
     visitdat_date = ymd(visitdat_date),
     # Group unscheduled visits with most recent, prior scheduled visit.
     visitnum_tmp = ifelse(
-        foldername != 'Unscheduled',
+        visit != 'Unscheduled',
         folderseq_nsv,
         NA
     )
@@ -44,10 +44,10 @@ folder <- clindata::rawplus_visdt %>%
       visitnum_tmp + (row_number()-1)*.1
     ),
     # Concatenate visit name with visit number to define unique visit name.
-    foldername = if_else(
+    visit = if_else(
       row_number() == 1,
-      foldername,
-      paste(foldername, visitnum)
+      visit,
+      paste(visit, visitnum)
     )
   ) %>%
   ungroup() %>%
@@ -60,14 +60,14 @@ form_field <- fread('data-raw/edc/form-field.tsv') %>%
   )
 
 # Merge visit data and form/field metadata (Cartesian join) to generate data points.
-data_points <- folder %>%
+data_points <- visit %>%
   merge(
     form_field,
     all = TRUE
   ) %>%
   filter(
     !(
-      foldername == 'Screening' &
+      visit == 'Screening' &
         !formoid %in% c(
           'Consents',
           'Visit Date',
@@ -76,15 +76,15 @@ data_points <- folder %>%
         )
     ),
     !(
-      foldername != 'Screening' &
+      visit != 'Screening' &
         formoid == 'Consents'
     ),
     !(
-      foldername != 'Day 1' &
+      visit != 'Day 1' &
         formoid == 'Enrollment'
     ),
     !(
-      foldername == 'Unscheduled' &
+      visit == 'Unscheduled' &
         !formoid %in% c(
           'PK',
           'Study Drug Administration (DRUG1)',
@@ -94,13 +94,13 @@ data_points <- folder %>%
         )
     )
   ) %>%
-  group_by(protocolname, subjectname, foldername, visitdat_date, formoid, fieldoid) %>%
+  group_by(protocolname, subjectname, visit, visitdat_date, formoid, fieldoid) %>%
   mutate(
     log_number = row_number()
   ) %>%
   ungroup() %>%
   arrange(
-    protocolname, subjectname, visitdat_date, visitnum, foldername, visitdat_date, formoid, fieldoid, log_number
+    protocolname, subjectname, visitdat_date, visitnum, visit, visitdat_date, formoid, fieldoid, log_number
   ) %>%
   mutate(
     datapointid = row_number(),
@@ -110,7 +110,7 @@ data_points <- folder %>%
   select(
     protocolname,
     subjectname,
-    foldername, visitdat_date,
+    visit, visitdat_date,
     formoid,
     fieldoid,
     log_number,

@@ -12,6 +12,6 @@
 
 #' @title Queries
 #' @description query-level data with simulated query characteristics (queries)
-#' @format a data frame with 42259 rows and 13 columns
+#' @format a data frame with 42259 rows and 14 columns
 #' @source ./data-raw/edc/queries.csv
 "edc_queries"
