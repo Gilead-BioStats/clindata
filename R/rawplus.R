@@ -297,40 +297,6 @@
 #' @source ./data-raw/rawplus/lb.parquet
 "rawplus_lb"
 
-#' @title rawplus_protdev
-#' @description Protocol Deviations (protdev) data in [ rawplus ] format.
-#' @format a data frame with 4473 rows and 26 columns.
-#' \describe{
-#'   \item{invid}{[ string ] Investigator ID}
-#'   \item{scrnid}{[ string ] Screen Identifier}
-#'   \item{subjid}{[ string ] Subject Identifier}
-#'   \item{dv_dt}{[ string ] Date of Deviation}
-#'   \item{dvdecod}{[ string ] PD Category}
-#'   \item{dvterm}{[ string ] PD Description}
-#'   \item{importnt}{[ string ] Deemed Important}
-#'   \item{cro_nsv}{[ string ] CRO}
-#'   \item{country_nsv}{[ string ] Country}
-#'   \item{invnam_nsv}{[ string ] Principal Investigator}
-#'   \item{subjinit_nsv}{[ string ] Initials}
-#'   \item{idendate_nsv}{[ string ] Date Deviation Identified}
-#'   \item{visit_nsv}{[ string ] Study Visit}
-#'   \item{devdesc_nsv}{[ string ] Description}
-#'   \item{devused_nsv}{[ string ] Protocol Deviation Form (GF-23005A) Used?}
-#'   \item{repdatec_nsv}{[ string ] Date of Report on PD Form}
-#'   \item{comments_nsv}{[ string ] Comments}
-#'   \item{gsidatec_nsv}{[ string ] Date Sent to GSI}
-#'   \item{mmdatec_nsv}{[ string ] Date Signed by  GSI MM}
-#'   \item{addatec_nsv}{[ string ] Date Signed by GSI AD}
-#'   \item{retdatec_nsv}{[ string ] Date Returned to CRO}
-#'   \item{tmfdatec_nsv}{[ string ] Date Completed Form filed in TMF}
-#'   \item{mmpddatec_nsv}{[ string ] Gilead MM Review Date of PD}
-#'   \item{revwdatec_nsv}{[ string ] Date  of Review Date}
-#'   \item{devdatec_nsv}{[ string ] Date of Deviation}
-#'   \item{idendatec_nsv}{[ string ] Date Deviation Identified}
-#' }
-#' @source ./data-raw/rawplus/protdev.parquet
-"rawplus_protdev"
-
 #' @title rawplus_sdrgcomp
 #' @description Treatment Disposition (sdrgcomp) data in [ rawplus ] format.
 #' @format a data frame with 689 rows and 35 columns.

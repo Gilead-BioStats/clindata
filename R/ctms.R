@@ -1,3 +1,7 @@
+#' @format a data frame with 4837 rows and 4 columns
+#' @source ./data-raw/ctms/protdev.csv
+"ctms_protdev"
+
 #' @title Site Metadata
 #' @description Site Metadata (site) data CTMS data
 #' @format a data frame with 176 rows and 14 columns
