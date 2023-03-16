@@ -10,8 +10,8 @@ snapshot_all(
     clindata::rawplus_dm, studcomp = clindata::rawplus_studcomp, sdrgcomp =
     clindata::rawplus_sdrgcomp, lb = clindata::rawplus_lb, ae = clindata::rawplus_ae,
     protdev = clindata::rawplus_protdev, enroll = clindata::rawplus_enroll, queries =
-    clindata::edc_queries, data_entry_lag = clindata::edc_data_entry_lag,
-    data_change_rate = clindata::edc_data_change_rate),
+    clindata::edc_queries, data_pages = clindata::edc_data_pages, data_points =
+    clindata::edc_data_points),
   impute_rf_dt = TRUE,
   print_check_rows = TRUE,
   rename_gsm = TRUE

@@ -4,7 +4,7 @@
 snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae, print_check_rows = TRUE) {
   ae_snapshot <- ae %>%
     dplyr::left_join(
-      dm %>% dplyr::select(subjid, rfpen_dt, rfxen_dt),
+      dm %>% dplyr::select(subjid, lastparticipantdate, lastdosedate),
       "subjid"
     ) %>%
     dplyr::mutate(
@@ -18,8 +18,8 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae, print_chec
       impute_date(aest_dt) <= snapshot_date
     ) %>%
     dplyr::select(
-      -rfpen_dt,
-      -rfxen_dt
+      -lastparticipantdate,
+      -lastdosedate
     )
 
   if (print_check_rows) {

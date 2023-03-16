@@ -28,8 +28,8 @@ snapshot_all <- function(
 
     # edc
     queries = clindata::edc_queries,
-    data_entry_lag = clindata::edc_data_entry_lag,
-    data_change_rate = clindata::edc_data_change_rate
+    data_pages = clindata::edc_data_pages,
+    data_points = clindata::edc_data_points
   ),
   impute_rf_dt = TRUE,
   print_check_rows = TRUE,
@@ -55,8 +55,8 @@ snapshot_all <- function(
 
   # edc
   queries <- snapshot_queries(snapshot_date, data$queries, print_check_rows = print_check_rows)
-  data_entry_lag <- snapshot_data_entry_lag(snapshot_date, data$data_entry_lag, print_check_rows = print_check_rows)
-  data_change_rate <- snapshot_data_change_rate(snapshot_date, data$data_change_rate, print_check_rows = print_check_rows)
+  data_pages <- snapshot_data_pages(snapshot_date, data$data_pages, print_check_rows = print_check_rows)
+  data_points <- snapshot_data_points(snapshot_date, data$data_points, print_check_rows = print_check_rows)
 
   data <- list(
     snapshot_date = snapshot_date,
@@ -74,8 +74,8 @@ snapshot_all <- function(
 
     # edc
     queries = queries,
-    data_entry_lag = data_entry_lag,
-    data_change_rate = data_change_rate
+    data_pages = data_pages,
+    data_points = data_points
   )
 
   if (rename_gsm) {

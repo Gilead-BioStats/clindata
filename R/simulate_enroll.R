@@ -12,7 +12,7 @@ simulate_enroll <- function(
       siteid,
       subjid,
       country,
-      enroll_dt = rfpst_dt
+      enroll_dt = firstparticipantdate
     ) %>%
     mutate(
       enrollyn = "Y",

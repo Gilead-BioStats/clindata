@@ -5,7 +5,7 @@
 \alias{rawplus_sdrgcomp}
 \title{rawplus_sdrgcomp}
 \format{
-a data frame with 689 rows and 34 columns.
+a data frame with 689 rows and 35 columns.
 \describe{
 \item{studyid}{\link{ string } Study Identifier}
 \item{siteid}{\link{ string } Site Identifier}
@@ -41,6 +41,7 @@ a data frame with 689 rows and 34 columns.
 \item{sdrgfu_std_nsv}{\link{ string } Will subject enter 24-week trt free fup_Coded Value}
 \item{sdrgtrt_nsv}{\link{ string } Did subject start another HBV therapy}
 \item{sdrgtrt_std_nsv}{\link{ string } Did subject start another HBV therapy_Coded Value}
+\item{phase}{\link{ character }}
 }
 }
 \source{

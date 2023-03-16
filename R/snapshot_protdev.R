@@ -6,7 +6,7 @@ snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::rawplus_prot
   if ("visit_nsv" %in% names(protdev)) {
     protdev_snapshot <- protdev %>%
       left_join(
-        dm %>% select(subjid, rfpst_dt),
+        dm %>% select(subjid, firstparticipantdate),
         "subjid"
       ) %>%
       mutate(
@@ -17,11 +17,11 @@ snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::rawplus_prot
         ),
         dv_dt = if_else(
           dv_dt == "",
-          impute_date(rfpst_dt) + 7 * week,
+          impute_date(firstparticipantdate) + 7 * week,
           impute_date(dv_dt)
         )
       ) %>%
-      select(-rfpst_dt, -week)
+      select(-firstparticipantdate, -week)
   } else {
     protdev_snapshot <- protdev
   }

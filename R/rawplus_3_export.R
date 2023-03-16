@@ -15,6 +15,8 @@ rawplus_3_export <- function(
     purrr::iwalk(function(data, domain) {
       rawplus_domain <- paste0("rawplus_", domain)
 
+      check_mapping(rawplus_domain, data)
+
       assign(rawplus_domain, tibble::as_tibble(data))
 
       do.call(

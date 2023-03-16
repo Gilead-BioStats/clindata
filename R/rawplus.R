@@ -128,7 +128,7 @@
 #'   \item{carddis_nsv}{[ string ] Cardiovascular Disease}
 #'   \item{hlipdem_nsv}{[ string ] Hyperlipidemia}
 #'   \item{uveitis_nsv}{[ string ] Uveitis}
-#'   \item{ae_te}{[ string ] Treatment Emergent Event}
+#'   \item{treatmentemergent}{[ character ]}
 #' }
 #' @source ./data-raw/rawplus/ae.parquet
 "rawplus_ae"
@@ -177,10 +177,10 @@
 #'   \item{ethnic_std_nsv}{[ string ] Ethnicity_Coded Value}
 #'   \item{race_std_nsv}{[ string ] Race_Coded Value}
 #'   \item{racescat_std_nsv}{[ string ] Race Sub-category_Coded Value}
-#'   \item{rfxst_dt}{[ string ] First Dose Date}
-#'   \item{rfxen_dt}{[ string ] Last Dose Date}
-#'   \item{rfpen_dt}{[ string ] Last Participant Date}
-#'   \item{rfpst_dt}{[ string ] First Participant Date}
+#'   \item{firstdosedate}{[ character ]}
+#'   \item{lastdosedate}{[ character ]}
+#'   \item{lastparticipantdate}{[ character ]}
+#'   \item{firstparticipantdate}{[ character ]}
 #'   \item{timeontreatment}{[ int ] Time on Treatment}
 #'   \item{timeonstudy}{[ int ] Time on Study}
 #'   \item{enrollyn}{[ character ]}
@@ -278,7 +278,7 @@
 
 #' @title rawplus_lb
 #' @description Labs (lb) data in [ rawplus ] format.
-#' @format a data frame with 1132070 rows and 15 columns.
+#' @format a data frame with 1132070 rows and 13 columns.
 #' \describe{
 #'   \item{subjid}{[ string ] Subject ID or Number}
 #'   \item{visnam}{[ string ] Visit Name}
@@ -286,15 +286,13 @@
 #'   \item{lb_dt}{[ string ] Actual Collection Date and Time}
 #'   \item{battrnam}{[ string ] Battery Name}
 #'   \item{lbtstnam}{[ string ] Test Name ID}
-#'   \item{lbtstcd}{[ string ] Test ID}
 #'   \item{siresn}{[ float ] SI Numeric Result}
 #'   \item{sinrlo}{[ string ] SI Reference Range Low}
 #'   \item{sinrhi}{[ string ] SI Reference Range High}
-#'   \item{toxgr}{[ string ] Toxicity Grade}
+#'   \item{toxgrg_nsv}{[ string ] Toxicity Grade}
 #'   \item{alrtfl}{[ string ] Alert Flag}
-#'   \item{lb_te}{[ character ]}
-#'   \item{alrtfl_s}{[ character ]}
-#'   \item{lb_abn}{[ logical ]}
+#'   \item{treatmentemergent}{[ character ]}
+#'   \item{alertsimplified}{[ character ]}
 #' }
 #' @source ./data-raw/rawplus/lb.parquet
 "rawplus_lb"
@@ -335,7 +333,7 @@
 
 #' @title rawplus_sdrgcomp
 #' @description Treatment Disposition (sdrgcomp) data in [ rawplus ] format.
-#' @format a data frame with 689 rows and 34 columns.
+#' @format a data frame with 689 rows and 35 columns.
 #' \describe{
 #'   \item{studyid}{[ string ] Study Identifier}
 #'   \item{siteid}{[ string ] Site Identifier}
@@ -371,6 +369,7 @@
 #'   \item{sdrgfu_std_nsv}{[ string ] Will subject enter 24-week trt free fup_Coded Value}
 #'   \item{sdrgtrt_nsv}{[ string ] Did subject start another HBV therapy}
 #'   \item{sdrgtrt_std_nsv}{[ string ] Did subject start another HBV therapy_Coded Value}
+#'   \item{phase}{[ character ]}
 #' }
 #' @source ./data-raw/rawplus/sdrgcomp.parquet
 "rawplus_sdrgcomp"

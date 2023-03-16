@@ -2,7 +2,7 @@
 #' - clindata::rawplus_dm
 #' - data-raw/edc/data_points.Rds
 
-# load_all('.')
+#load_all('.')
 library(dplyr)
 library(lubridate)
 library(data.table)
@@ -10,14 +10,14 @@ library(data.table)
 set.seed(8675309)
 
 # snapshot date for imputation of query end date.
-snapshot_date <- get_snapshot_date()
+snapshot_date <- clindata::get_snapshot_date()
 
 # participant-level data with study timeline from which to impute query start date.
-subjid <- rawplus_dm %>%
-  select(subjid, rfpst_dt, rfpen_dt, timeonstudy) %>%
+subjid <- clindata::rawplus_dm %>%
+  select(subject_nsv, firstparticipantdate, lastparticipantdate, timeonstudy) %>%
   mutate(
-    rfpst_dt = ymd(rfpst_dt),
-    rfpen_dt = ymd(rfpen_dt),
+    firstparticipantdate = ymd(firstparticipantdate),
+    lastparticipantdate = ymd(lastparticipantdate),
   )
 
 # data point-level data
@@ -25,23 +25,23 @@ data_points <- readRDS('data-raw/edc/data_points.Rds')
 
 # query-level data
 queries <- data_points %>%
-  # keep ~2% of records
+  # keep ~2% of all data points
   filter(
     runif(n()) < .02,
   ) %>%
   arrange(
-    subjid, foldername, form, field
+    subjectname, visit, formoid, fieldoid
   )
 
 # Marking group set from which to sample.
-markinggroupname <- c(
+markinggroup <- c(
   'System Query' = .7,
   'CRA to Site Manual Query' = .2,
   'CDA to Site Manual Query' = .1
 )
 
 # Query status set from which to sample.
-qrystatus <- c(
+querystatus <- c(
   'Closed' = .5,
   'Answered' = .3,
   'Open' = .2
@@ -51,20 +51,20 @@ qrystatus <- c(
 queries1 <- queries %>%
   left_join(
     subjid,
-    'subjid'
+    c('subjectname' = 'subject_nsv')
   ) %>%
   mutate(
     # Sample marking group set.
-    markinggroupname = sample(
-      names(markinggroupname), n(), TRUE, markinggroupname
+    markinggroup = sample(
+      names(markinggroup), n(), TRUE, markinggroup
     ),
     # Sample query status set.
-    qrystatus = sample(
-      names(qrystatus), n(), TRUE, qrystatus
+    querystatus = sample(
+      names(querystatus), n(), TRUE, querystatus
     ),
     timeonstudy_since_visit = if_else(
-      !is.na(visit_dt),
-      (rfpen_dt - visit_dt) + 1,
+      !is.na(visitdat_date),
+      as.numeric(lastparticipantdate - visitdat_date) + 1,
       timeonstudy
     )
   ) %>%
@@ -73,59 +73,46 @@ queries1 <- queries %>%
   rowwise() %>%
   mutate(
     # Impute query open date as any date between visit date and study end date + 30.
-    qryopendate = rfpst_dt + sample(timeonstudy_since_visit + 31, 1) - 1
+    created = firstparticipantdate + sample(timeonstudy_since_visit + 31, 1) - 1
   ) %>%
   ungroup() %>%
   mutate(
     # Set to "Closed" any queries older than a year.
-    qrystatus = if_else(
-      snapshot_date - qryopendate > 365,
+    querystatus = if_else(
+      snapshot_date - created > 365,
       'Closed',
-      qrystatus
+      querystatus
     ),
     # Generate random number from negative binomial distribution with mu = 3.
-    qryresponsedate = if_else(
-      qrystatus == 'Answered',
-      qryopendate + rnbinom(n(), size = 1, mu = 3),
+    answered = if_else(
+      querystatus == 'Answered',
+      created + rnbinom(n(), size = 1, mu = 3),
       as.Date(NA)
     ),
     # Generate random number from negative binomial distribution with mu = 7.
-    qryclosedate = if_else(
-      qrystatus == 'Closed',
-      qryopendate + rnbinom(n(), size = 1, mu = 7),
+    resolved = if_else(
+      querystatus == 'Closed',
+      created + rnbinom(n(), size = 1, mu = 7),
       as.Date(NA)
     ),
+    dataextractiondate = snapshot_date,
     # Define query "end date" dependent on query status.
     qryenddate = case_when(
-      qrystatus == 'Answered' ~ qryresponsedate,
-      qrystatus == 'Closed' ~ qryclosedate,
-      qrystatus == 'Open' & qryopendate <= snapshot_date ~ snapshot_date,
-      qrystatus == 'Open' & qryopendate > snapshot_date ~ qryopendate
+      querystatus == 'Answered' ~ answered,
+      querystatus == 'Closed' ~ resolved,
+      querystatus == 'Open' & created <= snapshot_date ~ snapshot_date,
+      querystatus == 'Open' & created > snapshot_date ~ created
     ),
     # Define query age.
-    qryage = as.numeric(qryenddate - qryopendate) + 1,
-    # Define query age flag.
-    qry30fl = if_else(
-      qryage > 30,
-      'Y',
-      'N'
-    ),
-    # Define query age category.
-    qryagecat = case_when(
-      qryage <   7 ~ '<7 days',
-      qryage <= 14 ~ '7-14 days',
-      qryage <= 21 ~ '14-21 days',
-      qryage <= 28 ~ '21-28 days',
-      TRUE ~ '>28 days'
-    )
+    queryage = as.numeric(qryenddate - created) + 1
   ) %>%
   select(all_of(c(
-    'subjid', 'foldername', 'form', 'field',
-    'qrystatus', 'markinggroupname', 'qryage', 'qryagecat', 'qry30fl',
-    'qryopendate', 'qryresponsedate', 'qryclosedate'
+    'protocolname', 'subjectname', 'visit', 'formoid', 'fieldoid', 'log_number', 'datapointid',
+    'querystatus', 'created', 'answered', 'resolved', 'dataextractiondate',
+    'queryage', 'markinggroup'
   )))
 
-fwrite(
+saveRDS(
   queries1,
-  'data-raw/edc/queries.csv'
+  'data-raw/edc/queries.Rds'
 )

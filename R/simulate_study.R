@@ -33,13 +33,13 @@ simulate_study <- function(
 
   # TODO: add logic around start date, end date, and duration
   if (is.null(start_date)) {
-    start_date <- as.Date(min(clindata::rawplus_dm$rfpst_dt, na.rm = TRUE))
+    start_date <- as.Date(min(clindata::rawplus_dm$firstparticipantdate, na.rm = TRUE))
     message('> Start date')
     print(start_date)
   }
 
   if (is.null(end_date)) {
-    end_date <- as.Date(max(clindata::rawplus_dm$rfpen_dt, na.rm = TRUE))
+    end_date <- as.Date(max(clindata::rawplus_dm$lastparticipantdate, na.rm = TRUE))
     message('> End date')
     print(end_date)
   }
@@ -90,9 +90,9 @@ simulate_study <- function(
     lb = lb,
     studcomp = studcomp,
     sdrgcomp = sdrgcomp,
+    data_points = data_points,
+    data_pages = data_pages,
     queries = queries,
-    data_entry_lag = data_pages,
-    data_change_rate = data_pages,
     enroll = enroll
   )
 

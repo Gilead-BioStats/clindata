@@ -3,46 +3,46 @@
 #' @export
 snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::rawplus_dm, print_check_rows = TRUE) {
   if (!is.null(visdt) & !is.null(ex)) {
-    rfpen_dt <- visdt %>%
+    lastparticipantdate <- visdt %>%
       dplyr::group_by(subjid) %>%
       dplyr::summarize(
-        rfpen_dt = max(visit_dt)
+        lastparticipantdate = max(visit_dt)
       )
 
-    rfxen_dt <- ex %>%
+    lastdosedate <- ex %>%
       dplyr::group_by(subjid) %>%
       dplyr::summarize(
-        rfxen_dt = max(exen_dt)
+        lastdosedate = max(exen_dt)
       )
 
     dm_snapshot <- dm %>%
       dplyr::filter(
-        impute_date(rfpst_dt) <= snapshot_date
+        impute_date(firstparticipantdate) <= snapshot_date
       ) %>%
       dplyr::rename(
-        rfpen_dt0 = rfpen_dt,
-        rfxen_dt0 = rfxen_dt
+        lastparticipantdate0 = lastparticipantdate,
+        lastdosedate0 = lastdosedate
       ) %>%
       dplyr::left_join(
-        rfpen_dt,
+        lastparticipantdate,
         "subjid"
       ) %>%
       dplyr::left_join(
-        rfxen_dt,
+        lastdosedate,
         "subjid"
       )
   } else {
     dm_snapshot <- dm %>%
       dplyr::filter(
-        impute_date(rfpst_dt) <= snapshot_date
+        impute_date(firstparticipantdate) <= snapshot_date
       ) %>%
       dplyr::rename(
-        rfpen_dt0 = rfpen_dt,
-        rfxen_dt0 = rfxen_dt
+        lastparticipantdate0 = lastparticipantdate,
+        lastdosedate0 = lastdosedate
       ) %>%
       dplyr::mutate(
-        rfpen_dt = snapshot_date,
-        rfxen_dt = snapshot_date
+        lastparticipantdate = snapshot_date,
+        lastdosedate = snapshot_date
       )
   }
 

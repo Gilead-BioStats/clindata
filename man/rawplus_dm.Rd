@@ -5,7 +5,7 @@
 \alias{rawplus_dm}
 \title{rawplus_dm}
 \format{
-a data frame with 1301 rows and 47 columns.
+a data frame with 1301 rows and 48 columns.
 \describe{
 \item{studyid}{\link{ string } Study Identifier}
 \item{siteid}{\link{ string } Site Identifier}
@@ -47,12 +47,13 @@ a data frame with 1301 rows and 47 columns.
 \item{ethnic_std_nsv}{\link{ string } Ethnicity_Coded Value}
 \item{race_std_nsv}{\link{ string } Race_Coded Value}
 \item{racescat_std_nsv}{\link{ string } Race Sub-category_Coded Value}
-\item{rfxst_dt}{\link{ string } First Dose Date}
-\item{rfxen_dt}{\link{ string } Last Dose Date}
-\item{rfpen_dt}{\link{ string } Last Participant Date}
-\item{rfpst_dt}{\link{ string } First Participant Date}
+\item{firstdosedate}{\link{ character }}
+\item{lastdosedate}{\link{ character }}
+\item{lastparticipantdate}{\link{ character }}
+\item{firstparticipantdate}{\link{ character }}
 \item{timeontreatment}{\link{ int } Time on Treatment}
 \item{timeonstudy}{\link{ int } Time on Study}
+\item{enrollyn}{\link{ character }}
 \item{country}{\link{ character }}
 }
 }
