@@ -9,7 +9,7 @@ snapshot_all(
   data = list(visdt = clindata::rawplus_visdt, ex = clindata::rawplus_ex, dm =
     clindata::rawplus_dm, studcomp = clindata::rawplus_studcomp, sdrgcomp =
     clindata::rawplus_sdrgcomp, lb = clindata::rawplus_lb, ae = clindata::rawplus_ae,
-    protdev = clindata::rawplus_protdev, enroll = clindata::rawplus_enroll, queries =
+    protdev = clindata::ctms_protdev, enroll = clindata::rawplus_enroll, queries =
     clindata::edc_queries, data_pages = clindata::edc_data_pages, data_points =
     clindata::edc_data_points),
   impute_rf_dt = TRUE,

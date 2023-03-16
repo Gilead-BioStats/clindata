@@ -2,7 +2,10 @@ library(arrow)
 library(dplyr)
 
 protdev <- arrow::read_parquet('data-raw/ctms/protdev.parquet') %>%
-    mutate(
+    filter(
+        subjid != ''
+    ) %>%
+    dplyr::mutate(
         importnt = case_when(
             importnt == 'Y' ~ 'Yes',
             importnt == 'N' ~ 'No'

@@ -510,12 +510,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2014-06-24",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0572",
         "DeviationDate": "2010-01-07",
         "GileadCategory": "OTHER",
@@ -954,24 +948,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0854",
         "DeviationDate": "",
         "GileadCategory": "OFF SCHEDULE PROCEDURE",
@@ -992,12 +968,6 @@
     {
         "SubjectEnrollmentNumber": "0854",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2013-10-15",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -1088,12 +1058,6 @@
     {
         "SubjectEnrollmentNumber": "0210",
         "DeviationDate": "2009-02-22",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -1392,12 +1356,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0100",
         "DeviationDate": "",
         "GileadCategory": "",
@@ -1450,12 +1408,6 @@
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "Yes"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
     },
     {
         "SubjectEnrollmentNumber": "0277",
@@ -2232,24 +2184,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2011-03-28",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2011-03-28",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2011-04-23",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0684",
         "DeviationDate": "2006-01-04",
         "GileadCategory": "OTHER",
@@ -2472,12 +2406,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2006-01-26",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0423",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -2488,18 +2416,6 @@
         "DeviationDate": "",
         "GileadCategory": "EXCLUDED CONCOMITANT MEDICATION",
         "DeemedImportant": "Yes"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-04-11",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-04-11",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
     },
     {
         "SubjectEnrollmentNumber": "0590",
@@ -2564,12 +2480,6 @@
     {
         "SubjectEnrollmentNumber": "0347",
         "DeviationDate": "2006-10-28",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -3021,12 +2931,6 @@
         "SubjectEnrollmentNumber": "1111",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
     {
@@ -3930,12 +3834,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2004-04-29",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0930",
         "DeviationDate": "",
         "GileadCategory": "WRONG TREATMENT OR INCORRECT DOSE",
@@ -3990,12 +3888,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2008-08-29",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0994",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -4111,18 +4003,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0570",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -4674,18 +4554,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2014-07-02",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2014-07-02",
-        "GileadCategory": "ELIGIBILITY CRITERIA",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0213",
         "DeviationDate": "",
         "GileadCategory": "",
@@ -4896,12 +4764,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0540",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -5090,12 +4952,6 @@
     {
         "SubjectEnrollmentNumber": "0744",
         "DeviationDate": "2007-12-29",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2014-06-23",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -5346,12 +5202,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1390",
         "DeviationDate": "",
         "GileadCategory": "OFF SCHEDULE PROCEDURE",
@@ -5382,32 +5232,8 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2009-04-18",
-        "GileadCategory": "ELIGIBILITY CRITERIA",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0901",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2005-05-17",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -5503,30 +5329,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0008",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -5679,12 +5481,6 @@
         "SubjectEnrollmentNumber": "0189",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2010-03-21",
-        "GileadCategory": "ELIGIBILITY CRITERIA",
         "DeemedImportant": "No"
     },
     {
@@ -6018,18 +5814,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2009-03-24",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2009-03-06",
-        "GileadCategory": "ELIGIBILITY CRITERIA",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1096",
         "DeviationDate": "",
         "GileadCategory": "",
@@ -6306,18 +6090,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2015-06-11",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2015-06-11",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1239",
         "DeviationDate": "",
         "GileadCategory": "WRONG TREATMENT OR INCORRECT DOSE",
@@ -6392,12 +6164,6 @@
     {
         "SubjectEnrollmentNumber": "1040",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2004-05-02",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -6578,18 +6344,6 @@
     {
         "SubjectEnrollmentNumber": "1143",
         "DeviationDate": "2019-03-02",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -6786,24 +6540,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0113",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -6828,12 +6564,6 @@
         "DeemedImportant": "Yes"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0320",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -6846,18 +6576,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0918",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -6865,12 +6583,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0918",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -7494,27 +7206,9 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0658",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2005-06-18",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
         "DeemedImportant": "No"
     },
     {
@@ -7878,12 +7572,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0327",
         "DeviationDate": "2006-06-28",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -8004,12 +7692,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1010",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -8122,12 +7804,6 @@
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "Yes"
     },
     {
         "SubjectEnrollmentNumber": "0712",
@@ -8450,18 +8126,6 @@
     {
         "SubjectEnrollmentNumber": "1277",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-07-06",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-06-16",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -9018,12 +8682,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2007-02-08",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0681",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -9147,12 +8805,6 @@
         "SubjectEnrollmentNumber": "1077",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2016-05-05",
-        "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
     {
@@ -9654,18 +9306,6 @@
         "DeemedImportant": "Yes"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2008-04-19",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0072",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -9810,18 +9450,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0796",
         "DeviationDate": "",
         "GileadCategory": "EXCLUDED CONCOMITANT MEDICATION",
@@ -9920,12 +9548,6 @@
     {
         "SubjectEnrollmentNumber": "0904",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2012-04-15",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -10212,18 +9834,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0695",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -10395,18 +10005,6 @@
         "SubjectEnrollmentNumber": "1067",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
     {
@@ -10683,12 +10281,6 @@
         "SubjectEnrollmentNumber": "1299",
         "DeviationDate": "2005-03-01",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2007-09-23",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
         "DeemedImportant": "No"
     },
     {
@@ -11208,12 +10800,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2005-12-13",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1058",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -11565,18 +11151,6 @@
         "SubjectEnrollmentNumber": "0029",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2013-03-16",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2013-03-16",
-        "GileadCategory": "INFORMED CONSENT",
         "DeemedImportant": "No"
     },
     {
@@ -11970,12 +11544,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0680",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -12008,12 +11576,6 @@
     {
         "SubjectEnrollmentNumber": "0454",
         "DeviationDate": "2012-10-15",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-10-18",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -12120,12 +11682,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2011-04-18",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0302",
         "DeviationDate": "2008-01-03",
         "GileadCategory": "OTHER",
@@ -12140,18 +11696,6 @@
     {
         "SubjectEnrollmentNumber": "0302",
         "DeviationDate": "2008-06-23",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -12270,12 +11814,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2006-01-18",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0663",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -12315,12 +11853,6 @@
         "SubjectEnrollmentNumber": "0766",
         "DeviationDate": "",
         "GileadCategory": "",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
     {
@@ -12350,12 +11882,6 @@
     {
         "SubjectEnrollmentNumber": "1352",
         "DeviationDate": "2014-12-13",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -12528,56 +12054,8 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2012-07-02",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2003-11-11",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0824",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2008-01-29",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2007-12-01",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2007-11-03",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2008-01-29",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2008-03-28",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -12603,24 +12081,6 @@
         "SubjectEnrollmentNumber": "0177",
         "DeviationDate": "",
         "GileadCategory": "",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
         "DeemedImportant": "No"
     },
     {
@@ -13074,12 +12534,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0925",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -13194,12 +12648,6 @@
         "DeemedImportant": "Yes"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0659",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -13296,12 +12744,6 @@
         "DeemedImportant": "Yes"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2004-06-12",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0629",
         "DeviationDate": "2010-11-11",
         "GileadCategory": "OTHER",
@@ -13348,12 +12790,6 @@
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "Yes"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2015-05-25",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
     },
     {
         "SubjectEnrollmentNumber": "0654",
@@ -13615,18 +13051,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0577",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2015-07-17",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -14454,12 +13878,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0020",
         "DeviationDate": "2010-02-06",
         "GileadCategory": "OTHER",
@@ -14701,42 +14119,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0840",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -15582,18 +14964,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0706",
         "DeviationDate": "",
         "GileadCategory": "INFORMED CONSENT",
@@ -15776,18 +15146,6 @@
     {
         "SubjectEnrollmentNumber": "1206",
         "DeviationDate": "2014-03-12",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -16086,12 +15444,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0030",
         "DeviationDate": "2016-12-29",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -16131,12 +15483,6 @@
         "SubjectEnrollmentNumber": "0530",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2005-04-28",
-        "GileadCategory": "INFORMED CONSENT",
         "DeemedImportant": "No"
     },
     {
@@ -16656,12 +16002,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2016-04-11",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1235",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -16938,18 +16278,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1063",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -17060,18 +16388,6 @@
     {
         "SubjectEnrollmentNumber": "0604",
         "DeviationDate": "2013-05-26",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2014-09-20",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2014-09-20",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -18006,30 +17322,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-06-11",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-06-11",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-06-11",
-        "GileadCategory": "ELIGIBILITY CRITERIA",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1212",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -18117,12 +17409,6 @@
         "SubjectEnrollmentNumber": "0842",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2009-04-15",
-        "GileadCategory": "ELIGIBILITY CRITERIA",
         "DeemedImportant": "No"
     },
     {
@@ -18367,30 +17653,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0405",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -19194,18 +18456,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1233",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -19246,18 +18496,6 @@
         "DeviationDate": "",
         "GileadCategory": "WRONG TREATMENT OR INCORRECT DOSE",
         "DeemedImportant": "Yes"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
     },
     {
         "SubjectEnrollmentNumber": "0816",
@@ -19518,24 +18756,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1349",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -19557,12 +18777,6 @@
         "SubjectEnrollmentNumber": "0368",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2015-12-26",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
         "DeemedImportant": "No"
     },
     {
@@ -19713,12 +18927,6 @@
         "SubjectEnrollmentNumber": "1107",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2005-01-18",
-        "GileadCategory": "ELIGIBILITY CRITERIA",
         "DeemedImportant": "No"
     },
     {
@@ -19962,12 +19170,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2014-07-16",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0538",
         "DeviationDate": "2013-07-09",
         "GileadCategory": "OTHER",
@@ -20007,18 +19209,6 @@
         "SubjectEnrollmentNumber": "1356",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
     {
@@ -20430,12 +19620,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2008-07-12",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0954",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -20451,12 +19635,6 @@
         "SubjectEnrollmentNumber": "0954",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2011-11-23",
-        "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
     {
@@ -20682,12 +19860,6 @@
         "DeemedImportant": "Yes"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2004-07-11",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0616",
         "DeviationDate": "2011-03-11",
         "GileadCategory": "OTHER",
@@ -20756,24 +19928,6 @@
     {
         "SubjectEnrollmentNumber": "0991",
         "DeviationDate": "2008-12-07",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -20880,12 +20034,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0391",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -20937,18 +20085,6 @@
         "SubjectEnrollmentNumber": "1234",
         "DeviationDate": "",
         "GileadCategory": "",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
     {
@@ -21504,12 +20640,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-06-10",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0289",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -21544,18 +20674,6 @@
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2015-07-13",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2009-08-24",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "Yes"
     },
     {
         "SubjectEnrollmentNumber": "0787",
@@ -21709,12 +20827,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0475",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -21948,18 +21060,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0064",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -22044,24 +21144,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0127",
         "DeviationDate": "2015-09-26",
         "GileadCategory": "OTHER",
@@ -22070,12 +21152,6 @@
     {
         "SubjectEnrollmentNumber": "0127",
         "DeviationDate": "2016-05-02",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2012-08-07",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -22796,12 +21872,6 @@
     {
         "SubjectEnrollmentNumber": "0038",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2015-04-24",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -23604,12 +22674,6 @@
         "DeemedImportant": "Yes"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2012-03-07",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0158",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -23667,24 +22731,6 @@
         "SubjectEnrollmentNumber": "1325",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
     {
@@ -24132,26 +23178,8 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2006-11-13",
-        "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2006-11-26",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1362",
         "DeviationDate": "2004-08-24",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2006-08-27",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -24164,18 +23192,6 @@
     {
         "SubjectEnrollmentNumber": "1068",
         "DeviationDate": "2010-11-14",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -24702,12 +23718,6 @@
         "DeemedImportant": "Yes"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2017-06-01",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0805",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -25032,18 +24042,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0598",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -25077,24 +24075,6 @@
         "SubjectEnrollmentNumber": "0598",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
         "DeemedImportant": "No"
     },
     {
@@ -25584,12 +24564,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0608",
         "DeviationDate": "",
         "GileadCategory": "INFORMED CONSENT",
@@ -25692,12 +24666,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1145",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -25759,12 +24727,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0194",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -26028,12 +24990,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2006-02-01",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0953",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -26196,18 +25152,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2012-05-19",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2012-05-19",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0870",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -26229,24 +25173,6 @@
         "SubjectEnrollmentNumber": "0734",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "INFORMED CONSENT",
         "DeemedImportant": "No"
     },
     {
@@ -26718,24 +25644,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2005-09-19",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2006-01-23",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2006-04-03",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "1153",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -27044,12 +25952,6 @@
     {
         "SubjectEnrollmentNumber": "0396",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2011-04-07",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },
@@ -27756,12 +26658,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0898",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
@@ -27823,24 +26719,6 @@
     },
     {
         "SubjectEnrollmentNumber": "0898",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
@@ -28188,12 +27066,6 @@
         "DeemedImportant": "No"
     },
     {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2011-01-28",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
         "SubjectEnrollmentNumber": "0136",
         "DeviationDate": "",
         "GileadCategory": "OTHER TREATMENT COMPLIANCE ISSUE",
@@ -28263,12 +27135,6 @@
         "SubjectEnrollmentNumber": "0036",
         "DeviationDate": "",
         "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2005-03-23",
-        "GileadCategory": "INFORMED CONSENT",
         "DeemedImportant": "No"
     },
     {
@@ -28508,18 +27374,6 @@
     {
         "SubjectEnrollmentNumber": "0913",
         "DeviationDate": "",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2004-09-20",
-        "GileadCategory": "OTHER",
-        "DeemedImportant": "No"
-    },
-    {
-        "SubjectEnrollmentNumber": "",
-        "DeviationDate": "2004-10-18",
         "GileadCategory": "OTHER",
         "DeemedImportant": "No"
     },

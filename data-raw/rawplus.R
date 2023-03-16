@@ -82,7 +82,7 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     ) %>%
     ungroup %>%
     select(
-        studyid, siteid, subjid,
+        studyid, siteid, subjectid,
         enroll_dt = firstparticipantdate, enrollyn, sfreas,
         country, invid
     )

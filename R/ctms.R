@@ -1,6 +1,6 @@
 #' @title Protocol Deviations
 #' @description Protocol Deviations (protdev) data CTMS data
-#' @format a data frame with 4837 rows and 4 columns
+#' @format a data frame with 4646 rows and 4 columns
 #' @source ./data-raw/ctms/protdev.csv
 "ctms_protdev"
 
