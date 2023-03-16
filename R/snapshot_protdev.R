@@ -2,7 +2,7 @@
 #' @importFrom readr parse_number
 #'
 #' @export
-snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::rawplus_protdev, print_check_rows = TRUE) {
+snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::ctms_protdev, print_check_rows = TRUE) {
   if ("visit_nsv" %in% names(protdev)) {
     protdev_snapshot <- protdev %>%
       left_join(

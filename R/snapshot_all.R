@@ -23,7 +23,7 @@ snapshot_all <- function(
     sdrgcomp = clindata::rawplus_sdrgcomp,
     lb = clindata::rawplus_lb,
     ae = clindata::rawplus_ae,
-    protdev = clindata::rawplus_protdev,
+    protdev = clindata::ctms_protdev,
     enroll = clindata::rawplus_enroll,
 
     # edc
