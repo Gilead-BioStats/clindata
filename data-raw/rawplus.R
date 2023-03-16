@@ -57,8 +57,6 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
             'N'
         )
     ) %>%
-    group_by(enrollyn) %>%
-    arrange(firstparticipantdate, as.numeric(siteid), scrnid) %>%
     mutate(
         sfreas = if_else(
             enrollyn == 'Y',
@@ -73,16 +71,10 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
                 TRUE,
                 prob = c(.9, .05, .05)
             )
-        ),
-        subjid = if_else(
-            enrollyn == 'Y',
-            subjid,
-            paste0('sf', row_number())
         )
     ) %>%
-    ungroup %>%
     select(
-        studyid, siteid, subjectid,
+        studyid, siteid, subjectid, subjid,
         enroll_dt = firstparticipantdate, enrollyn, sfreas,
         country, invid
     )
