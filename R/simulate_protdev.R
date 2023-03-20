@@ -4,7 +4,7 @@
 #' @export
 simulate_protdev <- function(
   dm,
-  protdev = clindata::rawplus_protdev,
+  protdev = clindata::ctms_protdev,
   pd_rate = runif(1, .25, 1)
 ) {
   protdev1 <- dm %>%
