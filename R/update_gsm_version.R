@@ -21,13 +21,15 @@ update_gsm_version <- function(version = 'latest') {
     # import
     datasets <- ctms_1_import(data_path = file.path('data-raw', 'config'))
 
-    if (gsm_version == 'latest') {
+    if (version == 'latest') {
         gsm_releases <- gh::gh(
             '/repos/Gilead-BioStats/gsm/releases',
             token = remotes:::github_pat()
         )
         gsm_version <- gsm_releases[[1]]$name %>% substring(2) %T>% message
 
+    } else {
+        gsm_version <- version
     }
 
     datasets$param$gsm_version <- as.character(gsm_version)
