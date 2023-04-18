@@ -20,6 +20,7 @@ run_simulation <- function(
   ))
   cat('\n')
 
+
   if (is.null(start_date)) {
     start_date <- end_date
     lubridate::year(start_date) <- lubridate::year(start_date) - 2

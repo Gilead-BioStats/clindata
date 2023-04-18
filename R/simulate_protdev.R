@@ -7,8 +7,11 @@ simulate_protdev <- function(
   protdev = clindata::ctms_protdev,
   pd_rate = runif(1, .25, 1)
 ) {
+
+
+    browser()
   protdev1 <- dm %>%
-    select(subjid, starts_with("rfp"), timeonstudy) %>%
+    select(subjid, firstdosedate, lastdosedate, timeonstudy) %>%
     filter(.data$timeonstudy > 0) %>%
     slice_sample(
       n = ceiling(pd_rate * nrow(.))
@@ -47,6 +50,8 @@ simulate_protdev <- function(
     select(
       subjid, dv_dt, importnt, dvdecod
     )
+
+
 
   return(protdev1)
 }

@@ -11,6 +11,7 @@
 edc_3_export <- function(
   datasets_processed
 ) {
+
   datasets_processed %>%
     purrr::iwalk(function(data, domain) {
       edc_domain <- paste0("edc_", domain)

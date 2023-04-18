@@ -21,15 +21,15 @@ simulate_data_pages <- function(
       foldername = "visit",
       formoid = "form",
       data_entry_lag = rnbinom(n(), size = 1, mu = 3),
-      min_entereddate = visitdat_date + data_entry_lag
+      min_entereddate = visit_date + data_entry_lag
     ) %>%
     rowwise() %>%
     mutate(
-      visitdat_date = sample_date(.data$firstparticipantdate, .data$lastparticipantdate)
+        visit_date = sample_date(.data$firstparticipantdate, .data$lastparticipantdate)
     ) %>%
     ungroup() %>%
     select(
-      subjectname = subjid, visitdat_date, foldername, formoid, data_entry_lag, min_entereddate
+      subjectname = subjid, visit_date, foldername, formoid, data_entry_lag, min_entereddate
     )
 
   return(data_pages)

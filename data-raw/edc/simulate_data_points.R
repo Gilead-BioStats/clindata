@@ -19,13 +19,13 @@ visit <- clindata::rawplus_visdt %>%
       protocolname = studyid,
       subjectname = subject_nsv,
       visit = foldername,
-      visitdat_date = visit_dt,
+      visit_date = visit_dt,
       folderseq_nsv
   ) %>%
-  arrange(protocolname, subjectname, visitdat_date) %>%
+  arrange(protocolname, subjectname, visit_date) %>%
   group_by(protocolname, subjectname) %>%
   mutate(
-    visitdat_date = ymd(visitdat_date),
+      visit_date = ymd(visit_date),
     # Group unscheduled visits with most recent, prior scheduled visit.
     visitnum_tmp = ifelse(
         visit != 'Unscheduled',
@@ -94,13 +94,13 @@ data_points <- visit %>%
         )
     )
   ) %>%
-  group_by(protocolname, subjectname, visit, visitdat_date, formoid, fieldoid) %>%
+  group_by(protocolname, subjectname, visit, visit_date, formoid, fieldoid) %>%
   mutate(
     log_number = row_number()
   ) %>%
   ungroup() %>%
   arrange(
-    protocolname, subjectname, visitdat_date, visitnum, visit, visitdat_date, formoid, fieldoid, log_number
+    protocolname, subjectname, visit_date, visitnum, visit, formoid, fieldoid, log_number
   ) %>%
   mutate(
     datapointid = row_number(),
@@ -110,7 +110,8 @@ data_points <- visit %>%
   select(
     protocolname,
     subjectname,
-    visit, visitdat_date,
+    visit,
+    visit_date,
     formoid,
     fieldoid,
     log_number,

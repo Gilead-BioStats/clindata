@@ -56,7 +56,7 @@ snapshot_all <- function(
   # edc
   queries <- snapshot_queries(snapshot_date, data$queries, print_check_rows = print_check_rows)
   data_pages <- snapshot_data_pages(snapshot_date, data$data_pages, print_check_rows = print_check_rows)
-  data_points <- snapshot_data_points(snapshot_date, data$data_points, print_check_rows = print_check_rows)
+  data_points <- snapshot_data_points(snapshot_date, data$data_points, print_check_rows = print_check_rows) 
 
   data <- list(
     snapshot_date = snapshot_date,

@@ -1,7 +1,7 @@
 check_mapping <- function(domain, data) {
     mapping <- gsm::input_data_schema %>%
         filter(
-            .data$Name == !!domain
+            .data$`{clindata} Name` == !!domain
         )
 
     missing_columns <- setdiff(mapping$Column, names(data))

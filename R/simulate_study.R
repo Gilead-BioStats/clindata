@@ -23,6 +23,7 @@ simulate_study <- function(
   # duration = NULL,
   rename_gsm = FALSE
 ) {
+
   if (is.null(n_sites)) {
     n_sites <- nrow(clindata::ctms_site)
   }
