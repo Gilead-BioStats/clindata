@@ -1,4 +1,4 @@
-load_all('../gsm')
+devtools::load_all('../../gsm')
 devtools::load_all()
 
 metadata <- yaml::read_yaml(

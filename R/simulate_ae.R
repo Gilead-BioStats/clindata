@@ -8,7 +8,7 @@ simulate_ae <- function(
   ae_rate = runif(1, .25, 1)
 ) {
   ae1 <- dm %>%
-    select(subjid, starts_with("rfx"), timeontreatment) %>%
+    select(subjid, firstdosedate, lastdosedate, timeontreatment) %>%
     filter(.data$timeontreatment > 0) %>%
     slice_sample(
       n = ceiling(ae_rate * nrow(.))

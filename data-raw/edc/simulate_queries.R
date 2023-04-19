@@ -63,8 +63,8 @@ queries1 <- queries %>%
       names(querystatus), n(), TRUE, querystatus
     ),
     timeonstudy_since_visit = if_else(
-      !is.na(visitdat_date),
-      as.numeric(lastparticipantdate - visitdat_date) + 1,
+      !is.na(visit_date),
+      as.numeric(lastparticipantdate - visit_date) + 1,
       timeonstudy
     )
   ) %>%
