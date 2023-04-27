@@ -1,5 +1,5 @@
 library(dplyr)
-load_all('../gsm')
+devtools::load_all('../../gsm')
 devtools::load_all()
 
 datasets <- rawplus_1_import()
@@ -80,3 +80,22 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     )
 
 usethis::use_data(rawplus_enroll, overwrite = TRUE)
+
+# temporary fix for [ ae ]
+rawplus_ae <- datasets_processed$ae %>%
+    left_join(
+        datasets_processed$dm %>%
+            select(
+                subjid, firstparticipantdate
+            ),
+        by = "subjid"
+    ) %>%
+    mutate(
+        aest_dt = lubridate::ymd(aest_dt),
+        firstparticipantdate = lubridate::ymd(firstparticipantdate),
+        anlyyn = ifelse(
+            (is.na(aest_dt) | aest_dt >= firstparticipantdate), "N", "Y"
+        )
+    )
+
+usethis::use_data(rawplus_ae, overwrite = TRUE)
