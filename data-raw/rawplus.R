@@ -94,7 +94,7 @@ rawplus_ae <- datasets_processed$ae %>%
         aest_dt = lubridate::ymd(aest_dt),
         firstparticipantdate = lubridate::ymd(firstparticipantdate),
         anlyyn = ifelse(
-            (is.na(aest_dt) | aest_dt >= firstparticipantdate), "N", "Y"
+            (is.na(aest_dt) | aest_dt >= firstparticipantdate), "Y", "N"
         )
     )
 
