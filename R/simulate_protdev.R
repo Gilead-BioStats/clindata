@@ -9,7 +9,7 @@ simulate_protdev <- function(
 ) {
 
 
-    browser()
+
   protdev1 <- dm %>%
     select(subjid, firstdosedate, lastdosedate, timeonstudy) %>%
     filter(.data$timeonstudy > 0) %>%

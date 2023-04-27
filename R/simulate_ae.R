@@ -7,7 +7,7 @@ simulate_ae <- function(
   ae = clindata::rawplus_ae,
   ae_rate = runif(1, .25, 1)
 ) {
-    browser()
+
   ae1 <- dm %>%
     select(subjid, firstdosedate, lastdosedate, timeontreatment) %>%
     filter(.data$timeontreatment > 0) %>%
