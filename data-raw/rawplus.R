@@ -1,5 +1,5 @@
 library(dplyr)
-devtools::load_all('../../gsm')
+devtools::load_all('../gsm')
 devtools::load_all()
 
 datasets <- rawplus_1_import()
