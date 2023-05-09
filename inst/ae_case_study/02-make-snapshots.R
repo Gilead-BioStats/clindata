@@ -15,7 +15,7 @@ snapshot_dates <- seq.Date(as.Date(start_date), as.Date(end_date), 'month')
 for (snapshot_date in as.character(snapshot_dates)) {
     print(snapshot_date)
 
-    out_path <- glue::glue("{system.file('ae_case_study', 'snapshots', package = 'gsm')}/{as.character(snapshot_date)}")
+    out_path <- glue::glue("{system.file('ae_case_study', 'snapshots', package = 'clindata')}/{as.character(snapshot_date)}")
     if (!file.exists(out_path))
         dir.create(out_path)
 
@@ -70,5 +70,8 @@ for (snapshot_date in as.character(snapshot_dates)) {
 }
 
 snapshot <- Make_Snapshot(lData = list(dfAE = rawplus_ae_demo, dfSUBJ = dfSUBJ))
-augment <- Augment_Snapshot(snapshot, here::here('inst', 'ae_case_study', 'snapshots'))
-Study_Report(augment$lStudyAssessResults, augment$lSnapshot$status_study)
+target_directory <- glue::glue("{system.file('ae_case_study', 'snapshots', package = 'clindata')}/{as.character(Sys.Date())}")
+if (!dir.exists(target_directory)) dir.create(target_directory)
+Save_Snapshot(snapshot, cPath = target_directory)
+#augment <- Augment_Snapshot(snapshot, here::here('inst', 'ae_case_study', 'snapshots'))
+#Study_Report(augment$lStudyAssessResults, augment$lSnapshot$status_study)
