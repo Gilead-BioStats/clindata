@@ -1,0 +1,5 @@
+﻿studyid,snapshot_date,workflowid,groupid,status,notes,locked
+AA-AA-000-0000,2010-09-01,kri0001,43,OK,,FALSE
+AA-AA-000-0000,2010-10-01,kri0001,43,Watch,,FALSE
+AA-AA-000-0000,2010-11-01,kri0001,43,Watch,Persistently high AE Rate. Needs follow-up.,TRUE
+AA-AA-000-0000,2010-12-01,kri0001,43,Action,AE rate is still high after intervention. Meeting needed per SOP ABC-123-45.,TRUE
