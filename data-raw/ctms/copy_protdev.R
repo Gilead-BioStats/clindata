@@ -12,10 +12,10 @@ protdev <- arrow::read_parquet('data-raw/ctms/protdev.parquet') %>%
         )
     ) %>%
     dplyr::select(
-        SubjectEnrollmentNumber = subjid,
-        DeviationDate = dv_dt,
-        GileadCategory = dvdecod,
-        DeemedImportant = importnt
+        subjectenrollmentnumber = subjid,
+        deviationdate = dv_dt,
+        gileadcategory = dvdecod,
+        deemedimportant = importnt
     )
 
 jsonlite::write_json(

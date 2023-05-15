@@ -28,7 +28,7 @@ snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::ctms_protdev
 
   protdev_snapshot1 <- protdev_snapshot %>%
     dplyr::filter(
-      impute_date(DeviationDate) <= snapshot_date
+      impute_date(deviationdate) <= snapshot_date
     )
 
   if (print_check_rows) {
