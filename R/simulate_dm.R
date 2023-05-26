@@ -34,14 +34,14 @@ simulate_dm <- function(
 
   dm3 <- dm2 %>%
     mutate(
-      siteid = sample(site$SITE_NUM, nrow(dm2), TRUE, runif(nrow(site))),
+      siteid = sample(site$site_num, nrow(dm2), TRUE, runif(nrow(site))),
       firstparticipantdate = sample(start_date:end_date, n(), TRUE),
       firstdosedate = .data$firstparticipantdate + sample(1:60, n(), TRUE)
     ) %>%
     left_join(
       site %>%
-        select(studyid = PROTOCOL, SITE_NUM, country = COUNTRY),
-      c("siteid" = "SITE_NUM")
+        select(studyid = protocol, site_num, country),
+      c("siteid" = "site_num")
     ) %>%
     rowwise() %>%
     mutate(

@@ -50,10 +50,10 @@ run_simulation <- function(
   )
   tictoc::toc()
 
-  studyid <- unique(data$site$PROTOCOL)
-  metadata$meta_study$PROTOCOL_NUMBER <- studyid
-  metadata$meta_study$NUM_PLAN_SITE <- n_sites
-  metadata$meta_study$NUM_PLAN_SUBJ <- n_subjects
+  studyid <- unique(data$site$protocol)
+  metadata$meta_study$protocol_number <- studyid
+  metadata$meta_study$num_plan_site <- n_sites
+  metadata$meta_study$num_plan_subj <- n_subjects
   metadata$config_param$studyid <- studyid
   metadata$config_workflow$studyid <- studyid
 
