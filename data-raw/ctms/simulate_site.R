@@ -11,7 +11,7 @@ set.seed(1)
 status_site <- clindata::rawplus_dm %>%
   group_by(studyid, siteid, invid, country) %>%
   summarize(
-    site_active_dt = min(rfpst_dt)
+    site_active_dt = min(firstparticipantdate)
   ) %>%
   mutate(
     protocol_row_id = '1-1G9113',
@@ -22,7 +22,7 @@ status_site <- clindata::rawplus_dm %>%
     is_satellite = sample(c(FALSE, TRUE), n(), TRUE, prob = c(.9, .1)),
     city = paste("city",row_number()),
     state = paste("state",row_number()),
-    account = paste(CITY, 'Medical Center')
+    account = paste(city, 'Medical Center')
   ) %>%
   select(
       protocol_row_id,

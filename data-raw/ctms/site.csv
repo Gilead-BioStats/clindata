@@ -1,4 +1,4 @@
-"PROTOCOL_ROW_ID","SITE_NUM","SITE_ROW_ID","PROTOCOL","PI_NUMBER","PI_LAST_NAME","PI_FIRST_NAME","SITE_STATUS","IS_SATELLITE","ACCOUNT","SITE_ACTIVE_DT","CITY","STATE","COUNTRY"
+"protocol_row_id","site_num","site_row_id","protocol","pi_number","pi_last_name","pi_first_name","site_status","is_satellite","account","site_active_dt","city","state","country"
 "1-1G9113","10","123-1234-0X126","AA-AA-000-0000","0X126","Torres","Ariel","Active",FALSE,"city 1 Medical Center","2004-01-31","city 1","state 1","China"
 "1-1G9113","100","123-1234-X060X","AA-AA-000-0000","X060X","Spangler","Cheyenne","Active",FALSE,"city 1 Medical Center","2011-09-29","city 1","state 1","Japan"
 "1-1G9113","101","123-1234-0X174","AA-AA-000-0000","0X174","Broughton","Macallyson","Active",FALSE,"city 1 Medical Center","2006-03-03","city 1","state 1","US"
