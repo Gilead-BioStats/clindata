@@ -19,7 +19,7 @@ snapshot_site <- function(
   site_snapshot <- site %>%
     inner_join(
       n_enrolled,
-      c("SITE_NUM" = "siteid")
+      c("site_num" = "siteid")
     )
 
   if (print_check_rows) {

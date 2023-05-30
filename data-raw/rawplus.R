@@ -8,7 +8,7 @@ datasets <- rawplus_1_import()
 # default to 'US' when country is missing
 ctms <- ctms_1_import()
 site <- ctms$site %>%
-    select(SITE_NUM, COUNTRY) %>%
+    select(site_num, country) %>%
     mutate(
         across(everything(), as.character)
     )
@@ -16,15 +16,15 @@ site <- ctms$site %>%
 datasets$dm <- datasets$dm %>%
   full_join(
     site,
-    by = c("siteid" = 'SITE_NUM')
+    by = c("siteid" = 'site_num')
   ) %>%
   mutate(
     enrollyn = "Y",
-    country = ifelse(is.na(COUNTRY), 'US', COUNTRY),
+    country = ifelse(is.na(country), 'US', country),
     timeonstudy = dplyr::coalesce(timeonstudy, 0),
     timeontreatment = dplyr::coalesce(timeontreatment, 0)
   ) %>%
-    select(-COUNTRY)
+    select(-country)
 datasets_processed <- rawplus_2_process(datasets)
 rawplus_3_export(datasets_processed)
 rawplus_4_document(datasets_processed)
@@ -44,12 +44,12 @@ usethis::use_data(rawplus_consent, overwrite = TRUE)
 rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     full_join(
         site,
-        by = c("siteid" = 'SITE_NUM')
+        by = c("siteid" = 'site_num')
     ) %>%
     mutate(
-        country = ifelse(is.na(COUNTRY), 'US', COUNTRY)
+        country = ifelse(is.na(country), 'US', country)
     ) %>%
-    select(-COUNTRY) %>%
+    select(-country) %>%
     mutate(
         enrollyn = if_else(
             subjid != '',

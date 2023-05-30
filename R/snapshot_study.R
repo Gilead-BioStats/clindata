@@ -22,7 +22,7 @@ snapshot_study <- function(
     select(-any_of(c('enrolled_sites', 'enrolled_participants'))) %>%
     inner_join(
       n_enrolled,
-      c("PROTOCOL_NUMBER" = "studyid")
+      c("protocol_number" = "studyid")
     )
 
   if (print_check_rows) {

@@ -13,9 +13,9 @@ simulate_site <- function(
         n = n_sites,
         replace = TRUE
       ) %>%
-      group_by(.data$SITE_NUM) %>%
+      group_by(.data$site_num) %>%
       mutate(
-        SITE_NUM = glue::glue("{.data$SITE_NUM}-{row_number()}") %>%
+        site_num = glue::glue("{.data$site_num}-{row_number()}") %>%
           as.character()
       ) %>%
       ungroup()
@@ -23,7 +23,7 @@ simulate_site <- function(
     site1 <- site
   }
 
-  site1$PROTOCOL <- studyid
+  site1$protocol <- studyid
 
   return(site1)
 }
