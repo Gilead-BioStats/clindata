@@ -1,10 +1,16 @@
 Package: clindata
 Title: Synthetic Clinical Data for testing and development
-Version: 0.14.8
+Version: 1.0.0
 Authors@R: 
-    person("Jeremy", "Wildfire", , "jwildfire@gilead.com", role = c("aut", "cre"))
+    person("Jeremy", "Wildfire", email = "jwildfire@gmail.com", role = c("aut", "cre")),
+    person("Spencer", "Childress", email = "spencer.childress@gilead.com", role = c("aut"), comment = c(ORCID = "0000-0001-6877-8511")),
+    person("Wang", "Zhongkai", email="zhongkai.wang6@gilead.com", role = c("aut")),
+    person("Matt", "Roumaya", email = "Matt.Roumaya@atorusresearch.com", role = c("aut"), comment = c(ORCID = "0000-0002-8009-2771")),
+    person("Colleen", "McLaughlin", email="colleen.mclaughlin@atorusresearch.com", role = c("aut")),
+    person("Chelsea", "Dickens", email="chelsea.dickens@atorusresearch.com", role = c("aut")),
+    person("Douglas", "Sanders", role = c("aut"))
 Description: Synthetic Clinical Data for testing and development. Raw form data to start, more data formats in future releases. 
-License: file LICENSE
+License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
