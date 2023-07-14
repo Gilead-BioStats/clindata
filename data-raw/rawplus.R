@@ -1,5 +1,6 @@
 library(dplyr)
 load_all('../gsm')
+load_all('../rbmPipe')
 devtools::load_all()
 
 datasets <- rawplus_1_import()
@@ -9,9 +10,7 @@ datasets <- rawplus_1_import()
 ctms <- ctms_1_import()
 site <- ctms$site %>%
     select(site_num, country) %>%
-    mutate(
-        across(everything(), as.character)
-    )
+    mutate(site_num = as.character(site_num))
 
 datasets$dm <- datasets$dm %>%
   full_join(
@@ -23,8 +22,7 @@ datasets$dm <- datasets$dm %>%
     country = ifelse(is.na(country), 'US', country),
     timeonstudy = dplyr::coalesce(timeonstudy, 0),
     timeontreatment = dplyr::coalesce(timeontreatment, 0)
-  ) %>%
-    select(-country)
+  )
 datasets_processed <- rawplus_2_process(datasets)
 rawplus_3_export(datasets_processed)
 rawplus_4_document(datasets_processed)
@@ -49,7 +47,6 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     mutate(
         country = ifelse(is.na(country), 'US', country)
     ) %>%
-    select(-country) %>%
     mutate(
         enrollyn = if_else(
             subjid != '',

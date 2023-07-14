@@ -47,14 +47,14 @@ a data frame with 1301 rows and 48 columns.
 \item{ethnic_std_nsv}{\link{ string } Ethnicity_Coded Value}
 \item{race_std_nsv}{\link{ string } Race_Coded Value}
 \item{racescat_std_nsv}{\link{ string } Race Sub-category_Coded Value}
-\item{firstdosedate}{\link{ character }}
-\item{lastdosedate}{\link{ character }}
-\item{lastparticipantdate}{\link{ character }}
-\item{firstparticipantdate}{\link{ character }}
+\item{firstdosedate}{\link{ Date }}
+\item{lastdosedate}{\link{ Date }}
+\item{lastparticipantdate}{\link{ Date }}
+\item{firstparticipantdate}{\link{ Date }}
 \item{timeontreatment}{\link{ int } Time on Treatment}
 \item{timeonstudy}{\link{ int } Time on Study}
-\item{enrollyn}{\link{ character }}
 \item{country}{\link{ character }}
+\item{enrollyn}{\link{ character }}
 }
 }
 \source{
