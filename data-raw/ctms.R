@@ -1,3 +1,4 @@
+devtools::load_all('../rbmPipe')
 devtools::load_all()
 datasets <- ctms_1_import()
 datasets_processed <- ctms_2_process(datasets)

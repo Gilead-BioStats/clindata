@@ -1,6 +1,6 @@
 library(dplyr)
-load_all('../gsm')
-load_all('../rbmPipe')
+devtools::load_all('../gsm')
+devtools::load_all('../rbmPipe')
 devtools::load_all()
 
 datasets <- rawplus_1_import()
@@ -30,6 +30,7 @@ rawplus_4_document(datasets_processed)
 # temporary fix for [ ie ]
 load('data-raw/rawplus/rawplus_ie.rda')
 rawplus_ie <- tibble::as_tibble(rawplus_ie)
+rawplus_ie <- as.data.frame(lapply(rawplus_ie, as.character), stringsAsFactors = FALSE)
 names(rawplus_ie) <- c('subjid', 'iecat', 'ieorres', 'tiver')
 usethis::use_data(rawplus_ie, overwrite = TRUE)
 
@@ -74,6 +75,7 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
         studyid, siteid, subjectid, subjid,
         enroll_dt = firstparticipantdate, enrollyn, sfreas,
         country, invid
-    )
+    ) %>%
+    mutate(enroll_dt = as.Date(enroll_dt, format = "%Y-%m-%d"))
 
 usethis::use_data(rawplus_enroll, overwrite = TRUE)
