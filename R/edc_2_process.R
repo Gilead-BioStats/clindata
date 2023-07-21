@@ -10,14 +10,14 @@ edc_2_process <- function(
 ) {
   datasets_processed <- datasets
 
-  # Use download function from rbmPipe to access rbmLibrary mappings
-  download_directory_from_github(
-      path = "default",
-      repo = "rbmLibrary",
-      destination = "./inst"
-  )
-
-  mapping <- read.csv(system.file("mapping_column.csv", package = "clindata"))
+  # Use download function from rbmPipe to access default rbmLibrary mappings
+  mapping <- 'default/mapping_column.csv' %>%
+      rbmPipe::download_file_from_github(
+          'rbmLibrary',
+          tempdir()
+      ) %>%
+      purrr::pluck('destination') %>%
+      utils::read.csv()
 
   # Define the mapping for gsm_domain_key to clindata_key
   keyMapping <- c("dfDATACHG" = "data_points",
@@ -33,7 +33,7 @@ edc_2_process <- function(
 
       for (col in colnames(df)) {
           expectedFormat <- mapping[mapping$clindata_key == dfName & mapping$default == col, "format"][1]
-          colFormat <- class(df[[col]])
+          colFormat <- tolower(class(df[[col]]))
 
           if (!is.na(expectedFormat) && any(!colFormat %in% expectedFormat)) {
               convertedValue <- NULL

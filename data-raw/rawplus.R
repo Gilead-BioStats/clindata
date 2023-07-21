@@ -1,7 +1,7 @@
-library(dplyr)
-devtools::load_all('../gsm')
-devtools::load_all('../rbmPipe')
 devtools::load_all()
+library(dplyr)
+library(gsm)
+library(rbmPipe)
 
 datasets <- rawplus_1_import()
 

@@ -1,6 +1,6 @@
-devtools::load_all('../gsm')
-devtools::load_all('../rbmPipe')
 devtools::load_all()
+library(gsm)
+library(rbmPipe)
 
 metadata <- yaml::read_yaml(
   system.file('data-standards', 'edc.yaml', package = 'clindata')
