@@ -1,6 +1,7 @@
-library(dplyr)
-load_all('../gsm')
 devtools::load_all()
+library(dplyr)
+library(gsm)
+library(rbmPipe)
 
 datasets <- rawplus_1_import()
 
@@ -9,9 +10,7 @@ datasets <- rawplus_1_import()
 ctms <- ctms_1_import()
 site <- ctms$site %>%
     select(site_num, country) %>%
-    mutate(
-        across(everything(), as.character)
-    )
+    mutate(site_num = as.character(site_num))
 
 datasets$dm <- datasets$dm %>%
   full_join(
@@ -23,8 +22,7 @@ datasets$dm <- datasets$dm %>%
     country = ifelse(is.na(country), 'US', country),
     timeonstudy = dplyr::coalesce(timeonstudy, 0),
     timeontreatment = dplyr::coalesce(timeontreatment, 0)
-  ) %>%
-    select(-country)
+  )
 datasets_processed <- rawplus_2_process(datasets)
 rawplus_3_export(datasets_processed)
 rawplus_4_document(datasets_processed)
@@ -32,6 +30,7 @@ rawplus_4_document(datasets_processed)
 # temporary fix for [ ie ]
 load('data-raw/rawplus/rawplus_ie.rda')
 rawplus_ie <- tibble::as_tibble(rawplus_ie)
+rawplus_ie <- as.data.frame(lapply(rawplus_ie, as.character), stringsAsFactors = FALSE)
 names(rawplus_ie) <- c('subjid', 'iecat', 'ieorres', 'tiver')
 usethis::use_data(rawplus_ie, overwrite = TRUE)
 
@@ -49,7 +48,6 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
     mutate(
         country = ifelse(is.na(country), 'US', country)
     ) %>%
-    select(-country) %>%
     mutate(
         enrollyn = if_else(
             subjid != '',
@@ -77,6 +75,7 @@ rawplus_enroll <- arrow::read_parquet('data-raw/rawplus/dm.parquet') %>%
         studyid, siteid, subjectid, subjid,
         enroll_dt = firstparticipantdate, enrollyn, sfreas,
         country, invid
-    )
+    ) %>%
+    mutate(enroll_dt = as.Date(enroll_dt, format = "%Y-%m-%d"))
 
 usethis::use_data(rawplus_enroll, overwrite = TRUE)
