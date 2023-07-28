@@ -177,12 +177,13 @@
 #'   \item{ethnic_std_nsv}{[ string ] Ethnicity_Coded Value}
 #'   \item{race_std_nsv}{[ string ] Race_Coded Value}
 #'   \item{racescat_std_nsv}{[ string ] Race Sub-category_Coded Value}
-#'   \item{firstdosedate}{[ character ]}
-#'   \item{lastdosedate}{[ character ]}
-#'   \item{lastparticipantdate}{[ character ]}
-#'   \item{firstparticipantdate}{[ character ]}
+#'   \item{firstdosedate}{[ Date ]}
+#'   \item{lastdosedate}{[ Date ]}
+#'   \item{lastparticipantdate}{[ Date ]}
+#'   \item{firstparticipantdate}{[ Date ]}
 #'   \item{timeontreatment}{[ int ] Time on Treatment}
 #'   \item{timeonstudy}{[ int ] Time on Study}
+#'   \item{country}{[ character ]}
 #'   \item{enrollyn}{[ character ]}
 #' }
 #' @source ./data-raw/rawplus/dm.parquet

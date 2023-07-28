@@ -1,6 +1,6 @@
 #' @title Configuration Parameters
 #' @description Configuration Parameters (param) data CTMS data
-#' @format a data frame with 124 rows and 6 columns
+#' @format a data frame with 148 rows and 6 columns
 #' @source ./data-raw/config/param.csv
 "config_param"
 
