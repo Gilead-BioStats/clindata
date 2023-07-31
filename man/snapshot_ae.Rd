@@ -18,7 +18,7 @@ snapshot_ae(
 
 \item{ae}{\code{data.frame} Adverse event data.}
 
-\item{print_check_rows}{\code{logical} Print row-checking output to console? Default: \code{TRUE}. \code{logical} Print row-checking output to console? Default: \code{TRUE}.}
+\item{print_check_rows}{\code{logical} Print row-checking output to console? Default: \code{TRUE}.}
 }
 \description{
 Snapshot AE domain.

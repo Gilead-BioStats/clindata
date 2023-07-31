@@ -1,5 +1,9 @@
 #' Update {gsm} version in config files.
 #'
+#' @importFrom gh gh
+#' @importFrom here here
+#' @importFrom utils getFromNamespace
+#'
 #' @param version `character` {gsm} version number.
 #'
 #' @examples
@@ -18,13 +22,14 @@
 #' @keywords internal
 
 update_gsm_version <- function(version = 'latest') {
+    remotes <- utils::getFromNamespace("github_pat", "remotes")
     # import
     datasets <- ctms_1_import(data_path = file.path('data-raw', 'config'))
 
     if (version == 'latest') {
         gsm_releases <- gh::gh(
             '/repos/Gilead-BioStats/gsm/releases',
-            token = remotes:::github_pat()
+            token = remotes
         )
         gsm_version <- gsm_releases[[1]]$name %>% substring(2) %T>% message
 
@@ -96,6 +101,8 @@ sample_date <- function(date1, date2) {
 
 #' Map {gsm} Domains
 #'
+#' @param data data to be mapped to domain
+#'
 #' @export
 map_gsm_domains <- function(data) {
     mapping <- c(
@@ -123,6 +130,8 @@ map_gsm_domains <- function(data) {
 
 
 #' Impute Date
+#'
+#' @param date The date to be converted
 #'
 #' @importFrom lubridate is.Date ymd
 #'

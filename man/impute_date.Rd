@@ -6,6 +6,9 @@
 \usage{
 impute_date(date)
 }
+\arguments{
+\item{date}{The date to be converted}
+}
 \description{
 Impute Date
 }

@@ -4,6 +4,7 @@
 #' @importFrom purrr iwalk
 #' @importFrom stringr str_pad
 #' @importFrom tictoc tic toc
+#' @importFrom gsm MakeWorkflowList Make_Snapshot
 #'
 #' @export
 run_simulation <- function(

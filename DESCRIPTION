@@ -25,6 +25,10 @@ Imports:
     tictoc,
     tidyr,
     usethis,
+    remotes,
+    gsm,
+    gh,
+    here,
     yaml
 Suggests:
     testthat (>= 3.0.0)

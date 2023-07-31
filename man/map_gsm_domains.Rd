@@ -6,6 +6,9 @@
 \usage{
 map_gsm_domains(data)
 }
+\arguments{
+\item{data}{data to be mapped to domain}
+}
 \description{
 Map {gsm} Domains
 }

@@ -22,7 +22,11 @@ snapshot_all(
 
 \item{data}{\code{list} Name list of data domains to snapshot}
 
-\item{impute_rf_dt}{\code{logical} Imput reference dates with \link{ visdt } and \link{ ex }?}
+\item{impute_rf_dt}{\code{logical} Imput reference dates with \code{visdt} and \code{ex}?}
+
+\item{print_check_rows}{\code{logical} Print row-checking output to console? Default: \code{TRUE}}
+
+\item{rename_gsm}{\code{logical} replace data names with names in domain?}
 }
 \value{
 \code{list} Named list of modified data domains

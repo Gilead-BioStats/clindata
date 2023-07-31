@@ -6,56 +6,6 @@
 \title{rawplus_dm}
 \format{
 a data frame with 1301 rows and 47 columns.
-\describe{
-\item{studyid}{\link{ string } Study Identifier}
-\item{siteid}{\link{ string } Site Identifier}
-\item{invid}{\link{ string } Investigator ID}
-\item{scrnid}{\link{ string } Screen Identifier}
-\item{subjid}{\link{ string } Subject Identifier}
-\item{subjectid}{\link{ string } System Subject Identifier}
-\item{datapagename}{\link{ string } eCRF Page Name}
-\item{datapageid}{\link{ string } Internal ID for Data Page}
-\item{foldername}{\link{ string } Folder Name}
-\item{instancename}{\link{ string } Instance Name}
-\item{recordid}{\link{ string } Record Identifier}
-\item{record_dt}{\link{ string } Record Date}
-\item{recordposition}{\link{ float } Record Position}
-\item{mincreated_dts}{\link{ string } Earliest Data Creation Date/Time}
-\item{maxupdated_dts}{\link{ string } Latest Data Update Date/Time}
-\item{brthdat}{\link{ string } Date of Birth}
-\item{agerep}{\link{ string } Reported Age}
-\item{sex}{\link{ string } Sex}
-\item{ethnic}{\link{ string } Ethnicity}
-\item{race}{\link{ string } Race}
-\item{raceoth}{\link{ string } Race Other}
-\item{racescat}{\link{ string } Race Sub-Category}
-\item{racesoth}{\link{ string } Race Sub-Category Other}
-\item{subjid_nsv}{\link{ string } SUBJECT IDENTIFIER}
-\item{scrnid_nsv}{\link{ string } SCREENING IDENTIFIER}
-\item{subjinit_nsv}{\link{ string } SUBJECT INITIALS}
-\item{invid_nsv}{\link{ string } INVESTIGATOR ID}
-\item{subject_nsv}{\link{ string } Subject name or identifier}
-\item{instanceid_nsv}{\link{ double } Internal id for the instance}
-\item{folder_nsv}{\link{ string } Folder OID}
-\item{folderseq_nsv}{\link{ double } Folder sequence number}
-\item{brthdat_nsv}{\link{ timestamp } Date of Birth}
-\item{brthdat_yy_nsv}{\link{ double } Date of Birth_Year}
-\item{brthdat_mm_nsv}{\link{ double } Date of Birth_Month}
-\item{brthdat_dd_nsv}{\link{ double } Date of Birth_Day}
-\item{age_nsv}{\link{ double } Age (in years)}
-\item{sex_std_nsv}{\link{ string } Sex at birth_Coded Value}
-\item{ethnic_std_nsv}{\link{ string } Ethnicity_Coded Value}
-\item{race_std_nsv}{\link{ string } Race_Coded Value}
-\item{racescat_std_nsv}{\link{ string } Race Sub-category_Coded Value}
-\item{firstdosedate}{\link{ Date }}
-\item{lastdosedate}{\link{ Date }}
-\item{lastparticipantdate}{\link{ Date }}
-\item{firstparticipantdate}{\link{ Date }}
-\item{timeontreatment}{\link{ int } Time on Treatment}
-\item{timeonstudy}{\link{ int } Time on Study}
-\item{country}{\link{ character }}
-\item{enrollyn}{\link{ character }}
-}
 }
 \source{
 ./data-raw/rawplus/dm.parquet
@@ -64,6 +14,56 @@ a data frame with 1301 rows and 47 columns.
 rawplus_dm
 }
 \description{
-Demographics (dm) data in \link{ rawplus } format.
+Demographics (dm) data in \code{rawplus} format.
+\describe{
+\item{studyid}{\code{string} Study Identifier}
+\item{siteid}{\code{string} Site Identifier}
+\item{invid}{\code{string} Investigator ID}
+\item{scrnid}{\code{string} Screen Identifier}
+\item{subjid}{\code{string} Subject Identifier}
+\item{subjectid}{\code{string} System Subject Identifier}
+\item{datapagename}{\code{string} eCRF Page Name}
+\item{datapageid}{\code{string} Internal ID for Data Page}
+\item{foldername}{\code{string} Folder Name}
+\item{instancename}{\code{string} Instance Name}
+\item{recordid}{\code{string} Record Identifier}
+\item{record_dt}{\code{string} Record Date}
+\item{recordposition}{\code{float} Record Position}
+\item{mincreated_dts}{\code{string} Earliest Data Creation Date/Time}
+\item{maxupdated_dts}{\code{string} Latest Data Update Date/Time}
+\item{brthdat}{\code{string} Date of Birth}
+\item{agerep}{\code{string} Reported Age}
+\item{sex}{\code{string} Sex}
+\item{ethnic}{\code{string} Ethnicity}
+\item{race}{\code{string} Race}
+\item{raceoth}{\code{string} Race Other}
+\item{racescat}{\code{string} Race Sub-Category}
+\item{racesoth}{\code{string} Race Sub-Category Other}
+\item{subjid_nsv}{\code{string} SUBJECT IDENTIFIER}
+\item{scrnid_nsv}{\code{string} SCREENING IDENTIFIER}
+\item{subjinit_nsv}{\code{string} SUBJECT INITIALS}
+\item{invid_nsv}{\code{string} INVESTIGATOR ID}
+\item{subject_nsv}{\code{string} Subject name or identifier}
+\item{instanceid_nsv}{\code{double} Internal id for the instance}
+\item{folder_nsv}{\code{string} Folder OID}
+\item{folderseq_nsv}{\code{double} Folder sequence number}
+\item{brthdat_nsv}{\code{timestamp} Date of Birth}
+\item{brthdat_yy_nsv}{\code{double} Date of Birth_Year}
+\item{brthdat_mm_nsv}{\code{double} Date of Birth_Month}
+\item{brthdat_dd_nsv}{\code{double} Date of Birth_Day}
+\item{age_nsv}{\code{double} Age (in years)}
+\item{sex_std_nsv}{\code{string} Sex at birth_Coded Value}
+\item{ethnic_std_nsv}{\code{string} Ethnicity_Coded Value}
+\item{race_std_nsv}{\code{string} Race_Coded Value}
+\item{racescat_std_nsv}{\code{string} Race Sub-category_Coded Value}
+\item{firstdosedate}{\code{Date}}
+\item{lastdosedate}{\code{Date}}
+\item{lastparticipantdate}{\code{Date}}
+\item{firstparticipantdate}{\code{Date}}
+\item{timeontreatment}{\code{int} Time on Treatment}
+\item{timeonstudy}{\code{int} Time on Study}
+\item{country}{\code{character}}
+\item{enrollyn}{\code{character}}
+}
 }
 \keyword{datasets}

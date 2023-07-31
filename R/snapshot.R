@@ -3,7 +3,7 @@
 #' @param snapshot_date `Date` Date at which to snapshot data.
 #' @param dm `data.frame` Demographic data.
 #' @param ae `data.frame` Adverse event data.
-#' @param print_check_rows `logical` Print row-checking output to console? Default: `TRUE`. `logical` Print row-checking output to console? Default: `TRUE`.
+#' @param print_check_rows `logical` Print row-checking output to console? Default: `TRUE`.
 #'
 #' @importFrom dplyr filter if_else left_join select
 #'
@@ -45,7 +45,9 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae, print_chec
 #'
 #' @param snapshot_date `Date` Date at which to snapshot data `Date` Date at which to snapshot data
 #' @param data `list` Name list of data domains to snapshot
-#' @param impute_rf_dt `logical` Imput reference dates with [ visdt ] and [ ex ]?
+#' @param impute_rf_dt `logical` Imput reference dates with `visdt` and `ex`?
+#' @param print_check_rows `logical` Print row-checking output to console? Default: `TRUE`
+#' @param rename_gsm `logical` replace data names with names in domain?
 #'
 #' @return `list` Named list of modified data domains
 #'
