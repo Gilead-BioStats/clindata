@@ -42,3 +42,6 @@ vignettes/*.pdf
 
 # SAS Data files
 *.sas7bdat
+
+# data-raw folder
+data-raw
