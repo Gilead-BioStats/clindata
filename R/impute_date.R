@@ -19,7 +19,7 @@ impute_date <- function(date) {
     date[no_d] <- sub("--$", "-01", date[no_d])
 
     # numeric
-    num_d <- which(!grepl("\\-", date))
+    num_d <- which(grepl("\\d{5}", date))
     date[num_d] <- as.character(as_date(as.numeric(date[num_d])))
 
     lubridate::ymd(date)
