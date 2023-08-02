@@ -22,7 +22,7 @@ check_columns <- function(path) {
 
     gismo_schema <- gsm::rbm_data_spec %>%
         filter(
-            System == 'Gismo'
+            .data$System == 'Gismo'
         )
 
     walk(files, function(file) {
@@ -31,7 +31,7 @@ check_columns <- function(path) {
 
         schema <- gismo_schema %>%
             filter(
-                Table == domain
+                .data$Table == domain
             )
 
         columns <- readLines(file, 1) %>%

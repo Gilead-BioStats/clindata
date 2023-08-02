@@ -11,18 +11,22 @@
 snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae, print_check_rows = TRUE) {
     ae_snapshot <- ae %>%
         dplyr::left_join(
-            dm %>% dplyr::select("subjid", "lastparticipantdate", "lastdosedate"),
+            dm %>% dplyr::select(
+                "subjid",
+                "lastparticipantdate",
+                "lastdosedate"
+                ),
             "subjid"
         ) %>%
         dplyr::mutate(
             aeen_dt = dplyr::if_else(
-                impute_date(aeen_dt) > snapshot_date,
+                impute_date(.data$aeen_dt) > snapshot_date,
                 as.character(snapshot_date),
-                as.character(aeen_dt)
+                as.character(.data$aeen_dt)
             )
         ) %>%
         dplyr::filter(
-            impute_date(aest_dt) <= snapshot_date
+            impute_date(.data$aest_dt) <= snapshot_date
         ) %>%
         dplyr::select(
             -c(
@@ -39,8 +43,6 @@ snapshot_ae <- function(snapshot_date, dm, ae = clindata::rawplus_ae, print_chec
 }
 
 
-#' Snapshot all data domains
-#'
 #' Snapshot all data domains at a specific point in time.
 #'
 #' @param snapshot_date `Date` Date at which to snapshot data `Date` Date at which to snapshot data
@@ -144,7 +146,7 @@ snapshot_all <- function(
 snapshot_consent <- function(snapshot_date, dm, consent = clindata::rawplus_consent, print_check_rows = TRUE) {
     consent_snapshot <- consent %>%
         dplyr::filter(
-            subjid %in% dm$subjid
+            .data$subjid %in% dm$subjid
         )
 
     if (print_check_rows) {
@@ -168,7 +170,7 @@ snapshot_data_pages <- function(snapshot_date, data_pages = clindata::edc_data_p
 
     data_pages_snapshot <- data_pages %>%
         dplyr::filter(
-            impute_date(visit_date) <= snapshot_date
+            impute_date(.data$visit_date) <= snapshot_date
         )
 
     if (print_check_rows) {
@@ -191,7 +193,7 @@ snapshot_data_pages <- function(snapshot_date, data_pages = clindata::edc_data_p
 snapshot_data_points <- function(snapshot_date, data_points = clindata::edc_data_points, print_check_rows = TRUE) {
     data_points_snapshot <- data_points %>%
         dplyr::filter(
-            impute_date(visit_date) <= snapshot_date
+            impute_date(.data$visit_date) <= snapshot_date
         )
 
     if (print_check_rows) {
@@ -216,20 +218,20 @@ snapshot_data_points <- function(snapshot_date, data_points = clindata::edc_data
 snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::rawplus_dm, print_check_rows = TRUE) {
     if (!is.null(visdt) & !is.null(ex)) {
         lastparticipantdate <- visdt %>%
-            dplyr::group_by(subjid) %>%
+            dplyr::group_by(.data$subjid) %>%
             dplyr::summarize(
-                lastparticipantdate = max(visit_dt)
+                lastparticipantdate = max(.data$visit_dt)
             )
 
         lastdosedate <- ex %>%
-            dplyr::group_by(subjid) %>%
+            dplyr::group_by(.data$subjid) %>%
             dplyr::summarize(
-                lastdosedate = max(exen_dt)
+                lastdosedate = max(.data$exen_dt)
             )
 
         dm_snapshot <- dm %>%
             dplyr::filter(
-                impute_date(firstparticipantdate) <= snapshot_date
+                impute_date(.data$firstparticipantdate) <= snapshot_date
             ) %>%
             dplyr::rename(
                 lastparticipantdate0 = lastparticipantdate,
@@ -246,7 +248,7 @@ snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::r
     } else {
         dm_snapshot <- dm %>%
             dplyr::filter(
-                impute_date(firstparticipantdate) <= snapshot_date
+                impute_date(.data$firstparticipantdate) <= snapshot_date
             ) %>%
             dplyr::rename(
                 lastparticipantdate0 = lastparticipantdate,
@@ -278,7 +280,7 @@ snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::r
 snapshot_enroll <- function(snapshot_date, enroll = clindata::rawplus_enroll, print_check_rows = TRUE) {
     enroll_snapshot <- enroll %>%
         dplyr::filter(
-            impute_date(enroll_dt) <= snapshot_date
+            impute_date(.data$enroll_dt) <= snapshot_date
         )
 
     if (print_check_rows) {
@@ -301,13 +303,13 @@ snapshot_enroll <- function(snapshot_date, enroll = clindata::rawplus_enroll, pr
 snapshot_ex <- function(snapshot_date, ex = clindata::rawplus_ex, print_check_rows = TRUE) {
     ex_snapshot <- ex %>%
         dplyr::filter(
-            impute_date(exst_dt) <= snapshot_date
+            impute_date(.data$exst_dt) <= snapshot_date
         ) %>%
         dplyr::mutate(
             exen_dt = dplyr::if_else(
-                impute_date(exen_dt) > snapshot_date,
+                impute_date(.data$exen_dt) > snapshot_date,
                 as.character(snapshot_date),
-                exen_dt
+                .data$exen_dt
             )
         )
 
@@ -332,7 +334,7 @@ snapshot_ex <- function(snapshot_date, ex = clindata::rawplus_ex, print_check_ro
 snapshot_ie <- function(snapshot_date, dm, ie = clindata::rawplus_ie, print_check_rows = TRUE) {
     ie_snapshot <- ie %>%
         dplyr::filter(
-            subjid %in% dm$subjid
+            .data$subjid %in% dm$subjid
         )
 
     if (print_check_rows) {
@@ -360,8 +362,8 @@ snapshot_lb <- function(snapshot_date, dm, lb = clindata::rawplus_lb, print_chec
 
     lb_snapshot <- lb %>%
         dplyr::filter(
-            subjid %in% dm$subjid,
-            impute_date(lb_dt) <= snapshot_date
+            .data$subjid %in% dm$subjid,
+            impute_date(.data$lb_dt) <= snapshot_date
         )
 
     if (print_check_rows) {
@@ -386,7 +388,7 @@ snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::ctms_protdev
     if ("visit_nsv" %in% names(protdev)) {
         protdev_snapshot <- protdev %>%
             left_join(
-                dm %>% select(subjid, firstparticipantdate),
+                dm %>% select("subjid", "firstparticipantdate"),
                 "subjid"
             ) %>%
             mutate(
@@ -396,19 +398,19 @@ snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::ctms_protdev
                     grepl("week", visit_nsv, TRUE) ~ readr::parse_number(visit_nsv)
                 ),
                 dv_dt = if_else(
-                    dv_dt == "",
-                    impute_date(firstparticipantdate) + 7 * week,
-                    impute_date(dv_dt)
+                    .data$dv_dt == "",
+                    impute_date(.data$firstparticipantdate) + 7 * .data$week,
+                    impute_date(.data$dv_dt)
                 )
             ) %>%
-            select(-firstparticipantdate, -week)
+            select(-c("firstparticipantdate", "week"))
     } else {
         protdev_snapshot <- protdev
     }
 
     protdev_snapshot1 <- protdev_snapshot %>%
         dplyr::filter(
-            impute_date(deviationdate) <= snapshot_date
+            impute_date(.data$deviationdate) <= snapshot_date
         )
 
     if (print_check_rows) {
@@ -431,7 +433,7 @@ snapshot_protdev <- function(snapshot_date, dm, protdev = clindata::ctms_protdev
 snapshot_queries <- function(snapshot_date, queries = clindata::edc_queries, print_check_rows = TRUE) {
     queries_snapshot <- queries %>%
         dplyr::filter(
-            impute_date(created) <= snapshot_date
+            impute_date(.data$created) <= snapshot_date
         )
 
     if (print_check_rows) {
@@ -455,24 +457,24 @@ snapshot_queries <- function(snapshot_date, queries = clindata::edc_queries, pri
 snapshot_sdrgcomp <- function(snapshot_date, dm, sdrgcomp = clindata::rawplus_sdrgcomp, print_check_rows = TRUE) {
     sdrgcomp_snapshot <- sdrgcomp %>%
         dplyr::inner_join(
-            dm %>% select(subjid, lastdosedate, lastdosedate0),
+            dm %>% select("subjid", "lastdosedate", "lastdosedate0"),
             "subjid"
         ) %>%
         dplyr::mutate(
             sdrgyn = dplyr::if_else(
-                lastdosedate < lastdosedate0,
+                .data$lastdosedate < .data$lastdosedate0,
                 "",
-                sdrgyn
+                .data$sdrgyn
             ),
             sdrgreas = dplyr::if_else(
-                lastdosedate < lastdosedate0,
+                .data$lastdosedate < .data$lastdosedate0,
                 "",
-                sdrgreas
+                .data$sdrgreas
             )
         ) %>%
         dplyr::select(
-            -lastdosedate,
-            -lastdosedate0
+            -"lastdosedate",
+            -"lastdosedate0"
         )
 
     if (print_check_rows) {
@@ -502,7 +504,7 @@ snapshot_site <- function(
         filter(
             .data$firstparticipantdate <= snapshot_date
         ) %>%
-        group_by(siteid) %>%
+        group_by(.data$siteid) %>%
         summarize(
             enrolled_participants = n()
         ) %>%
@@ -535,24 +537,24 @@ snapshot_site <- function(
 snapshot_studcomp <- function(snapshot_date, dm, studcomp = clindata::rawplus_studcomp, print_check_rows = TRUE) {
     studcomp_snapshot <- studcomp %>%
         dplyr::inner_join(
-            dm %>% dplyr::select(subjid, lastparticipantdate, lastparticipantdate0),
+            dm %>% dplyr::select("subjid", "lastparticipantdate", "lastparticipantdate0"),
             "subjid"
         ) %>%
         dplyr::mutate(
             compyn = dplyr::if_else(
-                lastparticipantdate < lastparticipantdate0,
+                .data$lastparticipantdate < .data$lastparticipantdate0,
                 "",
-                compyn
+                .data$compyn
             ),
             compreas = dplyr::if_else(
-                lastparticipantdate < lastparticipantdate0,
+                .data$lastparticipantdate < .data$lastparticipantdate0,
                 "",
-                compreas
+                .data$compreas
             )
         ) %>%
         dplyr::select(
-            -lastparticipantdate,
-            -lastparticipantdate0
+            -"lastparticipantdate",
+            -"lastparticipantdate0"
         )
 
     if (print_check_rows) {
@@ -583,9 +585,9 @@ snapshot_study <- function(
         filter(
             .data$firstparticipantdate <= snapshot_date
         ) %>%
-        group_by(studyid) %>%
+        group_by(.data$studyid) %>%
         summarize(
-            enrolled_sites = length(unique(siteid)),
+            enrolled_sites = length(unique(.data$siteid)),
             enrolled_participants = n()
         ) %>%
         ungroup()
@@ -618,7 +620,7 @@ snapshot_visdt <- function(snapshot_date, visdt = clindata::rawplus_visdt, print
 
     visdt_snapshot <- visdt %>%
         dplyr::filter(
-            impute_date(visit_dt) <= snapshot_date
+            impute_date(.data$visit_dt) <= snapshot_date
         )
 
     if (print_check_rows) {
@@ -651,7 +653,7 @@ get_snapshot_date <- function(
             impute_date() %>%
             max(na.rm = TRUE)
     } else {
-        interval(snapshot_date) <- interval(snapshot_date) - n_intervals
+        snapshot_date <- interval(snapshot_date) - n_intervals
     }
 
     cat(paste0("\n", paste(rep("-", 64), collapse = ""), "\n"))

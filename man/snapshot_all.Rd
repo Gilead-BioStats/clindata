@@ -2,7 +2,7 @@
 % Please edit documentation in R/snapshot.R
 \name{snapshot_all}
 \alias{snapshot_all}
-\title{Snapshot all data domains}
+\title{Snapshot all data domains at a specific point in time.}
 \usage{
 snapshot_all(
   snapshot_date = get_snapshot_date(),
