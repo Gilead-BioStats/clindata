@@ -131,7 +131,7 @@ edc_3_export <- function(
             assign(edc_domain, tibble::as_tibble(data))
 
             do.call(
-                "use_data",
+                "usethis::use_data",
                 list(
                     as.name(edc_domain),
                     overwrite = TRUE

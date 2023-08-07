@@ -14,7 +14,7 @@ protdev <- arrow::read_parquet('data-raw/ctms/protdev.parquet') %>%
     dplyr::select(
         subjectenrollmentnumber = subjid,
         deviationdate = dv_dt,
-        gileadcategory = dvdecod,
+        companycategory = dvdecod,
         deemedimportant = importnt
     )
 
