@@ -2,12 +2,19 @@ Package: clindata
 Title: Synthetic Clinical Data for testing and development
 Version: 0.15.0
 Authors@R: 
-    person("Jeremy", "Wildfire", , "jwildfire@gilead.com", role = c("aut", "cre"))
+    person("Jeremy", "Wildfire", email = "jwildfire@gmail.com", role = c("aut", "cre")),
+    person("Spencer", "Childress", email = "spencer.childress@gilead.com", role = c("aut"), comment = c(ORCID = "0000-0001-6877-8511")),
+    person("Wang", "Zhongkai", email="zhongkai.wang6@gilead.com", role = c("aut"), comment = c(ORCID = "0000-0002-1883-2265")),
+    person("Matt", "Roumaya", email = "Matt.Roumaya@atorusresearch.com", role = c("aut"), comment = c(ORCID = "0000-0002-8009-2771")),
+    person("Colleen", "McLaughlin", email="colleen.mclaughlin@atorusresearch.com", role = c("aut")),
+    person("Chelsea", "Dickens", email="chelsea.dickens@atorusresearch.com", role = c("aut")),
+    person("Douglas", "Sanders", role = c("aut")),
+    person("Jacob", "Anderson", email="jacob.anderson@atorusresearch.com", role = c("aut"))
 Description: Synthetic Clinical Data for testing and development. Raw form data to start, more data formats in future releases. 
-License: file LICENSE
+License: Apache License (>= 2)
 Encoding: UTF-8
 LazyData: true
-LazyDataCompression:xz
+LazyDataCompression: xz
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
 Imports: 
@@ -35,3 +42,4 @@ Suggests:
     testthat (>= 3.0.0)
 Depends: 
     R (>= 3.5)
+URL: https://gilead-biostats.github.io/clindata/
