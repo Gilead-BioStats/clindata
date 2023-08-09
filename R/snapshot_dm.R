@@ -6,13 +6,13 @@ snapshot_dm <- function(snapshot_date, visdt = NULL, ex = NULL, dm = clindata::r
     lastparticipantdate <- visdt %>%
       dplyr::group_by(subjid) %>%
       dplyr::summarize(
-        lastparticipantdate = max(visit_dt)
+        lastparticipantdate = max(impute_date(visit_dt))
       )
 
     lastdosedate <- ex %>%
       dplyr::group_by(subjid) %>%
       dplyr::summarize(
-        lastdosedate = max(exen_dt)
+        lastdosedate = max(impute_date(exen_dt))
       )
 
     dm_snapshot <- dm %>%
