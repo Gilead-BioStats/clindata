@@ -34,14 +34,14 @@ Imports:
     tibble,
     tictoc,
     tidyr,
-    usethis,
-    remotes,
-    gsm,
     gh,
     here,
     yaml
 Suggests:
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    gsm,
+    remotes,
+    usethis
 Depends: 
     R (>= 3.5)
 URL: https://gilead-biostats.github.io/clindata/
