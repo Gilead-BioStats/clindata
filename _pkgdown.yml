@@ -1,4 +1,4 @@
+url: https://gilead-biostats.github.io/clindata/
 template:
-  params:
-    bootswatch: yeti
+  bootstrap: 5
 
