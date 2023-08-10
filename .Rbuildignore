@@ -1,6 +1,6 @@
 ^clindata\.Rproj$
 ^\.Rproj\.user$
-^data-raw
+^data-raw$
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
