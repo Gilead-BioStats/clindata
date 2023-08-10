@@ -34,9 +34,7 @@ jobs:
         shell: Rscript {0}
         run: |
           install.packages("devtools")
-          devtools::install()
-          devtools::install_github("Gilead-BioStats/gsm")
-
+          devtools::install(dependencies = TRUE)
 
 
       - uses: r-lib/actions/setup-r-dependencies@v2
