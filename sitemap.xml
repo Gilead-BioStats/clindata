@@ -13,15 +13,6 @@
     <loc>https://gilead-biostats.github.io/clindata/index.html</loc>
   </url>
   <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/check_columns.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/check_mapping.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/check_rows.html</loc>
-  </url>
-  <url>
     <loc>https://gilead-biostats.github.io/clindata/reference/config_param.html</loc>
   </url>
   <url>
@@ -49,16 +40,7 @@
     <loc>https://gilead-biostats.github.io/clindata/reference/edc_queries.html</loc>
   </url>
   <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/get_snapshot_date.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/impute_date.html</loc>
-  </url>
-  <url>
     <loc>https://gilead-biostats.github.io/clindata/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/map_gsm_domains.html</loc>
   </url>
   <url>
     <loc>https://gilead-biostats.github.io/clindata/reference/pipe.html</loc>
@@ -95,59 +77,5 @@
   </url>
   <url>
     <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_visdt.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/sample_date.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_ae.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_all.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_consent.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_data_pages.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_data_points.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_dm.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_enroll.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_ex.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_ie.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_lb.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_protdev.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_queries.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_sdrgcomp.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_site.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_studcomp.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_study.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/snapshot_visdt.html</loc>
   </url>
 </urlset>
