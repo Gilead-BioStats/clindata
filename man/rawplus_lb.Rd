@@ -6,21 +6,6 @@
 \title{rawplus_lb}
 \format{
 a data frame with 1132070 rows and 13 columns.
-\describe{
-\item{subjid}{\link{ string } Subject ID or Number}
-\item{visnam}{\link{ string } Visit Name}
-\item{visnum}{\link{ float } Visit ID or Number}
-\item{lb_dt}{\link{ string } Actual Collection Date and Time}
-\item{battrnam}{\link{ string } Battery Name}
-\item{lbtstnam}{\link{ string } Test Name ID}
-\item{siresn}{\link{ float } SI Numeric Result}
-\item{sinrlo}{\link{ string } SI Reference Range Low}
-\item{sinrhi}{\link{ string } SI Reference Range High}
-\item{toxgrg_nsv}{\link{ string } Toxicity Grade}
-\item{alrtfl}{\link{ string } Alert Flag}
-\item{treatmentemergent}{\link{ character }}
-\item{alertsimplified}{\link{ character }}
-}
 }
 \source{
 ./data-raw/rawplus/lb.parquet
@@ -29,6 +14,21 @@ a data frame with 1132070 rows and 13 columns.
 rawplus_lb
 }
 \description{
-Labs (lb) data in \link{ rawplus } format.
+Labs (lb) data in \code{rawplus} format.
+\describe{
+\item{subjid}{\code{string} Subject ID or Number}
+\item{visnam}{\code{string} Visit Name}
+\item{visnum}{\code{float} Visit ID or Number}
+\item{lb_dt}{\code{string} Actual Collection Date and Time}
+\item{battrnam}{\code{string} Battery Name}
+\item{lbtstnam}{\code{string} Test Name ID}
+\item{siresn}{\code{float} SI Numeric Result}
+\item{sinrlo}{\code{string} SI Reference Range Low}
+\item{sinrhi}{\code{string} SI Reference Range High}
+\item{toxgrg_nsv}{\code{string} Toxicity Grade}
+\item{alrtfl}{\code{string} Alert Flag}
+\item{treatmentemergent}{\code{character}}
+\item{alertsimplified}{\code{character}}
+}
 }
 \keyword{datasets}
