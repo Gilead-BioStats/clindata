@@ -462,12 +462,12 @@ snapshot_sdrgcomp <- function(snapshot_date, dm, sdrgcomp = clindata::rawplus_sd
         ) %>%
         dplyr::mutate(
             sdrgyn = dplyr::if_else(
-                .data$lastdosedate < .data$lastdosedate0,
+                as.Date(.data$lastdosedate, format = "%Y-%m-%d") < .data$lastdosedate0,
                 "",
                 .data$sdrgyn
             ),
             sdrgreas = dplyr::if_else(
-                .data$lastdosedate < .data$lastdosedate0,
+                as.Date(.data$lastdosedate, format = "%Y-%m-%d") < .data$lastdosedate0,
                 "",
                 .data$sdrgreas
             )
