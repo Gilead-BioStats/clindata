@@ -6,26 +6,6 @@
 \title{rawplus_ixrsrand}
 \format{
 a data frame with 1301 rows and 18 columns.
-\describe{
-\item{studyid}{\link{ string }}
-\item{invid}{\link{ string }}
-\item{invnam}{\link{ string }}
-\item{oinvid}{\link{ string }}
-\item{oinvnam}{\link{ string }}
-\item{country}{\link{ string }}
-\item{ocountry}{\link{ string }}
-\item{txtyp_nsv}{\link{ string }}
-\item{scrnid_nsv}{\link{ string }}
-\item{subjid}{\link{ string }}
-\item{subjinit_nsv}{\link{ string }}
-\item{hbvdna_nsv}{\link{ string }}
-\item{virtreat_nsv}{\link{ string }}
-\item{trtgrpc}{\link{ string }}
-\item{randnum}{\link{ string }}
-\item{dispid_nsv}{\link{ double }}
-\item{status}{\link{ string }}
-\item{rand_dt}{\link{ string }}
-}
 }
 \source{
 ./data-raw/rawplus/ixrsrand.parquet
@@ -34,6 +14,26 @@ a data frame with 1301 rows and 18 columns.
 rawplus_ixrsrand
 }
 \description{
-Randomization (ixrsrand) data in \link{ rawplus } format.
+Randomization (ixrsrand) data in \code{rawplus} format.
+\describe{
+\item{studyid}{\code{string}}
+\item{invid}{\code{string}}
+\item{invnam}{\code{string}}
+\item{oinvid}{\code{string}}
+\item{oinvnam}{\code{string}}
+\item{country}{\code{string}}
+\item{ocountry}{\code{string}}
+\item{txtyp_nsv}{\code{string}}
+\item{scrnid_nsv}{\code{string}}
+\item{subjid}{\code{string}}
+\item{subjinit_nsv}{\code{string}}
+\item{hbvdna_nsv}{\code{string}}
+\item{virtreat_nsv}{\code{string}}
+\item{trtgrpc}{\code{string}}
+\item{randnum}{\code{string}}
+\item{dispid_nsv}{\code{double}}
+\item{status}{\code{string}}
+\item{rand_dt}{\code{string}}
+}
 }
 \keyword{datasets}
