@@ -62,10 +62,6 @@ map_gsm_domains <- function(data) {
 
 
 
-#' Impute Date
-#'
-#' @param date The date to be converted
-#'
 #' @importFrom lubridate is.Date ymd
 #'
 #' @export
@@ -85,6 +81,10 @@ impute_date <- function(date) {
     # no day
     no_d <- which(grepl("^\\d{4}-\\d{2}--$", date))
     date[no_d] <- sub("--$", "-01", date[no_d])
+
+    # numeric
+    num_d <- which(grepl("\\d{5}", date))
+    date[num_d] <- as.character(as_date(as.numeric(date[num_d])))
 
     lubridate::ymd(date)
 }
