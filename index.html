@@ -53,23 +53,8 @@
   <main id="main" class="col-md-9"><div class="section level1">
 <div class="page-header"><h1 id="clindata">clindata<a class="anchor" aria-label="anchor" href="#clindata"></a>
 </h1></div>
-<p>A repository of anonymized clinical trial data for testing and development</p>
-<div class="section level2">
-<h2 id="data-inclusion-and-update-process">Data inclusion and update process<a class="anchor" aria-label="anchor" href="#data-inclusion-and-update-process"></a>
-</h2>
-<ol style="list-style-type: decimal">
-<li>Place data files in the folder under <code>./data-raw/</code> named according to the data standard.</li>
-<li>Define domain descriptions in the .yaml file under <code>./inst/data-standards/</code> named according to the data standard.</li>
-<li>Run each .R script under <code>./data-raw/</code>:</li>
-</ol>
-<ul>
-<li><code>./data-raw/ctms.R</code></li>
-<li><code>./data-raw/rawplus.R</code></li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>Run <code><a href="https://devtools.r-lib.org/reference/document.html" class="external-link">devtools::document()</a></code>.</li>
-</ol>
-</div>
+<p>A repository of various anonymized clinical trial data for use in open source testing and development. This package includes data pertaining to: - participant demographics - adverse effects - trial discontinuation - lab results - visit information - study and site location - I/E criteria - study metadata</p>
+<p>This package is open source to provide users with the information necessary for future development of clinical trial analysis, leading to a more comprehensive understanding of risk factors and mitigation.</p>
 </div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
