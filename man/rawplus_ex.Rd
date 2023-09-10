@@ -6,6 +6,61 @@
 \title{rawplus_ex}
 \format{
 a data frame with 4876 rows and 53 columns.
+\describe{
+\item{studyid}{\link{ string } Study Identifier}
+\item{siteid}{\link{ string } Site Identifier}
+\item{invid}{\link{ string } Investigator ID}
+\item{scrnid}{\link{ string } Screen Identifier}
+\item{subjid}{\link{ string } Subject Identifier}
+\item{subjectid}{\link{ string } System Subject Identifier}
+\item{datapagename}{\link{ string } eCRF Page Name}
+\item{datapageid}{\link{ string } Internal ID for Data Page}
+\item{foldername}{\link{ string } Folder Name}
+\item{instancename}{\link{ string } Instance Name}
+\item{recordid}{\link{ string } Record Identifier}
+\item{record_dt}{\link{ string } Record Date}
+\item{recordposition}{\link{ float } Record Position}
+\item{mincreated_dts}{\link{ string } Earliest Data Creation Date/Time}
+\item{maxupdated_dts}{\link{ string } Latest Data Update Date/Time}
+\item{extrt}{\link{ string } Treatment Name}
+\item{exds}{\link{ string } Actual Dose}
+\item{exdsu}{\link{ string } Acutal Dose Units}
+\item{exdsfrmn}{\link{ int } Number of Dose Form}
+\item{exdsfrm}{\link{ string } Dose Form}
+\item{exdsfrq}{\link{ string } Dosing Frequecy}
+\item{exdsfrot}{\link{ string } Other Dosing Frequecy}
+\item{exrte}{\link{ string } Route}
+\item{exst_dt}{\link{ string } Start Date/Time of Treatment}
+\item{exen_dt}{\link{ string } End Date/Time of Treatment}
+\item{exongo}{\link{ string } EX Ongoing}
+\item{experm}{\link{ string } Permanently Withdrawn}
+\item{subjid_nsv}{\link{ string } SUBJECT IDENTIFIER}
+\item{scrnid_nsv}{\link{ string } SCREENING IDENTIFIER}
+\item{subjinit_nsv}{\link{ string } SUBJECT INITIALS}
+\item{invid_nsv}{\link{ string } INVESTIGATOR ID}
+\item{subject_nsv}{\link{ string } Subject name or identifier}
+\item{instanceid_nsv}{\link{ double } Internal id for the instance}
+\item{folder_nsv}{\link{ string } Folder OID}
+\item{folderseq_nsv}{\link{ double } Folder sequence number}
+\item{extrt_std_nsv}{\link{ string } Drug Name_Coded Value}
+\item{exdstxt_nsv}{\link{ double } Dose per administration}
+\item{exdosu_std_nsv}{\link{ double } Dose Units_Coded Value}
+\item{exdsfrmn_raw_nsv}{\link{ string } Number of insert Dose Form (Tablets)_(Character)}
+\item{exdosfrm_std_nsv}{\link{ double } Dose Form_Coded Value}
+\item{exdosfrq_std_nsv}{\link{ string } Dosing Frequency_Coded Value}
+\item{exroute_std_nsv}{\link{ double } Route_Coded Value}
+\item{exrtoth_nsv}{\link{ string } EXRTOTH}
+\item{exstdat_nsv}{\link{ timestamp } Start Date/Dose Date}
+\item{exstdat_yy_nsv}{\link{ double } Start Date/Dose Date_Year}
+\item{exstdat_mm_nsv}{\link{ double } Start Date/Dose Date_Month}
+\item{exstdat_dd_nsv}{\link{ double } Start Date/Dose Date_Day}
+\item{exendat_nsv}{\link{ timestamp } Stop Date}
+\item{exendat_yy_nsv}{\link{ double } Stop Date_Year}
+\item{exendat_mm_nsv}{\link{ double } Stop Date_Month}
+\item{exendat_dd_nsv}{\link{ double } Stop Date_Day}
+\item{exongo_std_nsv}{\link{ string } Check if Ongoing_Coded Value}
+\item{experm_nsv}{\link{ string } if study drug was permanently withdrawn}
+}
 }
 \source{
 ./data-raw/rawplus/ex.parquet
@@ -14,61 +69,6 @@ a data frame with 4876 rows and 53 columns.
 rawplus_ex
 }
 \description{
-Exposure (ex) data in \code{rawplus} format.
-\describe{
-\item{studyid}{\code{string} Study Identifier}
-\item{siteid}{\code{string} Site Identifier}
-\item{invid}{\code{string} Investigator ID}
-\item{scrnid}{\code{string} Screen Identifier}
-\item{subjid}{\code{string} Subject Identifier}
-\item{subjectid}{\code{string} System Subject Identifier}
-\item{datapagename}{\code{string} eCRF Page Name}
-\item{datapageid}{\code{string} Internal ID for Data Page}
-\item{foldername}{\code{string} Folder Name}
-\item{instancename}{\code{string} Instance Name}
-\item{recordid}{\code{string} Record Identifier}
-\item{record_dt}{\code{string} Record Date}
-\item{recordposition}{\code{float} Record Position}
-\item{mincreated_dts}{\code{string} Earliest Data Creation Date/Time}
-\item{maxupdated_dts}{\code{string} Latest Data Update Date/Time}
-\item{extrt}{\code{string} Treatment Name}
-\item{exds}{\code{string} Actual Dose}
-\item{exdsu}{\code{string} Acutal Dose Units}
-\item{exdsfrmn}{\code{int} Number of Dose Form}
-\item{exdsfrm}{\code{string} Dose Form}
-\item{exdsfrq}{\code{string} Dosing Frequecy}
-\item{exdsfrot}{\code{string} Other Dosing Frequecy}
-\item{exrte}{\code{string} Route}
-\item{exst_dt}{\code{string} Start Date/Time of Treatment}
-\item{exen_dt}{\code{string} End Date/Time of Treatment}
-\item{exongo}{\code{string} EX Ongoing}
-\item{experm}{\code{string} Permanently Withdrawn}
-\item{subjid_nsv}{\code{string} SUBJECT IDENTIFIER}
-\item{scrnid_nsv}{\code{string} SCREENING IDENTIFIER}
-\item{subjinit_nsv}{\code{string} SUBJECT INITIALS}
-\item{invid_nsv}{\code{string} INVESTIGATOR ID}
-\item{subject_nsv}{\code{string} Subject name or identifier}
-\item{instanceid_nsv}{\code{double} Internal id for the instance}
-\item{folder_nsv}{\code{string} Folder OID}
-\item{folderseq_nsv}{\code{double} Folder sequence number}
-\item{extrt_std_nsv}{\code{string} Drug Name_Coded Value}
-\item{exdstxt_nsv}{\code{double} Dose per administration}
-\item{exdosu_std_nsv}{\code{double} Dose Units_Coded Value}
-\item{exdsfrmn_raw_nsv}{\code{string} Number of insert Dose Form (Tablets)_(Character)}
-\item{exdosfrm_std_nsv}{\code{double} Dose Form_Coded Value}
-\item{exdosfrq_std_nsv}{\code{string} Dosing Frequency_Coded Value}
-\item{exroute_std_nsv}{\code{double} Route_Coded Value}
-\item{exrtoth_nsv}{\code{string} EXRTOTH}
-\item{exstdat_nsv}{\code{timestamp} Start Date/Dose Date}
-\item{exstdat_yy_nsv}{\code{double} Start Date/Dose Date_Year}
-\item{exstdat_mm_nsv}{\code{double} Start Date/Dose Date_Month}
-\item{exstdat_dd_nsv}{\code{double} Start Date/Dose Date_Day}
-\item{exendat_nsv}{\code{timestamp} Stop Date}
-\item{exendat_yy_nsv}{\code{double} Stop Date_Year}
-\item{exendat_mm_nsv}{\code{double} Stop Date_Month}
-\item{exendat_dd_nsv}{\code{double} Stop Date_Day}
-\item{exongo_std_nsv}{\code{string} Check if Ongoing_Coded Value}
-\item{experm_nsv}{\code{string} if study drug was permanently withdrawn}
-}
+Exposure (ex) data in \link{ rawplus } format.
 }
 \keyword{datasets}

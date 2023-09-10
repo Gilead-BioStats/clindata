@@ -6,6 +6,135 @@
 \title{rawplus_ae}
 \format{
 a data frame with 4854 rows and 127 columns.
+\describe{
+\item{studyid}{\link{ string } Study Identifier}
+\item{siteid}{\link{ string } Site Identifier}
+\item{invid}{\link{ string } Investigator ID}
+\item{scrnid}{\link{ string } Screen Identifier}
+\item{subjid}{\link{ string } Subject Identifier}
+\item{subjectid}{\link{ string } System Subject Identifier}
+\item{datapagename}{\link{ string } eCRF Page Name}
+\item{datapageid}{\link{ string } Internal ID for Data Page}
+\item{foldername}{\link{ string } Folder Name}
+\item{instancename}{\link{ string } Instance Name}
+\item{recordid}{\link{ string } Record Identifier}
+\item{record_dt}{\link{ string } Record Date}
+\item{recordposition}{\link{ float } Record Position}
+\item{mincreated_dts}{\link{ string } Earliest Data Creation Date/Time}
+\item{maxupdated_dts}{\link{ string } Latest Data Update Date/Time}
+\item{aeterm}{\link{ string } Reported Term for the Adverse Event}
+\item{aeser}{\link{ string } Serious Event}
+\item{aest_dt}{\link{ string } Start Date/Time for Adverse Event}
+\item{aeen_dt}{\link{ string } End Date/Time for Adverse Event}
+\item{aeongo}{\link{ string } AE Ongoing}
+\item{aerel}{\link{ string } Pass through label from RAW}
+\item{aerel1}{\link{ string } Pass through label from RAW}
+\item{aerel2}{\link{ string } Pass through label from RAW}
+\item{aerel3}{\link{ string } Pass through label from RAW}
+\item{aerelprc}{\link{ string } Related to Study Porcedures}
+\item{aeacn}{\link{ string } Pass through label from RAW}
+\item{aeacn1}{\link{ string } Pass through label from RAW}
+\item{aeacn2}{\link{ string } Pass through label from RAW}
+\item{aetoxgr}{\link{ string } Standard Toxicity Grade}
+\item{caseno}{\link{ string } Case ID}
+\item{aesdth}{\link{ string } Result in Death}
+\item{aeslife}{\link{ string } Is Life Threatening}
+\item{aeshosp}{\link{ string } Requires or Prolongs Hospitalization}
+\item{aehstdat}{\link{ string } If Hospitalized, Date Admitted}
+\item{aehendat}{\link{ string } If Hospitalized, Date Discharged}
+\item{aesdisab}{\link{ string } Persis of Signif Disability/Incapacity}
+\item{aescong}{\link{ string } Congenital Anomaly or Birth Defect}
+\item{aesmie}{\link{ string } Other Medically Important Serious Event}
+\item{aediseas}{\link{ string } Study Disease-related}
+\item{aeprecon}{\link{ string } Pre-existing Condition}
+\item{aeinter}{\link{ string } Intercurrent Illness}
+\item{aecm}{\link{ string } Concomitant Medications}
+\item{aecmspec}{\link{ string } Specify Concomitant Medications}
+\item{aeoth}{\link{ string } Other Causality}
+\item{aeothsp}{\link{ string } Specify Other Causality}
+\item{aeout}{\link{ string } Outcome of Advese Event}
+\item{subjid_nsv}{\link{ string } SUBJECT IDENTIFIER}
+\item{scrnid_nsv}{\link{ string } SCREENING IDENTIFIER}
+\item{subjinit_nsv}{\link{ string } SUBJECT INITIALS}
+\item{invid_nsv}{\link{ string } INVESTIGATOR ID}
+\item{subject_nsv}{\link{ string } Subject name or identifier}
+\item{instanceid_nsv}{\link{ double } Internal id for the instance}
+\item{folder_nsv}{\link{ string } Folder OID}
+\item{folderseq_nsv}{\link{ double } Folder sequence number}
+\item{aeser_std_nsv}{\link{ string } AE serious_Coded Value}
+\item{aestdat_nsv}{\link{ timestamp } Start Date}
+\item{aestdat_yy_nsv}{\link{ double } Start Date_Year}
+\item{aestdat_mm_nsv}{\link{ double } Start Date_Month}
+\item{aestdat_dd_nsv}{\link{ double } Start Date_Day}
+\item{aeendat_nsv}{\link{ timestamp } End Date}
+\item{aeendat_yy_nsv}{\link{ double } End Date_Year}
+\item{aeendat_mm_nsv}{\link{ double } End Date_Month}
+\item{aeendat_dd_nsv}{\link{ double } End Date_Day}
+\item{aeongo_std_nsv}{\link{ string } Check if Ongoing_Coded Value}
+\item{aerel_std_nsv}{\link{ string } Related to Study Treatment_Coded Value}
+\item{aerelprc_std_nsv}{\link{ string } Related to Study Procedures_Coded Value}
+\item{aeacn_std_nsv}{\link{ double } Action Taken with Blinded TAF_Coded Value}
+\item{aeacn1_std_nsv}{\link{ double } Action Taken with Blinded TDF_Coded Value}
+\item{aeacn2_std_nsv}{\link{ double } Action Taken with Open Label TAF_Coded Value}
+\item{aeacnoth1_nsv}{\link{ double } Other Action Taken}
+\item{aeacnoth1_raw_nsv}{\link{ string } Other Action Taken_(Character)}
+\item{aeacnoth2_nsv}{\link{ double } Medication Required}
+\item{aeacnoth2_raw_nsv}{\link{ string } Medication Required_(Character)}
+\item{aeacnoth4_nsv}{\link{ double } Other Treatment Required}
+\item{aeacnoth4_raw_nsv}{\link{ string } Other Treatment Required_(Character)}
+\item{aesev_std_nsv}{\link{ double } Severity_Coded Value}
+\item{caseno_std_nsv}{\link{ string } CASE ID_Coded Value}
+\item{oldcase_nsv}{\link{ string } Old Case ID}
+\item{aerel1_std_nsv}{\link{ string } Related to Blinded TAF_Coded Value}
+\item{aerel2_std_nsv}{\link{ string } Related to Blinded TDF_Coded Value}
+\item{aerel3_std_nsv}{\link{ string } Related to Open Label TAF_Coded Value}
+\item{aesdth_std_nsv}{\link{ string } Seriousness Criteria_Coded Value}
+\item{aeslife_std_nsv}{\link{ string } Life Threatening_Coded Value}
+\item{aeshosp_std_nsv}{\link{ string } AE, Initial/Prolonged Hospitalization_Coded Value}
+\item{aehstdat_nsv}{\link{ timestamp } If Hospitalized, Date Admitted}
+\item{aehstdat_yy_nsv}{\link{ double } If Hospitalized, Date Admitted_Year}
+\item{aehstdat_mm_nsv}{\link{ double } If Hospitalized, Date Admitted_Month}
+\item{aehstdat_dd_nsv}{\link{ double } If Hospitalized, Date Admitted_Day}
+\item{aehendat_nsv}{\link{ timestamp } If Hospitalized, Date Discharged}
+\item{aehendat_yy_nsv}{\link{ double } If Hospitalized, Date Discharged_Year}
+\item{aehendat_mm_nsv}{\link{ double } If Hospitalized, Date Discharged_Month}
+\item{aehendat_dd_nsv}{\link{ double } If Hospitalized, Date Discharged_Day}
+\item{aesdisab_std_nsv}{\link{ string } Persistent or significant disability_Coded Value}
+\item{aescong_std_nsv}{\link{ string } Congenital anomaly/birth defect_Coded Value}
+\item{aesmie_std_nsv}{\link{ string } Other significant medical event_Coded Value}
+\item{aealtcau_nsv}{\link{ string } Alternative Causality}
+\item{aediseas_nsv}{\link{ double } Study Disease-related}
+\item{aeprecon_nsv}{\link{ double } Pre-existing Condition}
+\item{aeinter_nsv}{\link{ double } Intercurrent Illness}
+\item{aecm_nsv}{\link{ double } Concomitant Medications}
+\item{aeoth_nsv}{\link{ double } Other}
+\item{aeout_std_nsv}{\link{ double } SAE Outcome_Coded Value}
+\item{rep_smtp_nsv}{\link{ string } Reporter's E-Mail Address}
+\item{diction_nsv}{\link{ string } CODING DICTIONARY}
+\item{dic_ver_nsv}{\link{ string } CODING DICTIONARY VERSION}
+\item{mdrlltc_nsv}{\link{ string } MEDDRA LOWEST LEVEL TERM CODE}
+\item{mdrllt_nsv}{\link{ string } MEDDRA LOWEST LEVEL TERM}
+\item{mdrsocc_nsv}{\link{ string } MEDDRA SYSTEM ORGAN CLASS CODE}
+\item{mdrsoc_nsv}{\link{ string } MEDDRA SYSTEM ORGAN CLASS}
+\item{mdrhlgtc_nsv}{\link{ string } MEDDRA HIGH LEVEL GROUP TERM CODE}
+\item{mdrhlgt_nsv}{\link{ string } MEDDRA HIGH LEVEL GROUP TERM}
+\item{mdrhltc_nsv}{\link{ string } MEDDRA HIGH LEVEL TERM CODE}
+\item{mdrhlt_nsv}{\link{ string } MEDDRA HIGH LEVEL TERM}
+\item{mdrptc_nsv}{\link{ string } MEDDRA PREFERRED TERM CODE}
+\item{mdrpt_nsv}{\link{ string } MEDDRA PREFERRED TERM}
+\item{aesel_nsv}{\link{ string } Selected Adverse Event}
+\item{aeselcat_nsv}{\link{ string } Selected Adverse Event Category}
+\item{aeseltyp_nsv}{\link{ string } Selected Adverse Event Type}
+\item{aebon_nsv}{\link{ string } Selected AE Bone Event}
+\item{aeboncat_nsv}{\link{ string } Selected AE Bone Event Category}
+\item{aebontyp_nsv}{\link{ string } Selected AE Bone Event Type}
+\item{htension_nsv}{\link{ string } Hypertension}
+\item{diabetes_nsv}{\link{ string } Diabetes}
+\item{carddis_nsv}{\link{ string } Cardiovascular Disease}
+\item{hlipdem_nsv}{\link{ string } Hyperlipidemia}
+\item{uveitis_nsv}{\link{ string } Uveitis}
+\item{treatmentemergent}{\link{ character }}
+}
 }
 \source{
 ./data-raw/rawplus/ae.parquet
@@ -14,135 +143,6 @@ a data frame with 4854 rows and 127 columns.
 rawplus_ae
 }
 \description{
-Adverse Events (ae) data in \code{rawplus} format.
-\describe{
-\item{studyid}{\code{string} Study Identifier}
-\item{siteid}{\code{string} Site Identifier}
-\item{invid}{\code{string} Investigator ID}
-\item{scrnid}{\code{string} Screen Identifier}
-\item{subjid}{\code{string} Subject Identifier}
-\item{subjectid}{\code{string} System Subject Identifier}
-\item{datapagename}{\code{string} eCRF Page Name}
-\item{datapageid}{\code{string} Internal ID for Data Page}
-\item{foldername}{\code{string} Folder Name}
-\item{instancename}{\code{string} Instance Name}
-\item{recordid}{\code{string} Record Identifier}
-\item{record_dt}{\code{string} Record Date}
-\item{recordposition}{\code{float} Record Position}
-\item{mincreated_dts}{\code{string} Earliest Data Creation Date/Time}
-\item{maxupdated_dts}{\code{string} Latest Data Update Date/Time}
-\item{aeterm}{\code{string} Reported Term for the Adverse Event}
-\item{aeser}{\code{string} Serious Event}
-\item{aest_dt}{\code{string} Start Date/Time for Adverse Event}
-\item{aeen_dt}{\code{string} End Date/Time for Adverse Event}
-\item{aeongo}{\code{string} AE Ongoing}
-\item{aerel}{\code{string} Pass through label from RAW}
-\item{aerel1}{\code{string} Pass through label from RAW}
-\item{aerel2}{\code{string} Pass through label from RAW}
-\item{aerel3}{\code{string} Pass through label from RAW}
-\item{aerelprc}{\code{string} Related to Study Porcedures}
-\item{aeacn}{\code{string} Pass through label from RAW}
-\item{aeacn1}{\code{string} Pass through label from RAW}
-\item{aeacn2}{\code{string} Pass through label from RAW}
-\item{aetoxgr}{\code{string} Standard Toxicity Grade}
-\item{caseno}{\code{string} Case ID}
-\item{aesdth}{\code{string} Result in Death}
-\item{aeslife}{\code{string} Is Life Threatening}
-\item{aeshosp}{\code{string} Requires or Prolongs Hospitalization}
-\item{aehstdat}{\code{string} If Hospitalized, Date Admitted}
-\item{aehendat}{\code{string} If Hospitalized, Date Discharged}
-\item{aesdisab}{\code{string} Persis of Signif Disability/Incapacity}
-\item{aescong}{\code{string} Congenital Anomaly or Birth Defect}
-\item{aesmie}{\code{string} Other Medically Important Serious Event}
-\item{aediseas}{\code{string} Study Disease-related}
-\item{aeprecon}{\code{string} Pre-existing Condition}
-\item{aeinter}{\code{string} Intercurrent Illness}
-\item{aecm}{\code{string} Concomitant Medications}
-\item{aecmspec}{\code{string} Specify Concomitant Medications}
-\item{aeoth}{\code{string} Other Causality}
-\item{aeothsp}{\code{string} Specify Other Causality}
-\item{aeout}{\code{string} Outcome of Advese Event}
-\item{subjid_nsv}{\code{string} SUBJECT IDENTIFIER}
-\item{scrnid_nsv}{\code{string} SCREENING IDENTIFIER}
-\item{subjinit_nsv}{\code{string} SUBJECT INITIALS}
-\item{invid_nsv}{\code{string} INVESTIGATOR ID}
-\item{subject_nsv}{\code{string} Subject name or identifier}
-\item{instanceid_nsv}{\code{double} Internal id for the instance}
-\item{folder_nsv}{\code{string} Folder OID}
-\item{folderseq_nsv}{\code{double} Folder sequence number}
-\item{aeser_std_nsv}{\code{string} AE serious_Coded Value}
-\item{aestdat_nsv}{\code{timestamp} Start Date}
-\item{aestdat_yy_nsv}{\code{double} Start Date_Year}
-\item{aestdat_mm_nsv}{\code{double} Start Date_Month}
-\item{aestdat_dd_nsv}{\code{double} Start Date_Day}
-\item{aeendat_nsv}{\code{timestamp} End Date}
-\item{aeendat_yy_nsv}{\code{double} End Date_Year}
-\item{aeendat_mm_nsv}{\code{double} End Date_Month}
-\item{aeendat_dd_nsv}{\code{double} End Date_Day}
-\item{aeongo_std_nsv}{\code{string} Check if Ongoing_Coded Value}
-\item{aerel_std_nsv}{\code{string} Related to Study Treatment_Coded Value}
-\item{aerelprc_std_nsv}{\code{string} Related to Study Procedures_Coded Value}
-\item{aeacn_std_nsv}{\code{double} Action Taken with Blinded TAF_Coded Value}
-\item{aeacn1_std_nsv}{\code{double} Action Taken with Blinded TDF_Coded Value}
-\item{aeacn2_std_nsv}{\code{double} Action Taken with Open Label TAF_Coded Value}
-\item{aeacnoth1_nsv}{\code{double} Other Action Taken}
-\item{aeacnoth1_raw_nsv}{\code{string} Other Action Taken_(Character)}
-\item{aeacnoth2_nsv}{\code{double} Medication Required}
-\item{aeacnoth2_raw_nsv}{\code{string} Medication Required_(Character)}
-\item{aeacnoth4_nsv}{\code{double} Other Treatment Required}
-\item{aeacnoth4_raw_nsv}{\code{string} Other Treatment Required_(Character)}
-\item{aesev_std_nsv}{\code{double} Severity_Coded Value}
-\item{caseno_std_nsv}{\code{string} CASE ID_Coded Value}
-\item{oldcase_nsv}{\code{string} Old Case ID}
-\item{aerel1_std_nsv}{\code{string} Related to Blinded TAF_Coded Value}
-\item{aerel2_std_nsv}{\code{string} Related to Blinded TDF_Coded Value}
-\item{aerel3_std_nsv}{\code{string} Related to Open Label TAF_Coded Value}
-\item{aesdth_std_nsv}{\code{string} Seriousness Criteria_Coded Value}
-\item{aeslife_std_nsv}{\code{string} Life Threatening_Coded Value}
-\item{aeshosp_std_nsv}{\code{string} AE, Initial/Prolonged Hospitalization_Coded Value}
-\item{aehstdat_nsv}{\code{timestamp} If Hospitalized, Date Admitted}
-\item{aehstdat_yy_nsv}{\code{double} If Hospitalized, Date Admitted_Year}
-\item{aehstdat_mm_nsv}{\code{double} If Hospitalized, Date Admitted_Month}
-\item{aehstdat_dd_nsv}{\code{double} If Hospitalized, Date Admitted_Day}
-\item{aehendat_nsv}{\code{timestamp} If Hospitalized, Date Discharged}
-\item{aehendat_yy_nsv}{\code{double} If Hospitalized, Date Discharged_Year}
-\item{aehendat_mm_nsv}{\code{double} If Hospitalized, Date Discharged_Month}
-\item{aehendat_dd_nsv}{\code{double} If Hospitalized, Date Discharged_Day}
-\item{aesdisab_std_nsv}{\code{string} Persistent or significant disability_Coded Value}
-\item{aescong_std_nsv}{\code{string} Congenital anomaly/birth defect_Coded Value}
-\item{aesmie_std_nsv}{\code{string} Other significant medical event_Coded Value}
-\item{aealtcau_nsv}{\code{string} Alternative Causality}
-\item{aediseas_nsv}{\code{double} Study Disease-related}
-\item{aeprecon_nsv}{\code{double} Pre-existing Condition}
-\item{aeinter_nsv}{\code{double} Intercurrent Illness}
-\item{aecm_nsv}{\code{double} Concomitant Medications}
-\item{aeoth_nsv}{\code{double} Other}
-\item{aeout_std_nsv}{\code{double} SAE Outcome_Coded Value}
-\item{rep_smtp_nsv}{\code{string} Reporter's E-Mail Address}
-\item{diction_nsv}{\code{string} CODING DICTIONARY}
-\item{dic_ver_nsv}{\code{string} CODING DICTIONARY VERSION}
-\item{mdrlltc_nsv}{\code{string} MEDDRA LOWEST LEVEL TERM CODE}
-\item{mdrllt_nsv}{\code{string} MEDDRA LOWEST LEVEL TERM}
-\item{mdrsocc_nsv}{\code{string} MEDDRA SYSTEM ORGAN CLASS CODE}
-\item{mdrsoc_nsv}{\code{string} MEDDRA SYSTEM ORGAN CLASS}
-\item{mdrhlgtc_nsv}{\code{string} MEDDRA HIGH LEVEL GROUP TERM CODE}
-\item{mdrhlgt_nsv}{\code{string} MEDDRA HIGH LEVEL GROUP TERM}
-\item{mdrhltc_nsv}{\code{string} MEDDRA HIGH LEVEL TERM CODE}
-\item{mdrhlt_nsv}{\code{string} MEDDRA HIGH LEVEL TERM}
-\item{mdrptc_nsv}{\code{string} MEDDRA PREFERRED TERM CODE}
-\item{mdrpt_nsv}{\code{string} MEDDRA PREFERRED TERM}
-\item{aesel_nsv}{\code{string} Selected Adverse Event}
-\item{aeselcat_nsv}{\code{string} Selected Adverse Event Category}
-\item{aeseltyp_nsv}{\code{string} Selected Adverse Event Type}
-\item{aebon_nsv}{\code{string} Selected AE Bone Event}
-\item{aeboncat_nsv}{\code{string} Selected AE Bone Event Category}
-\item{aebontyp_nsv}{\code{string} Selected AE Bone Event Type}
-\item{htension_nsv}{\code{string} Hypertension}
-\item{diabetes_nsv}{\code{string} Diabetes}
-\item{carddis_nsv}{\code{string} Cardiovascular Disease}
-\item{hlipdem_nsv}{\code{string} Hyperlipidemia}
-\item{uveitis_nsv}{\code{string} Uveitis}
-\item{treatmentemergent}{\code{character}}
-}
+Adverse Events (ae) data in \link{ rawplus } format.
 }
 \keyword{datasets}
