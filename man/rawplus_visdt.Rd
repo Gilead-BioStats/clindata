@@ -6,6 +6,56 @@
 \title{rawplus_visdt}
 \format{
 a data frame with 28093 rows and 48 columns.
+\describe{
+\item{studyid}{\link{ string } Study Identifier}
+\item{siteid}{\link{ string } Site Identifier}
+\item{invid}{\link{ string } Investigator ID}
+\item{scrnid}{\link{ string } Screen Identifier}
+\item{subjid}{\link{ string } Subject Identifier}
+\item{subjectid}{\link{ string } System Subject Identifier}
+\item{datapagename}{\link{ string } eCRF Page Name}
+\item{datapageid}{\link{ string } Internal ID for Data Page}
+\item{foldername}{\link{ string } Folder Name}
+\item{instancename}{\link{ string } Instance Name}
+\item{recordid}{\link{ string } Record Identifier}
+\item{record_dt}{\link{ string } Record Date}
+\item{recordposition}{\link{ float } Record Position}
+\item{mincreated_dts}{\link{ string } Earliest Data Creation Date/Time}
+\item{maxupdated_dts}{\link{ string } Latest Data Update Date/Time}
+\item{visit_dt}{\link{ string } Visit Date}
+\item{peperf}{\link{ string } Complete Physical Exam Performed}
+\item{pereasnd}{\link{ string } Reason Physical Exam Not Performed}
+\item{svvs}{\link{ string } Vital Signs}
+\item{svaecm}{\link{ string } Evaluation of AE and/or CM}
+\item{svecg}{\link{ string } ECG}
+\item{svpk}{\link{ string } PK and Associated Dose}
+\item{svlab}{\link{ string } Lab Evaluations}
+\item{svpregtest}{\link{ string } Pregnancy Test}
+\item{svsd}{\link{ string } Study Drug Adjustment or Dispensation}
+\item{svothsp}{\link{ string } Other Specify}
+\item{subjid_nsv}{\link{ string } SUBJECT IDENTIFIER}
+\item{scrnid_nsv}{\link{ string } SCREENING IDENTIFIER}
+\item{subjinit_nsv}{\link{ string } SUBJECT INITIALS}
+\item{invid_nsv}{\link{ string } INVESTIGATOR ID}
+\item{subject_nsv}{\link{ string } Subject name or identifier}
+\item{instanceid_nsv}{\link{ double } Internal id for the instance}
+\item{folder_nsv}{\link{ string } Folder OID}
+\item{folderseq_nsv}{\link{ double } Folder sequence number}
+\item{visitdat_nsv}{\link{ timestamp } Visit Date}
+\item{visitdat_yy_nsv}{\link{ double } Visit Date_Year}
+\item{visitdat_mm_nsv}{\link{ double } Visit Date_Month}
+\item{visitdat_dd_nsv}{\link{ double } Visit Date_Day}
+\item{peperf_std_nsv}{\link{ string } Complete physical examination performed? \emph{Coded Value}}
+\item{svvs_nsv}{\link{ double } Vital Signs}
+\item{svaecm_nsv}{\link{ double } Concomitant Medications}
+\item{svecg_nsv}{\link{ double } ECG}
+\item{svpk_nsv}{\link{ double } PK and Associated Dose}
+\item{svlab_nsv}{\link{ double } Lab Evaluations}
+\item{svpregtest_nsv}{\link{ double } Urine Pregnancy Test}
+\item{svsd_nsv}{\link{ double } Study Drug Adjustment or Dispensation}
+\item{svhcc_nsv}{\link{ double } HCC Surveillance}
+\item{svhcc_raw_nsv}{\link{ string } HCC Surveillance_(Character)}
+}
 }
 \source{
 ./data-raw/rawplus/visdt.parquet
@@ -14,56 +64,6 @@ a data frame with 28093 rows and 48 columns.
 rawplus_visdt
 }
 \description{
-Visits (visdt) data in \code{rawplus} format.
-\describe{
-\item{studyid}{\code{string} Study Identifier}
-\item{siteid}{\code{string} Site Identifier}
-\item{invid}{\code{string} Investigator ID}
-\item{scrnid}{\code{string} Screen Identifier}
-\item{subjid}{\code{string} Subject Identifier}
-\item{subjectid}{\code{string} System Subject Identifier}
-\item{datapagename}{\code{string} eCRF Page Name}
-\item{datapageid}{\code{string} Internal ID for Data Page}
-\item{foldername}{\code{string} Folder Name}
-\item{instancename}{\code{string} Instance Name}
-\item{recordid}{\code{string} Record Identifier}
-\item{record_dt}{\code{string} Record Date}
-\item{recordposition}{\code{float} Record Position}
-\item{mincreated_dts}{\code{string} Earliest Data Creation Date/Time}
-\item{maxupdated_dts}{\code{string} Latest Data Update Date/Time}
-\item{visit_dt}{\code{string} Visit Date}
-\item{peperf}{\code{string} Complete Physical Exam Performed}
-\item{pereasnd}{\code{string} Reason Physical Exam Not Performed}
-\item{svvs}{\code{string} Vital Signs}
-\item{svaecm}{\code{string} Evaluation of AE and/or CM}
-\item{svecg}{\code{string} ECG}
-\item{svpk}{\code{string} PK and Associated Dose}
-\item{svlab}{\code{string} Lab Evaluations}
-\item{svpregtest}{\code{string} Pregnancy Test}
-\item{svsd}{\code{string} Study Drug Adjustment or Dispensation}
-\item{svothsp}{\code{string} Other Specify}
-\item{subjid_nsv}{\code{string} SUBJECT IDENTIFIER}
-\item{scrnid_nsv}{\code{string} SCREENING IDENTIFIER}
-\item{subjinit_nsv}{\code{string} SUBJECT INITIALS}
-\item{invid_nsv}{\code{string} INVESTIGATOR ID}
-\item{subject_nsv}{\code{string} Subject name or identifier}
-\item{instanceid_nsv}{\code{double} Internal id for the instance}
-\item{folder_nsv}{\code{string} Folder OID}
-\item{folderseq_nsv}{\code{double} Folder sequence number}
-\item{visitdat_nsv}{\code{timestamp} Visit Date}
-\item{visitdat_yy_nsv}{\code{double} Visit Date_Year}
-\item{visitdat_mm_nsv}{\code{double} Visit Date_Month}
-\item{visitdat_dd_nsv}{\code{double} Visit Date_Day}
-\item{peperf_std_nsv}{\code{string} Complete physical examination performed? \emph{Coded Value}}
-\item{svvs_nsv}{\code{double} Vital Signs}
-\item{svaecm_nsv}{\code{double} Concomitant Medications}
-\item{svecg_nsv}{\code{double} ECG}
-\item{svpk_nsv}{\code{double} PK and Associated Dose}
-\item{svlab_nsv}{\code{double} Lab Evaluations}
-\item{svpregtest_nsv}{\code{double} Urine Pregnancy Test}
-\item{svsd_nsv}{\code{double} Study Drug Adjustment or Dispensation}
-\item{svhcc_nsv}{\code{double} HCC Surveillance}
-\item{svhcc_raw_nsv}{\code{string} HCC Surveillance_(Character)}
-}
+Visits (visdt) data in \link{ rawplus } format.
 }
 \keyword{datasets}

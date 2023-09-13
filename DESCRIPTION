@@ -1,6 +1,6 @@
 Package: clindata
 Title: Synthetic Clinical Data for testing and development
-Version: 0.15.0
+Version: 1.0.1
 Authors@R:c( 
     person("Jeremy", "Wildfire", email = "jwildfire@gmail.com", role = c("aut", "cre")),
     person("Spencer", "Childress", email = "spencer.childress@gilead.com", role = c("aut"), comment = c(ORCID = "0000-0001-6877-8511")),
