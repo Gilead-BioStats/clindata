@@ -80,6 +80,8 @@ jobs:
           metrics_wf <- gsm.core::MakeWorkflowList(strPath = "workflow/2_metrics", strPackage = "gsm.kri")
           metrics_wf$kri0005 <- NULL
           metrics_wf$cou0005 <- NULL
+          metrics_wf$kri0012 <- NULL
+          metrics_wf$cou0012 <- NULL
           analyzed <- gsm.core::RunWorkflows(metrics_wf, mapped)
 
           # Step 3 - Create Reporting Layer - create reports using metrics data
