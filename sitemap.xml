@@ -1,72 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/404.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/config_param.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/config_schedule.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/config_workflow.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/ctms_protdev.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/ctms_site.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/ctms_study.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/edc_data_pages.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/edc_data_points.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/edc_queries.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/pipe.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_ae.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_dm.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_ex.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_ixrsrand.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_lb.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_sdrgcomp.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_studcomp.html</loc>
-  </url>
-  <url>
-    <loc>https://gilead-biostats.github.io/clindata/reference/rawplus_visdt.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://gilead-biostats.github.io/clindata/404.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/LICENSE.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/authors.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/index.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/config_param.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/config_schedule.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/config_workflow.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/ctms_protdev.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/ctms_site.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/ctms_study.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/edc_data_pages.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/edc_data_points.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/edc_queries.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/index.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/pipe.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/rawplus_ae.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/rawplus_dm.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/rawplus_ex.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/rawplus_ixrsrand.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/rawplus_lb.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/rawplus_sdrgcomp.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/rawplus_studcomp.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/reference/rawplus_visdt.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/report_kri_country.html</loc></url>
+<url><loc>https://gilead-biostats.github.io/clindata/report_kri_site.html</loc></url>
 </urlset>
+
