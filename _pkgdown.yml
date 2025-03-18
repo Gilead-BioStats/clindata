@@ -2,3 +2,15 @@ url: https://gilead-biostats.github.io/clindata/
 template:
   bootstrap: 5
 
+navbar:
+  structure:
+    left: [Reports, reference, news]
+    right: [search, github]
+  components:
+    Reports:
+      text: Sample Reports
+      menu:
+        - text: Site Report
+          href: report_kri_site.html
+        - text: Country Report
+          href: report_kri_country.html

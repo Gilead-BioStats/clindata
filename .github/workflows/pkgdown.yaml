@@ -35,7 +35,65 @@ jobs:
         run: |
           install.packages("devtools")
           devtools::install(dependencies = TRUE)
+          devtools::install_github("Gilead-BioStats/gsm.core@main")
+          devtools::install_github("Gilead-BioStats/gsm.kri@main")
+          devtools::install_github("Gilead-BioStats/gsm.mapping@main")
+          devtools::install_github("Gilead-BioStats/gsm.reporting@main")
 
+      - name: Generate sample reports
+        shell: Rscript {0}
+        run: |
+          devtools::load_all()
+          dir.create(here::here("pkgdown", "assets"), recursive = TRUE)
+          library(gsm.core)
+          library(gsm.kri)
+          library(gsm.mapping)
+          library(gsm.reporting)
+
+          core_mappings <- c("AE", "COUNTRY", "DATACHG", "DATAENT", "ENROLL", "LB",
+                   "PD", "QUERY", "STUDY", "STUDCOMP", "SDRGCOMP", "SITE", "SUBJ")
+          # Source Data
+          lSource <- list(
+              Source_SUBJ = clindata::rawplus_dm,
+              Source_AE = clindata::rawplus_ae,
+              Source_PD = clindata::ctms_protdev,
+              Source_LB = clindata::rawplus_lb,
+              Source_STUDCOMP = clindata::rawplus_studcomp,
+              Source_SDRGCOMP = clindata::rawplus_sdrgcomp %>%
+                dplyr::filter(.data$phase == 'Blinded Study Drug Completion'),
+              Source_DATACHG = clindata::edc_data_points,
+              Source_DATAENT = clindata::edc_data_pages,
+              Source_QUERY = clindata::edc_queries,
+             Source_ENROLL = clindata::rawplus_enroll,
+             Source_SITE = clindata::ctms_site,
+             Source_STUDY = clindata::ctms_study
+          )
+
+          mappings_wf <- gsm.core::MakeWorkflowList(strNames = core_mappings, strPath = "workflow/1_mappings", strPackage = "gsm.mapping")
+          mappings_spec <- gsm.mapping::CombineSpecs(mappings_wf)
+          lRaw <- gsm.mapping::Ingest(lSource, mappings_spec)
+
+          # Step 1 - Create Mapped Data Layer - filter, aggregate and join raw data to create mapped data layer
+          mapped <- gsm.core::RunWorkflows(mappings_wf, lRaw)
+
+          # Step 2 - Create Metrics - calculate metrics using mapped data
+          use_metrics <- c(paste0("000", c(1:4,6:9)), paste0("00", c(10,11)))
+          metrics_wf <- gsm.core::MakeWorkflowList(strNames = use_metrics, strPath = "workflow/2_metrics", strPackage = "gsm.kri")
+          analyzed <- gsm.core::RunWorkflows(metrics_wf, mapped)
+
+          # Step 3 - Create Reporting Layer - create reports using metrics data
+          reporting_wf <- gsm.core::MakeWorkflowList(strPath = "workflow/3_reporting", strPackage = "gsm.reporting")
+          reporting <- gsm.core::RunWorkflows(reporting_wf, c(mapped, list(lAnalyzed = analyzed,
+                                                       lWorkflows = metrics_wf)))
+
+          # Step 4 - Create KRI Report - create KRI report using reporting data
+          module_wf <- gsm.core::MakeWorkflowList(strPath = "workflow/4_modules", strPackage = "gsm.kri")
+          ## add output dir and file for these reports to save them in correct location
+          module_wf$report_kri_country$steps[[4]]$params$strOutputDir <- here::here("pkgdown", "assets")
+          module_wf$report_kri_country$steps[[4]]$params$strOutputFile <- "report_kri_country.html"
+          module_wf$report_kri_site$steps[[4]]$params$strOutputDir <- here::here("pkgdown", "assets")
+          module_wf$report_kri_site$steps[[4]]$params$strOutputFile <- "report_kri_site.html"
+          lReports <- gsm.core::RunWorkflows(module_wf, reporting)
 
       - name: Config gitcreds
         run: |
